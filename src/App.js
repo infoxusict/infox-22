@@ -1,10 +1,10 @@
 import React from 'react'
+import Home from './Home'
+
 
 const App = () => {
   return (
-    <div>
-      INFOXPRESSION
-    </div>
+    <Home/>
   )
 }
 

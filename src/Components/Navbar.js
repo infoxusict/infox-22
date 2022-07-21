@@ -2,6 +2,8 @@
 import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import './Assets/Images/CSS/Nav.css'
+
 
 const navigation = [
   { name: 'Events', href: '/', current: true },
@@ -16,7 +18,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-black">
+    <Disclosure as="nav" className="bg-black" id='HideOnload'>
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">

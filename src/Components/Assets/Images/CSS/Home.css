@@ -1,0 +1,47 @@
+#videoCont{
+    height: 100vh !important;
+    width: 100vw !important;
+    position: relative;
+    z-index: 99 !important;
+    background-color: black !important;
+}
+
+#Home{
+    background-color: black !important;
+    height: 100vh !important;
+    width: 100vh !important;
+}
+.Home{
+    background-color: black !important;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+.video{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+.animationFrame{
+    display: flex;
+    justify-content: center;
+    height: 0vh;
+    width: 100vw !important;
+    background-color: black;
+    position: relative;
+    z-index: 999;
+    animation: top 7s;
+    animation-iteration-count: 1;
+    animation-delay: 8.5s;
+    animation-fill-mode: forwards;
+    align-items: center;
+    
+}
+
+@keyframes top{
+    from{
+        height: 0vh;
+    }
+    to{
+        height: 90vh;
+    }
+} 

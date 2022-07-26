@@ -10,7 +10,7 @@
 @media (max-width: 650px) {
   .myLogoImg {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: flex-end;
   }
 }

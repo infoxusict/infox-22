@@ -1,0 +1,232 @@
+* {
+  background-color: black;
+  color: whitesmoke;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2f2;
+  border-radius: 10px;
+}
+
+@font-face {
+  font-family: "aatomspheric";
+  src: url(../fonts/aAtmospheric.ttf);
+}
+/* @font-face {
+  font-family: "inter";
+  src: url(./Inter/Inter-VariableFont_slnt\wght.ttf);
+} */
+
+.hero-section {
+  height: 40rem;
+  margin-top: 5vh;
+}
+.title {
+  font-family: "aatomspheric";
+}
+/* .container {
+  width: 100%;
+  height: 100%;
+  background-color: #c9d6df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.mouse {
+  width: 50px;
+  height: 90px;
+  border: 3px solid #333;
+  border-radius: 60px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mouse::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
+/* arrow */
+
+/* body { background: #2d2d37;} */
+/* a { color: black; text-decoration: none; }
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+} */
+
+/* register */
+
+.register {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 3rem;
+  margin: 40px 0;
+  /* font-weight: 400; */
+  font-family: "aatomspheric";
+  color: #2f2;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+  background-color: #050801;
+  border-radius: 5px;
+}
+.register:hover {
+  background: #2f2;
+  color: #050801;
+  box-shadow: 0 0 5px #2f2, 0 0 25px #2f2, 0 0 50px #2f2, 0 0 200px #2f2;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+/*s.register:nth-child(1){
+    /* filter: hue-rotate(270deg); */
+/* } */
+.register:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+.register span {
+  position: absolute;
+  display: block;
+}
+.register span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2f2);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.register span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2f2);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.register span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, #2f2);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.register span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2f2);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.subheading {
+  font-family: aatomspheric;
+  font-size: large;
+  border-top: #2f2 solid 4px;
+  margin-top: 3rem;
+  padding: 20px 0px 20px 0px;
+}
+.img-poster{
+  border: 4px solid #1bcc1b;
+  transition: all 0.4s;
+  width: 31.25rem;
+}
+.img-poster:hover{
+  transform: scale(1.05);
+  
+}
+.margin{
+  margin-top: -2rem;
+}

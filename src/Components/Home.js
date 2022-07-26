@@ -4,10 +4,11 @@ import './Assets/Images/CSS/Home.css'
 import MatrixRain from './MatrixRain'
 
 
+
 const Home = () => {
 
     const [reveal, setReveal] = useState(false)
-    const [screen, setScreen] = useState({width : 0, height : 0})
+    const [screen, setScreen] = useState({ width: 0, height: 0 })
 
     const sleep = (ms) => {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -15,7 +16,7 @@ const Home = () => {
 
     useEffect(() => {
         setReveal(true)
-        setScreen({width : window.innerWidth, height : window.innerHeight})
+        setScreen({ width: window.innerWidth, height: window.innerHeight })
         document.getElementById('HideOnload').style.display = 'none'
 
         sleep(8500).then(() => {
@@ -26,27 +27,27 @@ const Home = () => {
 
     }, [])
 
-    const loader = ()=>{
+    const loader = () => {
         setReveal(true)
     }
 
- 
+
 
     return (
         <section id='Home'>
             {/* <button onClick={loader} className='btn bg-white'>play</button> */}
-            <div className="animationFrame"> { !reveal &&<MatrixRain/>} </div>
+            <div className="animationFrame"> {!reveal && <MatrixRain />} </div>
             {reveal &&
                 <div id="videoCont">
                     <video className='video' autoPlay='autoPlay' muted>
                         <source src={require('./Assets/Videos/Produce_11.mp4')} type="video/mp4" />
                         Your browser does not support the video tag.
-                        <source src={ Video } type="video/ogg" />Your browser does not support the video tag.
+                        <source src={Video} type="video/ogg" />Your browser does not support the video tag.
                     </video>
                 </div>
             }
-
-        </section>
+            {/* <Sponser/> */}
+        </section>  
     )
 }
 

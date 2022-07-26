@@ -5,6 +5,7 @@ import MatrixRain from './MatrixRain'
 
 
 
+
 const Home = () => {
 
     const [reveal, setReveal] = useState(false)
@@ -46,6 +47,7 @@ const Home = () => {
                     </video>
                 </div>
             }
+            {/* <Sponser/> */}
             {/* <Sponser/> */}
         </section>  
     )

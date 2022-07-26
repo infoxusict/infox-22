@@ -1,9 +1,3 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    /* background-color: black; */
-}
-
 .sponsors{
     display: grid;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -145,7 +139,7 @@
 }
 @font-face {
     font-family: atmospheric;
-    src: url(./aAtmospheric.ttf);
+    src: url(../fonts/aAtmospheric.ttf); 
   }
 body {
     background: black;
@@ -224,7 +218,7 @@ body {
   }
   @font-face {
     font-family: atmospheric;
-    src: url(./aAtmospheric.ttf);
+    src: url(../fonts/aAtmospheric.ttf);
   }
 
   .welcum{

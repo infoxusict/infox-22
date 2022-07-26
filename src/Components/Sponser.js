@@ -3,14 +3,14 @@ import "./Assets/Images/CSS/sponser.css"
 
 export default function Sponser() {
   return (
-    <div className='mt-5 pt-5'>
+    <div className='mt-5 pt-1'>
       <svg
         height="100"
         stroke="green"
         stroke-width="2"
         class="text-line"
         width="100%"
-        className="gg heading1 tracking-in-contract-bck-bottom mt-5 pt-5"
+        className="gg heading1 mt-5 pt-3"
         >
         <text
           x="50%"

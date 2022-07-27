@@ -135,7 +135,7 @@
 
 .logos:hover{
     transform: scale(1.03);
-    box-shadow: 0px 0px 5px 5px greenyellow;
+    /* box-shadow: 0px 0px 5px 5px greenyellow; */
 }
 @font-face {
     font-family: atmospheric;
@@ -147,7 +147,7 @@ body {
   .heading {
     font-family: atmospheric;
     text-transform: uppercase;
-    font-size: 8rem;
+    font-size: 7rem;
     text-align: center;
     margin: 0;
     min-height: calc(100vh - 16px);
@@ -282,8 +282,8 @@ canvas{
 .tracking-in-contract-bck-bottom {
 	-webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            -webkit-animation-delay: 2s;
             animation-delay: 2s;
-    -webkit-animation-delay: 2s;
 }
 
 @-webkit-keyframes tracking-in-contract-bck-bottom {

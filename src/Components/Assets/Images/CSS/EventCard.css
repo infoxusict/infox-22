@@ -52,9 +52,6 @@
   background: linear-gradient(135deg, #f79f1f, #ee5a24, #12cbc4);
 }
 
-.widget-title::after {
-}
-
 .widget-item:hover {
   top: -28px;
   width: 280px;

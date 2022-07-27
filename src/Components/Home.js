@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Video from './Assets/Videos/startv.mp4'
+// import Video from './Assets/Videos/startv.mp4'
 import './Assets/Images/CSS/Home.css'
 import MatrixRain from './MatrixRain'
 import Sponser from './Sponser'
@@ -29,9 +29,9 @@ const Home = () => {
 
     }, [])
 
-    const loader = () => {
-        setReveal(true)
-    }
+    // const loader = () => {
+    //     setReveal(true)
+    // }
 
 
 

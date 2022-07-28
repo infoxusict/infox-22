@@ -7,28 +7,23 @@ import {
   Switch,
   Route,
 } from 'react-router-dom'
-import Keeanu from './Components/Keeanu'
+// import Keeanu from './Components/Keeanu'
 import EventCard from './Components/EventCard'
 import EventTemplate from './Components/EventTemplate'
-import Sponser from './Components/Sponser'
+// import Sponser from './Components/Sponser'
 
 
 const App = () => {
   return (
-
     <Router>
       <Navbar />
-      <Keeanu />
+      {/* <Keeanu /> */}
       <Switch>
-
         <Route exact path='/' ><div className="Home"><Home /></div></Route>
         <Route exact path='/event' ><EventCard /></Route>
         <Route exact path='/event/name' ><EventTemplate /></Route>
-
-
       </Switch>
-
-      {/* <Footer/> */}
+      <Footer/>
     </Router>
   )
 }

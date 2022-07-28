@@ -19,7 +19,7 @@ export default function EventTemplate() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla,
             officiis!
           </p>
-          <a href="https://google.com" class="register ">
+          <a href="https://google.com" className="register ">
           <span></span>
         <span></span>
         <span></span>
@@ -37,9 +37,9 @@ export default function EventTemplate() {
         </div>
       </section>
       {/* <section>
-      <div class="md:container ">
-	<div class="field ">
-		<div class="mouse"></div>
+      <div className="md:container ">
+	<div className="field ">
+		<div className="mouse"></div>
 		
 	</div>
 </div>

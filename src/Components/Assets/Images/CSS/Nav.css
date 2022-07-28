@@ -3,8 +3,28 @@
   src: url(../fonts/aAtmospheric.ttf); 
 }
 
-#HideOnload {
+/* #HideOnload {
   border-bottom: 2px solid rgba(255, 255, 255, 0.281);
+} */
+
+
+.navbarr{
+  position: -webkit-sticky;
+  position: sticky;
+  margin-top: -100px;
+  animation-name: navimation;
+  animation-delay: 7.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navimation {
+  from{
+    margin-top:-100px;
+  }
+  to{
+    margin-top:0px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -16,9 +36,5 @@
 }
 
 .atmosphere {
-
   font-family: atmospheric;
-
-
-
 }

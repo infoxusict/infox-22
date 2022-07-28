@@ -38,6 +38,10 @@
     align-items: center;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 /* @keyframes top{
     from{
         height: 0vh;

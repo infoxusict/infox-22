@@ -17,7 +17,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-black" id='HideOnload'>
+    <Disclosure as="nav" className="bg-black navbarr" id='HideOnload'>
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -26,7 +26,7 @@ export default function Navbar() {
                 href='/' type="button"
                 className="p-1 rounded-full focus:outline-none myLogoImg"
               >
-                <img src={require('./Assets/Images/aswd.png')} alt="" width="62px" srcset="" />
+                <img src={require('./Assets/Images/aswd.png')} alt="" width="62px" srcSet="" />
                 {/* <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
               </a>
@@ -69,7 +69,7 @@ export default function Navbar() {
                   href='/' type="button"
                   className="p-1 rounded-full focus:outline-none"
                 >
-                    <img src={require('./Assets/Images/aswd.png')} alt=""  width="62px" srcset="" />
+                    <img src={require('./Assets/Images/aswd.png')} alt=""  width="62px" srcSet="" />
                 </a> */}
               </div>
             </div>

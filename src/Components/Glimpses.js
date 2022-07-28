@@ -1,73 +1,27 @@
 import React, { useEffect } from 'react'
 import './Assets/Images/CSS/glimpses.css'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const Glimpses = () => {
-    const glimpse = () => {
-        const carouselList = document.querySelector('.carousel__list');
-        const carouselItems = document.querySelectorAll('.carousel__item');
-        const elems = Array.from(carouselItems);
-
-        carouselList.addEventListener('click', function (event) {
-            var newActive = event.target;
-            var isItem = newActive.closest('.carousel__item');
-
-            if (!isItem || newActive.classList.contains('carousel__item_active')) {
-                return;
-            };
-
-            update(newActive);
-        });
-
-        const update = function (newActive) {
-            const newActivePos = newActive.dataset.pos;
-
-            const current = elems.find((elem) => elem.dataset.pos === 0);
-            const prev = elems.find((elem) => elem.dataset.pos === -1);
-            const next = elems.find((elem) => elem.dataset.pos === 1);
-            const first = elems.find((elem) => elem.dataset.pos === -2);
-            const last = elems.find((elem) => elem.dataset.pos === 2);
-
-            current.classList.remove('carousel__item_active');
-
-            [current, prev, next, first, last].forEach(item => {
-                var itemPos = item.dataset.pos;
-
-                item.dataset.pos = getPos(itemPos, newActivePos)
-            });
-        };
-
-        const getPos = function (current, active) {
-            const diff = current - active;
-
-            if (Math.abs(current - active) > 2) {
-                return -current
-            }
-
-            return diff;
-        }
-    }
-
     useEffect(()=>{
-        glimpse()
+        Aos.init({duration:2000})
     },[])
     return (
-        <div><>
+        <div style={{width:"100%"}} data-aos="fade-up">
             <div className="animate" style={{ opacity: 1 }}>
                 <svg
                     height={100}
                     stroke="BLUE"
                     strokeWidth={1}
-                    className="text-line"
                     width="100%"
-                    classname="gg heading1"
+                    className="text-line gg heading1"
                 >
                     <text
                         x="50%"
-                        dominantBaseline="middle"
                         textAnchor="middle"
                         y="50%"
-                        data-text="LEGACY"
-                        classname="heading"
+                        data-text="GLIMPSES"
+                        className="heading"
                     >
                         GLIMPSES
                     </text>
@@ -96,7 +50,6 @@ const Glimpses = () => {
                     </li>
                 </ul>
             </div>
-        </>
         </div>
     )
 }

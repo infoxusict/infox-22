@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+/* @font-face {
+    src: url(aAtmospheric.ttf);
+    font-family: atmospheric;
+} */
+>>>>>>> 8e2a8cbe6b5f7335f32376cde8426a1e9677f2f3
 
 .days{
     display: flex;

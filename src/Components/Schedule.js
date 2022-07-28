@@ -7,15 +7,15 @@ export default function Schedule() {
     <div className="teampage_background"></div>
     <div>
         <div className="days">
-            <div className="day"><img src={require("./Assets/Images/red.png")} alt=""  className='rings' />
+            <div className="day"><img alt=""  className='rings' />
             <h2>Day 1</h2>
             <h3>15 Events</h3>
             </div>
-            <div className="day"><img src={require("./Assets/Images/blue.png")} alt=""  className='rings' />
+            <div className="day"><img alt=""  className='rings' />
             <h2>Day 2</h2>
             <h3>15 Events</h3>
             </div>
-            <div className="day"><img src={require("./Assets/Images/green.png")} alt=""  className='rings' />
+            <div className="day"><img alt=""  className='rings' />
             <h2>Day 3</h2>
             <h3>15 Events</h3>
             </div>

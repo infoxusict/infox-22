@@ -1,0 +1,133 @@
+@font-face {
+  font-family: atmospheric;
+  src: url(../fonts/aAtmospheric.ttf);
+}
+
+.teampage__heading {
+  padding-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teampage__headingdown {
+  height: 10vh;
+}
+.heading {
+  font-family: atmospheric;
+  text-transform: uppercase;
+  font-size: 8rem;
+  text-align: center;
+  margin: 0;
+  min-height: calc(100vh - 16px);
+  position: relative;
+  color: transparent;
+  font-weight: normal;
+  font-style: normal;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* animation-delay: 9s; */
+}
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+  }
+}
+.teampage__heading-svg {
+  width: 32vw;
+  height: fit-content;
+  transform: translateZ(5px);
+
+  animation: textAnimate 2s 1 forwards linear;
+}
+.teampage__heading svg {
+  stroke: rgb(0, 255, 60);
+  animation: bg 5s linear infinite;
+  /* fill: rgb(0, 255, 60); */
+}
+.teampage__background {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(rgb(0, 255, 60, 0.2) 20%, transparent 20%);
+  /* box-shadow: 0 0 10px #00ff0a;
+    pointer-events: none;
+    transition: 2s; */
+  background-size: 20px 20px;
+  animation: bg 5s linear infinite;
+}
+
+.teampage__container {
+  margin: auto;
+  /* overflow-y: scroll; */
+  width: 60vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 0px;
+  row-gap: 0px;
+}
+
+@keyframes bg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes bg1 {
+  0% {
+    stroke: hue-rotate(0deg);
+  }
+  100% {
+    stroke: hue-rotate(360deg);
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.background span {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  animation: bg 5s linear infinite;
+}
+.background span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00ff0a;
+  transform: scale(0.1);
+  box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a,
+    0 0 60px #00ff0a;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 2s;
+}
+.background span:hover::before {
+  transform: scale(0.5);
+  transition: 0s;
+}

@@ -1,0 +1,158 @@
+.team__container {
+  /* background-color: black; */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  color: white;
+  border: 0.1px #fff solid;
+  height: 40vh;
+  width: 15vw;
+  position: relative;
+  overflow: hidden;
+  /* margin: 100px; */
+}
+.team__card {
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+
+  overflow: hidden;
+}
+
+.team__front {
+  overflow: hidden;
+  height: inherit;
+  width: inherit;
+  display: grid;
+  grid-template-rows: minmax(max-content, 50%) minmax(max-content, 50%);
+  grid-template-columns: 1fr;
+}
+
+.team__photo {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.1)
+  );
+  margin: auto;
+  margin-top: 5vh;
+  height: 16vh;
+  width: 16vh;
+  /* border: 0.1px lightgreen solid; */
+
+  border-radius: 50%;
+}
+.team__photo svg {
+  height: inherit;
+  width: inherit;
+}
+.team__photo-1 {
+  transition: all 0.4s ease;
+}
+.team__name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.team__name a {
+  text-decoration: none;
+  color: white;
+}
+/* .team__container:hover .team__front {
+  opacity: 0;
+}
+.team__container:hover .team__back {
+  transform: translateX(0);
+  opacity: 1;
+  /* animation: back 0.8s ease-in; 
+}
+
+.team__container:hover .team__photo-1 {
+  transform: rotate(180deg);
+} */
+
+.team__back {
+  height: inherit;
+  width: inherit;
+  /* background-image: linear-gradient(to right, #123, #f1a); */
+  transform: translateX(-500px);
+  border: 0.1px #fff solid;
+  border-bottom: 0.1px #fff solid;
+  opacity: 0;
+  /* visibility: hidden; */
+  display: grid;
+  display: grid;
+  grid-template-rows: auto auto 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+/* .team__back div {
+  border: 0.1px rgb(0, 255, 60) solid;
+} */
+.team__back-top {
+  padding: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-head {
+}
+.top-icon {
+}
+.team__back-main-hed {
+  padding: 1.5vh;
+}
+.team__back-details {
+  padding: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.team__back-photo {
+  height: 48px;
+  width: 48px;
+  background-image: linear-gradient(to right bottom, #ff0000, rgb(0, 255, 60));
+  border: 1px rgb(0, 255, 60) solid;
+  border-radius: 50%;
+}
+.team__back-name {
+}
+.team__back-work {
+  padding: 1.5vh;
+}
+.team__back-buttons {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+.team__back-linkedin {
+}
+.team__back-github {
+}
+
+@keyframes back {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  /* 90% {
+    /* transform: translateX(0); 
+    opacity: 1;
+  } */
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

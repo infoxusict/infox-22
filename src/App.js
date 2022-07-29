@@ -21,7 +21,7 @@ const App = () => {
       {/* <Keeanu /> */}
       <Switch>
         <Route exact path='/' ><div className="Home"><Home /></div></Route>
-        <Route exact path='/event' ><Schedule/></Route>
+        <Route exact path='/event' ><EventCard/><Schedule/></Route>
         <Route exact path='/event/name' ><EventTemplate /></Route>
       </Switch>
       <Footer/>

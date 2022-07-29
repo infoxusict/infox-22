@@ -11,11 +11,13 @@
 .navbarr{
   position: -webkit-sticky;
   position: sticky;
+  z-index: 9;
   margin-top: -100px;
   animation-name: navimation;
   animation-delay: 7.5s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+  box-shadow: 0px 2px 10px 0px white;
 }
 
 @keyframes navimation {

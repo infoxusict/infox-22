@@ -174,7 +174,7 @@ body::-webkit-scrollbar {
     }
   
     100% {
-      fill: rgb(0, 0, 0);
+      fill: rgb(255, 255, 255);
     }
   }
   
@@ -190,5 +190,5 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -50px;
+    margin-top: -25px;  
   }

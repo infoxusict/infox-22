@@ -1,5 +1,5 @@
-::-webkit-scrollbar {
-  width: 4px;
+.widget-content::-webkit-scrollbar {
+  width: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -224,4 +224,9 @@
 }
 .margin{
   margin-top: -2rem;
+}
+
+.widget-content{
+  width: 95vw;
+  overflow: visible;
 }

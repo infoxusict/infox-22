@@ -3,6 +3,8 @@ import './Assets/Images/CSS/EventCard.css'
 
 const EventCard = () => {
   return (
+    <>
+        {/* <div className="teampage_background"></div> */}
     <div className="containerAlpha">
       <div className="widget-content">
         <div className="widget-item">
@@ -133,7 +135,7 @@ const EventCard = () => {
             </div>
           </div>
         </div>
-        <div className="widget-item">
+        {/* <div className="widget-item">
           <div className="inner">
             <div className="content">
               <div className="time-stamp">
@@ -228,8 +230,8 @@ const EventCard = () => {
               <span>Chelsey Dietrich</span>
             </div>
           </div>
-        </div>
-        <div className="widget-item">
+        </div> */}
+        {/* <div className="widget-item">
           <div className="inner">
             <div className="content">
               <div className="time-stamp">
@@ -244,9 +246,10 @@ const EventCard = () => {
               <span>Clementine Bauch</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
+    </>
   )
 }
 

@@ -1,18 +1,19 @@
-
 .days{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     height: auto;
     color: whitesmoke;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .day{
     background-color: rgb(228, 246, 247);
-    border-radius: 10px;
-    width: 18vw;
-    height: 22vh;
+    border-radius: 20px;
+    width: 14vw;
+    height: 11vh;
     margin: 2vw;
     margin-left: 1vw;
     background: linear-gradient(
@@ -22,6 +23,9 @@
   );
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: row;
+  
     /* display: flex; */
     /* align-items:center; */
 }
@@ -32,12 +36,12 @@
     color: whitesmoke;
 }
 h2{
-font-weight: bold !important;
+/* font-weight: bold !important; */
 font-size: larger !important;
 }
 
 h3{
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: large;
     margin-top: 0.5vw;
 }
@@ -49,9 +53,9 @@ h3{
 
 .program{
     background-color: rgb(228, 246, 247);
-    border-radius: 10px;
+    border-radius: 5px;
     width: 18vw;
-    height: 40vh;
+    height: 45vh;
     margin: 2vw;
     margin-left: 1vw;
     background: linear-gradient(
@@ -66,31 +70,35 @@ h3{
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
-  align-items: center;
+  box-shadow: 0px 5px 10px 0px rgba(180, 50, 50, 0.5);
+
+  /* align-items: center; */
 }
 
 .rings{
-    margin: 1vh;
+    width: 2vw;
+    height: 2vw;
+    margin: auto;
 }
 
 .teampage_background {
-    position: absolute;
+    position: fixed;
     left: 0px !important;
     height: 100vh;
     width: 100vw;
     background-image: radial-gradient(rgb(0, 255, 60, 0.3) 20%, transparent 20%);
     margin-left: 0px;
-    background-size: 20px 20px;
+    background-size: 10px 10px;
     z-index: -1;
     animation: rain 1s 1s infinite alternate-reverse;
   }
 
-.band{
+/* .band{
     width: 100%;
     background-color: rgba(180, 50, 50, 1);
-    height: 1%;
+    height: 1%; */
     /* transform: rotate(145deg); */
-}
+/* } */
 
 
 /* @keyframes rain {
@@ -103,17 +111,98 @@ h3{
     }
 } */
 
-.timing{
+.event{
     /* color: rgba(255, 0, 0, 0.6); */
-    color: rgba(180, 50, 50, 1);
-    font-size: x-large;
+    background-color: rgba(180, 50, 50, 1);
+    font-size: larger;
     text-shadow: none;
     margin-top: 4vh;
     /* margin-left: 3.vw; */
     font-family: atmospheric;
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 1vw;
+    padding-right: 1vw; */
+    margin-left: 0px;
+    
+}
 
+.background{
+    margin-top: 2vh;
+    background-color: rgba(240, 255, 255, 0.245);
+    border-radius: 10px;
+}
+
+.info{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.more_info{
+    /* height: fit-content; */
+    margin: auto;
+    /* border: 2px solid  rgba(180, 50, 50, 1);; */
+    width: max-content;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    border-radius: 10px;
+    background-color:  rgba(180, 50, 50, 1);
+    font-size: larger;
 }
 
 .event_title{
-    margin-top: 15vh;
+    color: whitesmoke;
+
 }
+
+.data{
+    margin-left: 2vw;
+    margin-top: auto;
+}
+
+.swing-in {
+	-webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+	        animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+    0% {
+      -webkit-transform: rotateX(-200deg);
+              transform: rotateX(-200deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 1;
+    }
+  }
+  @keyframes swing-in-top-fwd {
+    0% {
+      -webkit-transform: rotateX(-200deg);
+              transform: rotateX(-200deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0deg);
+              transform: rotateX(0deg);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      opacity: 1;
+    }
+  }
+  

@@ -36,7 +36,7 @@ const Glimpses = () => {
                         left 1
                     </li>
                     <li className="carousel__item" data-pos={0}>
-                        <div id="counter">{/* counts */}</div>
+                        <div id="counter"></div>
                         <div id="parasn">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed natus
                             nisi a architecto expedita.

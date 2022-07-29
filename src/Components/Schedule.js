@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Schedule.css"
-import Schedule_cards from './Schedule_cards'
+import Schedule_Cards from './Schedule_cards'
 
 
 export default function Schedule() {
@@ -12,7 +12,7 @@ export default function Schedule() {
   }
   
 
-  function change_cards(color){
+  function Change_cards(color){
     var prog_arr = document.getElementsByClassName("event")
     var card_arr = document.getElementsByClassName("program")
     var button_arr = document.getElementsByClassName("more_info")
@@ -50,7 +50,7 @@ export default function Schedule() {
             </div>
             </button>
         </div>
-        <Schedule_cards color={color} />
+        <Schedule_Cards color={color} />
         {/* <div className="programs">
             <div className="program"><h3 className='event' >Event</h3>
             <h2 className='event_title data'>Data and Time</h2>

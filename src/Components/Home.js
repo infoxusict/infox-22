@@ -65,8 +65,8 @@ const Home = () => {
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
-    glimpsee();
-    count_iteration();
+    // glimpsee();
+    // count_iteration();
   }, []);
   // const [reveal, setReveal] = useState(false)
   // // const [screen, setScreen] = useState({ width: 0, height: 0 })
@@ -134,7 +134,7 @@ const Home = () => {
             </svg>
           </div>
           <Sponser />
-          <Glimpses />
+          {/* <Glimpses /> */}
         </div>
       </div>
       {/* {reveal &&

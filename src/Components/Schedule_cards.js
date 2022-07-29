@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Schedule_cards(props) {
+export default function Schedule_Cards(props) {
 
     // const [color, setColor] = useState("")
     const {color} = props;

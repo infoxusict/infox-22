@@ -4,11 +4,25 @@ import ScheduleCards from './ScheduleCards'
 
 
 export default function Schedule() {
-  const [color, setColor] = React.useState("")
+  const colors = ["#3CC157"];
+
+  const [color, setColor] = React.useState("rgba(180, 50, 50, 0.5)")
 
   function handle_state(e){
     console.log(e.target.id)
     setColor(e.target.id)
+
+    var day_arr = document.getElementsByClassName("day")
+
+    for (let index = 0; index < day_arr.length; index++) {
+        day_arr[index].style.boxShadow = "0px 5px 10px 0px black"     
+    }
+
+    document.getElementById(e.target.id).style.boxShadow = "0px 5px 10px 0px "+e.target.id
+    colors.push(e.target.id)
+    console.log(colors)
+
+    load_balls();
   }
   
 
@@ -26,27 +40,70 @@ export default function Schedule() {
   //   }
   // }
 
+  function load_balls(){
+
+const numBalls = 50;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
+
+  }
+
   return (
     <>
     {/* <div className="teampage_background"></div> */}
     <div>
-        <div className="days">
-            <button id='red' className="day" onClick={handle_state}  style={{boxShadow: "0px 5px 10px 0px rgba(180, 50, 50, 0.5)"}}><img src={require("./Assets/Images/red.png")} alt=""  className='rings' />
-            <div className="info">
-            <h2>Day 1</h2>
-            <h3>15 Events</h3>
+        <div className="days" onLoad={load_balls}>
+            <button id='#b43232' className="day" onClick={handle_state} style={{boxShadow:'0px 5px 10px 0px #b43232'}}><img id='#b43232' src={require("./Assets/Images/red.png")} alt=""  className='rings' />
+            <div className="info" id='#b43232'>
+            <h2 id='#b43232'>Day 1</h2>
+            <h3 id='#b43232'>15 Events</h3>
             </div>
             </button>
-            <button id='blue' className="day" onClick={handle_state} style={{boxShadow: "0px 5px 10px 0px rgba(50, 50, 180, 0.5)"}}><img src={require("./Assets/Images/blue.png")} alt=""  className='rings' />
-            <div className="info">
-            <h2>Day 2</h2>
-            <h3>15 Events</h3>
+            <div id='#3232b4' className="day" onClick={handle_state}><img id='#3232b4' src={require("./Assets/Images/blue.png")} alt=""  className='rings' />
+            <div id='#3232b4' className="info">
+            <h2 id='#3232b4'>Day 2</h2>
+            <h3 id='#3232b4'>15 Events</h3>
             </div>
-            </button>
-            <button id='green' className="day" onClick={handle_state}  style={{boxShadow: "0px 5px 10px 0px rgba(50, 180, 50, 0.5)"}}><img src={require("./Assets/Images/green.png")} alt=""  className='rings' />
-            <div className="info">
-            <h2>Day 3</h2>
-            <h3>15 Events</h3>
+            </div>
+            <button id='#32b432' className="day" onClick={handle_state} ><img id='#32b432' src={require("./Assets/Images/green.png")} alt=""  className='rings' />
+            <div className="info" id='#32b432'>
+            <h2 id='#32b432'>Day 3</h2>
+            <h3 id='#32b432'>15 Events</h3>
             </div>
             </button>
         </div>

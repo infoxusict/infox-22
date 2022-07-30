@@ -94,8 +94,13 @@
     stroke: hue-rotate(360deg);
   }
 }
-
-.background {
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+  z-index: 999;
+}
+/* .background1 {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -104,14 +109,14 @@
   flex-wrap: wrap;
   overflow: hidden;
 }
-.background span {
+.background1 span {
   position: relative;
   width: 40px;
   height: 40px;
   display: block;
   animation: bg 5s linear infinite;
 }
-.background span::before {
+.background1 span::before {
   content: "";
   position: absolute;
   top: 0;
@@ -126,7 +131,7 @@
   pointer-events: none;
   transition: 2s;
 }
-.background span:hover::before {
+.background1 span:hover::before {
   transform: scale(0.5);
   transition: 0s;
-}
+} */

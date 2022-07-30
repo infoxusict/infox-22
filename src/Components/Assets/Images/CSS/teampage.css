@@ -46,7 +46,6 @@
 }
 .teampage__heading-svg {
   width: 32vw;
-  height: fit-content;
   transform: translateZ(5px);
 
   animation: textAnimate 2s 1 forwards linear;

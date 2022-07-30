@@ -1,3 +1,7 @@
+::-webkit-scrollbar{
+  display: none;
+}
+
 #videoCont{
     height: 100vh !important;
     width: 100vw !important;
@@ -27,7 +31,6 @@
     width: 100vw !important;
     background-color: black;
     position: relative;
-    z-index: 999;
     align-items: center;
 }
 
@@ -174,7 +177,7 @@ body::-webkit-scrollbar {
     }
   
     100% {
-      fill: rgb(0, 0, 0);
+      fill: rgb(255, 255, 255);
     }
   }
   
@@ -187,8 +190,11 @@ body::-webkit-scrollbar {
     display: block;
     width: 100vw;
     height: 100vh;
+    margin-top: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -50px;
+    gap: 20px;
+    color: white;
   }

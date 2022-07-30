@@ -1,11 +1,9 @@
 import React from 'react'
 
-export default function Schedule_cards(props) {
+export default function ScheduleCards(props) {
 
     // const [color, setColor] = useState("")
     const {color} = props;
-
-
 
   return (
         <div className="programs">

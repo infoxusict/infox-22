@@ -1,8 +1,7 @@
-* {
-}
 
 .container_2 {
   /* border: 2px solid red; */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;

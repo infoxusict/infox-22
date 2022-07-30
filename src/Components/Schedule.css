@@ -48,13 +48,17 @@ h3{
 
 .programs{
     display: flex;
+    flex-wrap: wrap;
     color: whitesmoke;
+    /* width: 100vw; */
+    /* height: max-content; */
 }
 
 .program{
     background-color: rgb(228, 246, 247);
     border-radius: 5px;
-    width: 18vw;
+    /* min-width: 18vw; */
+    width: 17vw;
     height: 45vh;
     margin: 2vw;
     margin-left: 1vw;

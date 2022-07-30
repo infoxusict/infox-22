@@ -8,18 +8,19 @@ const Glimpses = () => {
     },[])
     return (
         <div style={{width:"100%"}} data-aos="fade-up">
-            <div className="animate" style={{ opacity: 1 }}>
+            <div className="animate" style={{ opacity: 1, marginBottom : "2vh" }}>
                 <svg
                     height={100}
-                    stroke="BLUE"
-                    strokeWidth={1}
+                    stroke="green"
+                    strokeWidth={3}
                     width="100%"
-                    className="text-line gg heading1"
+                    // height="70%"
+                    className=" gg heading1"
                 >
                     <text
                         x="50%"
                         textAnchor="middle"
-                        y="50%"
+                        y="100%"
                         data-text="GLIMPSES"
                         className="heading"
                     >
@@ -36,10 +37,9 @@ const Glimpses = () => {
                         left 1
                     </li>
                     <li className="carousel__item" data-pos={0}>
-                        <div id="counter">{/* counts */}</div>
+                        <div id="counter"></div>
                         <div id="parasn">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed natus
-                            nisi a architecto expedita.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                         </div>
                     </li>
                     <li className="carousel__item" data-pos={1}>

@@ -51,27 +51,7 @@ export default function TeamPage() {
     <div className="teampage" onLoad={load_balls}>
       <div className=""></div>
       <div className="teampage__heading">
-        <div className="teampage__heading-svg">
-          <svg
-            height="120"
-            // stroke="rgb(0, 255, 60)"
-            stroke-width="3"
-            className="text-line"
-            width="100%"
-          >
-            <text
-              x="50%"
-              // fill="black"
-              dominant-baseline="middle"
-              text-anchor="middle"
-              y="50%"
-              data-text="LEGACY"
-              className="heading"
-            >
-              TEAM
-            </text>
-          </svg>
-        </div>
+        <span>OUR TEAM</span>
       </div>
       <div className="teampage__headingdown"></div>
       <div className="teampage__container">

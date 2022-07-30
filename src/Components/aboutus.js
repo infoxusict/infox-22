@@ -1,4 +1,3 @@
-import React, { useState, useEffect, useRef } from "react";
 import "./Assets/Images/CSS/aboutus.css";
 
 export default function About() {

@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 import React, { useRef, useEffect, useState } from "react";
 import "./Assets/Images/CSS/team.css";
 // import Linkedin from "../assets/icons8-linkedin-2.json";
@@ -7,29 +6,24 @@ export default function Team({ ringColor, circleColor, commentColor }) {
   // const circleFill = props.circleFill;
   // const circleStroke = props.circleStroke;
   var x = 0;
-  var f1 = 0;
   var f2 = 1;
   var b1 = -500;
   var b2 = 0;
   const circleRef = useRef();
   const cardRef = useRef();
   const [circle, setCircle] = useState([{ transform: `rotate(${x}deg)` }]);
+  // eslint-disable-next-line
   const [frontPos, setFrontPos] = useState(0);
   const [backPos, setBackPos] = useState(-500);
   const [frontOp, setFrontOp] = useState(1);
   const [backOp, setBackOp] = useState(0);
 
-  useEffect(() => {
-    cardRef.current.addEventListener("mouseover", triggerAnimation);
-    cardRef.current.addEventListener("mouseleave", endAnimation);
-    // cardRef.current.addEventListener("animationend", nextAnimation);
-  }, []);
   const triggerAnimation = () => {
     x = 180;
     setCircle([{ transform: `rotate(${x}deg)` }]);
     if (x === 180) {
       f2 = 0;
-
+      
       setFrontOp(f2);
       b1 = 0;
       b2 = 1;
@@ -37,6 +31,7 @@ export default function Team({ ringColor, circleColor, commentColor }) {
       setBackOp(b2);
     }
   };
+  
 
   const endAnimation = () => {
     x = 0;
@@ -60,6 +55,13 @@ export default function Team({ ringColor, circleColor, commentColor }) {
     transform: `translateX(${backPos}px)`,
     opacity: `${backOp}`,
   };
+
+  useEffect(() => {
+    cardRef.current.addEventListener("mouseover", triggerAnimation);
+    cardRef.current.addEventListener("mouseleave", endAnimation);
+    // cardRef.current.addEventListener("animationend", nextAnimation);
+    // eslint-disable-next-line
+  },[]);
 
   return (
     // <div className="123">
@@ -134,7 +136,7 @@ export default function Team({ ringColor, circleColor, commentColor }) {
             <span className="team__name-name">Ansh Goyal</span>
           </h4>
 
-          <a href="">
+          <a href="/">
             <span className="team__name-email">anshgoel44@gmail.com</span>
           </a>
         </div>
@@ -160,7 +162,7 @@ export default function Team({ ringColor, circleColor, commentColor }) {
         </div>
         <div className="team__back-buttons">
           <div className="team__back-linkedin">
-            <a href="">
+            <a href="/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -179,7 +181,7 @@ export default function Team({ ringColor, circleColor, commentColor }) {
             </a>
           </div>
           <div className="team__back-github">
-            <a href="">
+            <a href="/">
               <svg
                 height="32px"
                 fill="#fff"

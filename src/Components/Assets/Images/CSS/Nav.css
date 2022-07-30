@@ -9,9 +9,9 @@
 
 
 .navbarr{
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   z-index: 9;
+  width: 100%;
   margin-top: -100px;
   animation-name: navimation;
   animation-delay: 7.5s;

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Schedule.css"
-import Schedule_Cards from './Schedule_cards'
+import ScheduleCards from './ScheduleCards'
 
 
 export default function Schedule() {
@@ -12,19 +12,19 @@ export default function Schedule() {
   }
   
 
-  function Change_cards(color){
-    var prog_arr = document.getElementsByClassName("event")
-    var card_arr = document.getElementsByClassName("program")
-    var button_arr = document.getElementsByClassName("more_info")
+  // function Change_cards(color){
+  //   var prog_arr = document.getElementsByClassName("event")
+  //   var card_arr = document.getElementsByClassName("program")
+  //   var button_arr = document.getElementsByClassName("more_info")
     
 
-    for (let index = 0; index < prog_arr.length; index++) {
-      prog_arr[index].style.backgroundColor = color;
-      button_arr[index].style.backgroundColor = color;
-      card_arr[index].style.boxShadow = "0px 5px 10px 0px "+color;
+  //   for (let index = 0; index < prog_arr.length; index++) {
+  //     prog_arr[index].style.backgroundColor = color;
+  //     button_arr[index].style.backgroundColor = color;
+  //     card_arr[index].style.boxShadow = "0px 5px 10px 0px "+color;
       
-    }
-  }
+  //   }
+  // }
 
   return (
     <>
@@ -50,7 +50,7 @@ export default function Schedule() {
             </div>
             </button>
         </div>
-        <Schedule_Cards color={color} />
+        <ScheduleCards color={color} />
         {/* <div className="programs">
             <div className="program"><h3 className='event' >Event</h3>
             <h2 className='event_title data'>Data and Time</h2>

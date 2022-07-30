@@ -1,33 +1,11 @@
-import React, { useEffect } from 'react'
 import './Assets/Images/CSS/glimpses.css'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 const Glimpses = () => {
-    useEffect(()=>{
-        Aos.init({duration:2000})
-    },[])
     return (
-        <div style={{width:"100%"}} data-aos="fade-up">
+        <div style={{width:"100%"}}>
             <div className="animate" style={{ opacity: 1 }}>
-                <svg
-                    height={100}
-                    stroke="BLUE"
-                    strokeWidth={1}
-                    width="100%"
-                    className="text-line gg heading1"
-                >
-                    <text
-                        x="50%"
-                        textAnchor="middle"
-                        y="50%"
-                        data-text="GLIMPSES"
-                        className="heading"
-                    >
-                        GLIMPSES
-                    </text>
-                </svg>
+                <h1>Glimpses</h1>
             </div>
-            <div className="carousel">
+            <div className="caroousell">
                 <ul className="carousel__list">
                     <li className="carousel__item" data-pos={-2}>
                         left 2
@@ -49,6 +27,11 @@ const Glimpses = () => {
                         right 2
                     </li>
                 </ul>
+            </div>
+            <div className="glimpses-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora quas, facere voluptate labore, rem molestias commodi obcaecati eveniet deleniti qui dolorem, veniam dolor nisi? Velit quidem iure delectus esse!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora quas, facere voluptate labore, rem molestias commodi obcaecati eveniet deleniti qui dolorem, veniam dolor nisi? Velit quidem iure delectus esse!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora quas, facere voluptate labore, rem molestias commodi obcaecati eveniet deleniti qui dolorem, veniam dolor nisi? Velit quidem iure delectus esse!</p>
             </div>
         </div>
     )

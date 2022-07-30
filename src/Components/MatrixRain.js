@@ -6,9 +6,9 @@ const MatrixRain = () => {
 
     const Rain = () => {
         var body = document.body,
-    html = document.documentElement;
-    var page_height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+            html = document.documentElement;
+        var page_height = Math.max(body.scrollHeight, body.offsetHeight,
+            html.clientHeight, html.scrollHeight, html.offsetHeight);
         const canvas = document.getElementById("canvas1")
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;

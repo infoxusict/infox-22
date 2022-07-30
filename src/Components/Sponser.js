@@ -13,18 +13,18 @@ export default function Sponser() {
         <button className='btn'>Register</button>
         </div>
         <div className="right">
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
-          <div className="box"></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
         </div>
         </div>
       </div>

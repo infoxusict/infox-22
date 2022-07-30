@@ -6,7 +6,7 @@ export default function ScheduleCards(props) {
     const {color} = props;
 
   return (
-        <div className="programs">
+        <div className="programs" id='programs'>
             <div className="program" style={{ boxShadow: "0px 5px 10px 0px "+color}}><h3 className='event' style={{backgroundColor:color}}>Event</h3>
             <h2 className='event_title data'>Data and Time</h2>
             <h2 className='event_title data'>Description</h2>

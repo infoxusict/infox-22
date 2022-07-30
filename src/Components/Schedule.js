@@ -4,9 +4,11 @@ import ScheduleCards from './ScheduleCards'
 
 
 export default function Schedule() {
-  const colors = ["#3CC157"];
+  const colors = ["#3CC157", "#b43232"];
 
   const [color, setColor] = React.useState("rgba(180, 50, 50, 0.5)")
+
+  
 
   function handle_state(e){
     console.log(e.target.id)
@@ -41,16 +43,20 @@ export default function Schedule() {
   // }
 
   function load_balls(){
+    if (window.innerWidth < 721) {
+      document.getElementById("main_con").classList.remove("main_con")
+    }
 
 const numBalls = 50;
 const balls = [];
+var offset_height = document.getElementById("programs").offsetHeight
 
 for (let i = 0; i < numBalls; i++) {
   let ball = document.createElement("div");
   ball.classList.add("ball");
   ball.style.background = colors[Math.floor(Math.random() * colors.length)];
   ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.top = `${Math.floor(Math.random() * offset_height)}px`;
   ball.style.transform = `scale(${Math.random()})`;
   ball.style.width = `${Math.random()}em`;
   ball.style.height = ball.style.width;
@@ -86,7 +92,7 @@ balls.forEach((el, i, ra) => {
   return (
     <>
     {/* <div className="teampage_background"></div> */}
-    <div>
+    <div className='main_con' id='main_con' style={{paddingTop: "6vh", overflowY: "hidden"}}>
         <div className="days" onLoad={load_balls}>
             <button id='#b43232' className="day" onClick={handle_state} style={{boxShadow:'0px 5px 10px 0px #b43232'}}><img id='#b43232' src={require("./Assets/Images/red.png")} alt=""  className='rings' />
             <div className="info" id='#b43232'>

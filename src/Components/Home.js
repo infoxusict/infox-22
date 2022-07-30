@@ -53,22 +53,22 @@ const Home = () => {
     };
   };
 
-  const count_iteration = () => {
-    let counts = setInterval(updated);
-    let upto = 0;
-    function updated() {
-      var count = document.getElementById("counter");
-      count.innerHTML = (upto = upto + 12) + " +";
-      if (upto >= 6000) {
-        clearInterval(counts);
-      }
-    }
-  };
+  // const count_iteration = () => {
+  //   let counts = setInterval(updated);
+  //   let upto = 0;
+  //   function updated() {
+  //     var count = document.getElementById("counter");
+  //     count.innerHTML = (upto = upto + 12) + " +";
+  //     if (upto >= 6000) {
+  //       clearInterval(counts);
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     // Aos.init({ duration: 2000 });
     // glimpsee();
-    count_iteration();
+    // count_iteration();
   }, []);
   // const [reveal, setReveal] = useState(false)
   // // const [screen, setScreen] = useState({ width: 0, height: 0 })
@@ -136,7 +136,7 @@ const Home = () => {
                   className="svg-elem-5"
                   ></path>
               </svg>
-              <div className="home-svg-con">
+              <div className="svg-elem-5">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In aperiam veniam cum obcaecati eos natus doloribus nobis beatae dolore ut?</p>
               </div>
             </div>

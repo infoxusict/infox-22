@@ -4,7 +4,7 @@ import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import TeamPage from "./Components/teampage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Keeanu from './Components/Keeanu'
+import Keeanu from './Components/Keeanu'
 // import EventCard from "./Components/EventCard";
 import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
@@ -16,7 +16,7 @@ const App = () => {
     <>
     <Router>
       <Navbar />
-      {/* <Keeanu /> */}
+      <Keeanu />
       <Switch>
         <Route exact path="/">
           <div className="Home">

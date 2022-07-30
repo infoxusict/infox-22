@@ -5,7 +5,7 @@ export default function EventTemplate() {
   return (
     <>
      
-      <div className="background">
+      <div className="event-background">
       <section
         className="xl:container xl:mx-auto grid grid-cols-2 hero-section  bg-local w-4/5 margin"
         // style={{backgroundImage: `url(${photo})`}}

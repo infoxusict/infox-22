@@ -83,3 +83,11 @@
 
   /* animation-delay: 9s; */
 }
+
+ 
+.ball {
+  position: absolute !important;
+  border-radius: 100% !important;
+  opacity: 0.7 !important;
+  z-index: -1 !important;
+}

@@ -1,0 +1,27 @@
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  /* max-width: 900px; */
+  position: relative;
+}
+
+.carousel-inner {
+  transition: ease 1s;
+
+  display: flex;
+}
+
+.carousel-item {
+  height: inherit;
+  width: inherit;
+  flex-shrink: 0;
+  /* flex-grow: 1; */
+  /* display: inline-block; */
+}
+.carousel-item img {
+  height: 50vh;
+  width: 60vw;
+}
+.active {
+  opacity: 1;
+}

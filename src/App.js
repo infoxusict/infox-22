@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import EventCard from "./Components/EventCard";
 import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
+import Legacy from "./Components/legacy";
 // import Sponser from './Components/Sponser'
 
 const App = () => {
@@ -29,6 +30,9 @@ const App = () => {
         </Route>
         <Route exact path="/team">
           <TeamPage />
+        </Route>
+        <Route exact path="/legacy">
+          <Legacy />
         </Route>
       </Switch>
       <Footer />

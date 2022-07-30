@@ -61,7 +61,7 @@ export default function Legacy() {
                 gridClass="slider-2"
                 width="30"
                 height="45"
-                ySlide="true"
+                // ySlide="true"
               />
               <Slider gridClass="slider-1" width="50" height="45" />
             </div>

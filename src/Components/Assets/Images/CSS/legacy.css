@@ -2,6 +2,11 @@
   font-family: atmospheric;
   src: url(../fonts/aAtmospheric.ttf);
 }
+
+@font-face {
+  font-family: "toko-light";
+  src: url(./../fonts/Teko-Light.ttf);
+}
 .legacy {
   color: white;
   background-color: #000;

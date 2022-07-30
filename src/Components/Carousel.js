@@ -49,11 +49,11 @@ const Carousel = ({
       clearInterval(slideInterval.current);
     }
   };
-  const x = height;
   useEffect(() => {
     startSlideTimer();
 
     return () => stopSlideTimer();
+    // eslint-disable-next-line
   }, []);
 
   return (

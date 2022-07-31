@@ -12,7 +12,15 @@ import Nat11 from "./Assets/Images/images/DSC_0469.JPG";
 // const width1=0;
 // const height1=0
 
-const sliderData = [Nat4, Nat5, Nat6, Nat7, Nat8, Nat9, Nat10, Nat11];
+const sliderData = [
+  "./Assets/Images/images/nat-4.jpg",
+  "./Assets/Images/images/nat-5.jpg",
+  "./Assets/Images/images/nat-6.jpg",
+  "./Assets/Images/images/nat-7.jpg",
+  "./Assets/Images/images/nat-8.jpg",
+  "./Assets/Images/images/nat-9.jpg",
+  "./Assets/Images/images/nat-10.jpg",
+];
 // const CarouselItem = ({ slide, style }) => {
 //   return (
 //     <div className="carousel-item" style={{ style }}>
@@ -85,7 +93,7 @@ const Carousel = ({
           // />
           <div className="carousel-item">
             <img
-              src={slide}
+              src={require(`${slide}`)}
               style={{ width: `${width}vw`, height: `${height}vh` }}
               alt=""
             />

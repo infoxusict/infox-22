@@ -4,9 +4,9 @@
   position: relative;
   margin: 0 auto;
   /* color: #fff; */
-  font-size: 15vh !important;
+  /* font-size: 15vh ; */
   font-family: Atmospheric;
-  font-weight: 600 !important;
+  font-weight: 600 ;
   text-align: center;
   color: green;
   text-transform: uppercase;
@@ -22,11 +22,14 @@
   overflow: hidden;
   /* background: #333; */
   background: transparent;
-  /* color: #fff */
+  /* color: #fff; */
+  /* color: limegreen; */
   color: lime;
   /* color: green; */
   /* color: whitesmoke; */
   clip: rect(0, 900px, 0, 0);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .glitch::before {
   left: 7px;
@@ -35,7 +38,7 @@
 }
 .glitch::after {
   left: 3px;
-  text-shadow: -2px 0 lime;
+  text-shadow: -2px 0 red;
   animation: glitch-effect 2s infinite linear alternate-reverse;
 }
 

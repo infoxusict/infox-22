@@ -100,7 +100,7 @@ const Home = () => {
       {/* <button onClick={loader} className='btn bg-white'>play</button> */}
       <MatrixRain />
       <Parallax pages={3}>
-        <div className="animationFrame">
+        <div className="animationFrame" id="svgggg">
           <div className="whole-hero">
             <ParallaxLayer speed={0.25}>
               <div className="svggg" >

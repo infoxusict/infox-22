@@ -1,31 +1,32 @@
 import React from 'react'
-import "./Schedule.css"
+// import "./Schedule.css"
 import ScheduleCards from './ScheduleCards'
-
+import "./Assets/Images/CSS/timeline.css"
+import MatrixRain from './MatrixRain';
 
 export default function Schedule() {
-  const colors = ["#3CC157", "#b43232"];
+  // const colors = ["#3CC157", "#b43232"];
 
-  const [color, setColor] = React.useState("rgba(180, 50, 50, 0.5)")
+  // const [color, setColor] = React.useState("rgba(180, 50, 50, 0.5)")
 
   
 
-  function handle_state(e){
-    console.log(e.target.id)
-    setColor(e.target.id)
+  // function handle_state(e){
+  //   console.log(e.target.id)
+  //   setColor(e.target.id)
 
-    var day_arr = document.getElementsByClassName("day")
+  //   var day_arr = document.getElementsByClassName("day")
 
-    for (let index = 0; index < day_arr.length; index++) {
-        day_arr[index].style.boxShadow = "0px 5px 10px 0px black"     
-    }
+  //   for (let index = 0; index < day_arr.length; index++) {
+  //       day_arr[index].style.boxShadow = "0px 5px 10px 0px black"     
+  //   }
 
-    document.getElementById(e.target.id).style.boxShadow = "0px 5px 10px 0px "+e.target.id
-    colors.push(e.target.id)
-    console.log(colors)
+  //   document.getElementById(e.target.id).style.boxShadow = "0px 5px 10px 0px "+e.target.id
+  //   colors.push(e.target.id)
+  //   console.log(colors)
 
-    load_balls();
-  }
+  //   load_balls();
+  // }
   
 
   // function Change_cards(color){
@@ -42,57 +43,90 @@ export default function Schedule() {
   //   }
   // }
 
-  function load_balls(){
-    if (window.innerWidth < 721) {
-      document.getElementById("main_con").classList.remove("main_con")
-    }
+//   function load_balls(){
+//     if (window.innerWidth < 721) {
+//       document.getElementById("main_con").classList.remove("main_con")
+//     }
 
-const numBalls = 50;
-const balls = [];
-var offset_height = document.getElementById("programs").offsetHeight
+// const numBalls = 50;
+// const balls = [];
+// var offset_height = document.getElementById("programs").offsetHeight
 
-for (let i = 0; i < numBalls; i++) {
-  let ball = document.createElement("div");
-  ball.classList.add("ball");
-  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * offset_height)}px`;
-  ball.style.transform = `scale(${Math.random()})`;
-  ball.style.width = `${Math.random()}em`;
-  ball.style.height = ball.style.width;
+// for (let i = 0; i < numBalls; i++) {
+//   let ball = document.createElement("div");
+//   ball.classList.add("ball");
+//   ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+//   ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+//   ball.style.top = `${Math.floor(Math.random() * offset_height)}px`;
+//   ball.style.transform = `scale(${Math.random()})`;
+//   ball.style.width = `${Math.random()}em`;
+//   ball.style.height = ball.style.width;
   
-  balls.push(ball);
-  document.body.append(ball);
-}
+//   balls.push(ball);
+//   document.body.append(ball);
+// }
 
 // Keyframes
-balls.forEach((el, i, ra) => {
-  let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
+// balls.forEach((el, i, ra) => {
+//   let to = {
+//     x: Math.random() * (i % 2 === 0 ? -11 : 11),
+//     y: Math.random() * 12
+//   };
+
+//   let anim = el.animate(
+//     [
+//       { transform: "translate(0, 0)" },
+//       { transform: `translate(${to.x}rem, ${to.y}rem)` }
+//     ],
+//     {
+//       duration: (Math.random() + 1) * 2000, // random duration
+//       direction: "alternate",
+//       fill: "both",
+//       iterations: Infinity,
+//       easing: "ease-in-out"
+//     }
+//   );
+// });
+
+  // }
+
+  setTimeout(timeline, 500);
+
+  function timeline(){
+    console.log("hey")
+    var items = document.querySelectorAll(".timeline li");
+    console.log(items)
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      if(!items[i].classList.contains("in-view")){
+        items[i].classList.add("in-view");
+      }
+    } else if(items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
   };
 
-  let anim = el.animate(
-    [
-      { transform: "translate(0, 0)" },
-      { transform: `translate(${to.x}rem, ${to.y}rem)` }
-    ],
-    {
-      duration: (Math.random() + 1) * 2000, // random duration
-      direction: "alternate",
-      fill: "both",
-      iterations: Infinity,
-      easing: "ease-in-out"
-    }
-  );
-});
-
-  }
-
   return (
-    <>
+    <section className='timeline'>
     {/* <div className="teampage_background"></div> */}
-    <div className='main_con' id='main_con' style={{paddingTop: "6vh", overflowY: "hidden"}}>
+    {/* <div className='main_con' id='main_con' style={{paddingTop: "6vh", overflowY: "hidden"}}>
         <div className="days" onLoad={load_balls}>
             <button id='#b43232' className="day" onClick={handle_state} style={{boxShadow:'0px 5px 10px 0px #b43232'}}><img id='#b43232' src={require("./Assets/Images/red.png")} alt=""  className='rings' />
             <div className="info" id='#b43232'>
@@ -113,7 +147,7 @@ balls.forEach((el, i, ra) => {
             </div>
             </button>
         </div>
-        <ScheduleCards color={color} />
+        <ScheduleCards color={color} /> */}
         {/* <div className="programs">
             <div className="program"><h3 className='event' >Event</h3>
             <h2 className='event_title data'>Data and Time</h2>
@@ -138,7 +172,190 @@ balls.forEach((el, i, ra) => {
             <div className="more_info">More Info</div>
             </div>
         </div> */}
-    </div>
-    </>
+    {/* </div> */}
+    <MatrixRain />
+    <ul>
+        <li className='in-view'>
+          <div>
+            <time>1687</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Laws of motion
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Newton</span>
+            </div>
+          </div>
+        </li>
+        <li className='in-view'>
+          <div>
+            <time>1785</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Law of electrostatic attraction
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Coulomb</span>
+            </div>
+          </div>
+        </li>
+        <li className='in-view'>
+          <div>
+            <time>1827</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Law of Electric Resistance
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>G.S Ohm</span>
+            </div>
+          </div>
+        </li>
+        <li className='in-view'>
+          <div>
+            <time>1831</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Electromagnetic Induction
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Michael Faraday</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1867</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Dynamite
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Alfred Nobel</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1895</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                X Rays
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Roentgen</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1897</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Electron
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>J.J.Thomson</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1898</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Radium
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Madam Curie</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1900</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Quantum Theory
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Max Plank</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1905</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Principle of Relativity
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Albert Einstein</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1905</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Photo electric effect
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Albert Einstein</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1942</time>
+            <div className="discovery">
+              <h1>Discovery</h1>
+              <p>
+                Nuclear Reactor
+              </p>
+            </div>
+            <div className="scientist">
+              <h1>Scientist</h1>
+              <span>Anrico Fermi</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
   )
 }

@@ -198,7 +198,8 @@
   background-color: rgba(255, 255, 255, 0.024);
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
-  border-bottom: 10px solid #18f98f;
+  border-bottom: 10px solid lime;
+  /* box-shadow: 0px 0px 5px 0px lime inset; */
 }
 
 

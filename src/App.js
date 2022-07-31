@@ -16,7 +16,7 @@ const App = () => {
     <>
     <Router>
       <Navbar />
-      <Keeanu />
+      {/* <Keeanu /> */}
       <Switch>
         <Route exact path="/">
           <div className="Home">

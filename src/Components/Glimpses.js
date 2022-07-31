@@ -93,19 +93,19 @@ const Glimpses = () => {
                     <div class="wrapper">
                         <div class="container">
                             <span class="num" data-val="6000">000+</span>
-                            <span class="text">Memories</span>
+                            {/* <span class="text">Memories</span> */}
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="container">
                             <span class="num" data-val="600">000+</span>
-                            <span class="text">Memories</span>
+                            {/* <span class="text">Memories</span> */}
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="container">
                             <span class="num" data-val="1500">000+</span>
-                            <span class="text">Memories</span>
+                            {/* <span class="text">Memories</span> */}
                         </div>
                     </div>
                     {/* </div> */}

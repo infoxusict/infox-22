@@ -1,4 +1,5 @@
 import './Assets/Images/CSS/glimpses.css'
+import "./Assets/Images/CSS/glitch.css"
 const Glimpses = () => {
 
     const count_iteration = () => {

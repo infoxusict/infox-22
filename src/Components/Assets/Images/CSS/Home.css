@@ -115,21 +115,24 @@ body::-webkit-scrollbar {
 
  @-webkit-keyframes animate-svg-fill-1 {
     0% {
-      fill: transparent;
+      /* fill: transparent; */
+      opacity: 0;
     }
   
     100% {
-      fill: transparent;
+      /* fill: transparent; */
+      opacity: 0.5;
     }
   }
   
   @keyframes animate-svg-fill-1 {
     0% {
-      fill: transparent;
+      opacity: 0;
     }
   
     100% {
-      fill: transparent;
+      /* fill: transparent; */
+      opacity: 0.5;
     }
   }
   
@@ -249,4 +252,21 @@ body::-webkit-scrollbar {
     align-items: center;
     gap: 20px;
     color: white;
+  }
+
+  .svgg{
+    animation: load_svg 3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes load_svg {
+    0%{
+      opacity: 0%;
+      stroke: white;
+    }
+
+    100%{
+      opacity: 100%;
+      stroke: yellow;
+    }
   }

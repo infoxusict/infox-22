@@ -29,7 +29,7 @@ const Glimpses = () => {
     return (
         <div style={{ width: "100%" }} onMouseEnter={count_iteration}>
             <div className="animate" style={{ opacity: 1 }}>
-                <h1>Glimpses</h1>
+                <h1 className='glimpses_h1'>Glimpses</h1>
                 <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
                     {/* <div className="animate" style={{ opacity: 1, marginBottom: "2vh" }}>
                         <svg

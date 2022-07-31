@@ -7,7 +7,7 @@ import Glimpses from "./Glimpses";
 import Svgg from "./Svgg.js"
 import "aos/dist/aos.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 const Home = () => {
   // eslint-disable-next-line
@@ -157,7 +157,10 @@ const Home = () => {
 
                 <Svgg />
                 <div className="home-svg-con">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In aperiam veniam cum obcaecati eos natus doloribus nobis beatae dolore ut?</p>
+                  <h3 style={{textAlign:"center",fontWeight:"bold",fontSize:"x-large"}}>OCTOBER 11th - 13th 2022</h3>
+                  <p style={{textAlign:"center"}}>TECHFEST USICT | GGSIPU <br/>
+                     CELEBRATING THE SENSE OF BELONGING
+                  </p>
                 </div>
               </div>
             </ParallaxLayer>

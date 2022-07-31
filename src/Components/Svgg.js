@@ -1,5 +1,6 @@
 import * as React from "react"
 import "./Assets/Images/CSS/Home.css"
+import "./Assets/Images/CSS/glitch.css"
 
 function SvgComponent(props) {
   return (
@@ -10,6 +11,8 @@ function SvgComponent(props) {
       {...props}
       width="70%"
       height="70%"
+      className="svgg"
+      // data-text = "X"
     >
       <defs>
         <radialGradient

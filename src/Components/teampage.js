@@ -1,5 +1,6 @@
 // import React, { useRef, useEffect, useState } from "react";
 import "./Assets/Images/CSS/teampage.css";
+import "./Assets/Images/CSS/glitch.css";
 // import Heading from "../heading svg/heading";
 import Team from "./team";
 export default function TeamPage() {
@@ -50,8 +51,8 @@ export default function TeamPage() {
   return (
     <div className="teampage" onLoad={load_balls}>
       <div className=""></div>
-      <div className="teampage__heading">
-        <span>OUR TEAM</span>
+      <div className="teampage__heading glitch" data-text="OUR TEAM" >
+        <h1 >OUR TEAM</h1>
       </div>
       <div className="teampage__headingdown"></div>
       <div className="teampage__container">

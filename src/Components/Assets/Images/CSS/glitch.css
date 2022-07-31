@@ -23,7 +23,8 @@
   /* background: #333; */
   background: transparent;
   /* color: #fff */
-  color: green;
+  color: lime;
+  /* color: green; */
   /* color: whitesmoke; */
   clip: rect(0, 900px, 0, 0);
 }

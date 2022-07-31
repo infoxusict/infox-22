@@ -5,7 +5,7 @@ const Glimpses = () => {
     const count_iteration = () => {
         let valueDisplays = document.querySelectorAll(".num");
 
-        let interval = 5000;
+        // let interval = 5000;
 
         // console.log(valueDisplays);
 
@@ -15,7 +15,7 @@ const Glimpses = () => {
 
             // console.log(endValue);
 
-            let duration = Math.floor(interval / endValue);
+            // let duration = Math.floor(interval / endValue);
 
             let counter = setInterval(function () {
                 startValue += 15;
@@ -28,16 +28,16 @@ const Glimpses = () => {
         });
     }
 
-    function reduce_blur(e) {
-        document.getElementById(e.target.id).style.backdropFilter = "blur(3px)";
+    // function reduce_blur(e) {
+    //     document.getElementById(e.target.id).style.backdropFilter = "blur(3px)";
 
-        document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(3px)";
-    }
+    //     document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(3px)";
+    // }
 
-    function increase_blur(e) {
-        document.getElementById(e.target.id).style.backdropFilter = "blur(7px)";
-        document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(7px)";
-    }
+    // function increase_blur(e) {
+    //     document.getElementById(e.target.id).style.backdropFilter = "blur(7px)";
+    //     document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(7px)";
+    // }
 
 
 

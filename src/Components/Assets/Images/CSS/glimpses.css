@@ -162,6 +162,7 @@
 .carousel{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   opacity: 1 !important;
 }

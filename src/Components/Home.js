@@ -7,7 +7,7 @@ import Glimpses from "./Glimpses";
 import Svgg from "./Svgg.js"
 import "aos/dist/aos.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 const Home = () => {
   // eslint-disable-next-line
@@ -103,7 +103,7 @@ const Home = () => {
         <div className="animationFrame">
           <div className="whole-hero">
             <ParallaxLayer speed={0.25}>
-              <div className="svggg">
+              <div className="svggg" >
               {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191.25 231.32" width="80%" height="80%">
   <g>
     <path class="a svg-elem-1" d="M34.58,225.78q-6.21,6.33-12.44,12.64l-.79.75.26-.76a1.41,1.41,0,0,1,.19-.34c1.63-1.89,3.29-3.75,4.92-5.64,2.29-2.64,4.56-5.3,6.85-7.94,1.55-1.81,3.13-3.59,4.68-5.39,2.21-2.57,4.4-5.15,6.61-7.71,1.68-1.94,3.41-3.85,5.09-5.79,2.18-2.53,4.34-5.09,6.52-7.62,1.63-1.89,3.3-3.75,4.93-5.64,2.11-2.45,4.18-4.93,6.29-7.38s4.37-5,6.54-7.48,4.56-5.3,6.85-7.94c1.55-1.81,3.13-3.59,4.68-5.4q3.31-3.84,6.61-7.7c1.69-2,3.36-4,5.07-5.94.91-1.05,1.89-2.06,2.93-3.19,2.23,2.49,4.36,4.82,6.45,7.19,2.51,2.85,5,5.73,7.48,8.58,1.84,2.1,3.72,4.17,5.56,6.27,2.56,2.91,5.09,5.83,7.64,8.74,1.32,1.52,2.66,3,4,4.54,1,1.13,1.76,2.59,3.67,1.8a1.35,1.35,0,0,1,.45,0q23.63,0,47.26,0a2,2,0,0,1,1.76.92c1.75,2.3,3.57,4.56,5.34,6.84.88,1.13,1.72,2.27,2.71,3.59a14,14,0,0,1-1.83.3c-7.15.09-14.3.18-21.45.23q-19.78.14-39.57.23c-.11,0-.23,0-.34,0a2.42,2.42,0,0,1-2.43-1c-.66-.8-1.39-1.55-2.08-2.33-2.44-2.81-4.86-5.63-7.31-8.43-1.9-2.15-3.83-4.27-5.73-6.42q-4-4.53-8-9.07c-1.29-1.48-2.54-3-3.84-4.49-1-1.18-2.15-2.33-3.23-3.51-.33.4-.55.7-.8,1q-3.39,3.53-6.79,7l-7,7.25-6.63,6.86-7.11,7.34-6.63,6.86-7.11,7.34q-3.31,3.44-6.64,6.86c-3.18,3.27-6.39,6.53-9.57,9.81C37.24,222.94,35.94,224.39,34.58,225.78Z" transform="translate(-5.63 -8.39)"></path>
@@ -156,15 +156,18 @@ const Home = () => {
 </svg> */}
 
                 <Svgg />
-                <div className="home-svg-con">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In aperiam veniam cum obcaecati eos natus doloribus nobis beatae dolore ut?</p>
+                <div className="home-svg-con svgg">
+                  <h3 style={{textAlign:"center",fontWeight:"bold",fontSize:"x-large"}}>OCTOBER 11th - 13th 2022</h3>
+                  <p style={{textAlign:"center"}}>TECHFEST USICT | GGSIPU <br/>
+                     CELEBRATING THE SENSE OF BELONGING
+                  </p>
                 </div>
               </div>
             </ParallaxLayer>
-            <ParallaxLayer offset={1.01} speed={1} >
+            <ParallaxLayer offset={1.01} speed={0.9} >
               <Sponser />
             </ParallaxLayer>
-            <ParallaxLayer offset={2.02} speed={0.5}>
+            <ParallaxLayer offset={2.02} speed={0.3}>
               <Glimpses />
             </ParallaxLayer>
           </div>

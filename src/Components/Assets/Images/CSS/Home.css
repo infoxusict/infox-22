@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 ::-webkit-scrollbar {
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+::-webkit-scrollbar{
+>>>>>>> 29226eb95ec3cb0e22fe31bee771af41d4e059c8
   display: none;
 }
 
@@ -46,7 +52,16 @@ g {
   fill: url(#j);
 }
 
+<<<<<<< HEAD
 .a {
+=======
+@font-face {
+  font-family: "atmospheric";
+  src: url("../fonts/aAtmospheric.ttf");
+}
+
+.a{
+>>>>>>> 29226eb95ec3cb0e22fe31bee771af41d4e059c8
   background: linear-gradient(lime, #02b002);
 }
 #videoCont {
@@ -142,6 +157,7 @@ body::-webkit-scrollbar {
     fill: transparent;
   }
 
+<<<<<<< HEAD
   100% {
     fill: rgb(0, 0, 0);
   }
@@ -301,3 +317,17 @@ body::-webkit-scrollbar {
     /* stroke-dashoffset: -100%; */
   }
 }
+=======
+  @keyframes load_svg {
+    0%{
+      opacity: 0%;
+      /* stroke: white; */
+    }
+
+    100%{
+      opacity: 100%;
+      /* stroke: yellow; */
+    }
+  }
+
+>>>>>>> 29226eb95ec3cb0e22fe31bee771af41d4e059c8

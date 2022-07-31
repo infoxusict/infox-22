@@ -1,4 +1,5 @@
 import "./Assets/Images/CSS/sponser.css"
+import "./Assets/Images/CSS/glitch.css"
 
 
 export default function Sponser() {
@@ -6,25 +7,26 @@ export default function Sponser() {
     <section>
 
       <div className='sponsers'>
-          <h1>Sponsers</h1>
+          <h1 className="glitch" data-text="Sponsers">Sponsers</h1>
         <div className="sponsers-whole">
         <div className="left">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur hic ullam inventore iusto porro voluptas architecto ipsam ducimus placeat molestiae.</p>
-        <button className='btn'>Register</button>
+        <p>We Are Honoured To Have You As Sponsers! With Your Support We Can Reach New Heights</p>
         </div>
         <div className="right">
           <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
-          <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/Agro.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/barista2.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/reappoint2.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/cb.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/designcut.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/Hidden.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/Paytm.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/Podio.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/redbull.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/Redwolf.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/reliance.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/samsung2.png")} alt="" /></div>
+          <div className="box"><img src={require("./Assets/Images/Sponsor/web.png")} alt="" /></div>
         </div>
         </div>
       </div>

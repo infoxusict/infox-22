@@ -8,17 +8,17 @@
 }
 
 .teampage__heading {
-  padding-top: 10vh;
+  margin-top: 10vh;
   color: rgb(0, 255, 60);
-  font-family: Teko-medium;
-  font-size: 14vh;
+  /* font-family: Teko-medium; */
+  font-size: 15vh !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 1vh;
-  animation-name: bg;
+  /* letter-spacing: 1vh; */
+  /* animation-name: bg;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 .teampage__headingdown {
   height: 5vh;

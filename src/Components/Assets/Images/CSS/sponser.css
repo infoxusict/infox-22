@@ -2,17 +2,19 @@
     color: white;
 }
 .sponsers h1{
+    font-family: "atmospheric";
     text-align: center;
-    font-size: 10vw;
+    font-size: 6vw;
     font-weight: bold;
     font-style: oblique;
     margin: 1vw;
-    
+    color: lime;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.258);
 }
 
 .sponsers-whole{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 40px;
     align-items: center;
@@ -24,11 +26,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items:center;
 }
 
 .left p{
-    text-align: right;
+    font-family: 'poppins';
+    text-indent: 3ch;
+    font-weight:300;
+    font-size: large;
+    text-align: center;
 }
 
 .left button{
@@ -42,8 +48,9 @@
 }
 
 .right{
-    width: 50vw;
+    width: 80vw;
     height: 80vh;
+    background: rgba(255, 255, 255, 0.024);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     /* box-shadow: 0px 0px 20px 0px rgb(0, 255, 60); */

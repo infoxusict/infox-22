@@ -9,8 +9,7 @@ export default function Sponser() {
           <h1>Sponsers</h1>
         <div className="sponsers-whole">
         <div className="left">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur hic ullam inventore iusto porro voluptas architecto ipsam ducimus placeat molestiae.</p>
-        <button className='btn'>Register</button>
+        <p>We Are Honoured To Have You As Sponsers! With Your Support We Can Reach New Heights</p>
         </div>
         <div className="right">
           <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>

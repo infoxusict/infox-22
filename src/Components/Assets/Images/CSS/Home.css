@@ -46,6 +46,11 @@ g{
   fill: url(#j);
 }
 
+@font-face {
+  font-family: "atmospheric";
+  src: url("../fonts/aAtmospheric.ttf");
+}
+
 .a{
   background: linear-gradient(lime, #02b002);
 }

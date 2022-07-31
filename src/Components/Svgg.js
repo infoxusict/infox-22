@@ -9,9 +9,9 @@ function SvgComponent(props) {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 191.25 231.32"
       {...props}
-      width="70%"
-      height="70%"
-      className="svgg"
+      width="80%"
+      height="100%"
+      className="svgg main-svg"
       // data-text = "X"
     >
       <defs>

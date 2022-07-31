@@ -30,7 +30,7 @@ const Glimpses = () => {
     return (
         <div style={{ width: "100%" }} onMouseEnter={count_iteration}>
             <div className="animate" style={{ opacity: 1 }}>
-                <h1 className='glimpses_h1'>Glimpses</h1>
+                <h1 className='glimpses_h1 glitch' data-text="Glimpses">Glimpses</h1>
                 <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
                     {/* <div className="animate" style={{ opacity: 1, marginBottom: "2vh" }}>
                         <svg
@@ -78,7 +78,7 @@ const Glimpses = () => {
                     {/* <div className="carousel"> */}
                         <div className="carousel_card" id='1' onMouseLeave={increase_blur} onMouseEnter={reduce_blur} >Container 1</div>
                         <div className="carousel_card" id='2' onMouseLeave={increase_blur} onMouseEnter={reduce_blur} ><div id="counter">0+</div></div>
-                        <div className="carousel_card" id='3' onMouseLeave={increase_blur} onMouseEnter={reduce_blur} >Container 3</div>
+                        <div className="carousel_card" id='3' onMouseLeave={increase_blur} onMouseEnter={reduce_blur} ></div>
                         <div className="carousel_card" id='4' onMouseLeave={increase_blur} onMouseEnter={reduce_blur} >Container 4</div>
                     {/* </div> */}
                     {/* <div className="glimpses-content">

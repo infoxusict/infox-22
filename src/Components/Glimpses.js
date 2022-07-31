@@ -1,4 +1,5 @@
 import './Assets/Images/CSS/glimpses.css'
+import "./Assets/Images/CSS/glitch.css"
 const Glimpses = () => {
 
     const count_iteration = () => {
@@ -29,7 +30,7 @@ const Glimpses = () => {
     return (
         <div style={{ width: "100%" }} onMouseEnter={count_iteration}>
             <div className="animate" style={{ opacity: 1 }}>
-                <h1>Glimpses</h1>
+                <h1 className='glitch' data-text= "Glimpses">Glimpses</h1>
                 <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
                     {/* <div className="animate" style={{ opacity: 1, marginBottom: "2vh" }}>
                         <svg

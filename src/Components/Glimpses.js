@@ -92,8 +92,9 @@ const Glimpses = () => {
                     {/* <div className="carousel"> */}
                     <div className="wrapper">
                         <div className="container">
+                        <span className="glimpses_text">With A Foot fall of </span>
                             <span className="num" data-val="6000">000+</span>
-                            <span className="text">Memories</span>
+                            <span className='glimpses_text'>Our last Year's Event Was A Huge Success</span>
                         </div>
                     </div>
                     <div className="wrapper">

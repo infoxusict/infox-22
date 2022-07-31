@@ -1,0 +1,12 @@
+#keanu {
+  position: fixed;
+  bottom: 10px;
+  height: 100px;
+  width: 100px;
+  background: greenyellow;
+}
+
+#myBar {
+  display: flex;
+  justify-content: flex-end;
+}

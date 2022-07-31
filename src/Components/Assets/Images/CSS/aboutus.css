@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "Teko-Light";
+  src: url(../fonts/Teko-Light.ttf);
+}
+.legacy__about {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  color: aliceblue;
+  display: flex;
+}
+.about__left {
+  width: 50vw;
+  position: relative;
+}
+.about__right {
+  width: 50vw;
+}
+.legacy__about-high {
+  margin-left: 40vh;
+  height: 30vh;
+  width: 30vh;
+  position: relative;
+}
+
+#about {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+#about-stats {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  left: 100px;
+  top: 0px;
+  transform: scale(0.8);
+}
+.circle-ripple {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  border: 2px solid #00ff3c;
+  border-radius: 50%;
+}
+.about-stat-num {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.about-stat-title {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+#about-students,
+#about-students-ripple-1,
+#about-students-ripple-2,
+#about-students-ripple-3,
+#about-students-ripple-4 {
+  position: absolute;
+  left: 20vw;
+  top: 8vh;
+}
+#about-students-ripple-1,
+#about-students-ripple-2 {
+  transform: scale(1.1);
+}
+#about-students-ripple-2 {
+  opacity: 0.8;
+}
+#about-students-ripple-3 {
+  opacity: 0.4;
+}
+#about-students-ripple-4 {
+  transform: scale(1.8);
+  border-width: 0.5px;
+  opacity: 0.3;
+}
+#about-students-ripple-1 {
+  animation: about-students-ripple 1.5s infinite;
+  animation-timing-function: ease;
+}
+#about-colleges,
+#about-colleges-ripple-1,
+#about-colleges-ripple-2,
+#about-colleges-ripple-3,
+#about-colleges-ripple-4 {
+  position: absolute;
+  top: 45vh;
+  left: 0px;
+}
+#about-colleges-ripple-1,
+#about-colleges-ripple-2 {
+  transform: scale(1.1);
+}
+#about-colleges-ripple-2 {
+  opacity: 0.8;
+}
+#about-colleges-ripple-3 {
+  opacity: 0.4;
+}
+#about-colleges-ripple-4 {
+  transform: scale(1.6);
+  border-width: 0.5px;
+  opacity: 0.3;
+}
+#about-colleges-ripple-1 {
+  animation: about-colleges-ripple 2s infinite;
+  animation-timing-function: ease;
+}
+#about-events,
+#about-events-ripple-1,
+#about-events-ripple-2,
+#about-events-ripple-3,
+#about-events-ripple-4 {
+  transform: scale(0.8);
+  position: absolute;
+  top: 65vh;
+  left: 25vw;
+}
+#about-events-ripple-1,
+#about-events-ripple-2 {
+  transform: scale(0.9);
+}
+#about-events-ripple-2 {
+  opacity: 0.8;
+}
+#about-events-ripple-3 {
+  opacity: 0.4;
+}
+#about-events-ripple-4 {
+  transform: scale(1.45);
+  border-width: 0.5px;
+  opacity: 0.3;
+}
+#about-events-ripple-1 {
+  animation: about-events-ripple 1.3s infinite;
+  animation-timing-function: ease;
+}
+#about-students,
+#about-colleges,
+#about-events {
+  border: none;
+}
+@keyframes about-colleges-ripple {
+  0% {
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes about-students-ripple {
+  0% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes about-events-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+#about-content {
+  /* position: absolute; */
+  right: 10vw;
+  top: 45%;
+  /* transform: translateY(-50%); */
+}
+#about-content h1 {
+  font-family: Teko-Light;
+  font-size: 100px;
+  line-height: 1;
+  font-weight: lighter;
+  letter-spacing: 20px;
+  padding-bottom: 0vh;
+  padding-top: 5vh;
+}
+.content-wrap {
+  display: flex;
+  width: 550px;
+  justify-content: space-between;
+}
+.content-wrap .content-line-wrap {
+  display: flex;
+  align-items: center;
+  height: 33px;
+  width: 10%;
+}
+.content-wrap .content-text {
+  line-height: 33px;
+  width: 85%;
+  font-size: 105%;
+}
+
+.before-content-line {
+  background: #00ff3c;
+  width: 70px;
+  height: 2px;
+}
+
+@media all and (max-width: 1200px) {
+  #about-stats {
+    transform: scale(0.6);
+  }
+}
+@media all and (max-width: 1000px) {
+  #about-stats {
+    display: none;
+  }
+}
+@media all and (max-width: 600px) {
+  .legacy__about {
+    flex-direction: column;
+  }
+  #about-stats {
+    transform: scale(1);
+  }
+  #about {
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  #about-stats {
+    display: block;
+    width: 290px;
+    position: static;
+    height: 500px;
+  }
+  #about-content {
+    position: static;
+    width: 90%;
+    transform: none;
+  }
+  #about-content h1 {
+    font-size: 15vw;
+    letter-spacing: 10px;
+  }
+  .circle-ripple {
+    width: 90px;
+    height: 90px;
+  }
+  .about-stat-num {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .about-stat-title {
+    letter-spacing: 0px;
+    font-size: 12px;
+    word-break: break-all;
+    text-align: center;
+  }
+  #about-students,
+  #about-students-ripple-1,
+  #about-students-ripple-2,
+  #about-students-ripple-3,
+  #about-students-ripple-4 {
+    transform: scale(1);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  #about-students-ripple-4 {
+    display: none;
+  }
+  #about-students-ripple-1 {
+    animation: about-students-ripple 1.5s infinite;
+  }
+  #about-colleges,
+  #about-colleges-ripple-1,
+  #about-colleges-ripple-2,
+  #about-colleges-ripple-3,
+  #about-colleges-ripple-4 {
+    transform: scale(1);
+    position: absolute;
+    top: 0px;
+    left: 100px;
+  }
+  #about-colleges-ripple-4 {
+    display: none;
+  }
+  #about-colleges-ripple-1 {
+    animation: about-students-ripple 1.5s infinite;
+  }
+  #about-events,
+  #about-events-ripple-1,
+  #about-events-ripple-2,
+  #about-events-ripple-3,
+  #about-events-ripple-4 {
+    transform: scale(1);
+    position: absolute;
+    top: 0px;
+    left: 200px;
+  }
+  #about-events-ripple-4 {
+    display: none;
+  }
+  #about-events-ripple-1 {
+    animation: about-students-ripple 1.5s infinite;
+  }
+  #about-stats {
+    height: 120px;
+  }
+  @keyframes about-students-ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+}
+@media all and (max-width: 600px) and (orientation: portrait) {
+  .content-wrap {
+    width: 90vw;
+  }
+  .content-wrap .content-line-wrap {
+    height: 22px;
+  }
+  .content-wrap .content-text {
+    line-height: 22px;
+    font-size: 90%;
+  }
+
+  .before-content-line {
+    width: 50px;
+  }
+}

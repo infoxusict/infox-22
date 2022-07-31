@@ -12,15 +12,6 @@ import Nat11 from "./Assets/Images/images/DSC_0469.JPG";
 // const width1=0;
 // const height1=0
 
-const sliderData = [
-  "./Assets/Images/images/nat-4.jpg",
-  "./Assets/Images/images/nat-5.jpg",
-  "./Assets/Images/images/nat-6.jpg",
-  "./Assets/Images/images/nat-7.jpg",
-  "./Assets/Images/images/nat-8.jpg",
-  "./Assets/Images/images/nat-9.jpg",
-  "./Assets/Images/images/nat-10.jpg",
-];
 // const CarouselItem = ({ slide, style }) => {
 //   return (
 //     <div className="carousel-item" style={{ style }}>
@@ -37,6 +28,7 @@ const Carousel = ({
   height,
   ySlide,
   xSlide,
+  sliderData,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideInterval = useRef();

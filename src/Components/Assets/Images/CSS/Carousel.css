@@ -21,6 +21,7 @@
 .carousel-item img {
   height: 50vh;
   width: 60vw;
+  object-fit: cover;
 }
 .active {
   opacity: 1;

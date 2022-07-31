@@ -2,57 +2,105 @@ import React from "react";
 import Slider from "./Carousel";
 import About from "./aboutus";
 import "./Assets/Images/CSS/legacy.css";
+
+const sliderData1 = [
+  "./Assets/Images/legacy/S1-01.JPG",
+  "./Assets/Images/legacy/S1-02.JPG",
+  "./Assets/Images/legacy/S1-03.JPG",
+  "./Assets/Images/legacy/S1-04.JPG",
+  "./Assets/Images/legacy/S1-05.JPG",
+  "./Assets/Images/legacy/S1-06.JPG",
+];
+const sliderData2 = [
+  "./Assets/Images/legacy/S2-01.jpg",
+  "./Assets/Images/legacy/S2-02.jpg",
+  "./Assets/Images/legacy/S2-03.jpg",
+  "./Assets/Images/legacy/S2-04.jpg",
+  "./Assets/Images/legacy/S2-05.JPG",
+  "./Assets/Images/legacy/S2-06.JPG",
+];
+
+const sliderData3 = [
+  "./Assets/Images/legacy/S3-01.jpg",
+  "./Assets/Images/legacy/S3-02.jpg",
+  "./Assets/Images/legacy/S3-03.jpg",
+  "./Assets/Images/legacy/S3-04.jpg",
+  "./Assets/Images/legacy/S3-05.JPG",
+  "./Assets/Images/legacy/S3-06.JPG",
+];
 export default function Legacy() {
+  const count_iteration = () => {
+    let valueDisplays = document.querySelectorAll(".num");
 
-  
-  function load_balls(){
+    // let interval = 5000;
 
-  const colors = ["#3CC157", "#b43232"];
+    // console.log(valueDisplays);
 
-    if (window.innerWidth < 721) {
-      document.getElementById("main_con").classList.remove("main_con")
-    }
+    valueDisplays.forEach((valueDisplay) => {
+      let startValue = 0;
+      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
 
-const numBalls = 50;
-const balls = [];
-// var offset_height = document.getElementById("programs").offsetHeight
+      // console.log(endValue);
 
-for (let i = 0; i < numBalls; i++) {
-  let ball = document.createElement("div");
-  ball.classList.add("ball");
-  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
-  ball.style.transform = `scale(${Math.random()})`;
-  ball.style.width = `${Math.random()}em`;
-  ball.style.height = ball.style.width;
-  
-  balls.push(ball);
-  document.body.append(ball);
-}
+      // let duration = Math.floor(interval / endValue);
 
-// Keyframes
-balls.forEach((el, i, ra) => {
-  let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
+      let counter = setInterval(function () {
+        startValue += 1;
+        valueDisplay.textContent = `${startValue}`;
+
+        if (startValue >= endValue) {
+          clearInterval(counter);
+        }
+      });
+    });
   };
 
-  let anim = el.animate(
-    [
-      { transform: "translate(0, 0)" },
-      { transform: `translate(${to.x}rem, ${to.y}rem)` }
-    ],
-    {
-      duration: (Math.random() + 1) * 2000, // random duration
-      direction: "alternate",
-      fill: "both",
-      iterations: Infinity,
-      easing: "ease-in-out"
-    }
-  );
-});
+  function load_balls() {
+    const colors = ["#3CC157", "#b43232"];
 
+    if (window.innerWidth < 721) {
+      document.getElementById("main_con").classList.remove("main_con");
+    }
+
+    const numBalls = 50;
+    const balls = [];
+    // var offset_height = document.getElementById("programs").offsetHeight
+
+    for (let i = 0; i < numBalls; i++) {
+      let ball = document.createElement("div");
+      ball.classList.add("ball");
+      ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+      ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+      ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+      ball.style.transform = `scale(${Math.random()})`;
+      ball.style.width = `${Math.random()}em`;
+      ball.style.height = ball.style.width;
+
+      balls.push(ball);
+      document.body.append(ball);
+    }
+
+    // Keyframes
+    balls.forEach((el, i, ra) => {
+      let to = {
+        x: Math.random() * (i % 2 === 0 ? -11 : 11),
+        y: Math.random() * 12,
+      };
+
+      let anim = el.animate(
+        [
+          { transform: "translate(0, 0)" },
+          { transform: `translate(${to.x}rem, ${to.y}rem)` },
+        ],
+        {
+          duration: (Math.random() + 1) * 2000, // random duration
+          direction: "alternate",
+          fill: "both",
+          iterations: Infinity,
+          easing: "ease-in-out",
+        }
+      );
+    });
   }
 
   return (
@@ -102,24 +150,36 @@ balls.forEach((el, i, ra) => {
           </div>
           <div className="legacy__hero-right">
             <div className="legacy__hero-sliders">
-              <div className="slider-4"></div>
+              <div className="slider-4" onMouseEnter={count_iteration}>
+                <span className="num" data-val="16">
+                  16
+                </span>
+              </div>
               <Slider
+                sliderData={sliderData1}
                 gridClass="slider-3"
                 width="20"
                 height="22.5"
                 xSlide="reverse"
               />
               <Slider
+                sliderData={sliderData2}
                 gridClass="slider-2"
                 width="30"
                 height="45"
-                // ySlide="true"
+                ySlide="true"
               />
-              <Slider gridClass="slider-1" width="50" height="45" />
+              <Slider
+                sliderData={sliderData3}
+                gridClass="slider-1"
+                width="50"
+                height="45"
+              />
             </div>
           </div>
         </div>
-        {/* <Slider width="60vw" height="50vh" ySlide="false" /> */}
+        {/* <Slider sliderData=sliderData
+        width="60vw" height="50vh" ySlide="false" /> */}
         <About />
       </div>
     </>

@@ -65,7 +65,7 @@
   grid-area: 3 / 1 / 5 / 6;
 }
 .slider-4 {
-  background-color: aqua;
+  /* background-color: whitesmoke; */
   grid-area: 1 / 2 / 2 / 3;
 }
 
@@ -84,7 +84,6 @@
   /* animation-delay: 9s; */
 }
 
- 
 .ball {
   position: absolute !important;
   border-radius: 100% !important;

@@ -42,11 +42,11 @@
 }
 
 .right{
-    width: 300px;
-    height: 400px;
+    width: 50vw;
+    height: 80vh;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    box-shadow: 0px 0px 20px 0px rgb(0, 255, 60);
+    /* box-shadow: 0px 0px 20px 0px rgb(0, 255, 60); */
     border-radius: 30px;
     display: flex;
     justify-content: space-around;
@@ -60,15 +60,23 @@
 }
 
 .box{
-    width: 70px;
-    height: 70px;
-    background-color: white;
+    width: 8vw;
+    /* height: 70px; */
+    /* background-color: white; */
     margin: 30px;
-    animation-name: sponsersmove;
-    animation-duration: 5s;
+    /* animation-name: sponsersmove; */
+    /* animation-duration: 5s;
     animation-play-state: running;
     animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse; */
+}
+
+.box img{
+    filter: saturate(0);
+}
+
+.box img:hover{
+    filter: saturate(1);
 }
 
 @keyframes sponsersmove {

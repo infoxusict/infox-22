@@ -1,7 +1,23 @@
+body{
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main_con{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main_con{
+  height: fit-content;
+}
+
 .days{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+    width: 40vw;
     height: auto;
     color: whitesmoke;
     align-items: center;
@@ -50,6 +66,7 @@ h3{
     display: flex;
     flex-wrap: wrap;
     color: whitesmoke;
+    width: 80vw;
     /* width: 100vw; */
     /* height: max-content; */
 }
@@ -136,7 +153,7 @@ h3{
     
 }
 
-.background{
+.sch-background{
     margin-top: 2vh;
     background-color: rgba(240, 255, 255, 0.245);
     border-radius: 10px;
@@ -216,3 +233,27 @@ h3{
     opacity: 0.7;
     z-index: -1;
   }
+
+@media screen and (max-width : 720px) {
+  .days{
+    padding-top: 6vh;
+    flex-direction: column;
+  }
+  .day{
+    width: 55vw;
+  }
+  .rings{
+    width: 10vw;
+    height: 10vw;
+  }
+  .programs{
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .program{
+    /* flex-direction: column; */
+    width: 70vw;
+    margin-top: 2vh;
+  }
+}

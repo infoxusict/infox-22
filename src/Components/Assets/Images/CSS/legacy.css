@@ -11,10 +11,6 @@
   color: white;
   background-color: #000;
 }
-.navbar {
-  height: 10vh;
-  width: 100%;
-}
 .legacy__hero {
   display: flex;
   height: 90vh;

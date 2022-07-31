@@ -188,6 +188,7 @@
 {
 /*   width: 28vmin;
   height: 28vmin; */
+  width: min-content;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -212,8 +213,9 @@ span.num
   font-family: 'Merriweather', serif;
 }
 
-span.text
+.glimpses_text
 {
+  max-width: 89%;
   color: #e0e0e0;
   text-align: center;
   font-weight: 400;

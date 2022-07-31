@@ -90,6 +90,7 @@ const Glimpses = () => {
                     </div> */}
 
                     {/* <div className="carousel"> */}
+<<<<<<< HEAD
                     <div class="wrapper">
                         <div class="container">
                             <span class="num" data-val="6000">000+</span>
@@ -106,6 +107,24 @@ const Glimpses = () => {
                         <div class="container">
                             <span class="num" data-val="1500">000+</span>
                             {/* <span class="text">Memories</span> */}
+=======
+                    <div className="wrapper">
+                        <div className="container">
+                            <span className="num" data-val="6000">000+</span>
+                            <span className="text">Memories</span>
+                        </div>
+                    </div>
+                    <div className="wrapper">
+                        <div className="container">
+                            <span className="num" data-val="600">000+</span>
+                            <span className="text">Memories</span>
+                        </div>
+                    </div>
+                    <div className="wrapper">
+                        <div className="container">
+                            <span className="num" data-val="1500">000+</span>
+                            <span className="text">Memories</span>
+>>>>>>> 7a9982c0bc0c086b325ed7ece521e57187320dc7
                         </div>
                     </div>
                     {/* </div> */}

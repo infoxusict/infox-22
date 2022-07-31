@@ -8,45 +8,6 @@ g{
   overflow: visible;
 }
 
-.a {
-  fill: url(#a);
-}
-
-.b {
-  fill: url(#b);
-}
-
-.c {
-  fill: url(#c);
-}
-
-.d {
-  fill: url(#d);
-}
-
-.e {
-  fill: url(#e);
-}
-
-.f {
-  fill: url(#f);
-}
-
-.g {
-  fill: url(#g);
-}
-
-.h {
-  fill: url(#h);
-}
-
-.i {
-  fill: url(#i);
-}
-
-.j {
-  fill: url(#j);
-}
 
 @font-face {
   font-family: "atmospheric";
@@ -180,7 +141,7 @@ body::-webkit-scrollbar {
   
   @keyframes animate-svg-fill-3 {
     0% {
-      fill: transparent;
+      opacity: 0;
     }
   
     100% {

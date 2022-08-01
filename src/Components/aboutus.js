@@ -14,6 +14,7 @@ export default function About() {
             <div id="about-students-ripple-2" class="circle-ripple"></div>
             <div id="about-students-ripple-3" class="circle-ripple"></div>
             <div id="about-students-ripple-4" class="circle-ripple"></div>
+            <div id="about-students-ripple-5" class="circle-ripple"></div>
 
             <div id="about-colleges" class="circle-ripple">
               <span class="about-stat-num">120+</span>
@@ -23,6 +24,7 @@ export default function About() {
             <div id="about-colleges-ripple-2" class="circle-ripple"></div>
             <div id="about-colleges-ripple-3" class="circle-ripple"></div>
             <div id="about-colleges-ripple-4" class="circle-ripple"></div>
+            <div id="about-colleges-ripple-5" class="circle-ripple"></div>
 
             <div id="about-events" class="circle-ripple">
               <span class="about-stat-num">25+</span>
@@ -32,6 +34,7 @@ export default function About() {
             <div id="about-events-ripple-2" class="circle-ripple"></div>
             <div id="about-events-ripple-3" class="circle-ripple"></div>
             <div id="about-events-ripple-4" class="circle-ripple"></div>
+            <div id="about-events-ripple-5" class="circle-ripple"></div>
           </div>
         </div>
         <div className="about__right">

@@ -59,13 +59,15 @@
 #about-students-ripple-1,
 #about-students-ripple-2,
 #about-students-ripple-3,
-#about-students-ripple-4 {
+#about-students-ripple-4,
+#about-students-ripple-5 {
   position: absolute;
   left: 20vw;
   top: 8vh;
 }
 #about-students-ripple-1,
-#about-students-ripple-2 {
+#about-students-ripple-2,
+#about-students-ripple-5 {
   transform: scale(1.1);
 }
 #about-students-ripple-2 {
@@ -79,21 +81,30 @@
   border-width: 0.5px;
   opacity: 0.3;
 }
+/* #about-students-ripple-5 {
+  transform: scale(1.5);
+} */
 #about-students-ripple-1 {
   animation: about-students-ripple 1.5s infinite;
+  animation-timing-function: ease;
+}
+#about-students-ripple-5 {
+  animation: about-students-ripple-2 1.5s infinite;
   animation-timing-function: ease;
 }
 #about-colleges,
 #about-colleges-ripple-1,
 #about-colleges-ripple-2,
 #about-colleges-ripple-3,
-#about-colleges-ripple-4 {
+#about-colleges-ripple-4,
+#about-colleges-ripple-5 {
   position: absolute;
   top: 45vh;
   left: 0px;
 }
 #about-colleges-ripple-1,
-#about-colleges-ripple-2 {
+#about-colleges-ripple-2,
+#about-colleges-ripple-5 {
   transform: scale(1.1);
 }
 #about-colleges-ripple-2 {
@@ -111,18 +122,24 @@
   animation: about-colleges-ripple 2s infinite;
   animation-timing-function: ease;
 }
+#about-colleges-ripple-5 {
+  animation: about-colleges-ripple-2 2s infinite;
+  animation-timing-function: ease;
+}
 #about-events,
 #about-events-ripple-1,
 #about-events-ripple-2,
 #about-events-ripple-3,
-#about-events-ripple-4 {
+#about-events-ripple-4,
+#about-events-ripple-5 {
   transform: scale(0.8);
   position: absolute;
   top: 65vh;
   left: 25vw;
 }
 #about-events-ripple-1,
-#about-events-ripple-2 {
+#about-events-ripple-2,
+#about-events-ripple-5 {
   transform: scale(0.9);
 }
 #about-events-ripple-2 {
@@ -138,6 +155,10 @@
 }
 #about-events-ripple-1 {
   animation: about-events-ripple 1.3s infinite;
+  animation-timing-function: ease;
+}
+#about-events-ripple-5 {
+  animation: about-events-ripple-2 1.3s infinite;
   animation-timing-function: ease;
 }
 #about-students,
@@ -175,6 +196,36 @@
     opacity: 0;
   }
 }
+@keyframes about-colleges-ripple-2 {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+@keyframes about-students-ripple-2 {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+@keyframes about-events-ripple-2 {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
 #about-content {
   /* position: absolute; */
   right: 10vw;
@@ -183,7 +234,7 @@
 }
 #about-content h1 {
   font-family: Teko-Light;
-  font-size: 100px;
+  font-size: 10vw;
   line-height: 1;
   font-weight: lighter;
   letter-spacing: 20px;
@@ -218,18 +269,19 @@
     transform: scale(0.6);
   }
 }
+
 @media all and (max-width: 1000px) {
-  #about-stats {
-    display: none;
-  }
-}
-@media all and (max-width: 600px) {
   .legacy__about {
     flex-direction: column;
+    overflow-x: hidden;
+    padding-left: 5vw;
   }
   #about-stats {
     transform: scale(1);
+    display: flex;
+    flex-direction: row;
   }
+
   #about {
     flex-direction: column;
     align-items: center;
@@ -280,6 +332,9 @@
   #about-students-ripple-1 {
     animation: about-students-ripple 1.5s infinite;
   }
+  #about-students-ripple-5 {
+    display: none;
+  }
   #about-colleges,
   #about-colleges-ripple-1,
   #about-colleges-ripple-2,
@@ -296,6 +351,9 @@
   #about-colleges-ripple-1 {
     animation: about-students-ripple 1.5s infinite;
   }
+  #about-colleges-ripple-5 {
+    display: none;
+  }
   #about-events,
   #about-events-ripple-1,
   #about-events-ripple-2,
@@ -307,6 +365,9 @@
     left: 200px;
   }
   #about-events-ripple-4 {
+    display: none;
+  }
+  #about-events-ripple-5 {
     display: none;
   }
   #about-events-ripple-1 {
@@ -340,5 +401,11 @@
 
   .before-content-line {
     width: 50px;
+  }
+}
+
+@media all and (max-width: 650px) {
+  .legacy__about {
+    transform: translateY(40vh);
   }
 }

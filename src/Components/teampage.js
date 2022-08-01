@@ -1,4 +1,4 @@
-// import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./Assets/Images/CSS/teampage.css";
 import "./Assets/Images/CSS/glitch.css";
 // import Heading from "../heading svg/heading";
@@ -51,31 +51,84 @@ export default function TeamPage() {
   return (
     <div className="teampage" onLoad={load_balls}>
       <div className=""></div>
-      <div className="teampage__heading glitch" data-text="OUR TEAM" >
-        <h1 >OUR TEAM</h1>
+      <div className="teampage__heading glitch" data-text="OUR TEAM">
+        <h1>OUR TEAM</h1>
       </div>
       <div className="teampage__headingdown"></div>
       <div className="teampage__container">
         <Team
           ringColor="#95F7FF  "
           circleColor="#01C3FC "
-          commentColor="#01C3FC "
+          name="Himesh Nayak"
+          team="Web Team"
+          position="Web Developer"
+          Quote="We are a team of dedicated and passionate people ."
+          linkedin="https://www.linkedin.com/in/shubham-kumar-b9a8b817b/"
+          github="https://www.github.com/ansh1693"
+          gmail="https://www.gmail.com/shubham-kumar-b9a8b817b/"
+          photo="./Assets/Images/teams/himesh.jpg"
         />
+        <Team ringColor="#55a245" circleColor="#00a245" name="Rudransh Ratan" />
+        <Team
+          ringColor="#aadef2 "
+          circleColor="#00def2"
+          name="Kashish Jain"
+          team="Web Team"
+          position="Web Developer"
+          Quote="We are a team of dedicated and passionate people ."
+          linkedin="https://www.linkedin.com/in/shubham-kumar-b9a8b817b/"
+          github="https://www.github.com/ansh1693"
+          gmail="https://www.gmail.com/shubham-kumar-b9a8b817b/"
+          photo="./Assets/Images/teams/kashish.jpg"
+        />
+        <Team ringColor="#fff" circleColor="#000" name=" Vivek Bhatia" />
+        <Team ringColor="#fff" circleColor="#000" name="Harsh Goyal" />
+        <Team ringColor="#fff" circleColor="#000" name="Prince" />
+        <Team ringColor="#fff" circleColor="#000" name="Himanshu Paliwal" />
+        <Team ringColor="#fff" circleColor="#000" name="Anuj Talwar" />
         <Team
           ringColor="#FFAE76 "
           circleColor="#FF6800 "
           commentColor="#FF6800 "
+          name="Ansh Goyal"
+          team="Web Team"
+          position="Web Developer"
+          Quote="We are a team of dedicated and passionate people ."
+          linkedin="https://www.linkedin.com/in/shubham-kumar-b9a8b817b/"
+          github="https://www.github.com/ansh1693"
+          gmail="https://www.gmail.com/shubham-kumar-b9a8b817b/"
+          photo="./Assets/Images/teams/ansh.jpg"
         />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
-        <Team ringColor="#fff" circleColor="#000" commentColor="#123456" />
+        <Team
+          ringColor="#ffcb88"
+          circleColor="#ffcb00"
+          name="Ayush Baliyan"
+          team="Web Team"
+          position="Web Developer"
+          Quote="We are a team of dedicated and passionate people ."
+          linkedin="https://www.linkedin.com/in/shubham-kumar-b9a8b817b/"
+          github="https://www.github.com/ansh1693"
+          gmail="https://www.gmail.com/shubham-kumar-b9a8b817b/"
+          photo="./Assets/Images/teams/ayush.jpeg"
+        />
+        <Team
+          ringColor="#b488ff"
+          circleColor="#b400ff"
+          name="Divyansh"
+          team="Web Team"
+          position="Web Developer"
+          Quote="We are a team of dedicated and passionate people ."
+          linkedin="https://www.linkedin.com/in/shubham-kumar-b9a8b817b/"
+          github="https://www.github.com/ansh1693"
+          gmail="https://www.gmail.com/shubham-kumar-b9a8b817b/"
+          photo="./Assets/Images/teams/Divyansh.jpg"
+        />
+        <Team ringColor="#fff" circleColor="#000" name="Toyeesh Sinha" />
+        <Team ringColor="#fff" circleColor="#000" name="Dhruv Aeron" />
+        <Team ringColor="#fff" circleColor="#000" name="Shivesh Nandan" />
+        <Team ringColor="#fff" circleColor="#000" name="Kartik" />
+        {/* <Team ringColor="#fff" circleColor="#000" name="Nishant" /> */}
+        <Team ringColor="#fff" circleColor="#000" name="Dhruv Gupta" />
       </div>
     </div>
   );

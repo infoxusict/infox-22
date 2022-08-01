@@ -4,9 +4,14 @@ import "./Assets/Images/CSS/team.css";
 export default function Team({
   ringColor,
   circleColor,
-  commentColor,
+  name,
   team = "Web Team",
+  position = "Web Developer",
   Quote = "We are a team of dedicated and passionate people .",
+  linkedin = "/#",
+  github = "/#",
+  gmail = "/#",
+  photo,
 }) {
   // const ringColor = props.ring;
   // const circleFill = props.circleFill;
@@ -104,8 +109,12 @@ export default function Team({
       <div className="team__card team__front" style={styles1}>
         <div
           className="team__photo"
-          style={{ border: `2px ${ringColor} solid` }}
+          style={{
+            border: `2px ${ringColor} solid`,
+            // backgroundImage: `url(${photo})`,
+          }}
         >
+          {photo && <img src={require(`${photo}`)} alt=" " />}
           <svg
             style={circle[0]}
             ref={circleRef}
@@ -138,7 +147,7 @@ export default function Team({
 
         <div className="team__name">
           <h4>
-            <span className="team__name-name">Ansh Goyal</span>
+            <span className="team__name-name">{name}</span>
           </h4>
           <div className="team__back-team">
             <span>{team}</span>
@@ -148,7 +157,7 @@ export default function Team({
       <div className="team__card team__back" style={styles2}>
         <div
           className="team__back-top"
-          style={{ borderBottom: `0.1px ${commentColor} solid` }}
+          style={{ borderBottom: `0.1px ${circleColor} solid` }}
         >
           <div className="top-head">
             <span>Comments</span>
@@ -156,20 +165,28 @@ export default function Team({
         </div>
 
         <div className="team__back-details">
-          <div className="team__back-photo"></div>
+          <div
+            className="team__back-photo"
+            style={{
+              border: `2px ${ringColor} solid`,
+              backgroundImage: `url(${photo})`,
+            }}
+          >
+            {photo && <img src={require(`${photo}`)} alt=" " />}
+          </div>
           <div className="team__back-name">
-            <span>Ansh Goyal</span>
+            <span>{name}</span>
           </div>
         </div>
         <div className="team__back-work">
-          <span>Front-end Developer</span>
+          <span>{position}</span>
           <div className="team__back-quote">
             <span>{Quote}</span>
           </div>
         </div>
         <div className="team__back-buttons">
           <div className="team__back-linkedin">
-            <a href="/">
+            <a href={`${linkedin}`}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -188,7 +205,7 @@ export default function Team({
             </a>
           </div>
           <div className="team__back-github">
-            <a href="/">
+            <a href={`${github}`}>
               <svg
                 height="32px"
                 fill="#fff"
@@ -201,7 +218,7 @@ export default function Team({
             </a>
           </div>
           <div className="team__back-gmail">
-            <a href="/">
+            <a href={`${gmail}`}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"

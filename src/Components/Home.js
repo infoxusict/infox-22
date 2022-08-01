@@ -9,8 +9,10 @@ import "aos/dist/aos.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
 // import Footer from "./Footer";
 
-const Home = () => {
+const Home = (props) => {
   // eslint-disable-next-line
+
+  
   const glimpsee = () => {
     const carouselList = document.querySelector(".carousel__list");
     const carouselItems = document.querySelectorAll(".carousel__item");
@@ -67,6 +69,9 @@ const Home = () => {
   // };
 
   useEffect(() => {
+    if (props.page === "home"){
+      document.getElementById("navbar").classList.add("inn")
+    }
     // Aos.init({ duration: 2000 });
     // glimpsee();
     // count_iteration();

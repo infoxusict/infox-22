@@ -20,7 +20,7 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <div className="Home">
-            <Home />
+            <Home page = "home" />
           </div>
         </Route>
         <Route exact path="/event">

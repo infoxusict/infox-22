@@ -81,11 +81,15 @@ export default function TeamPage() {
           gmail="https://www.gmail.com/shubham-kumar-b9a8b817b/"
           photo="./Assets/Images/teams/kashish.jpg"
         />
-        <Team ringColor="#fff" circleColor="#000" name=" Vivek Bhatia" />
-        <Team ringColor="#fff" circleColor="#000" name="Harsh Goyal" />
-        <Team ringColor="#fff" circleColor="#000" name="Prince" />
-        <Team ringColor="#fff" circleColor="#000" name="Himanshu Paliwal" />
-        <Team ringColor="#fff" circleColor="#000" name="Anuj Talwar" />
+        <Team ringColor="#ffcc00" circleColor="#c29d08" name=" Vivek Bhatia" />
+        <Team ringColor="#FF9980" circleColor="#009980" name="Harsh Goyal" />
+        <Team ringColor="#80aa80" circleColor="#80cc80" name="Prince" />
+        <Team
+          ringColor="#7dfa77"
+          circleColor="#7dfa00"
+          name="Himanshu Paliwal"
+        />
+        <Team ringColor="#663380" circleColor="#333380" name="Anuj Talwar" />
         <Team
           ringColor="#FFAE76 "
           circleColor="#FF6800 "
@@ -123,35 +127,35 @@ export default function TeamPage() {
           gmail="https://www.gmail.com/shubham-kumar-b9a8b817b/"
           photo="./Assets/Images/teams/Divyansh.jpg"
         />
-        <Team ringColor="#fff" circleColor="#000" name="Toyeesh Sinha" />
+        <Team ringColor="#808099" circleColor="#8080ff" name="Toyeesh Sinha" />
         <Team
-          ringColor="#fff"
-          circleColor="#000"
+          ringColor="#aa0000"
+          circleColor="#ff0000"
           name="Dhruv Aeron"
           team="Web Lead"
         />
         <Team
-          ringColor="#fff"
-          circleColor="#000"
+          ringColor="#cc3300"
+          circleColor="#ff3000"
           name="Shivesh Nandan"
           team="Web Lead"
         />
         <Team
           ringColor="#fff"
-          circleColor="#000"
+          circleColor="#aaa"
           name="Kartik"
           team="Web Lead"
         />
         {/* <Team ringColor="#fff" circleColor="#000" name="Nishant" /> */}
         <Team
-          ringColor="#fff"
-          circleColor="#000"
+          ringColor="#aaa"
+          circleColor="#777"
           name="Dhruv Gupta"
           team="Web Lead"
         />
         <Team
-          ringColor="#fff"
-          circleColor="#000"
+          ringColor="#431366"
+          circleColor="#431311"
           name="Nishant"
           team="Web Lead"
         />

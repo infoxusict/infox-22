@@ -1,52 +1,51 @@
-import './Assets/Images/CSS/glimpses.css'
-import "./Assets/Images/CSS/glitch.css"
+import "./Assets/Images/CSS/glimpses.css";
+import "./Assets/Images/CSS/glitch.css";
 const Glimpses = () => {
+  const count_iteration = () => {
+    let valueDisplays = document.querySelectorAll(".num");
 
-    const count_iteration = () => {
-        let valueDisplays = document.querySelectorAll(".num");
+    // let interval = 5000;
 
-        // let interval = 5000;
+    // console.log(valueDisplays);
 
-        // console.log(valueDisplays);
+    valueDisplays.forEach((valueDisplay) => {
+      let startValue = 0;
+      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
 
-        valueDisplays.forEach((valueDisplay) => {
-            let startValue = 0;
-            let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+      // console.log(endValue);
 
-            // console.log(endValue);
+      // let duration = Math.floor(interval / endValue);
 
-            // let duration = Math.floor(interval / endValue);
+      let counter = setInterval(function () {
+        startValue += 15;
+        valueDisplay.textContent = `${startValue}+`;
 
-            let counter = setInterval(function () {
-                startValue += 15;
-                valueDisplay.textContent =`${startValue}+`;
+        if (startValue >= endValue) {
+          clearInterval(counter);
+        }
+      });
+    });
+  };
 
-                if (startValue >= endValue) {
-                    clearInterval(counter);
-                }
-            });
-        });
-    }
+  // function reduce_blur(e) {
+  //     document.getElementById(e.target.id).style.backdropFilter = "blur(3px)";
 
-    // function reduce_blur(e) {
-    //     document.getElementById(e.target.id).style.backdropFilter = "blur(3px)";
+  //     document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(3px)";
+  // }
 
-    //     document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(3px)";
-    // }
+  // function increase_blur(e) {
+  //     document.getElementById(e.target.id).style.backdropFilter = "blur(7px)";
+  //     document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(7px)";
+  // }
 
-    // function increase_blur(e) {
-    //     document.getElementById(e.target.id).style.backdropFilter = "blur(7px)";
-    //     document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(7px)";
-    // }
-
-
-
-    return (
-        <div style={{ width: "100%" }} onMouseEnter={count_iteration}>
-            <div className="animate" style={{ opacity: 1 }}>
-                <h1 className='glimpses_h1 glitch' data-text="Glimpses">Glimpses</h1>
-                <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
-                    {/* <div className="animate" style={{ opacity: 1, marginBottom: "2vh" }}>
+  return (
+    <div style={{ width: "100%" }} onMouseEnter={count_iteration}>
+      <div className="animate" style={{ opacity: 1 }}>
+        <h1 className="glimpses_h1 glitch" data-text="Glimpses">
+          Glimpses
+        </h1>
+        <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
+          {/* <div className="animate" style={{ opacity: 1, marginBottom: "2vh" }}>
                         <svg
                             height={100}
                             stroke="green"
@@ -66,7 +65,7 @@ const Glimpses = () => {
                             </text>
                         </svg>
                     </div> */}
-                    {/* <div className="caroousell">
+          {/* <div className="caroousell">
                         <ul className="carousel__list">
                             <li className="carousel__item" data-pos={-2}>
                                 left 2
@@ -89,36 +88,44 @@ const Glimpses = () => {
                         </ul>
                     </div> */}
 
-                    {/* <div className="carousel"> */}
-                    <div className="wrapper">
-                        <div className="container">
-                        <span className="glimpses_text">With A Foot fall of </span>
-                            <span className="num" data-val="6000">000+</span>
-                            <span className='glimpses_text'>Our last Year's Event Was A Huge Success</span>
-                        </div>
-                    </div>
-                    <div className="wrapper">
-                        <div className="container">
-                            <span className="num" data-val="600">000+</span>
-                            <span className="text">Memories</span>
-                        </div>
-                    </div>
-                    <div className="wrapper">
-                        <div className="container">
-                            <span className="num" data-val="1500">000+</span>
-                            <span className="text">Memories</span>
-                        </div>
-                    </div>
-                    {/* </div> */}
-                    {/* <div className="glimpses-content">
+          {/* <div className="carousel"> */}
+          <div className="wrapper">
+            <div className="container1">
+              <span className="glimpses_text">With A Foot fall of </span>
+              <span className="num" data-val="6000">
+                000+
+              </span>
+              <span className="glimpses_text">
+                Our last Year's Event Was A Success
+              </span>
+            </div>
+          </div>
+          <div className="wrapper">
+            <div className="container1">
+              <span className="num" data-val="600">
+                000+
+              </span>
+              <span className="text">Memories</span>
+            </div>
+          </div>
+          <div className="wrapper">
+            <div className="container1">
+              <span className="num" data-val="1500">
+                000+
+              </span>
+              <span className="text">Memories</span>
+            </div>
+          </div>
+          {/* </div> */}
+          {/* <div className="glimpses-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora quas, facere voluptate labore, rem molestias commodi obcaecati eveniet deleniti qui dolorem, veniam dolor nisi? Velit quidem iure delectus esse!</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora quas, facere voluptate labore, rem molestias commodi obcaecati eveniet deleniti qui dolorem, veniam dolor nisi? Velit quidem iure delectus esse!</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tempora quas, facere voluptate labore, rem molestias commodi obcaecati eveniet deleniti qui dolorem, veniam dolor nisi? Velit quidem iure delectus esse!</p>
                     </div> */}
-                </div>
-            </div>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Glimpses
+export default Glimpses;

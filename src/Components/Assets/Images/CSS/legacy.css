@@ -12,7 +12,7 @@
 }
 .legacy {
   color: white;
-  background-color: #000;
+  /* background-color: #000; */
   /* margin-top: 10vh; */
 }
 .legacy__hero {

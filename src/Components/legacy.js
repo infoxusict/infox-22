@@ -3,6 +3,7 @@ import Slider from "./Carousel";
 import About from "./aboutus";
 import "./Assets/Images/CSS/legacy.css";
 import "./Assets/Images/CSS/glitch.css";
+import MatrixRain from "./MatrixRain";
 
 const sliderData1 = [
   "./Assets/Images/legacy/S1-01.JPG",
@@ -97,7 +98,7 @@ export default function Legacy() {
           </div>
           <div className="hero__left-head">
             <span className="glitch" data-text="LEGACY">
-              LEGACY
+              Legacy
             </span>
           </div>
           <div className="hero__left-desc">
@@ -195,6 +196,7 @@ export default function Legacy() {
   };
   return (
     <>
+    <MatrixRain/>
       <div className="legacy">
         <div className="navbar1"></div>
         <MyComponent />

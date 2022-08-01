@@ -265,9 +265,12 @@ body::-webkit-scrollbar {
  **************************************************/
 
 svg .svg-elem-1 {
+  fill: #02b002;
+  stroke: white;
+  stroke-width: 2px;
+  filter: drop-shadow(0px 0px 5px white);
   stroke-dashoffset: 457.9493408203125px;
   stroke-dasharray: 457.9493408203125px;
-  fill: lime;
   animation: stroking 3s ease-in infinite both;
   -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
                         fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
@@ -281,9 +284,12 @@ svg.active .svg-elem-1 {
 }
 
 svg .svg-elem-2 {
+  fill: #02b002;
+  stroke: white;
+  stroke-width: 2px;
+  filter: drop-shadow(0px 0px 5px white);
   stroke-dashoffset: 347.9952392578125px;
   stroke-dasharray: 347.9952392578125px;
-  fill: lime;
   animation: stroking 3s ease-in infinite both;
   -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s,
                         fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
@@ -297,9 +303,12 @@ svg.active .svg-elem-2 {
 }
 
 svg .svg-elem-3 {
+  fill: #02b002;
+  stroke: white;
+  stroke-width: 2px;
+  filter: drop-shadow(0px 0px 5px white);
   stroke-dashoffset: 288.9481506347656px;
   stroke-dasharray: 288.9481506347656px;
-  fill: lime;
   animation: stroking 3s ease-in infinite both;
   -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s,
                         fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
@@ -315,7 +324,10 @@ svg.active .svg-elem-3 {
 svg .svg-elem-4 {
   stroke-dashoffset: 456.7433776855469px;
   stroke-dasharray: 456.7433776855469px;
-  fill: lime;
+  fill: #02b002;
+  stroke: white;
+  stroke-width: 2px;
+  filter: drop-shadow(0px 0px 5px white);
   animation: stroking 3s ease-in infinite both;
   -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s,
                         fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s;
@@ -331,7 +343,10 @@ svg.active .svg-elem-4 {
 svg .svg-elem-5 {
   stroke-dashoffset: 349.967529296875px;
   stroke-dasharray: 349.967529296875px;
-  fill: lime;
+  fill: #02b002;
+  stroke: white;
+  stroke-width: 2px;
+  filter: drop-shadow(0px 0px 5px white);
   animation: stroking 3s ease-in infinite both;
   -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s,
                         fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2000000000000002s;
@@ -436,7 +451,7 @@ svg .svg-elem-10 {
 
 svg.active .svg-elem-10 {
   stroke-dashoffset: 0;
-  fill: #78f701;
+  fill: green;
 }
 
 @keyframes come-in {

@@ -8,7 +8,7 @@
   font-family: Atmospheric;
   font-weight: 600 ;
   text-align: center;
-  color: green;
+  color: #02b002;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   transform: scale3d(1, 1, 1);
@@ -24,7 +24,7 @@
   background: transparent;
   /* color: #fff; */
   /* color: limegreen; */
-  color: lime;
+  color: #02b002;
   /* color: green; */
   /* color: whitesmoke; */
   clip: rect(0, 900px, 0, 0);

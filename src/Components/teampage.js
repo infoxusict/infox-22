@@ -124,11 +124,37 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/Divyansh.jpg"
         />
         <Team ringColor="#fff" circleColor="#000" name="Toyeesh Sinha" />
-        <Team ringColor="#fff" circleColor="#000" name="Dhruv Aeron" />
-        <Team ringColor="#fff" circleColor="#000" name="Shivesh Nandan" />
-        <Team ringColor="#fff" circleColor="#000" name="Kartik" />
+        <Team
+          ringColor="#fff"
+          circleColor="#000"
+          name="Dhruv Aeron"
+          team="Web Lead"
+        />
+        <Team
+          ringColor="#fff"
+          circleColor="#000"
+          name="Shivesh Nandan"
+          team="Web Lead"
+        />
+        <Team
+          ringColor="#fff"
+          circleColor="#000"
+          name="Kartik"
+          team="Web Lead"
+        />
         {/* <Team ringColor="#fff" circleColor="#000" name="Nishant" /> */}
-        <Team ringColor="#fff" circleColor="#000" name="Dhruv Gupta" />
+        <Team
+          ringColor="#fff"
+          circleColor="#000"
+          name="Dhruv Gupta"
+          team="Web Lead"
+        />
+        <Team
+          ringColor="#fff"
+          circleColor="#000"
+          name="Nishant"
+          team="Web Lead"
+        />
       </div>
     </div>
   );

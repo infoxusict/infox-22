@@ -1,12 +1,32 @@
-#keanu {
-  position: fixed;
-  bottom: 10px;
+#keanu{
   height: 100px;
-  width: 100px;
-  background: greenyellow;
+  width:100px;
+  /* background: greenyellow; */
 }
 
-#myBar {
+#keanu img{
+  height: 100%;
+  width: 100%;
+}
+
+#myBar
+{
+  position: fixed;
+  bottom:30px;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.booth{
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  bottom: 30px;
+  right: 10px;
+}
+
+.keanu-h1{
+  position: fixed;
+  color: aqua;
 }

@@ -5,8 +5,8 @@
 .legacy__about {
   height: 100vh;
   width: 100vw;
-  background-color: #000;
-  color: aliceblue;
+  /* background-color: #000; */
+  color: whitesmoke !important;
   display: flex;
 }
 .about__left {
@@ -228,18 +228,19 @@
 }
 #about-content {
   /* position: absolute; */
-  right: 10vw;
-  top: 45%;
+  /* right: 10vw; */
+  /* top: 45%; */
   /* transform: translateY(-50%); */
 }
 #about-content h1 {
   font-family: Teko-Light;
   font-size: 10vw;
   line-height: 1;
+  color: whitesmoke;
   font-weight: lighter;
-  letter-spacing: 20px;
+  /* letter-spacing: 20px; */
   padding-bottom: 0vh;
-  padding-top: 5vh;
+  /* padding-top: 5vh; */
 }
 .content-wrap {
   display: flex;

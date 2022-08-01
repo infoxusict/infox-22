@@ -39,7 +39,7 @@ export default function About() {
         </div>
         <div className="about__right">
           <div id="about-content">
-            <h1>ABOUT</h1>
+            <h1 className="glitch" data-text="ABOUT">ABOUT</h1>
             <div class="content-wrap">
               <div class="content-line-wrap">
                 <div class="before-content-line"></div>

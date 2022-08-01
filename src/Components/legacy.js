@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "./Carousel";
 import About from "./aboutus";
 import "./Assets/Images/CSS/legacy.css";
+import "./Assets/Images/CSS/glitch.css";
+import MatrixRain from "./MatrixRain";
 
 const sliderData1 = [
   "./Assets/Images/legacy/S1-01.JPG",
@@ -94,8 +96,8 @@ export default function Legacy() {
           <div className="hero__left-name">
             <span>InfoXpression</span>
           </div>
-          <div className="hero__left-head  glitch">
-            <span className="" data-text="LEGACY">
+          <div className="hero__left-head">
+            <span >
               LEGACY
             </span>
           </div>
@@ -109,10 +111,11 @@ export default function Legacy() {
         </div>
         <div className="legacy__hero-right">
           <div className="legacy__hero-sliders">
-            <div className="slider-4" onMouseEnter={count_iteration}>
-              <span className="num" data-val="16">
+            <div className="slider-4">
+              {/* <span className="num" data-val="16">
                 16
-              </span>
+              </span> */}
+              <img src={require("./Assets/Images/legacy/hash.png")} alt="" />
             </div>
             <Slider
               sliderData={sliderData1}
@@ -147,8 +150,8 @@ export default function Legacy() {
           <div className="hero__left-name">
             <span>InfoXpression</span>
           </div>
-          <div className="hero__left-head glitch">
-            <span className="" data-text="LEGACY">
+          <div className="hero__left-head">
+            <span>
               LEGACY
             </span>
           </div>
@@ -162,10 +165,11 @@ export default function Legacy() {
         </div>
         <div className="legacy__hero-right">
           <div className="legacy__hero-sliders">
-            <div className="slider-4" onMouseEnter={count_iteration}>
-              <span className="num" data-val="16">
+            <div className="slider-4" >
+              {/* <span className="num" data-val="16">
                 16
-              </span>
+              </span> */}
+              <img src={require("./Assets/Images/legacy/hash.png")} alt="" />
             </div>
             <Slider
               sliderData={sliderData1}
@@ -194,6 +198,7 @@ export default function Legacy() {
   };
   return (
     <>
+    <MatrixRain/>
       <div className="legacy">
         <div className="navbar1"></div>
         <MyComponent />

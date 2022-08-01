@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "./Carousel";
 import About from "./aboutus";
 import "./Assets/Images/CSS/legacy.css";
+import "./Assets/Images/CSS/glitch.css";
 
 const sliderData1 = [
   "./Assets/Images/legacy/S1-01.JPG",
@@ -94,8 +95,8 @@ export default function Legacy() {
           <div className="hero__left-name">
             <span>InfoXpression</span>
           </div>
-          <div className="hero__left-head glitch">
-            <span className="" data-text="LEGACY">
+          <div className="hero__left-head">
+            <span className="glitch" data-text="LEGACY">
               LEGACY
             </span>
           </div>
@@ -148,7 +149,7 @@ export default function Legacy() {
             <span>InfoXpression</span>
           </div>
           <div className="hero__left-head glitch">
-            <span className="" data-text="LEGACY">
+            <span className="glitch" data-text="LEGACY">
               LEGACY
             </span>
           </div>

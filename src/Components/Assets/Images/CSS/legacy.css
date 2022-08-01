@@ -7,9 +7,13 @@
   font-family: "toko-light";
   src: url(./../fonts/Teko-Light.ttf);
 }
+.navbar1 {
+  height: 10vh;
+}
 .legacy {
   color: white;
   background-color: #000;
+  /* margin-top: 10vh; */
 }
 .legacy__hero {
   display: flex;
@@ -17,7 +21,6 @@
   width: 100vw;
 }
 .legacy__hero-left {
-  /* background-color: azure; */
   height: inherit;
   width: 50vw;
   display: flex;
@@ -26,15 +29,25 @@
   justify-content: center;
 }
 .legacy__hero-left div {
-  padding-left: 5vh;
+  padding-left: 3vw;
 }
 .hero__left-name {
+  font-size: 2vw;
+
+  /* font-weight: 100; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .hero__left-head {
+  font-size: 8vw;
 }
 .hero__heading-svg {
 }
 .hero__left-desc {
+  font-size: 1.3vw;
+  padding-top: 3vw;
+  /* padding-left: 2rem; */
+  /* font-family: "toko-light"; */
+  /* font-weight: 100; */
 }
 .legacy__hero-right {
   height: inherit;
@@ -80,9 +93,25 @@
   /* animation-delay: 9s; */
 }
 
-.ball {
-  position: absolute !important;
-  border-radius: 100% !important;
-  opacity: 0.7 !important;
-  z-index: -1 !important;
+@media only screen and (max-width: 650px) {
+  .legacy__hero {
+    flex-direction: column;
+  }
+  .legacy__hero-left {
+    height: 50vh;
+    width: 100vw;
+  }
+  .legacy__hero-right {
+    width: 100vw;
+  }
+  .hero__left-name {
+    font-size: 2.5vw;
+  }
+  .hero__left-head {
+    font-size: 12vw;
+  }
+  .hero__left-desc {
+    font-size: 1.5vw;
+    padding-bottom: 5vw;
+  }
 }

@@ -26,3 +26,15 @@
 .active {
   opacity: 1;
 }
+
+/* @media only screen and (max-width: 768px) {
+  .carousel-item img {
+    height: 200%;
+    width: 200%;
+  }
+  .carousel-item {
+    height: 200%;
+    width: 200%;
+  }
+
+} */

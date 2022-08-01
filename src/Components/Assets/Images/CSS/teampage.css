@@ -6,9 +6,13 @@
   font-family: Teko-medium;
   src: url(../fonts/Teko-Light.ttf);
 }
+.teampage {
+  background-color: black;
+  padding-top: 10vh;
+}
 
 .teampage__heading {
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
   color: rgb(0, 255, 60);
   /* font-family: Teko-medium; */
   font-size: 15vh !important;
@@ -60,7 +64,7 @@
   position: absolute;
   border-radius: 100%;
   opacity: 0.7;
-  z-index: 999;
+  z-index: -999;
 }
 /* @media only screen and (max-width: 680px) {
   .teampage__container {
@@ -83,6 +87,9 @@
   .teampage__container {
     grid-template-columns: auto auto;
     margin: 0;
+  }
+  .teampage__heading {
+    font-size: 10vh !important;
   }
 }
 @media only screen and (min-width: 900px) and (max-width: 1200px) {

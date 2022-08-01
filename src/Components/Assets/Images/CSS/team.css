@@ -37,26 +37,36 @@
 }
 
 .team__photo {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 1),
     rgba(0, 0, 0, 0.1)
-  );
+  ); */
   margin: auto;
   margin-top: 5vh;
   height: 16vh;
   width: 16vh;
+  position: relative;
   /* border: 0.1px lightgreen solid; */
 
   border-radius: 50%;
 }
+.team__photo img {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  height: 99%;
+  width: 99%;
+  object-fit: cover;
+}
 .team__photo svg {
   height: inherit;
   width: inherit;
-}
-.team__photo-1 {
   transition: all 0.4s ease;
 }
+
 .team__name {
   display: flex;
   flex-direction: column;
@@ -117,9 +127,16 @@
 .team__back-photo {
   height: 48px;
   width: 48px;
-  background-image: linear-gradient(to right bottom, #ff0000, rgb(0, 255, 60));
+  /* background-image: linear-gradient(to right bottom, #ff0000, rgb(0, 255, 60)); */
   border: 1px rgb(0, 255, 60) solid;
   border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.team__back-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .team__back-work {

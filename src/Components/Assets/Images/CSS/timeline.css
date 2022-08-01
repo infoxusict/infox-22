@@ -15,7 +15,9 @@ body {
   padding-bottom: 50px;
 }
 
-.timeline{margin-top: 8vh;}
+.timeline {
+  margin-top: 8vh;
+}
 
 .timeline ul li {
   list-style-type: none;
@@ -62,7 +64,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: whitesmoke ;
+  color: whitesmoke;
   letter-spacing: 2px;
 }
 .timeline ul li div div {
@@ -116,9 +118,6 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  body {
-    background: #8bfff4;
-  }
   .timeline ul li {
     margin-left: 20px;
   }
@@ -128,4 +127,4 @@ body {
   .timeline ul li:nth-of-type(even) > div {
     left: 45px;
   }
-}/*# sourceMappingURL=timeline.css.map */
+} /*# sourceMappingURL=timeline.css.map */

@@ -1,5 +1,8 @@
 import './Assets/Images/CSS/glimpses.css'
 import "./Assets/Images/CSS/glitch.css"
+import Aos from 'aos'
+import { useEffect } from 'react'
+import "aos/dist/aos.css"
 const Glimpses = () => {
 
     const count_iteration = () => {
@@ -39,10 +42,13 @@ const Glimpses = () => {
     //     document.getElementById(e.target.id).style.webkitBackdropFilter = "blur(7px)";
     // }
 
+    useEffect(()=>{
+        Aos.init({duration:2000})
+      })
 
 
     return (
-        <div style={{ width: "100%" }} onMouseEnter={count_iteration}>
+        <div style={{ width: "100%" }} onMouseEnter={count_iteration} data-aos="fade-up">
             <div className="animate" style={{ opacity: 1 }}>
                 <h1 className='glimpses_h1 glitch' data-text="Glimpses">Glimpses</h1>
                 <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">

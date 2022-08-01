@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useState, useEffect } from "react";
 // import Video from './Assets/Videos/startv.mp4'
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
@@ -6,13 +6,14 @@ import Sponser from "./Sponser";
 import Glimpses from "./Glimpses";
 import Svgg from "./Svgg.js"
 import "aos/dist/aos.css";
+import Aos from "aos";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax"
+import Keeanu from "./Keeanu";
 // import Footer from "./Footer";
 
 const Home = (props) => {
   // eslint-disable-next-line
 
-  
   const glimpsee = () => {
     const carouselList = document.querySelector(".carousel__list");
     const carouselItems = document.querySelectorAll(".carousel__item");
@@ -72,6 +73,7 @@ const Home = (props) => {
     if (props.page === "home"){
       document.getElementById("navbar").classList.add("inn")
     }
+      // return window.removeEventListener("scroll",setH(window.scrollY))
     // Aos.init({ duration: 2000 });
     // glimpsee();
     // count_iteration();
@@ -101,13 +103,15 @@ const Home = (props) => {
   // }
 
   return (
+    // <div id="overlay" style={{zIndex: "10", backgroundColor: "aqua", position: "absolute", height: "100vh", width: "100vw"}}>
     <section id="Home">
       {/* <button onClick={loader} className='btn bg-white'>play</button> */}
       <MatrixRain />
-      <Parallax pages={3}>
+
+      {/* <Parallax pages={3} id="parallax"> */}
         <div className="animationFrame" id="svgggg">
           <div className="whole-hero">
-            <ParallaxLayer speed={0.25}>
+            {/* <ParallaxLayer speed={0.25}> */}
               <div className="svggg" >
               <div className="homeLogo">
 
@@ -168,16 +172,18 @@ const Home = (props) => {
                   </p>
                 </div>
               </div>
-            </ParallaxLayer>
-            <ParallaxLayer offset={1.01} speed={0.9} >
+       
+            {/* </ParallaxLayer> */}
+            {/* <ParallaxLayer offset={1.01} speed={0.9} > */}
               <Sponser />
-            </ParallaxLayer>
-            <ParallaxLayer offset={2.02} speed={0.3}>
+            {/* </ParallaxLayer> */}
+            {/* <ParallaxLayer offset={2.02} speed={0.3}> */}
               <Glimpses />
-            </ParallaxLayer>
+              {/* <Keeanu /> */}
+            {/* </ParallaxLayer> */}
           </div>
         </div>
-      </Parallax>
+      {/* </Parallax> */}
       {/* {reveal &&
                 <div id="videoCont">
                     <video className='video' autoPlay='autoPlay' muted>
@@ -189,6 +195,7 @@ const Home = (props) => {
             } */}
       {/* <Sponser/> */}
     </section>
+    // </div>
   );
 };
 

@@ -94,7 +94,7 @@ export default function Legacy() {
           <div className="hero__left-name">
             <span>InfoXpression</span>
           </div>
-          <div className="hero__left-head  glitch">
+          <div className="hero__left-head glitch">
             <span className="" data-text="LEGACY">
               LEGACY
             </span>

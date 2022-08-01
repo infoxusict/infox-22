@@ -16,7 +16,6 @@ const App = () => {
     <>
     <Router>
       <Navbar />
-      {/* <Keeanu /> */}
       <Switch>
         <Route exact path="/">
           <div className="Home">
@@ -36,6 +35,7 @@ const App = () => {
           <Legacy />
         </Route>
       </Switch>
+      <Keeanu />
     </Router>
       {/* <Footer /> */}
       </>

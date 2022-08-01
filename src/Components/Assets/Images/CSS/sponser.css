@@ -60,7 +60,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .right::-webkit-scrollbar{

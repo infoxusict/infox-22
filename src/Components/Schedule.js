@@ -176,183 +176,158 @@ window.addEventListener("scroll", callbackFunc);
     <MatrixRain />
     <ul>
         <li className='in-view'>
-          <div>
+          <div className='boxx'>
             <time>1687</time>
             <div className="discovery">
-              <h1>Discovery</h1>
+              {/* <h1 className='heading-h1'>Discovery</h1>
               <p>
                 Laws of motion
-              </p>
+              </p> */}
+              <div>
+              <img className='poster' src={require("./Assets/Images/posters/uhack.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                {/* <div> */}
+                {/* <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1> */}
+                {/* </div> */}
             </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
+            {/* <div className="scientist">
+              <h1 className='heading-h1'>Scientist</h1>
               <span>Newton</span>
-            </div>
+            </div> */}
           </div>
         </li>
         <li className='in-view'>
           <div>
             <time>1785</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Law of electrostatic attraction
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Coulomb</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/BUGDEBUG.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li className='in-view'>
           <div>
             <time>1827</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Law of Electric Resistance
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>G.S Ohm</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/CODESTER.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li className='in-view'>
           <div>
             <time>1831</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Electromagnetic Induction
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Michael Faraday</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/codexpress.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li>
           <div>
             <time>1867</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Dynamite
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Alfred Nobel</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/UCODE.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li>
           <div>
             <time>1895</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                X Rays
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Roentgen</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/uhack.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li>
           <div>
             <time>1897</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Electron
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>J.J.Thomson</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/uhack.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li>
           <div>
             <time>1898</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Radium
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Madam Curie</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/BUGDEBUG.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li>
           <div>
             <time>1900</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Quantum Theory
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Max Plank</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/Code-venture.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li>
           <div>
             <time>1905</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Principle of Relativity
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Albert Einstein</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/CODESTER.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li>
           <div>
             <time>1905</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Photo electric effect
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Albert Einstein</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/codexpress.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
         <li>
           <div>
             <time>1942</time>
             <div className="discovery">
-              <h1>Discovery</h1>
-              <p>
-                Nuclear Reactor
-              </p>
-            </div>
-            <div className="scientist">
-              <h1>Scientist</h1>
-              <span>Anrico Fermi</span>
-            </div>
+            <div>
+              <img className='poster' src={require("./Assets/Images/posters/BUGDEBUG.webp")} alt="" />
+                <h1 className='heading-h1'>Uhack</h1>
+                <h1 className='heading-h1'>Time: 9:00 - 11:00 AM</h1>
+                </div>
+                </div>
           </div>
         </li>
       </ul>

@@ -97,8 +97,8 @@ export default function Legacy() {
             <span>InfoXpression</span>
           </div>
           <div className="hero__left-head">
-            <span className="glitch" data-text="LEGACY">
-              Legacy
+            <span >
+              LEGACY
             </span>
           </div>
           <div className="hero__left-desc">
@@ -111,10 +111,11 @@ export default function Legacy() {
         </div>
         <div className="legacy__hero-right">
           <div className="legacy__hero-sliders">
-            <div className="slider-4" onMouseEnter={count_iteration}>
-              <span className="num" data-val="16">
+            <div className="slider-4">
+              {/* <span className="num" data-val="16">
                 16
-              </span>
+              </span> */}
+              <img src={require("./Assets/Images/legacy/hash.png")} alt="" />
             </div>
             <Slider
               sliderData={sliderData1}
@@ -149,8 +150,8 @@ export default function Legacy() {
           <div className="hero__left-name">
             <span>InfoXpression</span>
           </div>
-          <div className="hero__left-head glitch">
-            <span className="glitch" data-text="LEGACY">
+          <div className="hero__left-head">
+            <span>
               LEGACY
             </span>
           </div>
@@ -164,10 +165,11 @@ export default function Legacy() {
         </div>
         <div className="legacy__hero-right">
           <div className="legacy__hero-sliders">
-            <div className="slider-4" onMouseEnter={count_iteration}>
-              <span className="num" data-val="16">
+            <div className="slider-4" >
+              {/* <span className="num" data-val="16">
                 16
-              </span>
+              </span> */}
+              <img src={require("./Assets/Images/legacy/hash.png")} alt="" />
             </div>
             <Slider
               sliderData={sliderData1}

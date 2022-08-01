@@ -1,9 +1,9 @@
 import React from "react";
-// import Footer from "./Components/Footer";
+import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import TeamPage from "./Components/teampage";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Keeanu from './Components/Keeanu'
 // import EventCard from "./Components/EventCard";
 import EventTemplate from "./Components/EventTemplate";
@@ -36,8 +36,8 @@ const App = () => {
         </Route>
       </Switch>
       <Keeanu />
-    </Router>
       {/* <Footer /> */}
+    </Router>
       </>
   );
 };

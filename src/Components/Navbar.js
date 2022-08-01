@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Assets/Images/CSS/Navbar.css'
 const Navbar = () => {
   return (
@@ -12,11 +13,11 @@ const Navbar = () => {
       </svg>
       </div>
       <div className="mainNav">
-        <div className="nav-con"><h4>About</h4></div>
-        <div className="nav-con"><h4>Event</h4></div>
-        <div className="nav-con" style={{display: "flex", justifyContent: "center"}}><img src={require('./Assets/Images/aswd.png')} alt=""  style={{width:"100%"}} /></div>
-        <div className="nav-con"><h4>Schedule</h4></div>
-        <div className="nav-con"><h4>Contact</h4></div>
+        <Link to="/legacy"><div className="nav-con"><h4>Legacy</h4></div></Link>
+        <Link to="/event"><div className="nav-con"><h4>Schedule</h4></div></Link>
+        <Link to="/"><div className="nav-con" style={{display: "flex", justifyContent: "center"}}><img src={require('./Assets/Images/aswd.png')} alt=""  style={{width:"100%"}} /></div></Link>
+        <Link to="/team"><div className="nav-con"><h4>Team</h4></div></Link>
+        <Link to="/event/name"><div className="nav-con"><h4>Event</h4></div></Link>
       </div>
     </div>
   )

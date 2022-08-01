@@ -3,6 +3,7 @@ import "./Assets/Images/CSS/teampage.css";
 import "./Assets/Images/CSS/glitch.css";
 // import Heading from "../heading svg/heading";
 import Team from "./team";
+import MatrixRain from "./MatrixRain";
 export default function TeamPage() {
   // const numBalls = 50;
   // const balls = [];
@@ -50,6 +51,7 @@ export default function TeamPage() {
 
   return (
     <div className="teampage">
+      <MatrixRain/>
       <div className=""></div>
       <div className="teampage__heading glitch" data-text="OUR TEAM">
         <h1>OUR TEAM</h1>

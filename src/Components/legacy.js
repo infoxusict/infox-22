@@ -4,6 +4,7 @@ import About from "./aboutus";
 import "./Assets/Images/CSS/legacy.css";
 import "./Assets/Images/CSS/glitch.css";
 import MatrixRain from "./MatrixRain";
+import Sponser from "./Sponser";
 
 const sliderData1 = [
   "./Assets/Images/legacy/S1-01.JPG",
@@ -202,6 +203,7 @@ export default function Legacy() {
       <div className="legacy">
         <div className="navbar1"></div>
         <MyComponent />
+        <Sponser/>
         <About />
       </div>
     </>

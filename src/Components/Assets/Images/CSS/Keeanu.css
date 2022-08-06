@@ -7,6 +7,17 @@
 #keanu img{
   height: 100%;
   width: 100%;
+  opacity: 0%;
+  /* animation: keanumation 4s forwards; */
+}
+
+@keyframes keanumation {
+  from{
+    opacity: 0%;
+  }
+  to{
+    opacity: 100%;
+  }
 }
 
 #myBar

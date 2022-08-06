@@ -27,12 +27,12 @@ g{
 
 #Home{
     /* background-color: black !important; */
-    height: 100vh !important;
+    height: max-content;
     width: 100vw !important;
 }
 .Home{
     /* background-color: black !important; */
-    height: 100vh !important;
+    height: max-content;
     width: 100vw !important;
 }
 .video{

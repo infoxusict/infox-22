@@ -47,7 +47,7 @@ const MatrixRain = () => {
             constructor(canvasWidth, canvasHeight) {
                 this.canvasWidth = canvasWidth;
                 this.canvasHeight = canvasHeight;
-                this.fontSize = 25;
+                this.fontSize = 20;
                 this.columns = this.canvasWidth / this.fontSize;
                 this.symbols = [];
                 this.#initialize();

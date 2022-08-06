@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-20192">
         {/* <div className="site-section"> */}
         <div className="container">
-          <div className="grid md:grid-cols-5">
+          <div className="grid md:grid-cols-5 footer-grid">
             <div className=" logo da-color-green">
               <a href="#" className="footer-logo theme text-xl atmosphere ">
                 Info

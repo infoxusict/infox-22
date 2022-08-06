@@ -36,7 +36,7 @@ const App = () => {
         </Route>
       </Switch>
       <Keeanu />
-      {/* <Footer /> */}
+      <Footer />
     </Router>
       </>
   );

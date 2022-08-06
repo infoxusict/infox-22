@@ -15,8 +15,8 @@
   position: relative;
   bottom: 0;
   color: #fff;
-  padding: 5rem 0;
-  background-color: #111;
+  /* padding: 5rem 0; */
+  /* background-color: #111; */
   justify-content: center;
   display: flex;
   align-items: center;
@@ -191,4 +191,8 @@
 .da-social-icons {
   font-size: 40px;
   color: white;
+}
+
+.footer-grid{
+  align-items: center;
 }

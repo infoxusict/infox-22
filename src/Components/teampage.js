@@ -1,9 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./Assets/Images/CSS/teampage.css";
-import "./Assets/Images/CSS/glitch.css";
 // import Heading from "../heading svg/heading";
+import "./Assets/Images/CSS/glitch.css";
+import "./Assets/Images/CSS/Contact.css";
 import Team from "./team";
 import MatrixRain from "./MatrixRain";
+import Contact from "./Contact";
 export default function TeamPage() {
   // const numBalls = 50;
   // const balls = [];
@@ -162,6 +164,7 @@ export default function TeamPage() {
           team="Web Lead"
         />
       </div>
+      <Contact />
     </div>
   );
 }

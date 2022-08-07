@@ -58,13 +58,13 @@ const MatrixRain = () => {
                     this.symbols[i] = new Symbol(i, 0, this.fontSize, this.canvasHeight);
                 }
             }
-            resize(width, height) {
-                this.canvasWidth = width;
-                this.canvasHeight = height
-                this.columns = this.canvasWidth / this.fontSize;
-                this.symbols = [];
-                this.#initialize();
-            }
+            // resize(width, height) {
+            //     this.canvasWidth = width;
+            //     this.canvasHeight = height
+            //     this.columns = this.canvasWidth / this.fontSize;
+            //     this.symbols = [];
+            //     // this.#initialize();
+            // }
         }
 
         const effect = new Effect(canvas.width, canvas.height);
@@ -92,11 +92,12 @@ const MatrixRain = () => {
         }
         animate(0);
 
-        window.addEventListener('resize', function () {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            effect.resize(canvas.width, canvas.height);
-        })
+        // window.addEventListener('resize', function () {
+        //     canvas.width = window.innerWidth;
+        //     canvas.height = Math.max(body.scrollHeight, body.offsetHeight,
+        //         html.clientHeight, html.scrollHeight, html.offsetHeight);
+        //     effect.resize(canvas.width, canvas.height);
+        // })
     }
 
     useEffect(() => {

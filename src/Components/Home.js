@@ -161,7 +161,7 @@ const Home = (props) => {
   </g>
 </svg> */}
 
-              <video className="video" autoPlay="autoPlay" muted loop>
+              <video className="video" autoPlay="autoPlay" muted loop style={{position:"relative",zIndex:"-1"}}>
                 <source
                   src={require("./Assets/Videos/Produce.mp4")}
                   type="video/mp4"

@@ -229,7 +229,7 @@ input{
     border-bottom-color: #aaa;
 }
 /* DUMP */
-.container {
+.neoh_fn_contact_page .container  {
     width: 60%;
     max-width: 1360px;
     padding: 0 80px;

@@ -136,7 +136,7 @@ export default function TeamPage() {
           ringColor="#aa0000"
           circleColor="#ff0000"
           name="Dhruv Aeron"
-          team="Web Lead"
+          team="Web Lead" 
         />
         <Team
           ringColor="#cc3300"

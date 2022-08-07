@@ -127,7 +127,7 @@ window.addEventListener("scroll", callbackFunc);
     // <section className='timeline'>
     // <div className="teampage_background"></div>
     <div className='main_con' id='main_con' style={{paddingTop: "6vh", overflowY: "hidden", color: "whitesmoke"}}>
-      <h1 >To be revealed...</h1>
+      <h1 className='schedule-h1' >To be revealed...</h1>
         {/* <div className="days">
             <button id='#b43232' className="day" onClick={handle_state} style={{boxShadow:'0px 5px 10px 0px #b43232'}}><img id='#b43232' src={require("./Assets/Images/red.png")} alt=""  className='rings' />
             <div className="info" id='#b43232'>

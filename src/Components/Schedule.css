@@ -258,8 +258,7 @@ h3{
     margin-top: 2vh;
   }
 }
-
-h1{
+.schedule-h1{
   /* font-size: xx-large; */
   font-size: 4vw;
   font-family: atmospheric;

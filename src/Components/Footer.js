@@ -13,11 +13,11 @@ const Footer = () => {
           <div className="grid md:grid-cols-5 footer-grid">
             <div className=" logo da-color-green">
               <a href="#" className="footer-logo theme text-xl atmosphere ">
-                Info
+                InfoXpression
               </a>
-              <a href="#" className="footer-logo theme text-xl atmosphere">
+              {/* <a href="#" className="footer-logo theme text-xl atmosphere">
                 Xpression
-              </a>
+              </a> */}
               <p className="copyright text-base">
                 <p>&copy; 2022</p>
               </p>

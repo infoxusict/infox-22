@@ -45,7 +45,7 @@ const Keeanu = () => {
         <div id="keanu"><img src={require("./Assets/Images/images/man_2_bg_r.png")} alt="" id="keanuimg"/></div>
       }
       </div>
-        <div className="booth"><img className='booth-img' src={require("./Assets/Images/images/booth.png")} alt="" /></div>
+        <div className="booth"><img className='booth-img' src={require("./Assets/Images/images/phonebooth.png")}  alt="" /></div>
         </div>
     )
 }

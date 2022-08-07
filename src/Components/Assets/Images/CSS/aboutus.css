@@ -35,6 +35,7 @@
   left: 100px;
   top: 0px;
   transform: scale(0.8);
+  /* overflow: hidden; */
 }
 .circle-ripple {
   display: flex;
@@ -233,13 +234,14 @@
   /* transform: translateY(-50%); */
 }
 #about-content h1 {
-  font-family: Teko-Light;
-  font-size: 10vw;
+  font-family: atmospheric;
+  font-size: 6vw;
   line-height: 1;
   color: whitesmoke;
   font-weight: lighter;
   /* letter-spacing: 20px; */
-  padding-bottom: 0vh;
+  padding-bottom: 2vh;
+  text-align: left !important;
   /* padding-top: 5vh; */
 }
 .content-wrap {
@@ -271,142 +273,81 @@
   }
 }
 
-@media all and (max-width: 1000px) {
-  .legacy__about {
-    flex-direction: column;
-    overflow-x: hidden;
-    padding-left: 5vw;
-  }
-  #about-stats {
-    transform: scale(1);
-    display: flex;
-    flex-direction: row;
-  }
-
-  #about {
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-  }
-  #about-stats {
-    display: block;
-    width: 290px;
-    position: static;
-    height: 500px;
-  }
-  #about-content {
-    position: static;
-    width: 90%;
-    transform: none;
-  }
-  #about-content h1 {
-    font-size: 15vw;
-    letter-spacing: 10px;
-  }
-  .circle-ripple {
-    width: 90px;
-    height: 90px;
-  }
-  .about-stat-num {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  .about-stat-title {
-    letter-spacing: 0px;
-    font-size: 12px;
-    word-break: break-all;
-    text-align: center;
-  }
-  #about-students,
-  #about-students-ripple-1,
-  #about-students-ripple-2,
-  #about-students-ripple-3,
-  #about-students-ripple-4 {
-    transform: scale(1);
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-  #about-students-ripple-4 {
-    display: none;
-  }
-  #about-students-ripple-1 {
-    animation: about-students-ripple 1.5s infinite;
-  }
-  #about-students-ripple-5 {
-    display: none;
-  }
-  #about-colleges,
-  #about-colleges-ripple-1,
-  #about-colleges-ripple-2,
-  #about-colleges-ripple-3,
-  #about-colleges-ripple-4 {
-    transform: scale(1);
-    position: absolute;
-    top: 0px;
-    left: 100px;
-  }
-  #about-colleges-ripple-4 {
-    display: none;
-  }
-  #about-colleges-ripple-1 {
-    animation: about-students-ripple 1.5s infinite;
-  }
-  #about-colleges-ripple-5 {
-    display: none;
-  }
-  #about-events,
-  #about-events-ripple-1,
-  #about-events-ripple-2,
-  #about-events-ripple-3,
-  #about-events-ripple-4 {
-    transform: scale(1);
-    position: absolute;
-    top: 0px;
-    left: 200px;
-  }
-  #about-events-ripple-4 {
-    display: none;
-  }
-  #about-events-ripple-5 {
-    display: none;
-  }
-  #about-events-ripple-1 {
-    animation: about-students-ripple 1.5s infinite;
-  }
-  #about-stats {
-    height: 120px;
-  }
-  @keyframes about-students-ripple {
-    0% {
-      transform: scale(1);
-      opacity: 0.3;
-    }
-    100% {
-      transform: scale(1.5);
-      opacity: 0;
-    }
-  }
+.aboutm {
+  height: fit-content;
+  width: 100vw;
+  background-color: transparent;
+  /* color: whitesmoke !important; */
+  /* display: flex; */
 }
-@media all and (max-width: 600px) and (orientation: portrait) {
-  .content-wrap {
-    width: 90vw;
-  }
-  .content-wrap .content-line-wrap {
-    height: 22px;
-  }
-  .content-wrap .content-text {
-    line-height: 22px;
-    font-size: 90%;
-  }
-
-  .before-content-line {
-    width: 50px;
-  }
+.aboutm-stats {
+  display: flex;
+  /* background-color: #00ff3c; */
+  width: 100vw;
+  /* height: 30vh; */
+  justify-content: space-around;
+  align-items: center;
+}
+.aboutm-stats div {
+  flex-shrink: 0;
+  height: 25vw;
+  width: 25vw;
+  /* background-color: aliceblue; */
+  border-radius: 50%;
+  border: 1px solid #00ff3c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media all and (max-width: 650px) {
-  .legacy__about {
-    transform: translateY(40vh);
-  }
+.aboutm-number {
+  font-size: 5vw;
+  /* font-weight: bold; */
+  color: #00ff3c;
+}
+.aboutm-number-head {
+  font-size: 3vw;
+}
+.aboutm-content {
+  margin-top: 5vh;
+  margin-left: 4vw;
+}
+
+.aboutm-content-head {
+  margin-bottom: 5vw;
+  /* text-align: center; */
+}
+.aboutm-content-head span {
+  font-family: atmospheric;
+  font-size: 10vw;
+  line-height: 1;
+  color: whitesmoke;
+  font-weight: lighter;
+  /* letter-spacing: 20px; */
+  padding-bottom: 2vh;
+  text-align: left !important;
+}
+
+.mcontent-wrap {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+}
+.mcontent-wrap .mcontent-line-wrap {
+  display: flex;
+  align-items: center;
+  height: 33px;
+  width: 5vw;
+}
+.mcontent-wrap .mcontent-text {
+  line-height: 33px;
+  width: 80vw;
+  font-size: 105%;
+}
+
+.mbefore-content-line {
+  background: #00ff3c;
+  width: 70px;
+  height: 2px;
 }

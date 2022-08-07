@@ -3,8 +3,9 @@ import Slider from "./Carousel";
 import About from "./aboutus";
 import "./Assets/Images/CSS/legacy.css";
 import "./Assets/Images/CSS/glitch.css";
-import MatrixRain from "./MatrixRain";
 import Sponser from "./Sponser";
+import MatrixRain from "./MatrixRain";
+// import Sponser from "./Sponser";
 
 const sliderData1 = [
   "./Assets/Images/legacy/S1-01.JPG",
@@ -98,7 +99,7 @@ export default function Legacy() {
             <span>InfoXpression</span>
           </div>
           <div className="hero__left-head">
-            <span >
+            <span className="glitch" data-text="LEGACY">
               LEGACY
             </span>
           </div>
@@ -152,7 +153,7 @@ export default function Legacy() {
             <span>InfoXpression</span>
           </div>
           <div className="hero__left-head">
-            <span>
+            <span className="glitch" data-text="LEGACY">
               LEGACY
             </span>
           </div>
@@ -166,7 +167,7 @@ export default function Legacy() {
         </div>
         <div className="legacy__hero-right">
           <div className="legacy__hero-sliders">
-            <div className="slider-4" >
+            <div className="slider-4">
               {/* <span className="num" data-val="16">
                 16
               </span> */}
@@ -199,12 +200,13 @@ export default function Legacy() {
   };
   return (
     <>
-    <MatrixRain/>
+      <MatrixRain />
       <div className="legacy">
         <div className="navbar1"></div>
         <MyComponent />
-        <Sponser/>
+        <div className="legacy__space"></div>
         <About />
+        <Sponser />
       </div>
     </>
   );

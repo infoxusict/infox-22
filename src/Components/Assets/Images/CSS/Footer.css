@@ -12,6 +12,7 @@
   color: #6cde01;
 }
 .footer-20192 {
+  background-color: #000000ec;
   position: relative;
   bottom: 0;
   color: #fff;
@@ -20,6 +21,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
+  padding-top: 2rem !important ;
   padding-bottom: 3rem !important;
   margin-top: 20vh;
   /* margin-bottom: -50px; */
@@ -165,6 +167,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding: 0;
+  margin-top: 3rem;
 }
 
 .footer-20192 .copyright {

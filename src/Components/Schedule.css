@@ -7,6 +7,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 50vh;
 }
 
 #main_con{
@@ -258,3 +259,9 @@ h3{
   }
 }
 
+h1{
+  /* font-size: xx-large; */
+  font-size: 4vw;
+  font-family: atmospheric;
+  text-shadow: 4px 4px 15px rgb(0, 213, 0) !important;
+}

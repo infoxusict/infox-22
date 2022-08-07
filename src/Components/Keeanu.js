@@ -39,10 +39,10 @@ const Keeanu = () => {
         {/* <h1 className='keanu-h1'>{h}</h1> */}
         <div id="myBar" style={{zIndex: "100"}}>
       {
-        Math.ceil(scrolled)%5===0 ? 
-        <div id="keanu"><img src={require("./Assets/Images/images/man.png")} alt="" id="keanuimg"/></div>
+        Math.ceil(scrolled)%2===0 ? 
+        <div id="keanu"><img src={require("./Assets/Images/images/man1_bg_r.png")} alt="" id="keanuimg"/></div>
         :
-        <div id="keanu"><img src={require("./Assets/Images/images/man2.png")} alt="" id="keanuimg"/></div>
+        <div id="keanu"><img src={require("./Assets/Images/images/man_2_bg_r.png")} alt="" id="keanuimg"/></div>
       }
       </div>
         <div className="booth"><img className='booth-img' src={require("./Assets/Images/images/booth.png")} alt="" /></div>

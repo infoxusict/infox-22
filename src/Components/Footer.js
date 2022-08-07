@@ -33,7 +33,7 @@ const Footer = () => {
                 Schedule
               </h3>
               <ul className="list-unstyled links ">
-                <li className="customerList mb-2 text-lg">
+                <li className="customerList text-lg">
                   <a className="customerListA" href="#">
                     Dates
                   </a>
@@ -50,13 +50,13 @@ const Footer = () => {
                 Teams
               </h3>
               <ul className="list-unstyled links text-lg">
-                <li className="companyFoot mb-2">
-                  <a className="footAcompany" href="#">
+                <li className="companyFoot text-lg">
+                  <a className="footAcomp any" href="#">
                     About us
                   </a>
                 </li>
                 {/* <li className = "companyFoot"><a className="footAcompany" href="#">Careers</a></li> */}
-                <li className="companyFoot mb-2">
+                <li className="companyFoot text-lg">
                   <a className="footAcompany" href="#">
                     Contact us
                   </a>

@@ -6,13 +6,6 @@ const Schedule_temp = () => {
     return(
         <>
         <MatrixRain />
-        <div className="Wrap-all">
-            <div className="heading-main">
-                <h1 className="see_ya_soon">To be Revealed</h1>
-                
-            </div>
-
-        </div>
         </>
     )
 }

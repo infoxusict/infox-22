@@ -1,0 +1,262 @@
+#bg_wali_image {
+    height: 200px;
+}
+
+.Mybg_overlay {
+    height: 200px;
+}
+
+.neoh_fn_pagetitle {
+    padding: 100px 100px 20px 50px;
+}
+
+.neoh_fn_contact_page {
+    padding: 50px;
+    /* display: flex;
+    align-items: center; */
+
+}
+
+input{
+    border: 2px solid;
+}
+#name:active {
+    border-color: #78f701;
+}
+
+#name:focus {
+    border-color: #78f701;
+}
+
+#name:focus-visible {
+    border: 1 px solid #78f701;
+}
+
+#email:active {
+    border-color: #78f701;
+}
+
+#email:focus {
+    border-color: #78f701;
+}
+
+#email:focus-visible {
+    border-color: #78f701;
+}
+
+#subject:active {
+    border-color: #78f701;
+}
+
+#subject:focus {
+    border-color: #78f701;
+}
+
+#subject:focus-visible {
+    border-color: #78f701;
+}
+
+#message:active {
+    border-color: #78f701;
+}
+
+#message:focus {
+    border-color: #78f701;
+}
+
+#message:focus-visible {
+    border-color: #78f701;
+}
+
+.pt_content {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.myNavIcons {
+    margin-top: -21px !important;
+}
+
+.myHeadSection {
+    margin-top: 15vh;
+    padding: 0px !important;
+}
+.neoh_fn_contact_page {
+   
+    padding: 70px 0 147px;
+}
+
+.contact_form {
+    margin-bottom: 45px;
+}
+
+.contact_form .input_list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.contact_form .input_list li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 26px;
+}
+
+.contact_form .input_list li:nth-last-child(2) {
+    margin-bottom: 30px;
+}
+
+.contact_form .input_list li:last-child {
+    margin-bottom: 0px;
+}
+
+.contact_form .input_list label {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color:white;
+    /* color: var(--heading-color); */
+    margin-bottom: 4px;
+}
+
+.contact_form .input_list textarea,
+.contact_form .input_list input {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    min-width: inherit;
+    height: 50px;
+    line-height: 46px;
+    /* border: 2px solid var(--extra-color); */
+    border-color: grey;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #ccc;
+    background-color: #181818;
+}
+
+.contact_form .input_list textarea:focus,
+.contact_form .input_list input:focus {
+    background-color: transparent;
+    border-color: #777;
+}
+
+.contact_form .input_list textarea {
+    height: 150px;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+#send_message {
+    width: 100%;
+}
+
+.empty_notice {
+    color: #F52225;
+    margin: 7px 0;
+    display: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.contact_error {
+    color: #F52225;
+    text-align: center;
+    font-weight: 500;
+}
+
+.returnmessage {
+    color: #3A00FF;
+    margin: 7px 0;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.neoh_fn_contact_page .desc_holder {
+    margin-bottom: 38px;
+}
+
+.neoh_fn_contact_page .desc_holder p {
+    margin-bottom: 27px;
+}
+
+.neoh_fn_contact_page .desc_holder p:last-child {
+    margin-bottom: 0;
+}
+
+.neoh_fn_contact_page .info_list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.neoh_fn_contact_page .info_list li {
+    margin-bottom: 37px;
+}
+
+.neoh_fn_contact_page .info_list li:last-child {
+    margin-bottom: 0px;
+}
+
+.neoh_fn_contact_page .info_list .label {
+    font-size: 14px;
+    font-family: var(--hff);
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.neoh_fn_contact_page .info_list .value {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+.neoh_fn_contact_page .info_list .email {
+    font-size: 18px;
+    text-decoration: none;
+    color: #aaa;
+    border-bottom: 1px solid #414141;
+    margin-top: 5px;
+}
+
+.neoh_fn_contact_page .info_list .email:hover {
+    color: #ccc;
+    border-bottom-color: #aaa;
+}
+/* DUMP */
+.container {
+    width: 60%;
+    max-width: 1360px;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+.HeadH3Res{
+    font-family: atmospheric !important;
+    text-align: center;
+    font-size: 3rem;
+    color:#78f701;
+}
+
+.register {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 3rem;
+    margin: 40px 0;
+    /* font-weight: 400; */
+    font-family: "aatomspheric";
+    color: #2f2;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    background-color: #050801;
+    border-radius: 5px;
+    text-align: center;
+}

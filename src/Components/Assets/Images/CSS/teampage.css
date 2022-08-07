@@ -83,13 +83,18 @@
     font-size: 10vh;
   }
 } */
+@media only screen and (max-width: 1050px) {
+  .teampage__heading {
+    font-size: 12vw !important;
+  }
+}
 @media only screen and (max-width: 900px) {
   .teampage__container {
     grid-template-columns: auto auto;
     margin: 0;
   }
   .teampage__heading {
-    font-size: 10vh !important;
+    font-size: 12vw !important;
   }
 }
 @media only screen and (min-width: 900px) and (max-width: 1200px) {

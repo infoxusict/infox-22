@@ -181,7 +181,7 @@
 @media only screen and (max-width: 768px) {
   .team__container {
     width: 50vw;
-    height: 40vh;
+    height: 35vh;
   }
   .team__photo {
     height: 12vh;

@@ -14,6 +14,7 @@
   color: white;
   /* background-color: #000; */
   /* margin-top: 10vh; */
+  
 }
 .legacy__hero {
   display: flex;
@@ -32,17 +33,18 @@
   padding-left: 3vw;
 }
 .hero__left-name {
-  font-size: 2vw;
+  font-size: 1.5vw;
 
   /* font-weight: 100; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: atmospheric;
 }
 .hero__left-head {
-  font-size: 8vw;
+  font-size: 12vw;
   font-family: toko-light;
   letter-spacing: 10px;
   font-size: 10vw;
   color: lime;
+  font-weight: 800;
 
 }
 .hero__heading-svg {
@@ -113,7 +115,7 @@
     font-size: 2.5vw;
   }
   .hero__left-head {
-    font-size: 12vw;
+    font-size: 24vw;
   }
   .hero__left-desc {
     font-size: 1.5vw;

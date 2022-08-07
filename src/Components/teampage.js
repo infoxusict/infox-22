@@ -57,7 +57,7 @@ export default function TeamPage() {
         <h1>OUR TEAM</h1>
       </div>
       <div className="teampage__headingdown"></div>
-      <div className="teampage__container">
+      <div className="teampage__container ">
         <Team
           ringColor="#95F7FF  "
           circleColor="#01C3FC "

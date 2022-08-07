@@ -3,7 +3,7 @@ import "./Assets/Images/CSS/aboutus.css";
 export default function About() {
   return (
     <div>
-      <div className="legacy__about">
+      <div className="legacy__about mt-10 md:mt-32">
         <div className="about__left">
           <div id="about-stats">
             <div id="about-students" class="circle-ripple">

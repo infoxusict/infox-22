@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "./Carousel";
 import About from "./aboutus";
+import Sponser from "./Sponser";
 import "./Assets/Images/CSS/legacy.css";
 import "./Assets/Images/CSS/glitch.css";
 import MatrixRain from "./MatrixRain";
@@ -145,7 +146,7 @@ export default function Legacy() {
 
   const MobileComponent = () => {
     return (
-      <div className="legacy__hero">
+      <div className="legacy__hero mb-15 md:mb-0">
         <div className="legacy__hero-left">
           <div className="hero__left-name">
             <span>InfoXpression</span>
@@ -202,6 +203,7 @@ export default function Legacy() {
       <div className="legacy">
         <div className="navbar1"></div>
         <MyComponent />
+        <Sponser/>
         <About />
       </div>
     </>

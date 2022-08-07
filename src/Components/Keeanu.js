@@ -35,7 +35,7 @@ const Keeanu = () => {
     },[])
 
     return (
-        <>
+        <div className="keanudiv">
         {/* <h1 className='keanu-h1'>{h}</h1> */}
         <div id="myBar" style={{zIndex: "100"}}>
       {
@@ -46,7 +46,7 @@ const Keeanu = () => {
       }
       </div>
         <div className="booth"><img className='booth-img' src={require("./Assets/Images/images/booth.png")} alt="" /></div>
-        </>
+        </div>
     )
 }
 

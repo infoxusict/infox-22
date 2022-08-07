@@ -41,3 +41,9 @@
   position: fixed;
   color: aqua;
 }
+
+@media (max-width:650px){
+  .keanudiv{
+    display: none;
+  }
+}

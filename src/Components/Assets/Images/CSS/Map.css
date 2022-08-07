@@ -1,0 +1,15 @@
+.Reach_us_title{
+    font-family: atmospheric !important;
+    text-align: center;
+    font-size: 3rem;
+    color:#78f701;
+    padding-bottom: 50px;
+}
+.Reach_us_card{
+    position: absolute;
+    height:100%;
+    width:30vw;
+    margin-left: 60vw;
+    background-color: white;
+    z-index: 99;
+}

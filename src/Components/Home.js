@@ -173,8 +173,19 @@ const Home = (props) => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <h1 className="Svg-text svgg">INFOXPRESSION</h1>
+              
+              <div class="sn_glitch atmosphere">
+  <div class="sn_line">INFOXPRESSION</div> 
+  <div class="sn_line">INFOXPRESSION</div> 
+  <div class="sn_line">INFOXPRESSION</div> 
+  <div class="sn_line">INFOXPRESSION</div> 
+  <div class="sn_line">INFOXPRESSION</div> 
+  <div class="sn_line">INFOXPRESSION</div> 
+  <div class="sn_line">INFOXPRESSION</div> 
+  <div class="sn_line">INFOXPRESSION</div> 
+  <div class="sn_line">INFOXPRESSION</div>  
             </div>
+</div>
             <div className="home-svg-con svgg">
               <h3
                 style={{

@@ -2,7 +2,7 @@
 // import Video from './Assets/Videos/startv.mp4'
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
-import Sponser from "./Sponser";
+import SponserNew from './SponsersNew'
 import Glimpses from "./Glimpses";
 // import Svgg from "./Svgg.js";
 import "aos/dist/aos.css";
@@ -230,7 +230,7 @@ const Home = (props) => {
 
           {/* </ParallaxLayer> */}
           {/* <ParallaxLayer offset={1.01} speed={0.9} > */}
-          <Sponser />
+          <SponserNew />
           {/* </ParallaxLayer> */}
           {/* <ParallaxLayer offset={2.02} speed={0.3}> */}
           <Glimpses />

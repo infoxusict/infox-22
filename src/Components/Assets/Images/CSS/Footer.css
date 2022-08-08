@@ -14,6 +14,7 @@
 .footer-20192 {
   background-color: #000000ec;
   position: relative;
+  min-height: 50vh;
   bottom: 0;
   color: #fff;
   /* padding: 5rem 0; */
@@ -27,11 +28,13 @@
   /* margin-bottom: -50px; */
   z-index: -1;
   width: 100vw !important;
+  background-color: black;
   /* left: 0; */
 }
 
 .footer-20192 .container {
   position: relative;
+  width: 80%;
 }
 
 .footer-20192 .customer {
@@ -198,4 +201,9 @@
 
 .footer-grid{
   align-items: center;
+}
+
+
+.div-text-lg{
+  margin-left: 1vw;
 }

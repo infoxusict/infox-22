@@ -186,6 +186,7 @@
 
 .wrapper {
   margin: 3vw;
+  margin-top: 5vh;
 }
 
 .container1 {
@@ -212,7 +213,7 @@ span.num {
   color: #ffffff;
   text-align: center;
   font-weight: 700;
-  font-size: 100%;
+  font-size: 3vw;
   font-family: Atmospheric;
 }
 
@@ -222,4 +223,24 @@ span.num {
   text-align: center;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
+}
+
+.text{
+  align-self: center;
+}
+
+@media screen and (max-width: 650px) {
+  .carousel{
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper{
+    width: 70%;
+  }
+  .container1{
+    width: 100%
+  }
+  span.num{
+    font-size: 7vw;
+  }
 }

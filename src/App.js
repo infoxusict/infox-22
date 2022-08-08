@@ -9,12 +9,14 @@ import Keeanu from './Components/Keeanu'
 import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
+import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
 const App = () => {
   return (
     <>
     <Router>
+      {/* <Navbar_3/> */}
       <Navbar />
       <Switch>
         <Route exact path="/">
@@ -35,7 +37,7 @@ const App = () => {
           <Legacy />
         </Route>
       </Switch>
-      <Keeanu />
+      {/* <Keeanu /> */}
       <Footer />
     </Router>
       </>

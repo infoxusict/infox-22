@@ -33,12 +33,12 @@ const Footer = () => {
                 Schedule
               </h3>
               <ul className="list-unstyled links ">
-                <li className="customerList mb-2 text-lg">
+                <li className="customerList text-lg div-text-lg">
                   <a className="customerListA" href="#">
                     Dates
                   </a>
                 </li>
-                <li className="customerList text-lg">
+                <li className="customerList text-lg div-text-lg">
                   <a className="customerListA" href="#">
                     Venue
                   </a>
@@ -49,14 +49,14 @@ const Footer = () => {
               <h3 className="company text-lg atmosphere da-color-green mb-5 mt-12 md:mt-0">
                 Teams
               </h3>
-              <ul className="list-unstyled links text-lg">
-                <li className="companyFoot mb-2">
-                  <a className="footAcompany" href="#">
+              <ul className="list-unstyled links text-lg div-text-lg">
+                <li className="companyFoot text-lg div-text-lg">
+                  <a className="footAcomp any" href="#">
                     About us
                   </a>
                 </li>
                 {/* <li className = "companyFoot"><a className="footAcompany" href="#">Careers</a></li> */}
-                <li className="companyFoot mb-2">
+                <li className="companyFoot text-lg div-text-lg">
                   <a className="footAcompany" href="#">
                     Contact us
                   </a>
@@ -68,7 +68,7 @@ const Footer = () => {
                 Further Information
               </h3>
               <ul className="list-unstyled links">
-                <li className="furtherInformation mb-2 text-lg">
+                <li className="furtherInformation mb-2 text-lg div-text-lg">
                   <a className="furtherInformationA" href="#">
                     Terms &amp; Conditions
                   </a>
@@ -81,7 +81,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="">
-              <h3 className="followUs atmosphere mb-5 text-lg da-color-green mt-12 md:mt-0">
+              <h3 className="followUs atmosphere mb-5 text-lg da-color-green mt-12 md:mt-0 div-text-lg">
                 Follow us
               </h3>
               <ul className="list-unstyled social">

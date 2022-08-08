@@ -12,8 +12,7 @@
 }
 .legacy {
   color: white;
-  /* background-color: #000; */
-  /* margin-top: 10vh; */
+  width: 100vw;
 }
 .legacy__hero {
   display: flex;
@@ -33,17 +32,20 @@
 }
 .hero__left-name {
   font-size: 2vw;
-
+  /* font-family: atmospheric; */
   /* font-weight: 100; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .hero__left-head {
-  font-size: 8vw;
-  font-family: toko-light;
-  letter-spacing: 10px;
-  font-size: 10vw;
-  color: lime;
+  /* font-family: toko-light; */
+  font-family: atmospheric;
 
+  letter-spacing: 4px;
+  font-size: 8vw;
+  /* color: lime; */
+}
+.hero__left-head span {
+  color: transparent !important;
 }
 .hero__heading-svg {
 }
@@ -80,49 +82,51 @@
 }
 .slider-4 {
   /* background-color: whitesmoke; */
-  grid-area: 1 / 1 / 3 / 3;
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: baseline; */
+  /* flex-shrink: 1; */
 }
+/* .slider-4 img {
+  /* height: inherit;
+  width: inherit; 
+  object-fit: cover;
+} */
 
-.heading {
-  font-family: atmospheric;
-  text-transform: uppercase;
-  font-size: 10vh;
-  text-align: center;
-  margin: 0;
-  min-height: calc(100vh - 16px);
-  position: relative;
-  color: transparent;
-  font-weight: normal;
-  font-style: normal;
-
-  /* animation-delay: 9s; */
+.legacy__space {
+  height: 30vh;
+  width: 100vw;
+  /* background-color: aliceblue; */
+  background-color: transparent;
 }
-
 @media only screen and (max-width: 650px) {
   .legacy__hero {
     flex-direction: column;
   }
   .legacy__hero-left {
-    height: 50vh;
+    /* height: 50vh; */
     width: 100vw;
+    padding-bottom: 10vw;
   }
   .legacy__hero-right {
     width: 100vw;
   }
   .hero__left-name {
-    font-size: 2.5vw;
+    font-size: 4vw;
   }
   .hero__left-head {
     font-size: 12vw;
+    text-align: center;
   }
   .hero__left-desc {
     font-size: 1.5vw;
     padding-bottom: 5vw;
   }
+  .legacy__space {
+    height: 60vh;
+  }
 }
-
-
-
 
 .glitch {
   position: relative;
@@ -130,14 +134,15 @@
   /* color: #fff; */
   /* font-size: 15vh ; */
   font-family: Atmospheric;
-  font-weight: 600 ;
+  font-weight: 600;
   text-align: center;
   color: green;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   transform: scale3d(1, 1, 1);
 }
-.glitch::before, .glitch::after {
+.glitch::before,
+.glitch::after {
   content: attr(data-text);
   position: absolute;
   top: 0;

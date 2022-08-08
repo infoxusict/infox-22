@@ -7,6 +7,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 50vh;
 }
 
 #main_con{
@@ -257,4 +258,23 @@ h3{
     margin-top: 2vh;
   }
 }
+.schedule-h1{
+  /* font-size: xx-large; */
+  font-size: 4vw;
+  font-family: atmospheric;
+  text-shadow: 4px 4px 15px rgb(0, 213, 0) !important;
+}
 
+.scheduleDiv{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.scheduleDiv h1{
+  font-family: "atmospheric";
+  font-size: 5vw;
+  text-shadow: 0px 0px 10px rgba(0, 255, 0, 0.505);
+}

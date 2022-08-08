@@ -71,7 +71,7 @@ const Contact = () => {
                         <span></span>
                         <span></span>
                         <span></span>
-                        Send Message
+                        Send
                         </a>
                       </li>
                     </ul>

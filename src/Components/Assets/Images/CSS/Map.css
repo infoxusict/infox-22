@@ -25,31 +25,31 @@
     width:auto;
     border-radius: 100%;
     border: 3px dotted grey;
-    padding:5px;
+    padding:1.2vh;
 }
 #phone{
     height:40px;
     width:auto;
     border-radius: 65px;
     border: 3px dotted grey;
-    padding:5px;
+    padding:1.2vh;
 }
 #emailreach{
     height:40px;
     width:auto;
     border-radius: 65px;
     border: 3px dotted grey;
-    padding:5px;
+    padding:1.2vh;
 }
 .card_reach_title{
     font-family: atmospheric !important;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color:#78f701;
-    padding: 40px;
+    padding: 3vw 3vw;
 }
 #anchor{
-    margin:0 0 0 10px;
+    margin:0 0 0 2.2vh;
     padding:0;
 }
 .lireach{
@@ -62,17 +62,20 @@
     padding:0;
 }
 .ulreach{
-    padding: 10px 40px;
+    padding: 10px 3vw;
     margin:0;
     color:white;
 }
 #contact_upper_rule{
-    border: 2px solid #78f701;
-    margin:0 190px 0 45px;
+    border: 0.3vh solid #78f701;
+    margin:0 14.8vw 0 3vw;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
 }
 #contact_bottom_rule{
     border:2px dotted grey;
-    margin:0 45px;
+    margin:0 3vw;
     border-bottom: 0;
 }
 #socials_contact{
@@ -80,7 +83,7 @@
     align-items: center;
 }
 #socials_contact{
-    margin:29px 40px;
+    margin:6.5vh 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +104,55 @@
     padding:0;
     background-color: black;
     width:100vw;
-    height:200px;
+    height:300px;
     position: absolute;
     z-index: 5;
+}
+#special_banner2{
+    margin:0;
+    padding:0;
+    background-color: black;
+    width:100vw;
+    height:200px;
+}
+@media (max-width:975px){
+    .card_reach_title{
+        font-size: 1.2rem;
+    }
+   
+}
+@media (max-width:780px){
+    .card_reach_title{
+        font-size: 1rem;
+    }
+}
+@media (max-width:650px){
+    .card_reach_title{
+        font-size: 0.65rem;
+    }
+}
+@media (max-width:425px){
+    .card_reach_title{
+        font-size: 0.5rem;
+    }
+}
+@media (max-width:1130px){
+    .preach{
+        font-size: 0.7rem;
+    }
+    #anchor{
+        font-size:0.7rem;
+    }
+}
+.reach_us_card_2{
+    display: none;
+}
+@media (max-width:740px){
+    .reach_us_card_2{
+        display: flex;
+    }
+    .reach_us_card,#special_banner , #special_banner2{
+        display:none;
+    }
+   
 }

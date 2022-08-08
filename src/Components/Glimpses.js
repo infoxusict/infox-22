@@ -1,7 +1,11 @@
 import "./Assets/Images/CSS/glimpses.css";
 import "./Assets/Images/CSS/glitch.css";
 const Glimpses = () => {
+  let count =0;
   const count_iteration = () => {
+    if(count===0)
+    {
+      count++;
     let valueDisplays = document.querySelectorAll(".num");
 
     // let interval = 5000;
@@ -13,11 +17,12 @@ const Glimpses = () => {
       let endValue = parseInt(valueDisplay.getAttribute("data-val"));
 
       // console.log(endValue);
-
+      let speed=200;
       // let duration = Math.floor(interval / endValue);
 
       let counter = setInterval(function () {
-        startValue += 15;
+        let interval = Math.ceil(endValue/speed);
+        startValue += interval;
         valueDisplay.textContent = `${startValue}+`;
 
         if (startValue >= endValue) {
@@ -25,6 +30,8 @@ const Glimpses = () => {
         }
       });
     });
+  }
+
   };
 
   // function reduce_blur(e) {

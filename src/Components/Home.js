@@ -69,9 +69,7 @@ const Home = (props) => {
   //   }
   // };
 
-<<<<<<< HEAD
 
-=======
   // useEffect(() => {
   //   if (props.page === "home") {
   //     document.getElementById("navbar").classList.add("inn");
@@ -81,7 +79,6 @@ const Home = (props) => {
   //   // glimpsee();
   //   // count_iteration();
   // }, []);
->>>>>>> d6bab48a2ad37981f3bf7d870f8975882d1aa1e9
   // const [reveal, setReveal] = useState(false)
   // // const [screen, setScreen] = useState({ width: 0, height: 0 })
 

@@ -16,6 +16,8 @@
     -webkit-backdrop-filter: blur( 4px );}
 .map_pic{
     width:100vw;
+    filter: brightness(.8);
+    filter: contrast(1.2);
 }
 .reach_us_stuff{
     display: flex;

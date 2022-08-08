@@ -36,30 +36,30 @@ const Navbar = () => {
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <span>01</span>About Natous
+            <a href="#/legacy" class="navigation__link">
+              <span>Legacy</span>
             </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <span>02</span>Your benfits
+            <a href="#/event" class="navigation__link">
+              <span>Schedule</span>
             </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <span>03</span>Popular tours
+            <a href="#/team" class="navigation__link">
+              <span>Team</span>
             </a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <span>04</span>Stories
+            <a href="#/reach" class="navigation__link">
+              <span>Reach Us</span>
             </a>
           </li>
-          <li class="navigation__item">
+          {/* <li class="navigation__item">
             <a href="#" class="navigation__link">
               <span>05</span>Book now
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

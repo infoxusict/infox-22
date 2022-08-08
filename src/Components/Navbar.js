@@ -36,6 +36,7 @@ const Navbar = () => {
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
+
             <a href="#/legacy" class="navigation__link">
               <span>Legacy</span>
             </a>
@@ -60,6 +61,7 @@ const Navbar = () => {
               <span>05</span>Book now
             </a>
           </li> */}
+
         </ul>
       </nav>
     </div>

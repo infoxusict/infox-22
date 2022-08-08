@@ -230,9 +230,9 @@ input{
 }
 /* DUMP */
 .neoh_fn_contact_page .container  {
-    width: 60%;
+    width: 55%;
     max-width: 1360px;
-    padding: 0 80px;
+    padding: 0 ;
     margin: 0 auto;
 }
 .HeadH3Res{
@@ -245,10 +245,10 @@ input{
 .register {
     position: relative;
     display: inline-block;
-    padding: 1rem 3rem;
+    /* padding: 1rem 3rem; */
     margin: 40px 0;
     /* font-weight: 400; */
-    font-family: "aatomspheric";
+    font-family: "atomspheric";
     color: #2f2;
     text-decoration: none;
     text-transform: uppercase;
@@ -259,4 +259,9 @@ input{
     background-color: #050801;
     border-radius: 5px;
     text-align: center;
+}
+@media (max-width:720px){
+    .HeadH3Res{
+        font-size: 2rem;
+    }
 }

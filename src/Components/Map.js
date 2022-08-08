@@ -59,6 +59,50 @@ const Map = () => {
         </div>
       </div>
       <div id="special_banner"></div>
+      <div id="special_banner2"></div>
+      <div class="reach_us_card_2">
+          <div class="align_card">
+            <h1 className="card_reach_title">Contact info</h1>
+            <hr id="contact_upper_rule" />
+            <ul className="ulreach">
+              <li className="lireach">
+                <img
+                  id="marker"
+                  src={require("./Assets/Images/reach us/pin.png")}
+                  alt="location marker"
+                />
+                <p className="preach">
+                  GGSIPU, Golf Course Rd, Sector 16 C, Dwarka, Delhi, 110078
+                </p>
+              </li>
+              <li className="lireach">
+                <img
+                  id="phone"
+                  src={require("./Assets/Images/reach us/phone.png")}
+                  alt="location marker"
+                />
+                <p className="preach">011-25302167</p>
+              </li>
+              <li className="lireach">
+                <img
+                  id="emailreach"
+                  src={require("./Assets/Images/reach us/email.png")}
+                  alt="location marker"
+                />
+                <a id="anchor" href="mailto:nishant.ola22@gmail.com">
+                  nishant.ola22@gmail.com
+                </a>
+              </li>
+            </ul>
+            <hr id="contact_bottom_rule" />
+            <div id="socials_contact">
+              <a href="https://www.instagram.com/ggsipuindia/"><img id="insta" src={require("./Assets/Images/reach us/instagram.png")}/></a>
+              <a href="https://www.linkedin.com/school/usict/"><img id="linkedin" src={require("./Assets/Images/reach us/linkedin.png")}/></a>
+              <a href="http://ipu.ac.in/"><img id="web" src={require("./Assets/Images/reach us/web.png")}/></a>
+              <a href="https://twitter.com/GGSIPUIndia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img id="twitter" src={require("./Assets/Images/reach us/twitter.png")}/></a>
+            </div>
+          </div>
+        </div>
     </div>
   );
 };

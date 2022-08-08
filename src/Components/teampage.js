@@ -6,6 +6,8 @@ import "./Assets/Images/CSS/Contact.css";
 import Team from "./team";
 import MatrixRain from "./MatrixRain";
 import Contact from "./Contact";
+import Map from "./Map";
+
 export default function TeamPage() {
   // const numBalls = 50;
   // const balls = [];
@@ -165,6 +167,7 @@ export default function TeamPage() {
         />
       </div>
       <Contact />
+      <Map />
     </div>
   );
 }

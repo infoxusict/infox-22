@@ -37,7 +37,7 @@ const Keeanu = () => {
     return (
         <div className="keanudiv">
         {/* <h1 className='keanu-h1'>{h}</h1> */}
-        <div id="myBar" style={{zIndex: "100"}}>
+        <div id="myBar" style={{zIndex: "19"}}>
       {
         Math.ceil(scrolled)%2===0 ? 
         <div id="keanu"><img src={require("./Assets/Images/images/matrix-manlight1.png")} alt="" id="keanuimg"/></div>

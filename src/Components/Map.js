@@ -6,7 +6,7 @@ const Map = () => {
       <h1 className="Reach_us_title">Reach us</h1>
       <div className="reach_us_stuff">
         <div className="mapdiv">
-          <a href="https://www.google.com/maps/place/Guru+Gobind+Singh+Indraprastha+University/@28.5949739,77.0171102,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1aafdb891567:0x10d270731c930a87!8m2!3d28.5949739!4d77.0192989">
+          <a href="https://www.google.com/maps/place/Guru+Gobind+Singh+Indraprastha+University/@28.5949739,77.0171102,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1aafdb891567:0x10d270731c930a87!8m2!3d28.5949739!4d77.0192989" target="_blank">
             <img
               className="map_pic"
               src={require("./Assets/Images/reach us/google maps.png")}
@@ -43,8 +43,8 @@ const Map = () => {
                   src={require("./Assets/Images/reach us/email.png")}
                   alt="location marker"
                 />
-                <a id="anchor" href="mailto:nishant.ola22@gmail.com">
-                  nishant.ola22@gmail.com
+                <a id="anchor" href="mailto:infox@ipu.ac.in">
+                  infox@ipu.ac.in
                 </a>
               </li>
             </ul>

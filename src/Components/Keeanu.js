@@ -7,7 +7,7 @@ const Keeanu = () => {
 
     const [scrolled,setScrolled] =useState(0)
 
-    const [h,setH]=useState("")
+    // const [h,setH]=useState("")
     
     useEffect(()=>{
   
@@ -27,7 +27,7 @@ const Keeanu = () => {
           }
             document.getElementById("myBar").style.width = scrolled1 + "%";
         setScrolled(scrolled1)
-        setH(scrolled1)
+        // setH(scrolled1)
         // console.log(scrolled1)
       }
         )

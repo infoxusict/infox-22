@@ -69,15 +69,15 @@ const Home = (props) => {
   //   }
   // };
 
-  useEffect(() => {
-    if (props.page === "home") {
-      document.getElementById("navbar").classList.add("inn");
-    }
-    // return window.removeEventListener("scroll",setH(window.scrollY))
-    // Aos.init({ duration: 2000 });
-    // glimpsee();
-    // count_iteration();
-  }, []);
+  // useEffect(() => {
+  //   if (props.page === "home") {
+  //     document.getElementById("navbar").classList.add("inn");
+  //   }
+  //   // return window.removeEventListener("scroll",setH(window.scrollY))
+  //   // Aos.init({ duration: 2000 });
+  //   // glimpsee();
+  //   // count_iteration();
+  // }, []);
   // const [reveal, setReveal] = useState(false)
   // // const [screen, setScreen] = useState({ width: 0, height: 0 })
 
@@ -161,7 +161,13 @@ const Home = (props) => {
   </g>
 </svg> */}
 
-              <video className="video" autoPlay="autoPlay" muted loop style={{position:"relative",zIndex:"-1"}}>
+              <video
+                className="video"
+                autoPlay="autoPlay"
+                muted
+                loop
+                style={{ position: "relative", zIndex: "-1" }}
+              >
                 <source
                   src={require("./Assets/Videos/Produce.mp4")}
                   type="video/mp4"
@@ -173,19 +179,19 @@ const Home = (props) => {
                 />
                 Your browser does not support the video tag.
               </video>
-              
+
               <div class="sn_glitch atmosphere">
-  <div class="sn_line">INFOXPRESSION</div> 
-  <div class="sn_line">INFOXPRESSION</div> 
-  <div class="sn_line">INFOXPRESSION</div> 
-  <div class="sn_line">INFOXPRESSION</div> 
-  <div class="sn_line">INFOXPRESSION</div> 
-  <div class="sn_line">INFOXPRESSION</div> 
-  <div class="sn_line">INFOXPRESSION</div> 
-  <div class="sn_line">INFOXPRESSION</div> 
-  <div class="sn_line">INFOXPRESSION</div>  
+                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line">INFOXPRESSION</div>
+              </div>
             </div>
-</div>
             <div className="home-svg-con svgg">
               <h3
                 style={{

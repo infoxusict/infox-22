@@ -9,7 +9,7 @@ import Keeanu from "./Components/Keeanu";
 import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
-import Navbar_3 from "./Components/Navbar_3";
+// import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
 const App = () => {

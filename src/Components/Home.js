@@ -181,15 +181,33 @@ const Home = (props) => {
               </video>
 
               <div class="sn_glitch atmosphere">
-                <div class="sn_line">INFOXPRESSION</div>
-                <div class="sn_line">INFOXPRESSION</div>
-                <div class="sn_line">INFOXPRESSION</div>
-                <div class="sn_line">INFOXPRESSION</div>
-                <div class="sn_line">INFOXPRESSION</div>
-                <div class="sn_line">INFOXPRESSION</div>
-                <div class="sn_line">INFOXPRESSION</div>
-                <div class="sn_line">INFOXPRESSION</div>
-                <div class="sn_line">INFOXPRESSION</div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
+                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                  INFOXPRESSION
+                </div>
               </div>
             </div>
             <div className="home-svg-con svgg">

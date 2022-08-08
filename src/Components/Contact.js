@@ -10,11 +10,12 @@ const Contact = () => {
           <div className="neoh_fn_pagetitle myHeadSection">
             <div className="bg_color" />
             <div className="pt_content">
-              <div className="container">
+              <div className="container" style={{width: "100vw", minWidth: "auto"}}>
                 <h1
                   className="fn_title theme HeadH3Res"
                   data-wait={1000}
                   data-speed={8}
+                  style={{width: "100vw"}}
                 >
                   Contact Us
                 </h1>

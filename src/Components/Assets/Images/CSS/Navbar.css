@@ -15,18 +15,7 @@
   text-align: center;
   cursor: pointer;
 }
-@media only screen and (max-width: 56.25em) {
-  .navigation__button {
-    top: 4rem;
-    right: 4rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .navigation__button {
-    top: 3rem;
-    right: 3rem;
-  }
-}
+
 .navigation__background {
   height: 8vh;
   width: 8vh;
@@ -50,18 +39,7 @@
     -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   opacity: 0;
 }
-@media only screen and (max-width: 56.25em) {
-  .navigation__background {
-    top: 4.5rem;
-    right: 4.5rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .navigation__background {
-    top: 3.5rem;
-    right: 3.5rem;
-  }
-}
+
 .navigation__nav {
   height: 100vh;
   position: fixed;
@@ -72,16 +50,19 @@
   width: 0;
   -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 100%;
 }
 .navigation__list {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-100%, -50%);
   list-style: none;
   text-align: center;
   width: 100%;
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .navigation__item {
   margin: 1rem;
@@ -125,6 +106,10 @@
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%;
+}
+.navigation__checkbox:checked ~ .navigation__nav .navigation__list {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .navigation__icon {
   position: relative;
@@ -170,4 +155,51 @@
   top: 0;
   -webkit-transform: rotate(-135deg);
   transform: rotate(-135deg);
+}
+
+@media screen and (max-width: 650px) {
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 3vh;
+  }
+  .navigation__button {
+    /* background-color: #00ff00; */
+    height: 5vh;
+    width: 5vh;
+
+    top: 4vh;
+    right: 4vh;
+  }
+
+  .navigation__background {
+    height: 5vh;
+    width: 5vh;
+    position: fixed;
+    top: 4vh;
+    right: 4vh;
+  }
+  .navigation__checkbox:checked ~ .navigation__background {
+    -webkit-transform: scale(50);
+    transform: scale(50);
+    opacity: 1;
+  }
+  .navigation__link:link,
+  .navigation__link:visited {
+    font-size: 3vh;
+    font-weight: 300;
+    padding: 1vh 2vh;
+  }
+  .navigation__link:link span,
+  .navigation__link:visited span {
+    margin-right: 1vh;
+    display: inline-block;
+  }
+  .navigation__link:hover,
+  .navigation__link:active {
+    background-position: 100%;
+    color: #78f701;
+    -webkit-transform: translateX(2vh);
+    transform: translateX(2vh);
+  }
 }

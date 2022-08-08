@@ -13,8 +13,7 @@
 }
 .footer-20192 {
   background-color: #000000ec;
-  position: relative;
-  min-height: 50vh;
+  /* position: relative; */
   bottom: 0;
   color: #fff;
   /* padding: 5rem 0; */
@@ -26,15 +25,13 @@
   padding-bottom: 3rem !important;
   margin-top: 20vh;
   /* margin-bottom: -50px; */
-  z-index: -1;
+  z-index: -10;
   width: 100vw !important;
-  background-color: black;
   /* left: 0; */
 }
 
 .footer-20192 .container {
   position: relative;
-  width: 80%;
 }
 
 .footer-20192 .customer {
@@ -185,12 +182,10 @@
   top: -150px;
   position: relative;
 }
-
 .footer-20192 .cta h2,
 .footer-20192 .cta h3 {
   line-height: 1.5;
 }
-
 .footer-20192 .cta h3 {
   font-size: 20px;
 } */
@@ -201,9 +196,4 @@
 
 .footer-grid{
   align-items: center;
-}
-
-
-.div-text-lg{
-  margin-left: 1vw;
 }

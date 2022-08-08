@@ -50,10 +50,10 @@ const Map = () => {
             </ul>
             <hr id="contact_bottom_rule" />
             <div id="socials_contact">
-              <a href="https://www.instagram.com/ggsipuindia/"><img id="insta" src={require("./Assets/Images/reach us/instagram.png")}/></a>
-              <a href="https://www.linkedin.com/school/usict/"><img id="linkedin" src={require("./Assets/Images/reach us/linkedin.png")}/></a>
-              <a href="http://ipu.ac.in/"><img id="web" src={require("./Assets/Images/reach us/web.png")}/></a>
-              <a href="https://twitter.com/GGSIPUIndia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img id="twitter" src={require("./Assets/Images/reach us/twitter.png")}/></a>
+              <a href="https://www.instagram.com/ggsipuindia/"><img id="insta" src={require("./Assets/Images/reach us/instagram.png")} alt=""/></a>
+              <a href="https://www.linkedin.com/school/usict/"><img id="linkedin" src={require("./Assets/Images/reach us/linkedin.png")} alt=""/></a>
+              <a href="http://ipu.ac.in/"><img id="web" src={require("./Assets/Images/reach us/web.png")} alt=""/></a>
+              <a href="https://twitter.com/GGSIPUIndia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img id="twitter" src={require("./Assets/Images/reach us/twitter.png")} alt=""/></a>
             </div>
           </div>
         </div>

@@ -1,61 +1,61 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 // import Video from './Assets/Videos/startv.mp4'
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
 import Sponser from "./Sponser";
 import Glimpses from "./Glimpses";
-import Svgg from "./Svgg.js";
+// import Svgg from "./Svgg.js";
 import "aos/dist/aos.css";
-import Aos from "aos";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Keeanu from "./Keeanu";
+// import Aos from "aos";
+// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+// import Keeanu from "./Keeanu";
 // import Footer from "./Footer";
 
 const Home = (props) => {
   // eslint-disable-next-line
 
-  const glimpsee = () => {
-    const carouselList = document.querySelector(".carousel__list");
-    const carouselItems = document.querySelectorAll(".carousel__item");
-    const elems = Array.from(carouselItems);
-    carouselList.addEventListener("click", function (event) {
-      console.log("You clicked");
-      var newActive = event.target;
-      var isItem = newActive.closest(".carousel__item");
+  // const glimpsee = () => {
+  //   const carouselList = document.querySelector(".carousel__list");
+  //   const carouselItems = document.querySelectorAll(".carousel__item");
+  //   const elems = Array.from(carouselItems);
+  //   carouselList.addEventListener("click", function (event) {
+  //     console.log("You clicked");
+  //     var newActive = event.target;
+  //     var isItem = newActive.closest(".carousel__item");
 
-      if (!isItem || newActive.classList.contains("carousel__item_active")) {
-        return;
-      }
+  //     if (!isItem || newActive.classList.contains("carousel__item_active")) {
+  //       return;
+  //     }
 
-      update(newActive);
-    });
+  //     update(newActive);
+  //   });
 
-    const update = async function (newActive) {
-      const newActivePos = newActive.dataset.pos;
-      const current = elems.find((elem) => elem.dataset.pos === "0");
-      const prev = elems.find((elem) => elem.dataset.pos === "-1");
-      const next = elems.find((elem) => elem.dataset.pos === "1");
-      const first = elems.find((elem) => elem.dataset.pos === "-2");
-      const last = elems.find((elem) => elem.dataset.pos === "2");
-      current.classList.remove("carousel__item_active");
+  //   const update = async function (newActive) {
+  //     const newActivePos = newActive.dataset.pos;
+  //     const current = elems.find((elem) => elem.dataset.pos === "0");
+  //     const prev = elems.find((elem) => elem.dataset.pos === "-1");
+  //     const next = elems.find((elem) => elem.dataset.pos === "1");
+  //     const first = elems.find((elem) => elem.dataset.pos === "-2");
+  //     const last = elems.find((elem) => elem.dataset.pos === "2");
+  //     current.classList.remove("carousel__item_active");
 
-      [current, prev, next, first, last].forEach((item) => {
-        var itemPos = item.dataset.pos;
+  //     [current, prev, next, first, last].forEach((item) => {
+  //       var itemPos = item.dataset.pos;
 
-        item.dataset.pos = getPos(itemPos, newActivePos);
-      });
-    };
+  //       item.dataset.pos = getPos(itemPos, newActivePos);
+  //     });
+  //   };
 
-    const getPos = function (current, active) {
-      const diff = current - active;
+  //   const getPos = function (current, active) {
+  //     const diff = current - active;
 
-      if (Math.abs(current - active) > 2) {
-        return -current;
-      }
+  //     if (Math.abs(current - active) > 2) {
+  //       return -current;
+  //     }
 
-      return diff;
-    };
-  };
+  //     return diff;
+  //   };
+  // };
 
   // const count_iteration = () => {
   //   let counts = setInterval(updated);
@@ -69,6 +69,9 @@ const Home = (props) => {
   //   }
   // };
 
+<<<<<<< HEAD
+
+=======
   // useEffect(() => {
   //   if (props.page === "home") {
   //     document.getElementById("navbar").classList.add("inn");
@@ -85,6 +88,7 @@ const Home = (props) => {
   //   // count_iteration();
 
   // }, []);
+>>>>>>> d6bab48a2ad37981f3bf7d870f8975882d1aa1e9
   // const [reveal, setReveal] = useState(false)
   // // const [screen, setScreen] = useState({ width: 0, height: 0 })
 

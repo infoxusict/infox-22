@@ -8,7 +8,8 @@
   font-family: Atmospheric;
   font-weight: 600 ;
   text-align: center;
-  color: #02b002;
+  /* color: #02b002; */
+  color: whitesmoke;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   transform: scale3d(1, 1, 1);
@@ -24,16 +25,16 @@
   background: transparent;
   /* color: #fff; */
   /* color: limegreen; */
-  color: #02b002;
+  /* color: #02b002; */
   /* color: green; */
-  /* color: whitesmoke; */
+  color: whitesmoke;
   clip: rect(0, 900px, 0, 0);
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
 .glitch::before {
   left: 7px;
-  text-shadow: 1px 0 whitesmoke;
+  text-shadow: 1px 0 green;
   animation: glitch-effect 3s infinite linear alternate-reverse;
 }
 .glitch::after {

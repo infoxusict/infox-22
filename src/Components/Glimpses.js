@@ -39,7 +39,7 @@ const Glimpses = () => {
   // }
 
   return (
-    <div style={{ width: "100%" }} onMouseEnter={count_iteration}>
+    <div style={{ width: "100%", marginTop: "25vh" }} onMouseEnter={count_iteration}>
       <div className="animate" style={{ opacity: 1 }}>
         <h1 className="glimpses_h1 glitch" data-text="Glimpses">
           Glimpses

@@ -13,7 +13,8 @@
 
 .teampage__heading {
   /* margin-top: 10vh; */
-  color: rgb(0, 255, 60);
+  /* color: rgb(0, 255, 60); */
+  color: whitesmoke;
   /* font-family: Teko-medium; */
   font-size: 15vh !important;
   display: flex;

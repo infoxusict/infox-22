@@ -4,12 +4,12 @@
   /* background: greenyellow; */
 }
 
-#keanu img{
+/* #keanu img{
   height: 100%;
   width: 100%;
-  opacity: 0%;
+  opacity: 0%; */
   /* animation: keanumation 4s forwards; */
-}
+/* } */
 
 @keyframes keanumation {
   from{
@@ -46,4 +46,9 @@
   .keanudiv{
     display: none;
   }
+}
+
+#keanuimg{
+  height: 175px;
+  aspect-ratio: 1;
 }

@@ -37,7 +37,7 @@ const App = () => {
           <Legacy />
         </Route>
       </Switch>
-      {/* <Keeanu /> */}
+      <Keeanu />
       <Footer />
     </Router>
       </>

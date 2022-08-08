@@ -12,7 +12,7 @@
   color: #6cde01;
 }
 .footer-20192 {
-  background-color: #000000ec;
+  background-color: #000000f3;
   /* position: relative; */
   bottom: 0;
   color: #fff;
@@ -196,4 +196,8 @@
 
 .footer-grid{
   align-items: center;
+}
+
+.footer-20192 .links{
+ flex-direction: column;
 }

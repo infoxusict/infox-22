@@ -69,15 +69,15 @@ const Home = (props) => {
   //   }
   // };
 
-  useEffect(() => {
-    if (props.page === "home") {
-      document.getElementById("navbar").classList.add("inn");
-    }
+  // useEffect(() => {
+  //   if (props.page === "home") {
+  //     document.getElementById("navbar").classList.add("inn");
+  //   }
     // return window.removeEventListener("scroll",setH(window.scrollY))
     // Aos.init({ duration: 2000 });
     // glimpsee();
     // count_iteration();
-  }, []);
+  // }, []);
   // const [reveal, setReveal] = useState(false)
   // // const [screen, setScreen] = useState({ width: 0, height: 0 })
 

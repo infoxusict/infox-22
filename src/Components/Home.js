@@ -2,7 +2,7 @@
 // import Video from './Assets/Videos/startv.mp4'
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
-import Sponser from "./Sponser";
+import SponserNew from './SponsersNew'
 import Glimpses from "./Glimpses";
 // import Svgg from "./Svgg.js";
 import "aos/dist/aos.css";
@@ -69,9 +69,7 @@ const Home = (props) => {
   //   }
   // };
 
-<<<<<<< HEAD
 
-=======
   // useEffect(() => {
   //   if (props.page === "home") {
   //     document.getElementById("navbar").classList.add("inn");
@@ -88,7 +86,6 @@ const Home = (props) => {
   //   // count_iteration();
 
   // }, []);
->>>>>>> d6bab48a2ad37981f3bf7d870f8975882d1aa1e9
   // const [reveal, setReveal] = useState(false)
   // // const [screen, setScreen] = useState({ width: 0, height: 0 })
 
@@ -240,7 +237,7 @@ const Home = (props) => {
 
           {/* </ParallaxLayer> */}
           {/* <ParallaxLayer offset={1.01} speed={0.9} > */}
-          <Sponser />
+          <SponserNew />
           {/* </ParallaxLayer> */}
           {/* <ParallaxLayer offset={2.02} speed={0.3}> */}
           <Glimpses />

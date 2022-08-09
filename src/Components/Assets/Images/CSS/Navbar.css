@@ -205,8 +205,8 @@
   ); */
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
-  background-fit: contain;
-  z-index: 1000;
+  background-size: contain;
+  z-index: -1;
   -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -220,7 +220,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  /* z-index: 1500; */
   opacity: 0;
   width: 0;
   -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -342,7 +341,7 @@
     /* background-color: #00ff00; */
     height: 5vh;
     width: 5vh;
-
+    position: absolute;
     top: 4vh;
     right: 4vh;
   }

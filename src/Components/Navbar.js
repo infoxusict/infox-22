@@ -1,7 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Navbar.css";
 const Navbar = () => {
+
+  let countt=0;
+  const handleNavIndex =() =>{
+    if(countt===0)
+    {
+      document.getElementById("navigation__nav").style.zIndex=1
+      document.getElementById("navigation__background").style.zIndex=1
+      countt=1;
+    }
+    else if(countt===1)
+    {
+      document.getElementById("navigation__nav").style.zIndex=-1
+      document.getElementById("navigation__background").style.zIndex=-1
+      countt=0;
+    }
+  }
+
   return (
     // <div className='navbar' id='navbar' style={{display : "flex", justifyContent: "center", width: "100%"}}>
     //   <div className="nav-svg" style={{display: "flex", justifyContent: "center", width: "100%" }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.76 27.94" width="40%">
@@ -27,16 +43,15 @@ const Navbar = () => {
         id="navi-toggle"
       ></input>
 
-      <label for="navi-toggle" class="navigation__button">
+      <label for="navi-toggle" class="navigation__button" onClick={handleNavIndex}>
         <span class="navigation__icon">&nbsp;</span>
       </label>
 
-      <div class="navigation__background">&nbsp;</div>
+      <div class="navigation__background" id="navigation__background">&nbsp;</div>
 
-      <nav class="navigation__nav">
+      <nav class="navigation__nav" id="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-
             <a href="#/legacy" class="navigation__link">
               <span>Legacy</span>
             </a>
@@ -56,12 +71,6 @@ const Navbar = () => {
               <span>Reach Us</span>
             </a>
           </li>
-          {/* <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <span>05</span>Book now
-            </a>
-          </li> */}
-
         </ul>
       </nav>
     </div>

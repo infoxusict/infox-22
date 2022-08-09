@@ -345,8 +345,8 @@ const Schedule = () => {
   return (
     <>
       <MatrixRain />
-      <div className='scheduleDiv'>
-        <h1>To Be Revealed...</h1>
+      <div className='scheduleDiv' style={{height: "40vh"}}>
+        <h2 style={{fontSize: "5vh"}}>To Be Revealed...</h2>
       </div>
     </>
   )

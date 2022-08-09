@@ -63,7 +63,9 @@ g {
 body::-webkit-scrollbar {
   display: none;
 }
-
+#root {
+  overflow-x: hidden;
+}
 /* @keyframes top{
     from{
         height: 0vh;
@@ -270,7 +272,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70%;
+  height: 100%;
   /* position: absolute; */
 }
 

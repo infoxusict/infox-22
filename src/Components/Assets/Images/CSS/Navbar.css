@@ -6,7 +6,7 @@
     height: 8vh;
     width: 8vh;
     position: fixed;
-    top: 5vh;
+    top: 3vh;
     right: 5vh;
     border-radius: 50%;
     z-index: 2000;
@@ -40,10 +40,11 @@
       #00aa00a0,
       rgba(0, 255, 0, 0.519)
     ); */
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+    /* backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); */
     background-size: contain;
     z-index: 20;
+    /* background: linear-gradient(54deg, green, green, lime); */
     -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -256,9 +257,10 @@
     transparent 50%,
     rgba(255, 255, 255, 1) 50%
   );
-  background-size: 220%;
+  background-size: 300%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  width: 20vw;
 }
 .navigation__link:link span,
 .navigation__link:visited span {
@@ -274,7 +276,7 @@
 }
 .navigation__checkbox:checked ~ .navigation__background {
   -webkit-transform: scale(80);
-  transform: scale(800);
+  transform: scale(80);
   opacity: 1;
 }
 .navigation__checkbox:checked ~ .navigation__nav {
@@ -380,4 +382,7 @@
 
 .navigation__button::after + .navigation__nav{
   z-index: 1;
+}
+.navigation_link{
+  width: 50%;
 }

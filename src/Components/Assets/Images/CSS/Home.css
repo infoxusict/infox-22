@@ -38,6 +38,8 @@ g {
   /* background-color: black !important; */
   height: max-content;
   width: 100vw !important;
+  /* background-color: #0f040f; */
+  /* z-index: -9; */
 }
 .video {
   height: 100vh;

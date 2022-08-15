@@ -53,3 +53,12 @@
   height: 175px;
   aspect-ratio: 1;
 }
+
+@keyframes keanu_fade {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}

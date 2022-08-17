@@ -27,7 +27,7 @@
 }
 
 .team__front {
-  z-index: 2004;
+  z-index: 0;
   overflow: hidden;
   height: inherit;
   width: inherit;

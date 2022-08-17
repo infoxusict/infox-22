@@ -37,6 +37,19 @@ const Navbar = () => {
     //   </div>
     // </div>
     <div class="navigation">
+      <div>
+        <ul>
+          <li>
+            <a href="#">
+              <img
+                src={require("./Assets/Images/aswd.png")}
+                alt="infox logo"
+                className="top-9 left-5 md:top-11 md:left-10 w-14 md:w-20 fixed z-50"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
       <input
         type="checkbox"
         class="navigation__checkbox"

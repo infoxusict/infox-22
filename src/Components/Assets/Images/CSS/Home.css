@@ -513,7 +513,11 @@ svg.active .svg-elem-10 {
   animation: load_svg 3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
   animation-delay: 2.5s;
 }
-
+@media screen and (max-width: 650px) {
+  .sn_glitch {
+    font-size: 10vw;
+  }
+}
 .sn_line:not(:first-child) {
   position: absolute;
   top: 0;

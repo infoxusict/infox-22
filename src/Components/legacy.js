@@ -105,9 +105,7 @@ export default function Legacy() {
           </div>
           <div className="hero__left-desc">
             <span>
-              Lorem ipsum is placeholder text commonly used in the graphic,
-              print, and publishing industries for previewing layouts and visual
-              mockups.
+            InfoXpression2022 edition is set to continue its legacy as one of the biggest tech-fest of GGSIPU (USICT).This year, InfoX aims to be bigger, bolder, and better.
             </span>
           </div>
         </div>

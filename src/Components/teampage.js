@@ -63,18 +63,6 @@ export default function TeamPage() {
       <div className="teampage__headingdown"></div>
       <div className="teampage__container">
         <Team
-          ringColor="#95F7FF  "
-          circleColor="#01C3FC "
-          name="Himesh Nayak"
-          team="Core Team"
-          position="Technical Lead"
-          Quote="We are a team of dedicated and passionate people ."
-          linkedin="https://linkedin.com/in/himeshnayak015"
-          github="https://github.com/HimeshNayak"
-          gmail="himeshnayak015@gmail.com"
-          photo="./Assets/Images/teams/himesh.jpeg"
-        />
-        <Team
           ringColor="#55a245"
           circleColor="#00a245"
           name="Rudransh Ratan"
@@ -85,6 +73,18 @@ export default function TeamPage() {
           github="https://github.com/RUDRANSHRATAN"
           gmail="rudranshratan@gmail.com"
           photo="./Assets/Images/teams/rudransh.jpg"
+        />
+        <Team
+          ringColor="#95F7FF  "
+          circleColor="#01C3FC "
+          name="Himesh Nayak"
+          team="Core Team"
+          position="Technical Lead"
+          Quote="We are a team of dedicated and passionate people ."
+          linkedin="https://linkedin.com/in/himeshnayak015"
+          github="https://github.com/HimeshNayak"
+          gmail="himeshnayak015@gmail.com"
+          photo="./Assets/Images/teams/himesh.jpeg"
         />
         <Team
           ringColor="#aadef2 "
@@ -98,9 +98,10 @@ export default function TeamPage() {
           gmail="jainabhishek7204@gmail.com"
           photo="./Assets/Images/teams/kashish.jpg"
         />
-        <Team ringColor="#ffcc00" circleColor="#c29d08" name=" Vivek Bhatia" />
-        <Team ringColor="#FF9980" circleColor="#009980" name="Harsh Goyal" />
-        <Team ringColor="#80aa80" circleColor="#80cc80" name="Prince" />
+        <Team ringColor="#ffcc00" circleColor="#c29d08" name=" Vivek Bhatia" team="Core Team" photo="./Assets/Images/teams/vivek.jpeg" />
+        <Team ringColor="#FF9980" circleColor="#009980" name="Harsh Goyal" team="Core Team" />
+        <Team ringColor="#80aa80" circleColor="#80cc80" name="Prince" photo="./Assets/Images/teams/prince.jpeg" team="Core Team" />
+        <Team ringColor="#80aa80" circleColor="#80cc80" name="Manas" photo="./Assets/Images/teams/manas.jpg" team="Core Team" linkedin="https://www.linkedin.com/in/manas-arora-274b681b1/" />
         <Team
           ringColor="#7dfa77"
           circleColor="#7dfa00"
@@ -111,6 +112,42 @@ export default function TeamPage() {
           circleColor="#333380"
           name="Anuj Talwar"
           photo="./Assets/Images/teams/Anuj.jpg"
+          team="Core Team"
+          position=""
+        />
+        <Team
+          ringColor="#aa0000"
+          circleColor="#ff0000"
+          name="Tushar Khanduri"
+          team="Core Team"
+          position=""
+          Quote="Wubba Lubba Dub Dub"
+          linkedin="https://www.linkedin.com/in/tusharkhanduri/"
+          github="https://github.com/Tushar-K24"
+          gmail="tusharkhanduri24@gmail.com"
+          photo="./Assets/Images/teams/tushar.jpg"
+        />
+        <Team
+          ringColor="#aa0000"
+          circleColor="#ff0000"
+          name="Rajnikant Roy"
+          team="Core Team"
+          position=""
+          // linkedin="https://www.linkedin.com/in/tusharkhanduri/"
+          // github="https://github.com/Tushar-K24"
+          // gmail="tusharkhanduri24@gmail.com"
+          // photo="./Assets/Images/teams/tushar.jpg"
+        />
+        <Team
+          ringColor="#aad030"
+          circleColor="#AAD030"
+          name="Adarsh Dheer"
+          team="Core Team"
+          position=""
+          // linkedin="https://www.linkedin.com/in/tusharkhanduri/"
+          // github="https://github.com/Tushar-K24"
+          // gmail="tusharkhanduri24@gmail.com"
+          // photo="./Assets/Images/teams/tushar.jpg"
         />
         <Team
           ringColor="#FFAE76 "
@@ -221,6 +258,18 @@ export default function TeamPage() {
           github="https://github.com/ola-nishant"
           gmail="nishant.ola22@gmail.com"
           photo="./Assets/Images/teams/nishant.jpg"
+        />
+        <Team
+          ringColor="#431366"
+          circleColor="#431311"
+          name="Suraj Mishra"
+          team="Graphics Team"
+          // position=" Developer"
+          Quote="You eliminate competition by being yourself"
+          linkedin="https://www.linkedin.com/in/nishant-ola-490712228/"
+          github="https://github.com/ola-nishant"
+          gmail="nishant.ola22@gmail.com"
+          photo="./Assets/Images/teams/suraj.jpg.png"
         />
       </div>
       <Contact />

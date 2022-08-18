@@ -51,7 +51,9 @@ const Glimpses = () => {
         <h1 className="glimpses_h1 glitch" data-text="Glimpses">
           Glimpses
         </h1>
+        {/* <h3 style={{margin: "auto"}}>Asuccessful legacy of 17 years, InfoXpression 2022 marks the 18th iteration of USICT’s flagship tech-fest. Back with a dose of euphoria, excitement and inspiration.</h3> */}
         <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
+          
           {/* <div className="animate" style={{ opacity: 1, marginBottom: "2vh" }}>
                         <svg
                             height={100}
@@ -99,7 +101,7 @@ const Glimpses = () => {
           <div className="wrapper">
             <div className="container1">
               <span className="glimpses_text">With A Foot fall of </span>
-              <span className="num" data-val="6000">
+              <span className="num" data-val="9000">
                 000+
               </span>
               <span className="glimpses_text">
@@ -109,18 +111,21 @@ const Glimpses = () => {
           </div>
           <div className="wrapper">
             <div className="container1">
-              <span className="num" data-val="600">
+            <span className="glimpses_text">Participation from</span>
+              <span className="num" data-val="250">
                 000+
               </span>
-              <span className="text">Memories</span>
+              <span className="glimpses_text">
+                Colleges across North India
+              </span>
             </div>
           </div>
           <div className="wrapper">
             <div className="container1">
-              <span className="num" data-val="1500">
+              <span className="num" data-val="24">
                 000+
               </span>
-              <span className="text">Memories</span>
+              <span className="glimpses_text">diverse events that will ensure fun and learning with no halts</span>
             </div>
           </div>
           {/* </div> */}

@@ -16,7 +16,7 @@ export default function Sponser() {
           <h1 className="glitch previous_sponsors" data-text="Previous Sponsers">Previous Sponsors</h1>
         <div className="sponsers-whole">
         <div className="left">
-        <p>We Are Honoured To Have You As Sponsers! With Your Support We Can Reach New Heights</p>
+        <p>We would like to express our sincere gratitudeand appreciation to our previous sponsors.</p>
         </div>
         <div className="right">
           <div className="box"><img src={require("./Assets/Images/Sponsor/amigos.png")} alt="" /></div>

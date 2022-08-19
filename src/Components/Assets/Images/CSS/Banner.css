@@ -1,6 +1,6 @@
 .glass-bg{
-    backdrop-filter: blur(10px);
-    background-color: transparent;
+    /* backdrop-filter: blur(10px); */
+    background-color: #111213;
     position: static;
     z-index: 5;
     height: 5vh;
@@ -12,6 +12,7 @@
 .banner-text{
     color: rgb(175, 175, 175);
     font-size: larger;
+    padding-bottom: 1vh;
 }
 
 .form-link{

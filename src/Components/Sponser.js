@@ -11,7 +11,7 @@ export default function Sponser() {
   return (
     <section>
       <div className="sponsers" data-aos="fade-up">
-        <h1 className="glitch previous_sponsors" data-text="Previous Sponsers">
+        <h1 className="glitch previous_sponsors" data-text="Previous Sponsors">
           Previous Sponsors
         </h1>
         <div className="sponsers-whole">

@@ -6,8 +6,8 @@ const Navbar = () => {
   let countt = 0;
   const handleNavIndex = () => {
     if (countt === 0) {
-      document.getElementById("navigation__nav").style.zIndex = 1;
-      document.getElementById("navigation__background").style.zIndex = 1;
+      document.getElementById("navigation__nav").style.zIndex = 20;
+      document.getElementById("navigation__background").style.zIndex = 20;
       countt = 1;
     } else if (countt === 1) {
       document.getElementById("navigation__nav").style.zIndex = -1;
@@ -67,7 +67,7 @@ const Navbar = () => {
       </div>
 
       <nav class="navigation__nav" id="navigation__nav">
-        <Banner/>
+      
         <ul class="navigation__list">
           <li class="navigation__item" onClick={handleNavToggle}>
             <a href="#/legacy" class="navigation__link">
@@ -84,11 +84,11 @@ const Navbar = () => {
               <span>Team</span>
             </a>
           </li>
-          <li class="navigation__item" onClick={handleNavToggle}>
+          {/* <li class="navigation__item" onClick={handleNavToggle}>
             <a href="#/reach" class="navigation__link">
               <span>Reach Us</span>
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

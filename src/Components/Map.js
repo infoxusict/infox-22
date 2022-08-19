@@ -2,7 +2,7 @@ import React from "react";
 import "./Assets/Images/CSS/Map.css";
 const Map = () => {
   return (
-    <div>
+    <div style={{marginTop: "10vh"}}>
       <h1 className="Reach_us_title">Reach us</h1>
       <div className="reach_us_stuff">
         <div className="mapdiv">

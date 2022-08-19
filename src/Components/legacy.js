@@ -98,14 +98,27 @@ export default function Legacy() {
           <div className="hero__left-name">
             <span>InfoXpression</span>
           </div>
-          <div className="hero__left-head">
+          {/* <div className="hero__left-head">
             <span className="glitch" data-text="LEGACY">
               LEGACY
             </span>
+          </div> */}
+          <div class="sn_glitch_forNHeading atmosphere">
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
           </div>
           <div className="hero__left-desc">
             <span>
-            InfoXpression2022 edition is set to continue its legacy as one of the biggest tech-fest of GGSIPU (USICT).This year, InfoX aims to be bigger, bolder, and better.
+              InfoXpression2022 edition is set to continue its legacy as one of
+              the biggest tech-fest of GGSIPU (USICT).This year, InfoX aims to
+              be bigger, bolder, and better.
             </span>
           </div>
         </div>
@@ -150,10 +163,21 @@ export default function Legacy() {
           <div className="hero__left-name">
             <span>InfoXpression</span>
           </div>
-          <div className="hero__left-head">
+          {/* <div className="hero__left-head">
             <span className="glitch" data-text="LEGACY">
               LEGACY
             </span>
+          </div> */}
+          <div class="sn_glitch_forNHeading atmosphere phone_lagecy">
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
           </div>
           {/* <div className="hero__left-desc">
             <span>

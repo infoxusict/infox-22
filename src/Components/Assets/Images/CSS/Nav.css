@@ -1,0 +1,42 @@
+@font-face {
+  font-family: atmospheric;
+  src: url(../fonts/aAtmospheric.ttf); 
+}
+
+/* #HideOnload {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.281);
+} */
+
+
+.navbarr{
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  margin-top: -100px;
+  animation-name: navimation;
+  animation-delay: 7.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  box-shadow: 0px 2px 10px 0px white;
+}
+
+@keyframes navimation {
+  from{
+    margin-top:-100px;
+  }
+  to{
+    margin-top:0px;
+  }
+}
+
+@media (max-width: 650px) {
+  .myLogoImg {
+    display: flex;
+    width: 100vw;
+    justify-content: flex-end;
+  }
+}
+
+.atmosphere {
+  font-family: atmospheric;
+}

@@ -1,0 +1,129 @@
+.sponsers {
+  margin-top: 25vh;
+  color: white;
+}
+.sponsers h1 {
+  font-family: "atmospheric";
+  text-align: center;
+  font-size: 7vw;
+  font-weight: bold;
+  font-style: oblique;
+  margin: 1vw;
+  color: whitesmoke;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.258);
+}
+
+.sponsers-whole {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+}
+
+.left p {
+  font-family: "poppins";
+  text-indent: 3ch;
+  font-weight: 300;
+  font-size: large;
+  text-align: center;
+}
+
+.left button {
+  background: white;
+  box-shadow: 0px 0px 5px 0px rgba(13, 176, 13, 0.237);
+  padding: 5px 10px 5px 10px;
+  margin: 30px 0px 0px 0px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.right {
+  width: 80vw;
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.024);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  /* box-shadow: 0px 0px 20px 0px rgb(0, 255, 60); */
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+.right::-webkit-scrollbar {
+  display: none;
+}
+
+.box {
+  width: 10vw;
+  /* height: 70px; */
+  /* background-color: white; */
+  margin: 30px;
+  /* animation-name: sponsersmove; */
+  /* animation-duration: 5s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; */
+}
+
+.box img {
+  /* filter: saturate(0); */
+  transition: all 0.3s;
+}
+
+.box img:hover {
+  /* filter: saturate(1); */
+  /* transform: rotate(2deg); */
+  /* transform: scale(1.04); */
+  transform: scale(1.05);
+}
+
+@keyframes sponsersmove {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@media (max-width: 650px) {
+  .left {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+  .left h1 {
+    font-size: 8vw;
+  }
+  .left p {
+    font-size: 2vw;
+  }
+  .right {
+    width: 80%;
+  }
+  .box {
+    width: 20vw;
+  }
+  .left p {
+    text-align: center;
+  }
+}
+
+.previous_sponsors{
+  font-size: 5vw !important;
+}

@@ -1,0 +1,64 @@
+#keanu{
+  height: 100px;
+  width:100px;
+  /* background: greenyellow; */
+}
+
+/* #keanu img{
+  height: 100%;
+  width: 100%;
+  opacity: 0%; */
+  /* animation: keanumation 4s forwards; */
+/* } */
+
+@keyframes keanumation {
+  from{
+    opacity: 0%;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
+#myBar
+{
+  position: fixed;
+  bottom:30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.booth{
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  bottom: 30px;
+  right: 10px;
+  z-index: 18;
+}
+
+.keanu-h1{
+  position: fixed;
+  color: aqua;
+}
+
+@media (max-width:650px){
+  .keanudiv{
+    display: none;
+  }
+}
+
+#keanuimg{
+  height: 175px;
+  aspect-ratio: 1;
+}
+
+@keyframes keanu_fade {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.76 27.94" >
+  <defs>
+    <style>
+      .a {
+        isolation: isolate;
+        <!-- filter: drop-shadow(0px 0p 0px rgba(0,255,0,0.2)) -->
+      }
+
+      .b {
+        fill: #fff;
+      }
+      <!-- svg{
+        filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+      } -->
+    </style>
+  </defs>
+  <g class="a">
+    <path class="b" d="M21.12,106.08s4.48.64,9.36,8.16c0,0,10.74,19.68,22.08,19.68H186.24s8.83,2.19,20.16-14.16c0,0,6.56-11.2,12.48-13.68Z" transform="translate(-21.12 -106.08)"/>
+  </g>
+</svg>

@@ -1,0 +1,136 @@
+@font-face {
+  font-family: atmospheric;
+  src: url(../fonts/aAtmospheric.ttf);
+}
+@font-face {
+  font-family: Teko-medium;
+  src: url(../fonts/Teko-Light.ttf);
+}
+.teampage {
+  /* background-color: black; */
+  padding-top: 10vh;
+}
+
+.teampage__heading {
+  /* margin-top: 10vh; */
+  /* color: rgb(0, 255, 60); */
+  color: whitesmoke;
+  /* font-family: Teko-medium; */
+  font-size: 15vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* letter-spacing: 1vh; */
+  /* animation-name: bg;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; */
+}
+.teampage__headingdown {
+  height: 5vh;
+}
+
+.teampage__background {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(rgb(0, 255, 60, 0.2) 20%, transparent 20%);
+  /* box-shadow: 0 0 10px #00ff0a;
+    pointer-events: none;
+    transition: 2s; */
+  background-size: 20px 20px;
+  animation: bg 5s linear infinite;
+}
+
+.teampage__container {
+  margin: auto;
+  /* overflow-y: scroll; */
+  width: 60vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* grid-template-rows: auto auto auto; */
+  column-gap: 0px;
+  row-gap: 0px;
+}
+
+@keyframes bg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+  z-index: -999;
+}
+/* @media only screen and (max-width: 680px) {
+  .teampage__container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+  }
+  .teampage {
+    /* display: flex; 
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .teampage__heading {
+    font-size: 10vh;
+  }
+} */
+@media only screen and (max-width: 900px) {
+  .teampage__container {
+    grid-template-columns: auto auto;
+    margin: 0;
+  }
+  .teampage__heading {
+    font-size: 10vh !important;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .teampage__container {
+    grid-template-columns: auto auto auto;
+    margin-left: 5vw;
+  }
+}
+/* .background1 {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.background1 span {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  animation: bg 5s linear infinite;
+}
+.background1 span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00ff0a;
+  transform: scale(0.1);
+  box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a,
+    0 0 60px #00ff0a;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 2s;
+}
+.background1 span:hover::before {
+  transform: scale(0.5);
+  transition: 0s;
+} */

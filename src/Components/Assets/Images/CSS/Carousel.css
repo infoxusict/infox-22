@@ -1,0 +1,40 @@
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  /* max-width: 900px; */
+  position: relative;
+}
+
+.carousel-inner {
+  transition: ease 1s;
+
+  display: flex;
+}
+
+.carousel-item {
+  height: inherit;
+  width: inherit;
+  flex-shrink: 0;
+  /* flex-grow: 1; */
+  /* display: inline-block; */
+}
+.carousel-item img {
+  height: 50vh;
+  width: 60vw;
+  object-fit: cover;
+}
+.active {
+  opacity: 1;
+}
+
+/* @media only screen and (max-width: 768px) {
+  .carousel-item img {
+    height: 200%;
+    width: 200%;
+  }
+  .carousel-item {
+    height: 200%;
+    width: 200%;
+  }
+
+} */

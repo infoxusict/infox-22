@@ -6,6 +6,7 @@ import SponserNew from './SponsersNew'
 import Glimpses from "./Glimpses";
 // import Svgg from "./Svgg.js";
 import "aos/dist/aos.css";
+import Banner from "./Banner";
 // import Aos from "aos";
 // import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 // import Keeanu from "./Keeanu";
@@ -114,8 +115,8 @@ const Home = (props) => {
     // <div id="overlay" style={{zIndex: "10", backgroundColor: "aqua", position: "absolute", height: "100vh", width: "100vw"}}>
     <section id="Home">
       {/* <button onClick={loader} className='btn bg-white'>play</button> */}
+      <Banner/>
       <MatrixRain />
-
       {/* <Parallax pages={3} id="parallax"> */}
       <div className="animationFrame" id="svgggg">
         <div className="whole-hero">

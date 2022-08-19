@@ -38,7 +38,7 @@ export default function About() {
             <div id="about-stats">
               <div class="about-students">
                 <div id="about-students" class="circle-ripple">
-                  <span class="about-stat-num">6000+</span>
+                  <span class="about-stat-num">9000+</span>
                   <span class="about-stat-title">students</span>
                 </div>
                 <div id="about-students-ripple-1" class="circle-ripple"></div>
@@ -50,7 +50,7 @@ export default function About() {
 
               <div class="about-colleges">
                 <div id="about-colleges" class="circle-ripple">
-                  <span class="about-stat-num">120+</span>
+                  <span class="about-stat-num">250+</span>
                   <span class="about-stat-title">colleges</span>
                 </div>
                 <div id="about-colleges-ripple-1" class="circle-ripple"></div>
@@ -61,7 +61,7 @@ export default function About() {
               </div>
               <div className="about-events">
                 <div id="about-events" class="circle-ripple">
-                  <span class="about-stat-num">25+</span>
+                  <span class="about-stat-num">24+</span>
                   <span class="about-stat-title">events</span>
                 </div>
                 <div id="about-events-ripple-1" class="circle-ripple"></div>

@@ -1,12 +1,10 @@
-
-
 .glitch {
   position: relative;
   margin: 0 auto;
   /* color: #fff; */
   /* font-size: 15vh ; */
   font-family: Atmospheric;
-  font-weight: 600 ;
+  font-weight: 600;
   text-align: center;
   /* color: #02b002; */
   color: whitesmoke;
@@ -14,7 +12,8 @@
   letter-spacing: 0.01em;
   transform: scale3d(1, 1, 1);
 }
-.glitch::before, .glitch::after {
+.glitch::before,
+.glitch::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -109,22 +108,16 @@
   }
 }
 
-
-
-
-
 /* baaki glitches ka kaam  */
-
-
-
 
 .sn_glitch_forNHeading {
   position: relative;
   color: #fff;
-  font-size: 5.3vw;
+  font-size: 6vw;
   text-shadow: 1px 1px 7px #78f701;
 }
-.phone_lagecy{
+
+.phone_lagecy {
   font-size: 15vw;
   /* text-align: center; */
 }
@@ -134,8 +127,10 @@
   left: 3vw;
 }
 .sn_line_forNHeading:nth-child(1) {
-  -webkit-animation: clip 3000ms -500ms linear infinite, glitch1 600ms -1140ms linear infinite;
-          animation: clip 3000ms -500ms linear infinite, glitch1 600ms -1140ms linear infinite;
+  -webkit-animation: clip 3000ms -500ms linear infinite,
+    glitch1 600ms -1140ms linear infinite;
+  animation: clip 3000ms -500ms linear infinite,
+    glitch1 600ms -1140ms linear infinite;
 }
 @-webkit-keyframes glitch1 {
   0% {
@@ -186,8 +181,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(2) {
-  -webkit-animation: clip 3000ms -1000ms linear infinite, glitch2 600ms -857ms linear infinite;
-          animation: clip 3000ms -1000ms linear infinite, glitch2 600ms -857ms linear infinite;
+  -webkit-animation: clip 3000ms -1000ms linear infinite,
+    glitch2 600ms -857ms linear infinite;
+  animation: clip 3000ms -1000ms linear infinite,
+    glitch2 600ms -857ms linear infinite;
 }
 @-webkit-keyframes glitch2 {
   0% {
@@ -238,8 +235,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(3) {
-  -webkit-animation: clip 3000ms -1500ms linear infinite, glitch3 600ms -607ms linear infinite;
-          animation: clip 3000ms -1500ms linear infinite, glitch3 600ms -607ms linear infinite;
+  -webkit-animation: clip 3000ms -1500ms linear infinite,
+    glitch3 600ms -607ms linear infinite;
+  animation: clip 3000ms -1500ms linear infinite,
+    glitch3 600ms -607ms linear infinite;
 }
 @-webkit-keyframes glitch3 {
   0% {
@@ -290,8 +289,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(4) {
-  -webkit-animation: clip 3000ms -2000ms linear infinite, glitch4 600ms -705ms linear infinite;
-          animation: clip 3000ms -2000ms linear infinite, glitch4 600ms -705ms linear infinite;
+  -webkit-animation: clip 3000ms -2000ms linear infinite,
+    glitch4 600ms -705ms linear infinite;
+  animation: clip 3000ms -2000ms linear infinite,
+    glitch4 600ms -705ms linear infinite;
 }
 @-webkit-keyframes glitch4 {
   0% {
@@ -342,8 +343,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(5) {
-  -webkit-animation: clip 3000ms -2500ms linear infinite, glitch5 600ms -251ms linear infinite;
-          animation: clip 3000ms -2500ms linear infinite, glitch5 600ms -251ms linear infinite;
+  -webkit-animation: clip 3000ms -2500ms linear infinite,
+    glitch5 600ms -251ms linear infinite;
+  animation: clip 3000ms -2500ms linear infinite,
+    glitch5 600ms -251ms linear infinite;
 }
 @-webkit-keyframes glitch5 {
   0% {
@@ -394,8 +397,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(6) {
-  -webkit-animation: clip 3000ms -3000ms linear infinite, glitch6 600ms -631ms linear infinite;
-          animation: clip 3000ms -3000ms linear infinite, glitch6 600ms -631ms linear infinite;
+  -webkit-animation: clip 3000ms -3000ms linear infinite,
+    glitch6 600ms -631ms linear infinite;
+  animation: clip 3000ms -3000ms linear infinite,
+    glitch6 600ms -631ms linear infinite;
 }
 @-webkit-keyframes glitch6 {
   0% {
@@ -446,8 +451,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(7) {
-  -webkit-animation: clip 3000ms -3500ms linear infinite, glitch7 600ms -634ms linear infinite;
-          animation: clip 3000ms -3500ms linear infinite, glitch7 600ms -634ms linear infinite;
+  -webkit-animation: clip 3000ms -3500ms linear infinite,
+    glitch7 600ms -634ms linear infinite;
+  animation: clip 3000ms -3500ms linear infinite,
+    glitch7 600ms -634ms linear infinite;
 }
 @-webkit-keyframes glitch7 {
   0% {
@@ -498,8 +505,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(8) {
-  -webkit-animation: clip 3000ms -4000ms linear infinite, glitch8 600ms -756ms linear infinite;
-          animation: clip 3000ms -4000ms linear infinite, glitch8 600ms -756ms linear infinite;
+  -webkit-animation: clip 3000ms -4000ms linear infinite,
+    glitch8 600ms -756ms linear infinite;
+  animation: clip 3000ms -4000ms linear infinite,
+    glitch8 600ms -756ms linear infinite;
 }
 @-webkit-keyframes glitch8 {
   0% {
@@ -550,8 +559,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(9) {
-  -webkit-animation: clip 3000ms -4500ms linear infinite, glitch9 600ms -305ms linear infinite;
-          animation: clip 3000ms -4500ms linear infinite, glitch9 600ms -305ms linear infinite;
+  -webkit-animation: clip 3000ms -4500ms linear infinite,
+    glitch9 600ms -305ms linear infinite;
+  animation: clip 3000ms -4500ms linear infinite,
+    glitch9 600ms -305ms linear infinite;
 }
 @-webkit-keyframes glitch9 {
   0% {
@@ -602,8 +613,10 @@
   }
 }
 .sn_line_forNHeading:nth-child(10) {
-  -webkit-animation: clip 3000ms -5000ms linear infinite, glitch10 600ms -1120ms linear infinite;
-          animation: clip 3000ms -5000ms linear infinite, glitch10 600ms -1120ms linear infinite;
+  -webkit-animation: clip 3000ms -5000ms linear infinite,
+    glitch10 600ms -1120ms linear infinite;
+  animation: clip 3000ms -5000ms linear infinite,
+    glitch10 600ms -1120ms linear infinite;
 }
 @-webkit-keyframes glitch10 {
   0% {
@@ -657,21 +670,21 @@
 @-webkit-keyframes clip {
   0% {
     -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 120%, 0 120%);
-            clip-path: polygon(0 100%, 100% 100%, 100% 120%, 0 120%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 120%, 0 120%);
   }
   100% {
     -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
-            clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
+    clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
   }
 }
 
 @keyframes clip {
   0% {
     -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 120%, 0 120%);
-            clip-path: polygon(0 100%, 100% 100%, 100% 120%, 0 120%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 120%, 0 120%);
   }
   100% {
     -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
-            clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
+    clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
   }
 }

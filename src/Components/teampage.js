@@ -80,7 +80,7 @@ export default function TeamPage() {
           name="Himesh Nayak"
           team="Core Team"
           position="Technical Lead"
-          Quote="We are a team of dedicated and passionate people ."
+          Quote="Destination is not the purpose of life... The journey is..."
           linkedin="https://linkedin.com/in/himeshnayak015"
           github="https://github.com/HimeshNayak"
           gmail="himeshnayak015@gmail.com"
@@ -272,7 +272,7 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/suraj.jpg.png"
         />
       </div>
-      <Contact />
+      {/* <Contact /> */}
       <Map />
     </div>
   );

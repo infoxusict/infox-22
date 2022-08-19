@@ -74,9 +74,20 @@ export default function About() {
           </div>
           <div className="about__right">
             <div id="about-content">
-              <h1 className="glitch" data-text="ABOUT">
+              {/* <h1 className="glitch" data-text="ABOUT">
                 ABOUT
-              </h1>
+              </h1> */}
+              <div class="sn_glitch_forNHeading atmosphere">
+            <div class="sn_line_forNHeading">ABOUT</div>
+            <div class="sn_line_forNHeading">ABOUT</div>
+            <div class="sn_line_forNHeading">ABOUT</div>
+            <div class="sn_line_forNHeading">ABOUT</div>
+            <div class="sn_line_forNHeading">ABOUT</div>
+            <div class="sn_line_forNHeading">ABOUT</div>
+            <div class="sn_line_forNHeading">ABOUT</div>
+            <div class="sn_line_forNHeading">ABOUT</div>
+            <div class="sn_line_forNHeading">ABOUT</div>
+          </div>
               <div class="content-wrap">
                 <div class="content-line-wrap">
                   <div class="before-content-line"></div>

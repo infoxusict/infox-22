@@ -11,9 +11,20 @@ export default function Sponser() {
   return (
     <section>
       <div className="sponsers" data-aos="fade-up">
-        <h1 className="glitch previous_sponsors" data-text="Previous Sponsors">
+        {/* <h1 className="glitch previous_sponsors" data-text="Previous Sponsors">
           Previous Sponsors
-        </h1>
+        </h1> */}
+        <div class="sn_glitch_forNHeading atmosphere sn_exSpon">
+            <div class="sn_line_forNHeading">previous sponsors</div>
+            <div class="sn_line_forNHeading">previous sponsors</div>
+            <div class="sn_line_forNHeading">previous sponsors</div>
+            <div class="sn_line_forNHeading">previous sponsors</div>
+            <div class="sn_line_forNHeading">previous sponsors</div>
+            <div class="sn_line_forNHeading">previous sponsors</div>
+            <div class="sn_line_forNHeading">previous sponsors</div>
+            <div class="sn_line_forNHeading">previous sponsors</div>
+            <div class="sn_line_forNHeading">previous sponsors</div>
+          </div>
         <div className="sponsers-whole">
           <div className="left">
             <p>

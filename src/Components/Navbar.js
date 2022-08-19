@@ -1,5 +1,6 @@
 import React from "react";
 import "./Assets/Images/CSS/Navbar.css";
+import Banner from "./Banner";
 const Navbar = () => {
 
   let countt = 0;
@@ -66,6 +67,7 @@ const Navbar = () => {
       </div>
 
       <nav class="navigation__nav" id="navigation__nav">
+        <Banner/>
         <ul class="navigation__list">
           <li class="navigation__item" onClick={handleNavToggle}>
             <a href="#/legacy" class="navigation__link">

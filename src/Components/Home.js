@@ -115,7 +115,7 @@ const Home = (props) => {
     // <div id="overlay" style={{zIndex: "10", backgroundColor: "aqua", position: "absolute", height: "100vh", width: "100vw"}}>
     <section id="Home">
       {/* <button onClick={loader} className='btn bg-white'>play</button> */}
-      <Banner/>
+      {/* <Banner/> */}
       <MatrixRain />
       {/* <Parallax pages={3} id="parallax"> */}
       <div className="animationFrame" id="svgggg">

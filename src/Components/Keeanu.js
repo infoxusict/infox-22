@@ -19,18 +19,20 @@ const Keeanu = () => {
       // console.log("Scrolled2 is" + scrolled2)
       if (Math.ceil(scrolled2) === 1) {
         // console.log("Scrolled2 is currently 1")
-        document.getElementById("keanuimg").style.animation =
-          "keanumation 4s forwards";
+        document.getElementById("keanuimg").style.animation ="keanumation 4s forwards";
+        document.getElementById("booth-img").style.animation ="keanumation 4s forwards";
         setInterval(() => {
           document.getElementById("keanuimg").style.opacity = "100%";
+          document.getElementById("booth-img").style.opacity = "100%";
         }, 4000);
       }
       if (Math.ceil(scrolled2) === 87) {
         // console.log("Scrolled2 is currently 1")
-        document.getElementById("keanuimg").style.animation =
-          "keanu_fade 0.5s forwards";
+        document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
+        document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
         setInterval(() => {
           document.getElementById("keanuimg").style.opacity = "0%";
+          document.getElementById("booth-img").style.opacity = "0%";
         }, 500);
       }
       document.getElementById("myBar").style.width = scrolled1 + "%";
@@ -66,7 +68,7 @@ const Keeanu = () => {
       <div className="booth">
         <img
           className="booth-img"
-          
+          id="booth-img"
           src={require("./Assets/Images/images/phonebooth.png")}
           alt=""
         />

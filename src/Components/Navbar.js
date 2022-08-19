@@ -5,8 +5,8 @@ const Navbar = () => {
   let countt = 0;
   const handleNavIndex = () => {
     if (countt === 0) {
-      document.getElementById("navigation__nav").style.zIndex = 1;
-      document.getElementById("navigation__background").style.zIndex = 1;
+      document.getElementById("navigation__nav").style.zIndex = 20;
+      document.getElementById("navigation__background").style.zIndex = 20;
       countt = 1;
     } else if (countt === 1) {
       document.getElementById("navigation__nav").style.zIndex = -1;

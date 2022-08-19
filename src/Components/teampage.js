@@ -98,10 +98,34 @@ export default function TeamPage() {
           gmail="jainabhishek7204@gmail.com"
           photo="./Assets/Images/teams/kashish.jpg"
         />
-        <Team ringColor="#ffcc00" circleColor="#c29d08" name=" Vivek Bhatia" team="Core Team" photo="./Assets/Images/teams/vivek.jpeg" />
-        <Team ringColor="#FF9980" circleColor="#009980" name="Harsh Goyal" team="Core Team" />
-        <Team ringColor="#80aa80" circleColor="#80cc80" name="Prince" photo="./Assets/Images/teams/prince.jpeg" team="Core Team" />
-        <Team ringColor="#80aa80" circleColor="#80cc80" name="Manas" photo="./Assets/Images/teams/manas.jpg" team="Core Team" linkedin="https://www.linkedin.com/in/manas-arora-274b681b1/" />
+        <Team
+          ringColor="#ffcc00"
+          circleColor="#c29d08"
+          name=" Vivek Bhatia"
+          team="Core Team"
+          photo="./Assets/Images/teams/vivek.jpeg"
+        />
+        <Team
+          ringColor="#FF9980"
+          circleColor="#009980"
+          name="Harsh Goyal"
+          team="Core Team"
+        />
+        <Team
+          ringColor="#80aa80"
+          circleColor="#80cc80"
+          name="Prince"
+          photo="./Assets/Images/teams/prince.jpeg"
+          team="Core Team"
+        />
+        <Team
+          ringColor="#80aa80"
+          circleColor="#80cc80"
+          name="Manas"
+          photo="./Assets/Images/teams/manas.jpg"
+          team="Core Team"
+          linkedin="https://www.linkedin.com/in/manas-arora-274b681b1/"
+        />
         <Team
           ringColor="#7dfa77"
           circleColor="#7dfa00"
@@ -156,7 +180,7 @@ export default function TeamPage() {
           name="Ansh Goyal"
           team="Web Team"
           position="Front-end Developer"
-          Quote="We are a team of dedicated and passionate people ."
+          Quote="Talk is cheap. Show me the code."
           linkedin="https://www.linkedin.com/in/ansh-goyal-891492146/"
           github="https://www.github.com/ansh1693"
           gmail="anshgoel44@gmail.com"

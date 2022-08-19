@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-20192">
         {/* <div className="site-section"> */}
         <div className="container">
-          <div className="grid md:grid-cols-5 footer-grid">
+          <div className="grid md:grid-cols-5 footer-grid ">
             <div className=" logo da-color-green">
               <a href="#" className="footer-logo theme text-xl atmosphere ">
                 InfoXpression
@@ -34,12 +34,12 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links ">
                 <li className="customerList text-lg div-text-lg">
-                  <a className="customerListA" href="#">
+                  <a className="customerListA" href="#/event">
                     Dates
                   </a>
                 </li>
                 <li className="customerList text-lg div-text-lg">
-                  <a className="customerListA" href="#">
+                  <a className="customerListA " href="#/event">
                     Venue
                   </a>
                 </li>
@@ -51,13 +51,13 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links text-lg div-text-lg">
                 <li className="companyFoot text-lg div-text-lg">
-                  <a className="footAcomp any" href="#">
+                  <a className="footAcompany" href="#/team">
                     About us
                   </a>
                 </li>
                 {/* <li className = "companyFoot"><a className="footAcompany" href="#">Careers</a></li> */}
                 <li className="companyFoot text-lg div-text-lg">
-                  <a className="footAcompany" href="#">
+                  <a className="footAcompany" href="#/team">
                     Contact us
                   </a>
                 </li>
@@ -77,8 +77,8 @@ const Footer = () => {
                     Campus Ambassador
                   </a>
                 </li>
-                <li className="furtherInformation mb-2">
-                  <a className="furtherInformationA" href="#">
+                <li className="furtherInformation mb-2 ">
+                  <a className="furtherInformationA " href="#/legacy">
                     Legacy
                   </a>
                 </li>

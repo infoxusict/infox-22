@@ -58,8 +58,8 @@ const Map = () => {
           </div>
         </div>
       </div>
-      <div id="special_banner"></div>
-      <div id="special_banner2"></div>
+      {/* <div id="special_banner"></div>
+      <div id="special_banner2"></div> */}
       <div class="reach_us_card_2">
           <div class="align_card">
             <h1 className="card_reach_title">Contact info</h1>

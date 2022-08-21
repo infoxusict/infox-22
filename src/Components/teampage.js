@@ -9,85 +9,40 @@ import Contact from "./Contact";
 import Map from "./Map";
 
 export default function TeamPage() {
-  // const numBalls = 50;
-  // const balls = [];
-  // const colors = ["#3CC157"];
-  // function load_balls() {
-  //   const numBalls = 50;
-  //   const balls = [];
-
-  //   for (let i = 0; i < numBalls; i++) {
-  //     let ball = document.createElement("div");
-  //     ball.classList.add("ball");
-  //     ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  //     ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  //     ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
-  //     ball.style.transform = `scale(${Math.random()})`;
-  //     ball.style.width = `${Math.random()}em`;
-  //     ball.style.height = ball.style.width;
-
-  //     balls.push(ball);
-  //     document.body.append(ball);
-  //   }
-
-  //   // Keyframes
-  //   balls.forEach((el, i, ra) => {
-  //     let to = {
-  //       x: Math.random() * (i % 2 === 0 ? -11 : 11),
-  //       y: Math.random() * 12,
-  //     };
-
-  //     let anim = el.animate(
-  //       [
-  //         { transform: "translate(0, 0)" },
-  //         { transform: `translate(${to.x}rem, ${to.y}rem)` },
-  //       ],
-  //       {
-  //         duration: (Math.random() + 1) * 2000, // random duration
-  //         direction: "alternate",
-  //         fill: "both",
-  //         iterations: Infinity,
-  //         easing: "ease-in-out",
-  //       }
-  //     );
-  //   });
-  // }
-
   return (
     <div className="teampage">
       <MatrixRain />
       <div className=""></div>
-      {/* <div className="teampage__heading glitch" data-text="OUR TEAM"> */}
-        {/* <h1>OUR TEAM</h1> */}
-        <div class="sn_glitch_forNHeading atmosphere sn_teamheading">
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-            <div class="sn_line_forNHeading">OUR TEAM</div>
-          </div>
-      {/* </div> */}
+
+      <div class="sn_glitch_forNHeading atmosphere sn_teamheading">
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+        <div class="sn_line_forNHeading">OUR TEAM</div>
+      </div>
+
       <div className="teampage__headingdown"></div>
       <div className="teampage__container">
         <Team
-          ringColor="#55a245"
-          circleColor="#00a245"
+          ringColor="#161616"
+          circleColor="#c2bfb9"
           name="Rudransh Ratan"
           team="Core Team"
           position="President"
-          Quote=""
+          Quote="Impossible is a word only in the dictionary of fools."
           linkedin="https://www.linkedin.com/in/rudransh-ratan-415985a0/"
           github="https://github.com/RUDRANSHRATAN"
           gmail="rudranshratan@gmail.com"
           photo="./Assets/Images/teams/rudransh2.png"
         />
         <Team
-          ringColor="#95F7FF  "
-          circleColor="#01C3FC "
+          ringColor="#412c26"
+          circleColor="#413c26 "
           name="Himesh Nayak"
           team="Core Team"
           position="Technical Lead"
@@ -98,8 +53,8 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/himesh.jpeg"
         />
         <Team
-          ringColor="#aadef2 "
-          circleColor="#00def2"
+          ringColor="#444c57 "
+          circleColor="#114c57"
           name="Kashish Jain"
           team="Web Team"
           position="Full stack Developer"
@@ -110,12 +65,12 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/kashish.jpg"
         />
         <Team
-          ringColor="#FFAE76 "
-          circleColor="#FF6800 "
-          commentColor="#FF6800 "
+          ringColor="#e4bfcb"
+          circleColor="#e5c7 "
+          // commentColor="#e5c7 "
           name="Ansh Goyal"
           team="Web Team"
-          position="Front-end Developer"
+          position="Full-Stack Developer"
           Quote="Talk is cheap. Show me the code."
           linkedin="https://www.linkedin.com/in/ansh-goyal-891492146/"
           github="https://www.github.com/ansh1693"
@@ -123,11 +78,11 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/ansh.jpg"
         />
         <Team
-          ringColor="#ffcb88"
-          circleColor="#ffcb00"
+          ringColor="#d2c6c2"
+          circleColor="#d2c688"
           name="Ayush Baliyan"
           team="Web Team"
-          position="Front-end Developer"
+          position="Full-Stack Developer"
           Quote="The strong don't win. The winners are the strong ones."
           linkedin="https://www.linkedin.com/in/ayush-baliyan-4a2242146"
           github="https://www.github.com/ayush-baliyan-19"
@@ -135,23 +90,23 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/ayush.jpeg"
         />
         <Team
-          ringColor="#aa0000"
-          circleColor="#ff0000"
+          ringColor="#286088"
+          circleColor="#2860ff"
           name="Dhruv Aeron"
           team="Web Team"
-          position="Front-end Developer"
+          position="Full-Stack Developer"
           Quote="I intend to live life not just exist.🤣"
           linkedin="www.linkedin.com/in/aerondhruv"
           github="https://github.com/Aeron2"
           gmail="dhruv.aeron3@gmail.com"
           photo="./Assets/Images/teams/dhruvAeron.jpeg"
         />
-         <Team
-          ringColor="#aaa"
-          circleColor="#777"
+        <Team
+          ringColor="#ca7e77"
+          circleColor="#ca7e55"
           name="Dhruv Gupta"
           team="Web Team"
-          position="Front-end Developer"
+          position="Full-Stack Developer"
           Quote="Where the focus goes, Energy flows 🌞"
           linkedin="https://www.linkedin.com/in/dhruv-gupta-55034a228/"
           github="https://www.github.com/MR-DHRUV"
@@ -159,49 +114,48 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/dhruvGupta.jpg"
         />
         <Team
-          ringColor="#b488ff"
-          circleColor="#b400ff"
+          ringColor="#9c7e91"
+          circleColor="#9c7e51"
           name="Divyansh"
           team="Web Team"
-          position="Front-end Developer"
+          position="Full-Stack Developer"
           Quote="Curiosity is the essence of our existence."
           linkedin="https://www.linkedin.com/in/divyansh-787533211/"
           github="https://github.com/Divyansh3021"
           gmail="Divyansh3021@gmail.com"
           photo="./Assets/Images/teams/Divyansh.jpg"
         />
-          <Team
-            ringColor="#fff"
-            circleColor="#aaa"
-            name="Kartik Singh"
-            team="Web Team"
-            position="Security Tester"
-            Quote="Don't Hate the Hacker hate the code "
-            linkedin="https://www.linkedin.com/in/kartik-singh-68bb8b179/"
-            github="https://www.github.com/kartikkc"
-            gmail="kartikkc95@gmail.com"
-            photo="./Assets/Images/teams/kartik.jpeg"
-          />
         <Team
-          ringColor="#431366"
-          circleColor="#431311"
+          ringColor="#253e42"
+          circleColor="#b82724"
+          name="Kartik Singh"
+          team="Web Team"
+          position="Security Tester"
+          Quote="Don't Hate the Hacker hate the code "
+          linkedin="https://www.linkedin.com/in/kartik-singh-68bb8b179/"
+          github="https://www.github.com/kartikkc"
+          gmail="kartikkc95@gmail.com"
+          photo="./Assets/Images/teams/kartik.jpeg"
+        />
+        <Team
+          ringColor="#262519"
+          circleColor="#c1ff01"
           name="Nishant"
           team="Web Team"
-          position="Front-end Developer"
+          position="Full-Stack Developer"
           Quote="You eliminate competition by being yourself"
           linkedin="https://www.linkedin.com/in/nishant-ola-490712228/"
           github="https://github.com/ola-nishant"
           gmail="nishant.ola22@gmail.com"
           photo="./Assets/Images/teams/nishant.jpg"
         />
-        
-        
+
         <Team
-          ringColor="#cc3300"
-          circleColor="#ff3000"
+          ringColor="#caeafa"
+          circleColor="#caeafa"
           name="Shivesh Nandan"
           team="Web Team"
-          position="Front-end Developer"
+          position="Full-Stack Developer"
           Quote="giving up isn't an option!"
           linkedin="https://www.linkedin.com/in/shivesh-nandan-39a1b219a/"
           github="https://github.com/ShiveshNandan"
@@ -209,11 +163,10 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/shivesh.png"
         />
         {/* <Team ringColor="#fff" circleColor="#000" name="Nishant" /> */}
-       
 
         <Team
-          ringColor="#431366"
-          circleColor="#431311"
+          ringColor="#efc020"
+          circleColor="#1e1e1e"
           name="Suraj Mishra"
           team="Web Team"
           // position=" Developer"
@@ -224,8 +177,8 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/suraj.jpg.png"
         />
         <Team
-          ringColor="#808099"
-          circleColor="#8080ff"
+          ringColor="#692839"
+          circleColor="#13a39a"
           name="Toyeesh Sinha"
           team="Web Team"
           position="Full Stack Developer"

@@ -39,7 +39,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="customerList text-lg div-text-lg">
-                  <a className="customerListA " href="#/event">
+                  <a className="customerListA " href="#/team">
                     Venue
                   </a>
                 </li>

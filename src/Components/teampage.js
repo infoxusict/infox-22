@@ -83,7 +83,7 @@ export default function TeamPage() {
           linkedin="https://www.linkedin.com/in/rudransh-ratan-415985a0/"
           github="https://github.com/RUDRANSHRATAN"
           gmail="rudranshratan@gmail.com"
-          photo="./Assets/Images/teams/rudransh.jpg"
+          photo="./Assets/Images/teams/rudransh2.png"
         />
         <Team
           ringColor="#95F7FF  "

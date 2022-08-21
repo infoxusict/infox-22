@@ -17,7 +17,7 @@ const Keeanu = () => {
       var scrolled1 = ((winScroll + winScroll / 10) / height) * 100;
       var scrolled2 = (winScroll / height) * 100;
       // console.log("Scrolled2 is" + scrolled2)
-      if (Math.ceil(scrolled2) === 1) {
+      if (Math.ceil(scrolled2) <= 1) {
         // console.log("Scrolled2 is currently 1")
         document.getElementById("keanuimg").style.animation ="keanumation 4s forwards";
         document.getElementById("booth-img").style.animation ="keanumation 4s forwards";

@@ -14,7 +14,6 @@
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer;
-
 }
 @media only screen and (max-width: 56.25em) {
   .navigation__button {
@@ -354,7 +353,18 @@
     top: 4vh;
     right: 4vh;
   }
-
+  .navigation__button:hover .navigation__icon::before {
+    top: -1vh;
+  }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1vh;
+  }
+  .navigation__button:active .navigation__icon::before {
+    top: -2vh;
+  }
+  .navigation__button:active .navigation__icon::after {
+    top: 2vh;
+  }
   .navigation__background {
     height: 5vh;
     width: 5vh;

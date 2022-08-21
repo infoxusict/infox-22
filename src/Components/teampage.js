@@ -58,7 +58,7 @@ export default function TeamPage() {
           name="Kashish Jain"
           team="Web Team"
           position="Full stack Developer"
-          Quote="Full Stack Software Developer"
+          Quote="Things aren’t always #000000 and #FFFFFF"
           linkedin="https://links.kjdev.tech/linkedin"
           github="https://links.kjdev.tech/github"
           gmail="jainabhishek7204@gmail.com"

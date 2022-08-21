@@ -108,7 +108,18 @@
   }
 }
 
+
+
+
+
+
 /* baaki glitches ka kaam  */
+
+
+
+
+
+
 
 .sn_glitch_forNHeading {
   position: relative;
@@ -116,7 +127,16 @@
   font-size: 6vw;
   text-shadow: 1px 1px 7px #78f701;
 }
-
+.sn_glimpses{
+  /* text-align: center; */
+  left: 30vw;
+}
+.sn_teamheading{
+  left: 29vw;
+}
+.sn_exSpon{
+  left: 6vw;
+}
 .phone_lagecy {
   font-size: 15vw;
   /* text-align: center; */
@@ -124,8 +144,9 @@
 .sn_line_forNHeading:not(:first-child) {
   position: absolute;
   top: 0;
-  left: 3vw;
+  /* left: 3vw; */
 }
+
 .sn_line_forNHeading:nth-child(1) {
   -webkit-animation: clip 3000ms -500ms linear infinite,
     glitch1 600ms -1140ms linear infinite;
@@ -687,4 +708,16 @@
     -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
     clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
   }
+}
+@media only screen and (max-width: 700px) {
+  .sn_glimpses,.sn_teamheading, .sn_exSpon{
+    /* text-align: center; */
+    font-size: 12vw;
+    left: 8vw;
+  }
+  .snsponsors{
+    font-size: 12vw;
+    
+  }
+ 
 }

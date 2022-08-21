@@ -48,9 +48,20 @@ const Glimpses = () => {
   return (
     <div style={{ width: "100%", marginTop: "25vh" }} onMouseEnter={count_iteration}>
       <div className="animate" style={{ opacity: 1 }}>
-        <h1 className="glimpses_h1 glitch" data-text="Glimpses">
+        {/* <h1 className="glimpses_h1 glitch" data-text="Glimpses">
           Glimpses
-        </h1>
+        </h1> */}
+        <div class="sn_glitch_forNHeading atmosphere sn_glimpses">
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+            <div class="sn_line_forNHeading">GLIMPSES</div>
+          </div>
         {/* <h3 style={{margin: "auto"}}>Asuccessful legacy of 17 years, InfoXpression 2022 marks the 18th iteration of USICT’s flagship tech-fest. Back with a dose of euphoria, excitement and inspiration.</h3> */}
         <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
           

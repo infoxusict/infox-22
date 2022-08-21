@@ -57,9 +57,20 @@ export default function TeamPage() {
     <div className="teampage">
       <MatrixRain />
       <div className=""></div>
-      <div className="teampage__heading glitch" data-text="OUR TEAM">
-        <h1>OUR TEAM</h1>
-      </div>
+      {/* <div className="teampage__heading glitch" data-text="OUR TEAM"> */}
+        {/* <h1>OUR TEAM</h1> */}
+        <div class="sn_glitch_forNHeading atmosphere sn_teamheading">
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+            <div class="sn_line_forNHeading">OUR TEAM</div>
+          </div>
+      {/* </div> */}
       <div className="teampage__headingdown"></div>
       <div className="teampage__container">
         <Team

@@ -14,7 +14,17 @@ export default function Sponser() {
     <section>
 
       <div className='sponsers' data-aos="fade-up">
-          <h1 className="glitch" data-text="Sponsors">Sponsors</h1>
+      <div class="sn_glitch_forNHeading atmosphere snsponsors">
+            <div class="sn_line_forNHeading">SPONSORS</div>
+            <div class="sn_line_forNHeading">SPONSORS</div>
+            <div class="sn_line_forNHeading">SPONSORS</div>
+            <div class="sn_line_forNHeading">SPONSORS</div>
+            <div class="sn_line_forNHeading">SPONSORS</div>
+            <div class="sn_line_forNHeading">SPONSORS</div>
+            <div class="sn_line_forNHeading">SPONSORS</div>
+            <div class="sn_line_forNHeading">SPONSORS</div>
+            <div class="sn_line_forNHeading">SPONSORS</div>
+          </div>
         <div className="sponsers-whole">
         <Schedule />
         </div>

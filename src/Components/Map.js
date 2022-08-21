@@ -2,11 +2,11 @@ import React from "react";
 import "./Assets/Images/CSS/Map.css";
 const Map = () => {
   return (
-    <div>
+    <div style={{marginTop: "10vh"}}>
       <h1 className="Reach_us_title">Reach us</h1>
       <div className="reach_us_stuff">
         <div className="mapdiv">
-          <a href="https://www.google.com/maps/place/Guru+Gobind+Singh+Indraprastha+University/@28.5949739,77.0171102,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1aafdb891567:0x10d270731c930a87!8m2!3d28.5949739!4d77.0192989">
+          <a href="https://www.google.com/maps/place/Guru+Gobind+Singh+Indraprastha+University/@28.5949739,77.0171102,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1aafdb891567:0x10d270731c930a87!8m2!3d28.5949739!4d77.0192989" target="_blank">
             <img
               className="map_pic"
               src={require("./Assets/Images/reach us/google maps.png")}
@@ -43,8 +43,8 @@ const Map = () => {
                   src={require("./Assets/Images/reach us/email.png")}
                   alt="location marker"
                 />
-                <a id="anchor" href="mailto:nishant.ola22@gmail.com">
-                  nishant.ola22@gmail.com
+                <a id="anchor" href="mailto:infox@ipu.ac.in">
+                  infox@ipu.ac.in
                 </a>
               </li>
             </ul>
@@ -58,8 +58,8 @@ const Map = () => {
           </div>
         </div>
       </div>
-      <div id="special_banner"></div>
-      <div id="special_banner2"></div>
+      {/* <div id="special_banner"></div>
+      <div id="special_banner2"></div> */}
       <div class="reach_us_card_2">
           <div class="align_card">
             <h1 className="card_reach_title">Contact info</h1>

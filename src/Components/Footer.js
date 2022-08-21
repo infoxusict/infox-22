@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Footer.css";
 
-import MatrixRain from "./MatrixRain";
+// import MatrixRain from "./MatrixRain";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-20192">
         {/* <div className="site-section"> */}
         <div className="container">
-          <div className="grid md:grid-cols-5 footer-grid">
+          <div className="grid md:grid-cols-5 footer-grid ">
             <div className=" logo da-color-green">
               <a href="#" className="footer-logo theme text-xl atmosphere ">
                 InfoXpression
@@ -34,12 +34,12 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links ">
                 <li className="customerList text-lg div-text-lg">
-                  <a className="customerListA" href="#">
+                  <a className="customerListA" href="#/event">
                     Dates
                   </a>
                 </li>
                 <li className="customerList text-lg div-text-lg">
-                  <a className="customerListA" href="#">
+                  <a className="customerListA " href="#/event">
                     Venue
                   </a>
                 </li>
@@ -51,13 +51,13 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links text-lg div-text-lg">
                 <li className="companyFoot text-lg div-text-lg">
-                  <a className="footAcomp any" href="#">
+                  <a className="footAcompany" href="#/team">
                     About us
                   </a>
                 </li>
                 {/* <li className = "companyFoot"><a className="footAcompany" href="#">Careers</a></li> */}
                 <li className="companyFoot text-lg div-text-lg">
-                  <a className="footAcompany" href="#">
+                  <a className="footAcompany" href="#/team">
                     Contact us
                   </a>
                 </li>
@@ -65,17 +65,21 @@ const Footer = () => {
             </div>
             <div className="">
               <h3 className="furtherInfo atmosphere text-lg mb-5 da-color-green mt-12 md:mt-0">
-                Further Information
+                Pages
               </h3>
               <ul className="list-unstyled links">
                 <li className="furtherInformation mb-2 text-lg div-text-lg">
-                  <a className="furtherInformationA" href="#">
-                    Terms &amp; Conditions
+                  <a
+                    className="furtherInformationA"
+                    href="https://forms.gle/bZgie3xMhq9CiwBU6"
+                    target="_blank"
+                  >
+                    Campus Ambassador
                   </a>
                 </li>
-                <li className="furtherInformation mb-2">
-                  <a className="furtherInformationA" href="#">
-                    Privacy Policy
+                <li className="furtherInformation mb-2 ">
+                  <a className="furtherInformationA " href="#/legacy">
+                    Legacy
                   </a>
                 </li>
               </ul>
@@ -86,7 +90,11 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled social">
                 <li className="socialList mb-2">
-                  <a className="listSocialA" href="#">
+                  <a
+                    className="listSocialA"
+                    href="https://www.instagram.com/infoxpression.usict/"
+                    target="_blank"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -104,7 +112,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="socialList">
-                  <a className="listSocialA " href="#">
+                  <a
+                    className="listSocialA "
+                    href="https://twitter.com/infoxpression_"
+                    target="_blank"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -122,7 +134,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="socialList">
-                  <a className="listSocialA" href="#">
+                  <a
+                    className="listSocialA"
+                    href="https://www.facebook.com/infoxpression/"
+                    target="_blank"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -140,7 +156,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="socialList">
-                  <a className="listSocialA" href="#">
+                  <a
+                    className="listSocialA"
+                    href="https://www.linkedin.com/company/infoxpression-usict/about/"
+                    target="_blank"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -158,7 +178,7 @@ const Footer = () => {
                     </svg>
                   </a>
                 </li>
-                <li className="socialList">
+                {/* <li className="socialList">
                   <a className="listSocialA" href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +196,7 @@ const Footer = () => {
                       ></path>
                     </svg>
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

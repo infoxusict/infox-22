@@ -1,0 +1,25 @@
+.glass-bg{
+    /* backdrop-filter: blur(10px); */
+    background-color: #111213;
+    position: static;
+    z-index: 5;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text{
+    color: rgb(175, 175, 175);
+    /* padding-bottom: 1vh; */
+}
+
+.form-link{
+    text-decoration: underline;
+    color: green;
+}
+@media only screen and (max-width: 360px) {
+.banner-text{
+    font-size: 10px;
+}
+} 

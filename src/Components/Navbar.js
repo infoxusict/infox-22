@@ -1,23 +1,24 @@
 import React from "react";
 import "./Assets/Images/CSS/Navbar.css";
+import Banner from "./Banner";
 const Navbar = () => {
 
-  let countt=0;
-  const handleNavIndex =() =>{
-    if(countt===0)
-    {
-      document.getElementById("navigation__nav").style.zIndex=1
-      document.getElementById("navigation__background").style.zIndex=1
-      countt=1;
-    }
-    else if(countt===1)
-    {
-      document.getElementById("navigation__nav").style.zIndex=-1
-      document.getElementById("navigation__background").style.zIndex=-1
-      countt=0;
-    }
-  }
+  let countt = 0;
+  const handleNavIndex = () => {
+    if (countt === 0) {
+      document.getElementById("navigation__nav").style.zIndex = 20;
+      document.getElementById("navigation__background").style.zIndex = 20;
+      countt = 1;
+    } else if (countt === 1) {
+      document.getElementById("navigation__nav").style.zIndex = -1;
+      document.getElementById("navigation__background").style.zIndex = -1;
+      countt = 0;
 
+    }
+  };
+  const handleNavToggle = () => {
+    document.getElementById("navi-toggle").click();
+  };
   return (
     // <div className='navbar' id='navbar' style={{display : "flex", justifyContent: "center", width: "100%"}}>
     //   <div className="nav-svg" style={{display: "flex", justifyContent: "center", width: "100%" }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.76 27.94" width="40%">
@@ -37,19 +38,36 @@ const Navbar = () => {
     //   </div>
     // </div>
     <div class="navigation">
+      <div>
+        <ul>
+          <li>
+            <a href="#">
+              <img
+                src={require("./Assets/Images/aswd.png")}
+                alt="infox logo"
+                className="top-9 left-5 md:top-11 md:left-10 w-14 md:w-20 fixed z-50"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
       <input
         type="checkbox"
         class="navigation__checkbox"
         id="navi-toggle"
+        onClick={handleNavIndex}
       ></input>
 
-      <label for="navi-toggle" class="navigation__button" onClick={handleNavIndex}>
+      <label for="navi-toggle" class="navigation__button">
         <span class="navigation__icon">&nbsp;</span>
       </label>
 
-      <div class="navigation__background" id="navigation__background">&nbsp;</div>
+      <div class="navigation__background" id="navigation__background">
+        &nbsp;
+      </div>
 
       <nav class="navigation__nav" id="navigation__nav">
+      
         <ul class="navigation__list">
           <li class="navigation__item">
             <a href="/#/team" class="navigation__link">
@@ -76,6 +94,27 @@ const Navbar = () => {
               Register
             </a>
           </li>
+=======
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <a href="#/legacy" class="navigation__link">
+              <span>Legacy</span>
+            </a>
+          </li>
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <a href="#/event" class="navigation__link">
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <a href="#/team" class="navigation__link">
+              <span>Team</span>
+            </a>
+          </li>
+          {/* <li class="navigation__item" onClick={handleNavToggle}>
+            <a href="#/reach" class="navigation__link">
+              <span>Reach Us</span>
+            </a>
+          </li> */}
         </ul>
       </nav>
     </div>

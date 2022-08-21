@@ -11,11 +11,15 @@
 
 .banner-text{
     color: rgb(175, 175, 175);
-    font-size: larger;
-    padding-bottom: 1vh;
+    /* padding-bottom: 1vh; */
 }
 
 .form-link{
     text-decoration: underline;
     color: green;
 }
+@media only screen and (max-width: 360px) {
+.banner-text{
+    font-size: 10px;
+}
+} 

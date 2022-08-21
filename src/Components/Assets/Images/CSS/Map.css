@@ -8,14 +8,16 @@
 .reach_us_card{
     margin-left: 55vw;
     width: 30vw;
-    height:88vh;
+    height:732px;
     position: absolute;
     z-index: 3;
     background: rgba( 255, 255, 255, 0.15 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );}
 .map_pic{
-    width:100vw;
+    width: 1872px;
+    height:732px;
+    object-fit: cover;
     filter: brightness(.8);
     filter: contrast(1.2);
 }

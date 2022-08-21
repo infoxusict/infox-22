@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import "./Assets/Images/CSS/MAtrixRain.css";
 
+var fps;
+var ph;
+var boody= document.body;
+var htmll=document.documentElement
 const MatrixRain = () => {
   const Rain = () => {
     var body = document.body,
@@ -52,6 +56,7 @@ const MatrixRain = () => {
           this.y = 0;
         } else {
           this.y += 1;
+          ph +=1;
         }
       }
     }
@@ -83,7 +88,7 @@ const MatrixRain = () => {
 
     const effect = new Effect(canvas.width, canvas.height);
     let lastTime = 0;
-    const fps = 30;
+    fps = 120;
     const nextFrame = 1000 / fps;
     let timer = 0;
 
@@ -114,8 +119,19 @@ const MatrixRain = () => {
   };
 
   useEffect(() => {
-    Rain();
-
+    setTimeout(()=>{
+      Rain()
+    },3000)
+    if(ph===Math.max(
+      boody.scrollHeight,
+      boody.offsetHeight,
+      htmll.clientHeight,
+      htmll.scrollHeight,
+      htmll.offsetHeight
+    ))
+    {
+      fps=30;
+    }
     // eslint-disable-next-line
   }, []);
 

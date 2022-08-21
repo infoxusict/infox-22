@@ -207,7 +207,7 @@ export default function Legacy() {
               gridClass="slider-2"
               width="60"
               height="50"
-              ySlide="true"
+              // ySlide="true"
             />
             <Slider
               sliderData={sliderData3}

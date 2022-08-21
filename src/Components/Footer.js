@@ -68,7 +68,7 @@ const Footer = () => {
                 Pages
               </h3>
               <ul className="list-unstyled links">
-                <li className="furtherInformation mb-2 text-lg div-text-lg">
+                <li className="furtherInformation text-lg div-text-lg" style={{marginBottom: "0px"}}>
                   <a
                     className="furtherInformationA"
                     href="https://forms.gle/bZgie3xMhq9CiwBU6"
@@ -155,7 +155,7 @@ const Footer = () => {
                     </svg>
                   </a>
                 </li>
-                <li className="socialList">
+                <li className="socialList mb-1">
                   <a
                     className="listSocialA"
                     href="https://www.linkedin.com/company/infoxpression-usict/about/"

@@ -82,7 +82,7 @@ const Home = (props) => {
                   fontSize: "x-large",
                 }}
               >
-                OCTOBER 11th - 13th 2022
+                OCTOBER 2022
               </h3>
               <p style={{ textAlign: "center" }}>
                 TECHFEST USICT | GGSIPU <br />

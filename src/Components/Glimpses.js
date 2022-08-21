@@ -1,43 +1,45 @@
 import "./Assets/Images/CSS/glimpses.css";
+import React from "react";
+import { InView, inView } from "react-intersection-observer";
 import "./Assets/Images/CSS/glitch.css";
 const Glimpses = () => {
-  let count =0;
+  // const ref = React.useRef();
+  let count = 0;
   const count_iteration = () => {
-    if(count===0)
-    {
+    if (count === 0) {
       count++;
-    let valueDisplays = document.querySelectorAll(".num");
-    valueDisplays.forEach((valueDisplay) => {
-      let startValue = 0;
-      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-      let speed=24;
-      let counter = setInterval(function () {
-        let interval = Math.ceil(endValue/speed);
-        startValue += interval;
-        valueDisplay.textContent = `${startValue}+`;
+      let valueDisplays = document.querySelectorAll(".num");
+      valueDisplays.forEach((valueDisplay) => {
+        let startValue = 0;
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let speed = 24;
+        let counter = setInterval(function () {
+          let interval = Math.ceil(endValue / speed);
+          startValue += interval;
+          valueDisplay.textContent = `${startValue}+`;
 
-        if (startValue >= endValue) {
-          clearInterval(counter);
-        }
+          if (startValue >= endValue) {
+            clearInterval(counter);
+          }
+        });
       });
-    });
-  }
-
+    }
   };
+
   return (
-    <div style={{ width: "100%", marginTop: "25vh" }} onMouseEnter={count_iteration}>
+    <div style={{ width: "100%", marginTop: "25vh" }}>
       <div className="animate" style={{ opacity: 1 }}>
         <div class="sn_glitch_forNHeading atmosphere sn_glimpses">
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-            <div class="sn_line_forNHeading">GLIMPSES</div>
-          </div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+          <div class="sn_line_forNHeading">GLIMPSES</div>
+        </div>
         <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
           <div className="wrapper">
             <div className="container1">
@@ -50,23 +52,32 @@ const Glimpses = () => {
               </span>
             </div>
           </div>
-          <div className="wrapper">
+          <InView
+            as="div"
+            className="wrapper"
+            onChange={(inView, entry) => {
+              if (inView) {
+                count_iteration();
+              }
+              console.log("inView :", inView);
+            }}
+          >
             <div className="container1">
-            <span className="glimpses_text">Participation from</span>
+              <span className="glimpses_text">Participation from</span>
               <span className="num" data-val="250">
                 000+
               </span>
-              <span className="glimpses_text">
-                Colleges across North India
-              </span>
+              <span className="glimpses_text">Colleges across North India</span>
             </div>
-          </div>
+          </InView>
           <div className="wrapper">
             <div className="container1">
               <span className="num" data-val="24">
                 000+
               </span>
-              <span className="glimpses_text">diverse events that will ensure fun and learning with no halts</span>
+              <span className="glimpses_text">
+                diverse events that will ensure fun and learning with no halts
+              </span>
             </div>
           </div>
         </div>

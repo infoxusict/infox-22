@@ -24,7 +24,7 @@ export default function About() {
   };
 
   const MyComponent1 = () => {
-    const { width1, height1 } = useViewport();
+    const { width1} = useViewport();
     // const { height } = useHeight();
     const breakpoint1 = 1000;
 

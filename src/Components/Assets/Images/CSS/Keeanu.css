@@ -43,6 +43,15 @@
   color: aqua;
 }
 
+#keanuimg
+{
+  opacity: 0;
+}
+
+#booth-img{
+  opacity: 0;
+}
+
 @media (max-width:650px){
   .keanudiv{
     display: none;

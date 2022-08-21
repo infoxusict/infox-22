@@ -5,7 +5,7 @@ import "./Assets/Images/CSS/glitch.css";
 import "./Assets/Images/CSS/Contact.css";
 import Team from "./team";
 import MatrixRain from "./MatrixRain";
-import Contact from "./Contact";
+// import Contact from "./Contact";
 import Map from "./Map";
 
 export default function TeamPage() {

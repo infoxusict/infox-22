@@ -26,7 +26,7 @@ const Keeanu = () => {
           document.getElementById("booth-img").style.opacity = "100%";
         }, 4000);
       }
-      if (Math.ceil(scrolled2) === 87) {
+      if (Math.ceil(scrolled2) === 83) {
         // console.log("Scrolled2 is currently 1")
         document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
         document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
@@ -35,7 +35,34 @@ const Keeanu = () => {
           document.getElementById("booth-img").style.opacity = "0%";
         }, 500);
       }
-      else if (Math.ceil(scrolled2) === 88) {
+      else if (Math.ceil(scrolled2) === 84) {
+        // console.log("Scrolled2 is currently 1")
+        document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
+        document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
+        setInterval(() => {
+          document.getElementById("keanuimg").style.opacity = "0%";
+          document.getElementById("booth-img").style.opacity = "0%";
+        }, 500);
+      }
+      else if (Math.ceil(scrolled2) === 85) {
+        // console.log("Scrolled2 is currently 1")
+        document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
+        document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
+        setInterval(() => {
+          document.getElementById("keanuimg").style.opacity = "0%";
+          document.getElementById("booth-img").style.opacity = "0%";
+        }, 500);
+      }
+      else if (Math.ceil(scrolled2) === 86) {
+        // console.log("Scrolled2 is currently 1")
+        document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
+        document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
+        setInterval(() => {
+          document.getElementById("keanuimg").style.opacity = "0%";
+          document.getElementById("booth-img").style.opacity = "0%";
+        }, 500);
+      }
+      else if (Math.ceil(scrolled2) === 87) {
         // console.log("Scrolled2 is currently 1")
         document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
         document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
@@ -54,6 +81,15 @@ const Keeanu = () => {
         }, 500);
       }
       else if (Math.ceil(scrolled2) === 89) {
+        // console.log("Scrolled2 is currently 1")
+        document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
+        document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
+        setInterval(() => {
+          document.getElementById("keanuimg").style.opacity = "0%";
+          document.getElementById("booth-img").style.opacity = "0%";
+        }, 500);
+      }
+      else if (Math.ceil(scrolled2) === 90) {
         // console.log("Scrolled2 is currently 1")
         document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
         document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";

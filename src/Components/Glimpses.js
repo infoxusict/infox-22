@@ -17,7 +17,7 @@ const Glimpses = () => {
       let endValue = parseInt(valueDisplay.getAttribute("data-val"));
 
       // console.log(endValue);
-      let speed=200;
+      let speed=24;
       // let duration = Math.floor(interval / endValue);
 
       let counter = setInterval(function () {

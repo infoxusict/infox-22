@@ -29,8 +29,8 @@
     #00aa00a0,
     rgba(0, 255, 0, 0.519)
   ); */
-  -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   background-fit: contain;
   z-index: -1;
   -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);

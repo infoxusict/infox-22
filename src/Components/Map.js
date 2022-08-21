@@ -35,7 +35,7 @@ const Map = () => {
                   src={require("./Assets/Images/reach us/phone.png")}
                   alt="location marker"
                 />
-                <p className="preach">011-25302167</p>
+                <p className="preach">+91-8802008175</p>
               </li>
               <li className="lireach">
                 <img

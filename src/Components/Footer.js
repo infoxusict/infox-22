@@ -34,12 +34,12 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links ">
                 <li className="customerList text-lg div-text-lg">
-                  <a className="customerListA" href="#/event">
+                  <a className="customerListA" href="/event">
                     Dates
                   </a>
                 </li>
                 <li className="customerList text-lg div-text-lg">
-                  <a className="customerListA " href="#/event">
+                  <a className="customerListA " href="/team">
                     Venue
                   </a>
                 </li>
@@ -51,13 +51,13 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links text-lg div-text-lg">
                 <li className="companyFoot text-lg div-text-lg">
-                  <a className="footAcompany" href="#/team">
+                  <a className="footAcompany" href="/team">
                     About us
                   </a>
                 </li>
                 {/* <li className = "companyFoot"><a className="footAcompany" href="#">Careers</a></li> */}
                 <li className="companyFoot text-lg div-text-lg">
-                  <a className="footAcompany" href="#/team">
+                  <a className="footAcompany" href="/team">
                     Contact us
                   </a>
                 </li>
@@ -68,7 +68,7 @@ const Footer = () => {
                 Pages
               </h3>
               <ul className="list-unstyled links">
-                <li className="furtherInformation mb-2 text-lg div-text-lg">
+                <li className="furtherInformation text-lg div-text-lg" style={{marginBottom: "0px"}}>
                   <a
                     className="furtherInformationA"
                     href="https://forms.gle/bZgie3xMhq9CiwBU6"
@@ -78,7 +78,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="furtherInformation mb-2 ">
-                  <a className="furtherInformationA " href="#/legacy">
+                  <a className="furtherInformationA " href="/legacy">
                     Legacy
                   </a>
                 </li>
@@ -155,7 +155,7 @@ const Footer = () => {
                     </svg>
                   </a>
                 </li>
-                <li className="socialList">
+                <li className="socialList mb-1">
                   <a
                     className="listSocialA"
                     href="https://www.linkedin.com/company/infoxpression-usict/about/"

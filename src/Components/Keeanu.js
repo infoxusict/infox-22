@@ -26,7 +26,16 @@ const Keeanu = () => {
           document.getElementById("booth-img").style.opacity = "100%";
         }, 4000);
       }
-      if (Math.ceil(scrolled2) === 83) {
+      if (Math.ceil(scrolled2) === 82) {
+        // console.log("Scrolled2 is currently 1")
+        document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
+        document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
+        setInterval(() => {
+          document.getElementById("keanuimg").style.opacity = "0%";
+          document.getElementById("booth-img").style.opacity = "0%";
+        }, 500);
+      }
+      else if (Math.ceil(scrolled2) === 83) {
         // console.log("Scrolled2 is currently 1")
         document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
         document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";

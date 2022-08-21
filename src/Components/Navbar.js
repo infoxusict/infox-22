@@ -17,7 +17,9 @@ const Navbar = () => {
     }
   };
   const handleNavToggle = () => {
+    if (countt===1){
     document.getElementById("navi-toggle").click();
+  }
   };
   return (
     // <div className='navbar' id='navbar' style={{display : "flex", justifyContent: "center", width: "100%"}}>
@@ -41,7 +43,7 @@ const Navbar = () => {
       <div>
         <ul>
           <li>
-            <a href="#">
+            <a href="#" onClick={handleNavToggle}>
               <img
                 src={require("./Assets/Images/aswd.png")}
                 alt="infox logo"

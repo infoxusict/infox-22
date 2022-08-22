@@ -89,7 +89,7 @@ const Map = () => {
                   src={require("./Assets/Images/reach us/email.png")}
                   alt="location marker"
                 />
-                <a id="anchor" href="mailto:nishant.ola22@gmail.com">
+                <a id="anchor" href="infox@ipu.ac.in">
                 infox@ipu.ac.in
                 </a>
               </li>

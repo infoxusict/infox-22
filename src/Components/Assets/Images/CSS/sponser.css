@@ -115,6 +115,7 @@
   }
   .right {
     width: 80%;
+    height: max-content;
   }
   .box {
     width: 20vw;

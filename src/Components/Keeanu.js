@@ -27,7 +27,7 @@ const Keeanu = () => {
           document.getElementById("booth-img").style.opacity = "100%";
         }, 4000);
       }
-      if (Math.ceil(scrolled2) >= 84) {
+      if (Math.ceil(scrolled2) >= 90) {
         // console.log("Scrolled2 is currently 1")
         document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
         document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";

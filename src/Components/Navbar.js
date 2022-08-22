@@ -43,13 +43,13 @@ const Navbar = () => {
       <div>
         <ul>
           <li>
-            <a href="/" onClick={handleNavToggle}>
+            <Link to="/" onClick={handleNavToggle}>
               <img
                 src={require("./Assets/Images/aswd.png")}
                 alt="infox logo"
                 className="top-9 left-5 md:top-11 md:left-10 w-14 md:w-20 fixed z-50"
               />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

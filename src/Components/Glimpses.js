@@ -71,12 +71,12 @@ const Glimpses = () => {
             </div>
           </InView>
           <div className="wrapper">
-            <div className="container1">
+            <div className="container1"><span className="glimpses_text">Conducted</span>
               <span className="num" data-val="24">
                 000+
               </span>
               <span className="glimpses_text">
-                diverse events that will ensure fun and learning with no halts
+                diverse events full of fun & learning
               </span>
             </div>
           </div>

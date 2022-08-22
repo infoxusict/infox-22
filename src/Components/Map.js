@@ -81,7 +81,7 @@ const Map = () => {
                   src={require("./Assets/Images/reach us/phone.png")}
                   alt="location marker"
                 />
-                <p className="preach">011-25302167</p>
+                <p className="preach">+91-8802008175</p>
               </li>
               <li className="lireach">
                 <img
@@ -90,7 +90,7 @@ const Map = () => {
                   alt="location marker"
                 />
                 <a id="anchor" href="mailto:nishant.ola22@gmail.com">
-                  nishant.ola22@gmail.com
+                infox@ipu.ac.in
                 </a>
               </li>
             </ul>

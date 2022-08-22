@@ -9,7 +9,6 @@ import Keeanu from "./Components/Keeanu";
 import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
-import Banner from "./Components/Banner";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 

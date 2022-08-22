@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Navbar.css";
-import Banner from "./Banner";
 const Navbar = () => {
 
   let countt = 0;
@@ -17,7 +17,9 @@ const Navbar = () => {
     }
   };
   const handleNavToggle = () => {
+    if (countt===1){
     document.getElementById("navi-toggle").click();
+  }
   };
   return (
     // <div className='navbar' id='navbar' style={{display : "flex", justifyContent: "center", width: "100%"}}>
@@ -41,7 +43,7 @@ const Navbar = () => {
       <div>
         <ul>
           <li>
-            <a href="#">
+            <a href="/" onClick={handleNavToggle}>
               <img
                 src={require("./Assets/Images/aswd.png")}
                 alt="infox logo"
@@ -70,19 +72,19 @@ const Navbar = () => {
       
         <ul class="navigation__list">
           <li class="navigation__item" onClick={handleNavToggle}>
-            <a href="#/legacy" class="navigation__link">
+            <Link to="/legacy" class="navigation__link">
               <span>Legacy</span>
-            </a>
+            </Link>
           </li>
           <li class="navigation__item" onClick={handleNavToggle}>
-            <a href="#/event" class="navigation__link">
+            <Link to="/event" class="navigation__link">
               <span>Schedule</span>
-            </a>
+            </Link>
           </li>
           <li class="navigation__item" onClick={handleNavToggle}>
-            <a href="#/team" class="navigation__link">
+            <Link to="/team" class="navigation__link">
               <span>Team</span>
-            </a>
+            </Link>
           </li>
           {/* <li class="navigation__item" onClick={handleNavToggle}>
             <a href="#/reach" class="navigation__link">

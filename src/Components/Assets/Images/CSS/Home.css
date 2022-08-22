@@ -224,7 +224,7 @@ body::-webkit-scrollbar {
   display: block;
   width: 100vw;
   height: 100vh;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -235,6 +235,12 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 650px) {
   .svggg {
     margin-top: 0px;
+  }
+  .home-svg-con{
+   font-size: 4vw;
+  }
+  .sn_glitch{
+     font-size: 13vw !important;
   }
 }
 
@@ -504,7 +510,7 @@ svg.active .svg-elem-10 {
 }
 
 .sn_glitch {
-  position: absolute;
+  position: relative;
   color: #fff;
   font-size: 5.3vw;
   /* font-size: 80px; */
@@ -1084,4 +1090,15 @@ svg.active .svg-elem-10 {
     -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
     clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
   }
+}
+
+.home-textCon{
+  position: absolute;
+  margin-top: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }

@@ -1,14 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 
 import "./Assets/Images/CSS/Carousel.css";
-import Nat4 from "./Assets/Images/images/nat-4.jpg";
-import Nat5 from "./Assets/Images/images/nat-5.jpg";
-import Nat6 from "./Assets/Images/images/nat-6.jpg";
-import Nat7 from "./Assets/Images/images/nat-7.jpg";
-import Nat8 from "./Assets/Images/images/nat-8.jpg";
-import Nat9 from "./Assets/Images/images/nat-9.jpg";
-import Nat10 from "./Assets/Images/images/nat-10.jpg";
-import Nat11 from "./Assets/Images/images/DSC_0469.JPG";
+
 // const width1=0;
 // const height1=0
 

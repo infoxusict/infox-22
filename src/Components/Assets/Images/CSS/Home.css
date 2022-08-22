@@ -236,6 +236,12 @@ body::-webkit-scrollbar {
   .svggg {
     margin-top: 0px;
   }
+  .home-svg-con{
+   font-size: 4vw;
+  }
+  .sn_glitch{
+     font-size: 13vw !important;
+  }
 }
 
 .svgg {

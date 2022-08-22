@@ -64,6 +64,7 @@ export default function Team({
   useEffect(() => {
     cardRef.current.addEventListener("mouseover", triggerAnimation);
     cardRef.current.addEventListener("mouseleave", endAnimation);
+    // eslint-disable-next-line
   }, []);
 
   return (

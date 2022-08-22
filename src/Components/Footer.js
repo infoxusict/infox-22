@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Footer.css";
 
 // import MatrixRain from "./MatrixRain";
@@ -12,7 +11,7 @@ const Footer = () => {
         <div className="container">
           <div className="grid md:grid-cols-5 footer-grid ">
             <div className=" logo da-color-green">
-              <a href="#" className="footer-logo theme text-xl atmosphere ">
+              <a href="/" className="footer-logo theme text-xl atmosphere ">
                 InfoXpression
               </a>
               {/* <a href="#" className="footer-logo theme text-xl atmosphere">
@@ -70,6 +69,7 @@ const Footer = () => {
               <ul className="list-unstyled links">
                 <li className="furtherInformation text-lg div-text-lg" style={{marginBottom: "0px"}}>
                   <a
+                    rel="noreferrer"
                     className="furtherInformationA"
                     href="https://forms.gle/bZgie3xMhq9CiwBU6"
                     target="_blank"
@@ -91,6 +91,7 @@ const Footer = () => {
               <ul className="list-unstyled social">
                 <li className="socialList mb-2">
                   <a
+                    rel="noreferrer"
                     className="listSocialA"
                     href="https://www.instagram.com/infoxpression.usict/"
                     target="_blank"
@@ -113,6 +114,7 @@ const Footer = () => {
                 </li>
                 <li className="socialList">
                   <a
+                    rel="noreferrer"
                     className="listSocialA "
                     href="https://twitter.com/infoxpression_"
                     target="_blank"
@@ -135,6 +137,7 @@ const Footer = () => {
                 </li>
                 <li className="socialList">
                   <a
+                    rel="noreferrer"
                     className="listSocialA"
                     href="https://www.facebook.com/infoxpression/"
                     target="_blank"
@@ -157,6 +160,7 @@ const Footer = () => {
                 </li>
                 <li className="socialList mb-1">
                   <a
+                    rel="noreferrer"
                     className="listSocialA"
                     href="https://www.linkedin.com/company/infoxpression-usict/about/"
                     target="_blank"

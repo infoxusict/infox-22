@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Navbar.css";
-import Banner from "./Banner";
 const Navbar = () => {
 
   let countt = 0;

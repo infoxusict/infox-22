@@ -21,6 +21,7 @@ const Keeanu = () => {
         // console.log("Scrolled2 is currently 1")
         document.getElementById("keanuimg").style.animation ="keanumation 4s forwards";
         document.getElementById("booth-img").style.animation ="keanumation 4s forwards";
+        document.getElementById("myBar").style.zIndex=19;
         setInterval(() => {
           document.getElementById("keanuimg").style.opacity = "100%";
           document.getElementById("booth-img").style.opacity = "100%";

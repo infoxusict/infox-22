@@ -65,8 +65,8 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/kashish.jpg"
         />
         <Team
-          ringColor="#e4bfcb"
-          circleColor="#e5c7 "
+          ringColor="#4f2f4f"
+          circleColor="#c9a9fc"
           // commentColor="#e5c7 "
           name="Ansh Goyal"
           team="Web Team"
@@ -88,6 +88,18 @@ export default function TeamPage() {
           github="https://www.github.com/ayush-baliyan-19"
           gmail="ayushbaliyan05@gmail.com"
           photo="./Assets/Images/teams/ayush.jpeg"
+        />
+        <Team
+          ringColor="#267b96"
+          circleColor="#a6caeb"
+          name="Brihaspati Sigdel"
+          team="Web Team"
+          position="SEO Head"
+          Quote="Action, not just talk "
+          linkedin="https://www.linkedin.com/in/brihaspati-sigdel-52a285233/"
+          github="https://github.com/bidursigdel"
+          gmail="sigdbidur@gmail.com"
+          photo="./Assets/Images/teams/bidur.jpeg"
         />
         <Team
           ringColor="#286088"

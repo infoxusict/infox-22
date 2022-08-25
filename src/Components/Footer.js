@@ -69,14 +69,14 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links">
                 <li className="furtherInformation text-lg div-text-lg" style={{marginBottom: "0px"}}>
-                  <Link
+                  <a
                     rel="noreferrer"
                     className="furtherInformationA"
-                    to="https://forms.gle/bZgie3xMhq9CiwBU6"
+                    href="https://forms.gle/bZgie3xMhq9CiwBU6"
                     target="_blank"
                   >
                     Campus Ambassador
-                  </Link>
+                  </a>
                 </li>
                 <li className="furtherInformation mb-2 ">
                   <Link className="furtherInformationA " to="/legacy">

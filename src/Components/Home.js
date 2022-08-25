@@ -68,7 +68,7 @@ const Home = (props) => {
                 </div>
               </div>
             <div className="home-svg-con svgg">
-              <h3
+              {/* <h3
                 style={{
                   textAlign: "center",
                   fontWeight: "bold",
@@ -76,7 +76,7 @@ const Home = (props) => {
                 }}
               >
                 OCTOBER 2022
-              </h3>
+              </h3> */}
               <p style={{ textAlign: "center" }}>
                 TECHFEST USICT | GGSIPU <br />
                 CELEBRATING THE SENSE OF BELONGING

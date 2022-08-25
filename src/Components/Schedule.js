@@ -9,11 +9,11 @@ const Schedule = () => {
     <>
       <MatrixRain />
 
-      <div className='scheduleDiv' style={{height: "45vh"}}>
-        <h2 style={{fontSize: "5vh"}}>To Be Revealed...</h2>
+      <div className="scheduleDiv" style={{ height: "80vh" }}>
+        <h2 style={{ fontSize: "5vh" }}>To Be Revealed...</h2>
       </div>
     </>
-  )
+  );
 }
 
 export default Schedule

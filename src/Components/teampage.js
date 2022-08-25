@@ -65,8 +65,8 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/kashish.jpg"
         />
         <Team
-          ringColor="#e4bfcb"
-          circleColor="#e5c7 "
+          ringColor="#4f2f4f"
+          circleColor="#c9a9fc"
           // commentColor="#e5c7 "
           name="Ansh Goyal"
           team="Web Team"
@@ -90,8 +90,8 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/ayush.jpeg"
         />
         <Team
-          ringColor="#253e42"
-          circleColor="#b82724"
+          ringColor="#267b96"
+          circleColor="#a6caeb"
           name="Brihaspati Sigdel"
           team="Web Team"
           position="SEO Head"

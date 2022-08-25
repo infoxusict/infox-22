@@ -90,6 +90,18 @@ export default function TeamPage() {
           photo="./Assets/Images/teams/ayush.jpeg"
         />
         <Team
+          ringColor="#253e42"
+          circleColor="#b82724"
+          name="Brihaspati Sigdel"
+          team="Web Team"
+          position="SEO Head"
+          Quote="Action, not just talk "
+          linkedin="https://www.linkedin.com/in/brihaspati-sigdel-52a285233/"
+          github="https://github.com/bidursigdel"
+          gmail="sigdbidur@gmail.com"
+          photo="./Assets/Images/teams/bidur.jpeg"
+        />
+        <Team
           ringColor="#286088"
           circleColor="#2860ff"
           name="Dhruv Aeron"

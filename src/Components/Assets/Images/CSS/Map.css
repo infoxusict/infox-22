@@ -123,6 +123,9 @@
     .card_reach_title{
         font-size: 1.2rem;
     }
+    .map_pic{
+        object-fit: contain;
+    }
    
 }
 @media (max-width:780px){

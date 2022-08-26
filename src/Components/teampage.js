@@ -217,7 +217,7 @@ export default function TeamPage() {
           name="Suraj Mishra"
           team="Web Team"
           // position=" Developer"
-          Quote="You eliminate competition by being yourself"
+          Quote="My life will be the best illustration of all my work."
           linkedin="https://www.linkedin.com/in/nishant-ola-490712228/"
           github="https://github.com/ola-nishant"
           gmail="nishant.ola22@gmail.com"

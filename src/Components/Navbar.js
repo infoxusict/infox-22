@@ -71,7 +71,7 @@ const Navbar = () => {
       <nav class="navigation__nav" id="navigation__nav">
       
         <ul class="navigation__list">
-          <li class="navigation__item">
+          {/* <li class="navigation__item">
             <a href="/#/team" class="navigation__link">
               About Us
             </a>
@@ -94,9 +94,8 @@ const Navbar = () => {
           <li class="navigation__item">
             <a href="/#/event" class="navigation__link">
               Register
-            </a>
-          </li>
-=======
+            </a> */}
+          {/* </li> */}
           <li class="navigation__item" onClick={handleNavToggle}>
             <a href="#/legacy" class="navigation__link">
               <span>Legacy</span>

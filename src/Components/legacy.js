@@ -36,6 +36,7 @@ const sliderData3 = [
 export default function Legacy() {
   const [width, setWidth] = React.useState(window.innerWidth);
   const [height, setHeight] = React.useState(window.innerHeight);
+  // eslint-disable-next-line
   const useViewport = () => {
     React.useEffect(() => {
       const handleWindowResize = () => {
@@ -53,37 +54,10 @@ export default function Legacy() {
   };
 
   const MyComponent = () => {
-    const { width, height } = useViewport();
     // const { height } = useHeight();
     const breakpoint = 650;
 
     return width < breakpoint ? <MobileComponent /> : <DesktopComponent />;
-  };
-
-  const count_iteration = () => {
-    let valueDisplays = document.querySelectorAll(".num");
-
-    // let interval = 5000;
-
-    // console.log(valueDisplays);
-
-    valueDisplays.forEach((valueDisplay) => {
-      let startValue = 0;
-      let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-
-      // console.log(endValue);
-
-      // let duration = Math.floor(interval / endValue);
-
-      let counter = setInterval(function () {
-        startValue += 1;
-        valueDisplay.textContent = `${startValue}`;
-
-        if (startValue >= endValue) {
-          clearInterval(counter);
-        }
-      });
-    });
   };
 
   const DesktopComponent = () => {
@@ -207,7 +181,7 @@ export default function Legacy() {
               gridClass="slider-2"
               width="60"
               height="50"
-              ySlide="true"
+              // ySlide="true"
             />
             <Slider
               sliderData={sliderData3}

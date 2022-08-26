@@ -4,13 +4,8 @@ import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
 import SponserNew from './SponsersNew'
 import Glimpses from "./Glimpses";
-// import Svgg from "./Svgg.js";
 import "aos/dist/aos.css";
 import Banner from "./Banner";
-// import Aos from "aos";
-// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-// import Keeanu from "./Keeanu";
-// import Footer from "./Footer";
 
 const Home = (props) => {
  
@@ -43,7 +38,6 @@ const Home = (props) => {
               </video>
             </div>
             <div className="home-textCon">
-
               <div class="sn_glitch atmosphere">
                 <div class="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
@@ -73,17 +67,16 @@ const Home = (props) => {
                   INFOXPRESSION
                 </div>
               </div>
-            
             <div className="home-svg-con svgg">
-              <h3
+              {/* <h3
                 style={{
                   textAlign: "center",
                   fontWeight: "bold",
                   fontSize: "x-large",
                 }}
               >
-                OCTOBER 11th - 13th 2022
-              </h3>
+                OCTOBER 2022
+              </h3> */}
               <p style={{ textAlign: "center" }}>
                 TECHFEST USICT | GGSIPU <br />
                 CELEBRATING THE SENSE OF BELONGING
@@ -91,30 +84,11 @@ const Home = (props) => {
             </div>
             </div>
           </div>
-
-          {/* </ParallaxLayer> */}
-          {/* <ParallaxLayer offset={1.01} speed={0.9} > */}
           <SponserNew />
-          {/* </ParallaxLayer> */}
-          {/* <ParallaxLayer offset={2.02} speed={0.3}> */}
           <Glimpses />
-          {/* <Keeanu /> */}
-          {/* </ParallaxLayer> */}
         </div>
       </div>
-      {/* </Parallax> */}
-      {/* {reveal &&
-                <div id="videoCont">
-                    <video className='video' autoPlay='autoPlay' muted>
-                        <source src={require('./Assets/Videos/Produce_11.mp4')} type="video/mp4" />
-                        Your browser does not support the video tag.
-                        <source src={Video} type="video/ogg" />Your browser does not support the video tag.
-                    </video>
-                </div>
-            } */}
-      {/* <Sponser/> */}
     </section>
-    // </div>
   );
 };
 

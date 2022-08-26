@@ -13,9 +13,6 @@ export default function Team({
   gmail = "/#",
   photo,
 }) {
-  // const ringColor = props.ring;
-  // const circleFill = props.circleFill;
-  // const circleStroke = props.circleStroke;
   var x = 0;
   var f2 = 1;
   var b1 = -500;
@@ -47,9 +44,7 @@ export default function Team({
     x = 0;
     setCircle([{ transform: `rotate(${x}deg)` }]);
     f2 = 1;
-    // setFrontPos(f1);
     setFrontOp(f2);
-    // console.log(circle[1]);
 
     b1 = -500;
     b2 = 0;
@@ -69,42 +64,10 @@ export default function Team({
   useEffect(() => {
     cardRef.current.addEventListener("mouseover", triggerAnimation);
     cardRef.current.addEventListener("mouseleave", endAnimation);
-    // cardRef.current.addEventListener("animationend", nextAnimation);
     // eslint-disable-next-line
   }, []);
 
   return (
-    // <div className="123">
-    //   <img src={Nat1} alt=" " className="team__photo" />
-    //   <div data-testid="svgRoot-comp-kjl9j41t" className="gg">
-    //     <svg
-    //       preserveAspectRatio="xMidYMid meet"
-    //       data-bbox="1 1 160 160"
-    //       viewBox="0 0 162 162"
-    //       height="162"
-    //       width="162"
-    //       xmlns="http://www.w3.org/2000/svg"
-    //       data-type="ugc"
-    //       role="img"
-    //       aria-labelledby="svgcid-534po1gxdk6w"
-    //     >
-    //       <title id="svgcid-534po1gxdk6w">blue circle</title>
-    //       <g fill-rule="evenodd">
-    //         {/* <path
-    //           className="team__photo-1"
-    //           stroke="#0C2EFF"
-    //           d="M161 81c0 44.183-35.817 80-80 80S1 125.183 1 81 36.817 1 81 1s80 35.817 80 80z"
-    //         /> */}
-    //         <path
-    //           stroke-width="2"
-    //           stroke="#FFFFFF"
-    //           fill="#1D15FF"
-    //           d="M139 20a8 8 0 1 1-16 0 8 8 0 0 1 16 0z"
-    //         />
-    //       </g>
-    //     </svg>
-    //   </div>
-    // </div>
     <div ref={cardRef} className="team__container">
       <div className="team__card team__front" style={styles1}>
         <div
@@ -130,11 +93,6 @@ export default function Team({
             aria-labelledby="svgcid-534po1gxdk6w"
           >
             <g fill-rule="evenodd">
-              {/* <path
-              className="team__photo-1"
-              stroke="#0C2EFF"
-              d="M161 81c0 44.183-35.817 80-80 80S1 125.183 1 81 36.817 1 81 1s80 35.817 80 80z"
-            /> */}
               <path
                 stroke-width="2"
                 stroke={`${circleColor}`}

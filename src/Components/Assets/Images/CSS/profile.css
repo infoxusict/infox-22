@@ -11,7 +11,7 @@
     margin: auto;
 }
 .profilePart{
-     height: 40vw;
+     /* height: 40vw; */
      width: 30vw;
-     background-color: aliceblue;
+     background-color: #141414;
 }

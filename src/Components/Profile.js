@@ -9,7 +9,7 @@ const Profile = () => {
     return(
     <>
     <MatrixRain />
-    <div class="sn_glitch_forNHeading atmosphere sn_teamheading">
+    <div class="sn_glitch_forNHeading atmosphere sn_teamheading profileTitle">
         <div class="sn_line_forNHeading">PROFILE</div>
         <div class="sn_line_forNHeading">PROFILE</div>
         <div class="sn_line_forNHeading">PROFILE</div>
@@ -22,10 +22,11 @@ const Profile = () => {
       </div>
     <div className="ParticipantProfile">
         <div className="eventsParticipated">
+        <div className="ProfileHeading" style={{ fontFamily: "kurinji" }}>Registered Events</div>
           <Cards/>   
         </div>
         <div className="profilePart">
-            
+
         </div>
     </div>
     </>

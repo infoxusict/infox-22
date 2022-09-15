@@ -1,0 +1,17 @@
+.ParticipantProfile{
+    display: flex;
+    width: 95vw;
+    margin: auto;
+}
+.eventsParticipated{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around !important;
+    width: 65vw;
+    margin: auto;
+}
+.profilePart{
+     height: 40vw;
+     width: 30vw;
+     background-color: aliceblue;
+}

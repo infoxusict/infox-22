@@ -17,6 +17,10 @@ g {
   font-family: "kurinji";
   src: url("../fonts/Kurinji-Regular.otf");
 }
+@font-face {
+  font-family: "MechTech";
+  src: url("../fonts/MechTech-1mlZ.ttf");
+}
 
 .a {
   background: linear-gradient(lime, #02b002);

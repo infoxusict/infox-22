@@ -2,7 +2,7 @@
 // import Video from './Assets/Videos/startv.mp4'
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
-import SponserNew from './SponsersNew'
+import SponserNew from './SponsersNew';
 import Glimpses from "./Glimpses";
 import "aos/dist/aos.css";
 import Banner from "./Banner";

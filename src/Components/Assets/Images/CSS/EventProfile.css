@@ -1,0 +1,76 @@
+#canvas1{
+    filter: blur(3px);
+}
+.Ccard{
+    display: block;
+    height: 23rem;
+    width: 27%;
+    position: relative;
+    background-image: url("../images/nat-4.jpg");
+    margin: 2vw 2vw 2vw 2vw;
+    border-radius: 1vw;
+    transition: all 0.5s;
+    opacity: 1;
+}
+.EventHeading{
+    display: flex;
+    justify-content: center;
+    padding-top: 11rem;
+    font-size: 2vw;
+}
+.Eventtime{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2vw;
+}
+.Eventtime:hover{
+    display: none;
+}
+.layer{
+    display: flex;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:0.5s;
+}
+.teams{
+width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.5vw;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  opacity:0;
+  transition: 0.5s;
+  text-align: center;
+  padding-top: 5.5vw;
+  border-radius: 1vw;
+}
+.teamname{
+    margin-bottom: 5vw;
+}
+.buttonn{
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 0.5vw;
+    width: 60%;
+    align-self: center;
+    margin: 1vw;
+}
+.layer:hover{
+      background: url("../images/nat-4.jpg");
+      /* filter: blur(3px); */
+      
+    }
+    .teams:hover{
+        opacity: 1;
+        background-color: rgba(39, 131, 39, 0.586);
+      }
+    /* .Ccard:hover{
+} */

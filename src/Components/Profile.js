@@ -1,7 +1,8 @@
 import React from "react";
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
-import Cards from "./ScheduleCards";
+// import Cards from "./ScheduleCards";
+import EventCardProfile from "./EventProfile";
 import "./Assets/Images/CSS/profile.css";
 
 
@@ -23,7 +24,8 @@ const Profile = () => {
     <div className="ParticipantProfile">
         <div className="eventsParticipated">
         <div className="ProfileHeading" style={{ fontFamily: "kurinji" }}>Registered Events</div>
-          <Cards/>   
+          {/* <Cards/> */}
+          <EventCardProfile/> 
         </div>
         <div className="profilePart">
 

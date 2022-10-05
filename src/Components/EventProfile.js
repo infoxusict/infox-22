@@ -28,4 +28,5 @@ const EventCardProfile = () => {
 
     )
 }
+
 export default EventCardProfile;

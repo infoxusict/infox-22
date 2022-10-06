@@ -16,7 +16,7 @@
     margin: 2vw 2vw 2vw 0vw;
     border-radius: 1vw;
     transition: all 0.5s;
-    opacity: 1;
+    /* opacity: 1; */
     font-family: "mechtech";
     /* box-shadow: rgba(16, 231, 81, 0.24) 0px 3px 8px;
      */
@@ -33,9 +33,9 @@
     justify-content: center;
     font-size: 1.2vw;
 }
-.Eventtime:hover{
+/* .Eventtime:hover{
     display: none;
-}
+} */
 .layer{
     display: flex;
     background: transparent;
@@ -52,7 +52,7 @@ width: 100%;
   font-weight: 500;
   color: #fff;
   font-size: 1.5vw;
-  bottom: 0;
+  /* bottom: 0; */
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -65,7 +65,7 @@ width: 100%;
 .teamname{
     margin-bottom: 5vw;
 }
-.buttonn{
+/* .buttonn{
     border: 2px solid green;
     background-color: rgb(44, 167, 44);
     border-radius: 0.5vw;
@@ -73,8 +73,8 @@ width: 100%;
     align-self: center;
     position: relative;
     bottom: 15px;
-    /* margin: 1vw; */
-}
+    margin: 1vw;
+} */
 .layer:hover{
       background: url("../images/nat-4.jpg");
       /* filter: blur(3px); */
@@ -83,31 +83,32 @@ width: 100%;
     .teams:hover{
         opacity: 1;
         background-color: rgba(34, 114, 34, 0.586);
-        height: 18rem;
+        height: 18vw;
       }
-    /* .Ccard:hover{
-} */
+   
 
 /* ...................... Changes------------ */
 
 
+
 .button-49,
 .button-49:after {
-  width: 150px;
-  height: 76px;
-  line-height: 78px;
-  font-size: 20px;
-  font-family: 'Bebas Neue', sans-serif;
   background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
-  border: 0;
   color: #fff;
   letter-spacing: 3px;
   box-shadow: 6px 0px 0px #00E6F6;
-  outline: transparent;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  /* position: relative; */
+  /* user-select: none; */
+  /* -webkit-user-select: none; */
+  /* touch-action: manipulation; */
+  width: 19.11vw;
+    height: 4vw;
+    line-height: 4vw;
+    font-family: "atmospheric";
+    font-size: 1.2vw;
+    position: absolute;
+    margin: 12vw 0vw 0vw 0vw;
+    /* bottom: 0; */
 }
 
 .button-49:after {
@@ -139,58 +140,68 @@ width: 100%;
   0% {
     clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   10% {
     clip-path: var(--slice-3);
     transform: translate(10px, 10px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   20% {
     clip-path: var(--slice-1);
     transform: translate(-10px, 10px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   30% {
     clip-path: var(--slice-3);
     transform: translate(0px, 5px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   40% {
     clip-path: var(--slice-2);
     transform: translate(-5px, 0px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   50% {
     clip-path: var(--slice-3);
     transform: translate(5px, 0px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   60% {
     clip-path: var(--slice-4);
     transform: translate(5px, 10px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   70% {
     clip-path: var(--slice-2);
     transform: translate(-10px, 10px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   80% {
     clip-path: var(--slice-5);
     transform: translate(20px, -10px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   90% {
     clip-path: var(--slice-1);
     transform: translate(-10px, 0px);
+    margin: 0vw 0vw 0vw 0vw;
   }
   100% {
     clip-path: var(--slice-1);
     transform: translate(0);
+    margin: 0vw 0vw 0vw 0vw;
   }
 }
 
-@media (min-width: 47vw) {
-  .button-49,
+
+  /* .button-49,
   .button-49:after {
-    width: 19vw;
-    height: 5vw;
+    width: 19.11vw;
+    height: 4vw;
     line-height: 4vw;
     font-family: "atmospheric";
     font-size: 1.2vw;
     position: absolute;
-    bottom: -5vw;
-  }
-}
+    bottom: -3.3vw;
+  } */

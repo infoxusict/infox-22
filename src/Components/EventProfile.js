@@ -2,9 +2,10 @@ import React from "react";
 import "./Assets/Images/CSS/EventProfile.css";
 
 const EventCardProfile = () => {
-  return (
-    <div className="programs" id="programs">
-      <div id="#Ccard" className="Ccard">
+    return (
+
+        <div className="programs" id='programs'>
+            <div id="#Ccard" className="Ccard">
         <div className="EventHeading">Event Name</div>
         <div className="Eventtime"> 12 Nov 2022</div>
         <div className="layer">
@@ -58,8 +59,11 @@ const EventCardProfile = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+
+            
+        </div>
+
+    )
+}
 
 export default EventCardProfile;

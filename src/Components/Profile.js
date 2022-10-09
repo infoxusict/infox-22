@@ -23,9 +23,10 @@ const Profile = () => {
       </div>
       <div className="ParticipantProfile">
         <div className="eventsParticipated">
-        <div className="ProfileHeading" style={{ fontFamily: "kurinji" }}>Registered Events</div>
-          {/* <Cards/> */}
-          <EventCardProfile/> 
+          <div className="ProfileHeading" style={{ fontFamily: "kurinji" }}>
+            Registered Events
+          </div>
+          <EventCardProfile />
         </div>
         <div className="profilePart">
           <ProfileCard />

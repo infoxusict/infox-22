@@ -33,7 +33,8 @@ export default function About() {
   const DesktopComponent1 = () => {
     return (
       <div>
-        <div className="legacy__about" data-aos="fade-up">
+        {/* <div className="legacy__about" data-aos="fade-up"> */}
+        <div className="legacy__about">
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">
@@ -104,7 +105,8 @@ export default function About() {
   };
   const MobileComponent1 = () => {
     return (
-      <div className="aboutm" data-aos="fade-up">
+      // <div className="aboutm" data-aos="fade-up">
+        <div className="aboutm" >
         <div className="aboutm-stats">
           <div className="aboutm-students">
             <span class="aboutm-number">6000+</span>

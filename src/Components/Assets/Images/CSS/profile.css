@@ -1,11 +1,11 @@
 .ParticipantProfile{
     display: flex;
-    width: 95vw;
+    width: 90vw;
     margin:auto;
     margin-bottom: 20vw;
 }
 .profileTitle{
-    margin: 8vw 0vw 4vw 4vw;
+    margin: 10vw 0vw 4vw 7vw;
 }
 .ProfileHeading{
     color: rgb(255, 255, 255);
@@ -35,9 +35,9 @@
     margin:auto;
     /* margin-bottom: 300px !important; */
     height: 43vw;
-    position: absolute;
+    /* position: absolute; */
     top:26vw;
-    right:4vw;
+    /* right:4vw; */
 
     background: linear-gradient(134.03deg, rgba(255, 255, 255, 0.4) -47.9%, rgba(255, 255, 255, 0.08) 116.08%);
 box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
@@ -49,9 +49,6 @@ border-radius: 2vw;
 .profilelogo{
     position: absolute;
     width:10vw;
-    
-    
-
 }
 
 .profilepic{
@@ -123,6 +120,108 @@ border-radius: 2vw;
     padding-right: 10px;
 }
 
+@media (max-width: 700px) {
+    .ProfileHeading{
+        font-size: 4vw;
+        margin: 4vw 0vw 4vw 2vw;
+    }
+    .ParticipantProfile{
+      flex-direction: column-reverse;
+      /* background-color: #09661d; */
+    }
+    .eventsParticipated{
+        width: 90vw;
+    }
+    .page-content {
+        grid-gap: 2vw;
+        padding: 1vw;
+        justify-content: center;
+     }
+     .card {
+        padding: 1vw;
+        width: 40vw;
+        height: 55vw !important;
+     }
+     .copy {
+        margin: 4vw;
+        font-size: 3.2vw;
+     }
+     .title {
+        font-size: 4vw;
+     }
+     .btn {
+        font-size: 1.5vw;
+     }
+     .profileCard{
+        rotate: -90deg;
+        margin: -22vw 0vw -22vw 27vw;
+        height: 90vw;
+        width: 35vw;
+     }
+     .profilelogo{
+        rotate: -90deg;
+        margin: 0vw 10vw 0vw 23vw;
+    }
+    
+    .headshot {
+       rotate: 90deg;
+       left: 2vw;
+    }  
+    .headshot-2 {
+        height: 23vw;
+        width: 23vw;
+    }
+    
+    .profileData h3{
+        rotate: 90deg;
+        top:36vw;
+        left: -2vw;
+        font-size: 4vw;
+        width: 60vw;
+    }
+    
+    .profileQuote{
+        rotate: 90deg;
+        top:35vw;
+        left:-14vw;
+        font-size: 2.4vw;
+        width: 55vw;
+    } 
+    .profileTitle{
+        margin-top: 20vw;
+    }
+    
+  } 
+  @media (max-width: 500px) {
+    .ProfileHeading{
+        font-size: 6vw;
+    }
+     .copy {
+        font-size: 3.9vw;
+     }
+     .title {
+        font-size: 5vw;
+     }
+     .btn {
+        font-size: 2.2vw;
+    }   
+    .profileData h3{
+        font-size: 5vw;
+        width: 60vw;
+        left: -4.5vw;
+    }
+    
+    .profileQuote{
+        top:37vw;
+        left:-13vw;
+        font-size: 2.9vw;
+        width: 50vw;
+        line-height: 3.3vw;
+    }    
+    .profileTitle{
+        margin-top: 30vw;
+    } 
+  } 
 
 
   

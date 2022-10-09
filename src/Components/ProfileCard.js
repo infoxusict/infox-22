@@ -12,7 +12,7 @@ export default function ProfileCard() {
         <div class="headshot headshot-2"></div>
       </div>
       <div className="profileData">
-        <h3>keanu reeves</h3>
+        <h3>keanu reeves singh rathore</h3>
       </div>
 
       <div className="profileQuote">

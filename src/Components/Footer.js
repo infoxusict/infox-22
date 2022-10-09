@@ -71,7 +71,7 @@ const Footer = () => {
                 <li className="furtherInformation text-lg div-text-lg" style={{marginBottom: "0px"}}>
                   <a
                     rel="noreferrer"
-                    className="furtherInformationA"
+                    className="furtherInformationA companyFoot text-lg div-text-lg"
                     href="https://forms.gle/bZgie3xMhq9CiwBU6"
                     target="_blank"
                   >
@@ -79,7 +79,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="furtherInformation mb-2 ">
-                  <Link className="furtherInformationA " to="/legacy">
+                  <Link className="furtherInformationA companyFoot text-lg div-text-lg" to="/legacy">
                     Legacy
                   </Link>
                 </li>

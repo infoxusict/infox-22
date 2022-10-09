@@ -136,9 +136,11 @@ const MatrixRain = () => {
   }, []);
 
   return (
+    <>
     <div>
       <canvas id="canvas1"></canvas>
     </div>
+    </>
   );
 };
 

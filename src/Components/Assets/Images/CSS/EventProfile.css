@@ -1,5 +1,5 @@
-#canvas1{
-    filter: blur(3px);
+#canvas2{
+    filter: blur(2px);
 }
 
 .programs{
@@ -213,8 +213,9 @@ width: 100%;
   .page-content {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 1.3rem;
-    padding: 1rem;
+    grid-gap: 1.3vw;
+    padding: 1vw;
+    justify-content: left;
     /* width: 100vw; */
     max-width: 1024px;
     margin: 0 auto;
@@ -235,9 +236,10 @@ width: 100%;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
-    padding: 1rem;
-    width: 20vw;
-    border-radius: 1rem;
+    padding: 1vw;
+    width: 18vw;
+    height: 25vw !important;
+    border-radius: 1vw;
     text-align: center;
     color: whitesmoke;
     background-color: whitesmoke;
@@ -291,31 +293,31 @@ width: 100%;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 1vw;
     transition: transform var(--d) var(--e);
     z-index: 1;
  }
   .content > * + * {
-    margin-top: 1rem;
+    margin-top: 1vw;
  }
   .title {
-    font-size: 1.3rem;
+    font-size: 1.3vw;
     font-weight: bold;
     line-height: 1.2;
  }
   .copy {
     font-family: var(--font-serif);
-    font-size: 1.125rem;
+    font-size: 1.125vw;
     font-style: italic;
     line-height: 1.35;
  }
   .btn {
     cursor: pointer;
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.65rem;
+    margin-top: 1.5vw;
+    padding: 0.75vw 1.5vw;
+    font-size: 0.65vw;
     font-weight: bold;
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.025vw;
     text-transform: uppercase;
     color: white;
     background-color: black;

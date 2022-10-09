@@ -33,8 +33,8 @@ export default function About() {
   const DesktopComponent1 = () => {
     return (
       <div>
-        {/* <div className="legacy__about" data-aos="fade-up"> */}
-        <div className="legacy__about">
+        <div className="legacy__about" data-aos="fade-up">
+        {/* <div className="legacy__about"> */}
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">

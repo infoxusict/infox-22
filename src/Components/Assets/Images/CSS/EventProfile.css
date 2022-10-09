@@ -237,6 +237,7 @@ width: 100%;
     align-items: flex-end;
     overflow: hidden;
     padding: 1vw;
+    margin-bottom: 1vw;
     width: 18vw;
     height: 25vw !important;
     border-radius: 1vw;
@@ -306,10 +307,11 @@ width: 100%;
     line-height: 1.2;
  }
   .copy {
-    font-family: var(--font-serif);
+    /* font-family: "sans-serif"; */
     font-size: 1.125vw;
     font-style: italic;
     line-height: 1.35;
+    color: #fcfffa;
  }
   .btn {
     cursor: pointer;

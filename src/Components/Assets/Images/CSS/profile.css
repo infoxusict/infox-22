@@ -8,11 +8,14 @@
     margin: 10vw 0vw 4vw 7vw;
 }
 .ProfileHeading{
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
     margin: 0vw 0vw 0vw 4vw;
-    text-shadow:  0.2vw 0.16vw 4px rgb(10, 228, 10);
+    /* text-shadow:  0.2vw 0.16vw 4px rgb(10, 228, 10); */
     font-size: 2.2vw;
+    
 }
+
+
 .programs{
     justify-content: space-around;
 }
@@ -106,7 +109,8 @@ border-radius: 2vw;
 }
 
 .profileQuote{
-    font-family: "mechtech";
+    /* font-family: "mechtech"; */
+    font-style: italic;
     color: #fefefe;
     position: relative;
     top:13vw;

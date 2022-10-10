@@ -3,38 +3,68 @@ import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
 import FAQ from "./uhack-faq";
 
-
-
 const Uhack = () => {
-
-
   const [faqs, setFaqs] = useState([
     {
-      question:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate minimm eveniet illo?",
+      question: "What is UHack 5.0?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.",
+        "It is a hackathon where you get to collaborate with people to create a project in the given time.It'll operate in hybrid mode. In other words, participants may be invited to the hackathon in either of the ways (offline/online).",
       open: true,
     },
     {
-      question:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate minimm eveniet illo?",
+      question: "Is there a cost for registration?",
+      answer: "No, it costs nothing to register.",
+      open: false,
+    },
+    {
+      question: "What is the theme of the Hackathon?",
       answer:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate minimm eveniet illo?",
+        "There will be few options of programming challenges provided, which are AI/ML, Web3, Open innovation. Healthcare, Edtech,  Utility or IOT.",
       open: false,
     },
     {
       question:
-        "HLorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate minimm eveniet illo?",
-      answer:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate minimm eveniet illo?",
+        "What kind of programming languages can be used in the Hackathon?",
+      answer: "Any programming language is acceptable",
       open: false,
     },
     {
       question:
-        "HLorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate minimm eveniet illo?",
+        "Do we have to compete as a team? How many people make up a team?",
       answer:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt cupiditate minimm eveniet illo?",
+        "Yes.  You will form your team composed of 2 to 4 members. You are encouraged to form the team before the event. However, registration is individual. If you don't have a team, we will assist you to form the team during the event.",
+      open: false,
+    },
+    {
+      question:
+        "What parameters were used to choose the teams for shortlisting?",
+      answer:
+        "On the basis of their concise summaries of their project concepts, the registered participants will be narrowed down.",
+      open: false,
+    },
+    {
+      question:
+        "What do I need to prepare before the Hackathon event? What do I need to bring for this event?",
+      answer:
+        "Bring your own laptop that is pre-installed with the software development tools you'll need, as well as any other devices you'll need to accomplish your project.",
+      open: false,
+    },
+    {
+      question: "Are we required to stay at the venue?",
+      answer:
+        "Yes you may stay at Hall for 24 hours so you can complete your project.",
+      open: false,
+    },
+    {
+      question: "What time is the hackathon's beginning and ending?",
+      answer:
+        "The hackathon will start at 12 AM on November 28 and end at 12 AM on November 29.",
+      open: false,
+    },
+    {
+      question: "Who can participate?",
+      answer:
+        "You must be enrolled in a university, college, or higher secondary school.",
       open: false,
     },
   ]);
@@ -52,7 +82,6 @@ const Uhack = () => {
       })
     );
   };
-
 
   return (
     <>

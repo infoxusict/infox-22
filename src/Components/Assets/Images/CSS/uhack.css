@@ -24,7 +24,7 @@
 
 .faqs {
   width: 100%;
-  max-width: 768px;
+  max-width: 75vw;
   margin: 0 auto;
   padding: 15px;
 }
@@ -75,5 +75,5 @@
   opacity: 1;
 }
 .uhf{
-  min-height: 80vh;
+  min-height: 110vh;
 }

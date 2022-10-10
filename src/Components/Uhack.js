@@ -173,7 +173,7 @@ const Uhack = () => {
                 href="https://devfolio.co"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5 "
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Devfolio-logo.png")}
@@ -184,7 +184,7 @@ const Uhack = () => {
                 href="https://filecoin.io"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5"
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Filecoin-logo.png")}
@@ -195,18 +195,18 @@ const Uhack = () => {
                 href="https://polygon.technology/"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5"
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
-                  alt="Polygon-logo"
+                  alt="Polygon-log "
                 />
               </a>
               <a
                 href="https://replit.com"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5"
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Replit-logo.png")}
@@ -217,7 +217,7 @@ const Uhack = () => {
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5"
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}

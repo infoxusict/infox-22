@@ -90,7 +90,18 @@ const Uhack = () => {
         <div className="md:pt-24  text-white">
           <section className=" flex md:flex  gap-32  ">
             <div className="basis-1/2 mt-16">
-              <div className="atmosphere text-7xl">Uhack</div>
+              {/* <div className="atmosphere text-7xl">Uhack</div> */}
+              <div class="sn_glitch_forNHeading atmosphere">
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+          </div>
               <div className="mt-4 text-l">
                 UHack is here again folks!! One of the best hackathons of
                 Delhi-NCR region is here again, waiting for you to participate.

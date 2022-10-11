@@ -38,7 +38,7 @@
     margin:auto;
     /* margin-bottom: 300px !important; */
     height: 43vw;
-    /* position: absolute; */
+    position: sticky;
     top:26vw;
     /* right:4vw; */
 

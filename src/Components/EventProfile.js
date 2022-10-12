@@ -3,7 +3,7 @@ import "./Assets/Images/CSS/EventProfile.css";
 
 const EventCardProfile = () => {
   return (
- //   <div className="programs" id='programs'>
+    //   <div className="programs" id='programs'>
     //       <div id="#Ccard" className="Ccard">
     //   <div className="EventHeading">Event Name</div>
     //   <div className="Eventtime"> 12 Nov 2022</div>
@@ -59,7 +59,7 @@ const EventCardProfile = () => {
     //   </div>
     // </div>
 
-    //   </div>   
+    //   </div>
     <main class="page-content">
       <div class="card">
         <div class="content">

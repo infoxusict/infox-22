@@ -15,11 +15,12 @@ export default function ProfileCard() {
         <h3>keanu reeves </h3>
       </div>
 
-      <div className="profileQuote">
-        <h5>
-          " I can only show you the door, you're the one that has to walk
-          through it "
-        </h5>
+      <div className="profileData2">
+        <h6 className="shadows">
+          University School of Information and Communication technology{" "}
+        </h6>
+        <h5>Btech 2025</h5>
+        {/* <h4 className="college_title">College</h4> */}
       </div>
     </div>
   );

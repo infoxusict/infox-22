@@ -37,8 +37,7 @@
     width:28vw;
     margin:auto;
     /* margin-bottom: 300px !important; */
-    height: 43vw;
-    position: sticky;
+    height: 47vw;
     top:26vw;
     /* right:4vw; */
 
@@ -95,6 +94,7 @@ border-radius: 2vw;
 .profileData{
     background-color: rgb(206, 208, 209);
     height: 4vw;
+    margin-bottom: .5vw;
 }
 
 .profileData h3{
@@ -108,8 +108,8 @@ border-radius: 2vw;
     text-align: center;
 }
 
-.profileQuote{
-    /* font-family: "mechtech"; */
+/* .profileQuote{
+    font-family: "mechtech";
     font-style: italic;
     color: #fefefe;
     position: relative;
@@ -118,10 +118,65 @@ border-radius: 2vw;
     font-size: 1.5vw;
     width: 25vw;
     text-align: center;
-    /* background-color: black; */
+    background-color: black;
     opacity: 0.5;
     padding-left: 10px;
     padding-right: 10px;
+} */
+
+.profileData2{  
+    font-size: 1.8vw;
+    width: 25vw;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profileData2 h5{
+    position: relative;
+    top:15vw;
+    left:1.5vw;
+    font-family: "mechtech";
+    color: white !important;
+    opacity: 0.9;
+    font-size: 2vw;
+}
+
+.college_title{
+    color: rgb(10, 10, 10);
+    position: relative;
+    top:12.5vw;
+    left:1.5vw;
+    font-family: "serif";
+}
+
+.profileData2 h6 {
+    /* font-style: italic; */
+    color: #6CDE01;
+    position: relative;
+    top:13vw;
+    font-size: 1.4vw;
+    width: 25vw;
+    /* text-align: center; */
+    padding-left: 12px;
+    padding-right: 10px;
+    opacity: 0.8;
+}
+
+.shadows {
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: -15px 5px 20px #118b17;
+    color: #6CDE01;
+    letter-spacing: -0.05em;
+    font-family: 'Anton', Arial, sans-serif;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    transition: all 0.25s ease-out;
+}
+.shadows:hover {
+    text-shadow: -16px 6px 15px #055520;
 }
 
 @media (max-width: 700px) {
@@ -184,11 +239,26 @@ border-radius: 2vw;
         width: 60vw;
     }
     
-    .profileQuote{
+    .profileData2{
         rotate: 90deg;
         top:35vw;
-        left:-14vw;
-        font-size: 2.4vw;
+        left:-15vw;
+        font-size: 4vw;
+        width: 55vw;
+    } 
+    .profileData2 h5{
+        top:18vw;
+        left:25vw;
+        font-size: 4vw;
+        width: 55vw;
+       
+    } 
+
+
+    .profileData2 h6{
+        top:15vw;
+        left:30vw;
+        font-size: 2.8vw;
         width: 55vw;
     } 
     .profileTitle{

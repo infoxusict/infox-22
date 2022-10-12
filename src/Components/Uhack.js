@@ -4,6 +4,16 @@ import MatrixRain from "./MatrixRain";
 import FAQ from "./uhack-faq";
 
 const Uhack = () => {
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
   const [faqs, setFaqs] = useState([
     {
       question: "What is UHack 5.0?",
@@ -157,14 +167,12 @@ const Uhack = () => {
                   <p className="">12 Noon</p>
                 </div>
               </div>
-              <div className="mt-32">
-                <a href="/" className="register ">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  change me
-                </a>
+              <div className="mt-19 ml-20 devfolio-button">
+                <div 
+                  class="apply-button" 
+                  data-hackathon-slug="YOUR-HACKATHON-SLUG" 
+                  data-button-theme="dark-inverted"
+                ></div>
               </div>
             </div>
             <div className="basis-1/2 flex justify-center">

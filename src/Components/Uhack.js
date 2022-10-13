@@ -121,7 +121,7 @@ const Uhack = () => {
                 <div class="sn_line_forNHeading">Uhack</div>
                 <div class="sn_line_forNHeading">Uhack</div>
               </div>
-              <div className="md:mt-4  text-l mx-2 md:mx-0  text-center md:text-left">
+              <div className="md:mt-4  text-l mx-8 md:mx-0  ">
                 UHack is here again folks!! One of the best hackathons of
                 Delhi-NCR region is here again, waiting for you to participate.
                 Its bigger, better and more fun than ever and surely, prizes
@@ -198,11 +198,11 @@ const Uhack = () => {
                   <div class="sn_line_forNHeading">Uhack</div>
                 </div>
               </div>
-              <div className="hel">
+              <div className="hel ">
                 <img
-                  src={require("./Assets/Images/images/uhack/uhack.8544fd4e.webp")}
+                  src={require("./Assets/Images/images/uhack/USICT-UHACK-2022.png")}
                   alt="infox"
-                  className="uh-img   w-4/5"
+                  className="uh-img  p-4 uh-bg w-4/5 "
                 />
               </div>
             </div>
@@ -276,41 +276,41 @@ const Uhack = () => {
             </div>
             <div className="uh-bg py-12 mt-12">
               <div className="flex text-3xl flex-wrap-reverse gap-16 md:gap-24 md:flex-nowrap hel">
-                <div className="h-42 hel basis-1/3 flex flex-col gap-2 md:gap-5 ">
+                <div className="h-42 hel basis-1/3 flex flex-col  ">
                   {" "}
-                  <FaRobot size={55} style={{ fill: "#E5F5DF" }} />
+                  <FaRobot size={55} style={{ fill: "r" }} />
                   <div>AI / ML</div>
                 </div>
-                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
-                  <IoLogoBuffer size={55} style={{ fill: "#4C6F4F" }} />
+                <div className="h-42 hel md:basis-1/3 flex flex-col ">
+                  <IoLogoBuffer size={55} style={{ fill: "r" }} />
                   Web3
                 </div>
-                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5 hel">
-                  <SiMusicbrainz size={55} style={{ fill: "#75EC75" }} />
+                <div className="h-42 hel md:basis-1/3 flex flex-col hel">
+                  <SiMusicbrainz size={55} style={{ fill: "r" }} />
                   Open Innovation
                 </div>
               </div>
               <div className="flex text-3xl gap-16 md:gap-24 mt-16 flex-wrap md:flex-nowrap hel">
                 <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
-                  <GiHealthNormal size={55} style={{ fill: "#2f2" }} />
+                  <GiHealthNormal size={55} style={{ fill: "" }} />
                   Healthcare
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
                   <MdOutlineCastForEducation
                     size={55}
-                    style={{ fill: "#4eff4e" }}
+                    style={{ fill: "r" }}
                   />
                   Edtech
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
                   <RiMoneyDollarCircleFill
                     size={55}
-                    style={{ fill: "#18b318" }}
+                    style={{ fill: "" }}
                   />
                   Fintech
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
-                  <VscTools size={55} style={{ fill: "#22ff22" }} />
+                  <VscTools size={55} style={{ fill: "" }} />
                   Utility
                 </div>
               </div>

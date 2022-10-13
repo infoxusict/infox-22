@@ -14,6 +14,16 @@ import { GiReceiveMoney } from "react-icons/gi"
 
 
 const Uhack = () => {
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
   const [faqs, setFaqs] = useState([
     {
       question: "What is UHack 5.0?",
@@ -96,23 +106,83 @@ const Uhack = () => {
   return (
     <>
       <MatrixRain />
-      <div className="uh-bg">
-        <div className="md:pt-32 text-white">
-          <section className="container flex md:flex mx-auto gap-32  ">
+      <div className="container md:mx-auto">
+        <div className="md:pt-24  text-white">
+          <section className=" flex md:flex  gap-32  ">
             <div className="basis-1/2 mt-16">
-              <div className="atmosphere text-7xl">Uhack</div>
-              <div className="mt-4 text-xl">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate minimm eveniet illo?
+              {/* <div className="atmosphere text-7xl">Uhack</div> */}
+              <div class="sn_glitch_forNHeading atmosphere">
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+            <div class="sn_line_forNHeading">Uhack</div>
+          </div>
+              <div className="mt-4 text-l">
+                UHack is here again folks!! One of the best hackathons of
+                Delhi-NCR region is here again, waiting for you to participate.
+                Its bigger, better and more fun than ever and surely, prizes
+                that can make you go berserk. So come up, work on your dreams
+                for 24-hours non-stop and make it happen. Make your imaginations
+                take out solutions that nobody has ever thought and get involved
+                in the heat with some of the best coders of the country.
               </div>
-              <div className="mt-56">
-                <a href="/" className="register ">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  change me
-                </a>
+              <div className="flex mt-16 gap-8 txt-shdw text-xl">
+                <div className="flex gap-2">
+                  <svg
+                    // style="color: #000"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    class="bi bi-calendar-date"
+                    viewBox="0 0 16 16"
+                  >
+                    {" "}
+                    <path
+                      d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"
+                      fill="white"
+                    ></path>{" "}
+                    <path
+                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+                      fill="white"
+                    ></path>{" "}
+                  </svg>
+                  <p> 28th November 2022</p>
+                </div>
+                <div className="flex gap-2">
+                  <svg
+                    // style="color: white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    class="bi bi-clock"
+                    viewBox="0 0 16 16"
+                  >
+                    {" "}
+                    <path
+                      d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"
+                      fill="white"
+                    ></path>{" "}
+                    <path
+                      d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"
+                      fill="white"
+                    ></path>{" "}
+                  </svg>
+                  <p className="">12 Noon</p>
+                </div>
+              </div>
+              <div className="mt-19 ml-20 devfolio-button">
+                <div 
+                  class="apply-button" 
+                  data-hackathon-slug="YOUR-HACKATHON-SLUG" 
+                  data-button-theme="dark-inverted"
+                ></div>
               </div>
             </div>
             <div className="basis-1/2 flex justify-center">
@@ -123,14 +193,16 @@ const Uhack = () => {
               />
             </div>
           </section>
-          <section className="container mx-auto ">
-            <div className="flex hel text-6xl atmosphere">Sponsors</div>
-            <div className="flex mx-auto gap-12 mt-14 hel ">
+          <section className="  ">
+            <div className="flex hel text-6xl atmosphere title-txt-shdw">
+              Sponsors
+            </div>
+            <div className="flex  gap-12 mt-14 hel ">
               <a
                 href="https://devfolio.co"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5 "
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Devfolio-logo.png")}
@@ -141,7 +213,7 @@ const Uhack = () => {
                 href="https://filecoin.io"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5"
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Filecoin-logo.png")}
@@ -152,18 +224,18 @@ const Uhack = () => {
                 href="https://polygon.technology/"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5"
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
-                  alt="Polygon-logo"
+                  alt="Polygon-log "
                 />
               </a>
               <a
                 href="https://replit.com"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5"
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Replit-logo.png")}
@@ -174,7 +246,7 @@ const Uhack = () => {
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5"
+                className="basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
@@ -202,8 +274,8 @@ const Uhack = () => {
               <div className="h-96 hel basis-1/3 uh-glass">Utilities</div>
             </div>
           </section>
-          <section className="container mx-auto ">
-            <div className="atmosphere hel text-5xl mt-32">
+          <section className="">
+            <div className="atmosphere hel text-5xl mt-32 title-txt-shdw ">
               Sponsor Tracks &amp; prizes
             </div>
             <div className="flex text-3xl gap-24 mt-16">
@@ -212,11 +284,16 @@ const Uhack = () => {
               <div className="h-96 hel basis-1/3 uh-glass">cards</div>
             </div>
           </section>
-          <section className="container mx-auto ">
-            <div className="atmosphere hel text-5xl mt-32">Prize Winnners</div>
+          <section className="">
+            <div className="atmosphere hel text-5xl mt-32 title-txt-shdw">
+              Prize Winnners
+            </div>
+            <div className="hel txt-shdw h-56 text-3xl">To Be Announced...</div>
           </section>
-          <section className="container mx-auto uhf">
-            <div className="atmosphere hel text-5xl mt-32">FAQs</div>
+          <section className="uhf">
+            <div className="atmosphere hel text-5xl mt-32 title-txt-shdw">
+              FAQs
+            </div>
             <div className="">
               <div className="faqs text-black ">
                 {faqs.map((faq, index) => (

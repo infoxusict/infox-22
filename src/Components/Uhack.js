@@ -9,7 +9,8 @@ import { MdOutlineCastForEducation } from "react-icons/md"
 import { WiDayThunderstorm } from "react-icons/wi"
 import { SiMusicbrainz } from "react-icons/si"
 
-import { GiReceiveMoney } from "react-icons/gi"
+import { RiMoneyDollarCircleFill } from "react-icons/ri"
+import { VscTools } from "react-icons/vsc"
 
 
 
@@ -260,21 +261,21 @@ const Uhack = () => {
               Categories
             </div>
             <div className="flex text-3xl gap-24 mt-16">
-              <div className="h-96 hel basis-1/3 uh-glass"> <FaRobot size={55} style={{ fill: 'cyan' }} />AI/ML</div>
-              <div className="h-96 hel basis-1/3 uh-glass"><IoLogoBuffer size={55} />Web3</div>
-              <div className="h-96 hel basis-1/3 uh-glass"><SiMusicbrainz size={55} />Open innovation</div>
+              <div className="h-96 hel basis-1/3 uh-glass"> <FaRobot size={55} style={{ fill: '' }} />AI/ML</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><IoLogoBuffer size={55}  style={{ fill: '' }} />Web3</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><SiMusicbrainz size={55}  style={{ fill: '' }}/>Open innovation</div>
             </div>
             <div className="flex text-3xl gap-24 mt-16">
-              <div className="h-96 hel basis-1/3 uh-glass"><GiHealthNormal size={55} />Healthcare</div>
-              <div className="h-96 hel basis-1/3 uh-glass"><MdOutlineCastForEducation size={55} />Edtech</div>
-              <div className="h-96 hel basis-1/3 uh-glass"><GiReceiveMoney size={55} />Fintech</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><GiHealthNormal size={55}  style={{ fill: '' }} />Healthcare</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><MdOutlineCastForEducation size={55}  style={{ fill: '' }}/>Edtech</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><RiMoneyDollarCircleFill size={55}  style={{ fill: '' }} />Fintech</div>
 
             </div>
             <div className="flex text-3xl gap-24 mt-16">
-              <div className="h-96 hel basis-1/3 uh-glass">Utilities</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><VscTools size={55} style={{ fill: '' }}/>Utilities</div>
             </div>
           </section>
-          <section className="">
+          {/* <section className="">
             <div className="atmosphere hel text-5xl mt-32 title-txt-shdw ">
               Sponsor Tracks &amp; prizes
             </div>
@@ -283,18 +284,18 @@ const Uhack = () => {
               <div className="h-96 hel basis-1/3 uh-glass">cards</div>
               <div className="h-96 hel basis-1/3 uh-glass">cards</div>
             </div>
-          </section>
-          <section className="">
+          </section> */}
+          {/* <section className="">
             <div className="atmosphere hel text-5xl mt-32 title-txt-shdw">
               Prize Winnners
             </div>
             <div className="hel txt-shdw h-56 text-3xl">To Be Announced...</div>
-          </section>
+          </section> */}
           <section className="uhf">
             <div className="atmosphere hel text-5xl mt-32 title-txt-shdw">
               FAQs
             </div>
-            <div className="">
+            <div className="hel">
               <div className="faqs text-black ">
                 {faqs.map((faq, index) => (
                   <FAQ

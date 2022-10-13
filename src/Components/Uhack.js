@@ -6,7 +6,7 @@ import { FaRobot } from "react-icons/fa"
 import { IoLogoBuffer } from "react-icons/io"
 import { GiHealthNormal } from "react-icons/gi"
 import { MdOutlineCastForEducation } from "react-icons/md"
-import { WiDayThunderstorm } from "react-icons/wi"
+// import { WiDayThunderstorm } from "react-icons/wi"
 import { SiMusicbrainz } from "react-icons/si"
 
 import { RiMoneyDollarCircleFill } from "react-icons/ri"
@@ -29,12 +29,12 @@ const Uhack = () => {
     {
       question: "What is UHack 5.0?",
       answer:
-        "It is a hackathon where you get to collaborate with people to create a project in the given time.It'll operate in hybrid mode. In other words, participants may be invited to the hackathon in either of the ways (offline/online).",
+        "UHack is a hackathon where you get to collaborate with people to create a project in the given time.It'll operate in offline mode. In other words, participants are required to come to campus for their participation.",
       open: true,
     },
     {
       question: "Is there a cost for registration?",
-      answer: "No, it costs nothing to register.",
+      answer: "Nada, it costs nothing to register.",
       open: false,
     },
     {
@@ -79,7 +79,7 @@ const Uhack = () => {
     {
       question: "What time is the hackathon's beginning and ending?",
       answer:
-        "The hackathon will start at 12 AM on November 28 and end at 12 AM on November 29.",
+        "The hackathon will start at 12 Noon on November 17 and end at 12 Noon on November 18.",
       open: false,
     },
     {
@@ -107,23 +107,23 @@ const Uhack = () => {
   return (
     <>
       <MatrixRain />
-      <div className="container md:mx-auto">
+      <div className="container mx-auto">
         <div className="md:pt-24  text-white">
-          <section className=" flex md:flex  gap-32  ">
-            <div className="basis-1/2 mt-16">
+          <section className=" flex flex-col-reverse  md:flex-row md:gap-32  ">
+            <div className="basis-1/2 mt-8 md:mt-16 ">
               {/* <div className="atmosphere text-7xl">Uhack</div> */}
-              <div class="sn_glitch_forNHeading atmosphere">
-            <div class="sn_line_forNHeading">Uhack</div>
-            <div class="sn_line_forNHeading">Uhack</div>
-            <div class="sn_line_forNHeading">Uhack</div>
-            <div class="sn_line_forNHeading">Uhack</div>
-            <div class="sn_line_forNHeading">Uhack</div>
-            <div class="sn_line_forNHeading">Uhack</div>
-            <div class="sn_line_forNHeading">Uhack</div>
-            <div class="sn_line_forNHeading">Uhack</div>
-            <div class="sn_line_forNHeading">Uhack</div>
-          </div>
-              <div className="mt-4 text-l">
+              <div class="sn_glitch_forNHeading atmosphere uh-heading ">
+                <div class="sn_line_forNHeading">Uhack</div>
+                <div class="sn_line_forNHeading">Uhack</div>
+                <div class="sn_line_forNHeading">Uhack</div>
+                <div class="sn_line_forNHeading">Uhack</div>
+                <div class="sn_line_forNHeading">Uhack</div>
+                <div class="sn_line_forNHeading">Uhack</div>
+                <div class="sn_line_forNHeading">Uhack</div>
+                <div class="sn_line_forNHeading">Uhack</div>
+                <div class="sn_line_forNHeading">Uhack</div>
+              </div>
+              <div className="mt-4 text-l ">
                 UHack is here again folks!! One of the best hackathons of
                 Delhi-NCR region is here again, waiting for you to participate.
                 Its bigger, better and more fun than ever and surely, prizes
@@ -132,8 +132,8 @@ const Uhack = () => {
                 take out solutions that nobody has ever thought and get involved
                 in the heat with some of the best coders of the country.
               </div>
-              <div className="flex mt-16 gap-8 txt-shdw text-xl">
-                <div className="flex gap-2">
+              <div className="flex md:mt-16 mt-8 gap-8 txt-shdw text-xl justify-center md:justify-start">
+                <div className="flex gap-2 ">
                   <svg
                     // style="color: #000"
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,7 @@ const Uhack = () => {
                       fill="white"
                     ></path>{" "}
                   </svg>
-                  <p> 28th November 2022</p>
+                  <p> 17th November 2022</p>
                 </div>
                 <div className="flex gap-2">
                   <svg
@@ -178,32 +178,33 @@ const Uhack = () => {
                   <p className="">12 Noon</p>
                 </div>
               </div>
-              <div className="mt-19 ml-20 devfolio-button">
-                <div 
-                  class="apply-button" 
-                  data-hackathon-slug="YOUR-HACKATHON-SLUG" 
+              <div className="devfolio-button">
+                <div
+                  class="apply-button"
+                  data-hackathon-slug="YOUR-HACKATHON-SLUG"
                   data-button-theme="dark-inverted"
                 ></div>
               </div>
             </div>
-            <div className="basis-1/2 flex justify-center">
+            <div className="basis-1/2 flex justify-center mt-16 md:mt-0">
               <img
                 src={require("./Assets/Images/images/uhack/uhack.8544fd4e.webp")}
                 alt="infox"
-                className="uh-img h-4/5"
+                className="uh-img  w-4/5"
               />
             </div>
           </section>
-          <section className="  ">
-            <div className="flex hel text-6xl atmosphere title-txt-shdw">
+
+          <section className="mt-16 md:mt-32 ">
+            <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-            <div className="flex  gap-12 mt-14 hel ">
+            <div className="flex flex-wrap md:flex-nowrap gap-12 mt-6 md:mt-14 hel uh-bg py-12">
               <a
                 href="https://devfolio.co"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5 spon-logo-width"
+                className="basis-2/5 md:basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Devfolio-logo.png")}
@@ -214,7 +215,7 @@ const Uhack = () => {
                 href="https://filecoin.io"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5 spon-logo-width"
+                className="basis-2/5 md:basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Filecoin-logo.png")}
@@ -225,7 +226,7 @@ const Uhack = () => {
                 href="https://polygon.technology/"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5 spon-logo-width"
+                className="basis-2/5 md:basis-1/5 spon-logo-width"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
@@ -236,7 +237,7 @@ const Uhack = () => {
                 href="https://replit.com"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5 spon-logo-width"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Replit-logo.png")}
@@ -247,7 +248,7 @@ const Uhack = () => {
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
-                className="basis-1/5 spon-logo-width"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
@@ -257,22 +258,49 @@ const Uhack = () => {
             </div>
           </section>
           <section className="container mx-auto ">
-            <div className="atmosphere hel text-5xl mt-32">
+            <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw mt-24 md:mt-32">
               Categories
             </div>
-            <div className="flex text-3xl gap-24 mt-16">
-              <div className="h-96 hel basis-1/3 uh-glass"> <FaRobot size={55} style={{ fill: '' }} />AI/ML</div>
-              <div className="h-96 hel basis-1/3 uh-glass"><IoLogoBuffer size={55}  style={{ fill: '' }} />Web3</div>
-              <div className="h-96 hel basis-1/3 uh-glass"><SiMusicbrainz size={55}  style={{ fill: '' }}/>Open innovation</div>
-            </div>
-            <div className="flex text-3xl gap-24 mt-16">
-              <div className="h-96 hel basis-1/3 uh-glass"><GiHealthNormal size={55}  style={{ fill: '' }} />Healthcare</div>
-              <div className="h-96 hel basis-1/3 uh-glass"><MdOutlineCastForEducation size={55}  style={{ fill: '' }}/>Edtech</div>
-              <div className="h-96 hel basis-1/3 uh-glass"><RiMoneyDollarCircleFill size={55}  style={{ fill: '' }} />Fintech</div>
-
-            </div>
-            <div className="flex text-3xl gap-24 mt-16">
-              <div className="h-96 hel basis-1/3 uh-glass"><VscTools size={55} style={{ fill: '' }}/>Utilities</div>
+            <div className="uh-bg py-12 mt-12">
+              <div className="flex text-3xl flex-wrap-reverse gap-16 md:gap-24 md:flex-nowrap hel">
+                <div className="h-42 hel basis-1/3 flex flex-col gap-2 md:gap-5 ">
+                  {" "}
+                  <FaRobot size={55} style={{ fill: "#E5F5DF" }} />
+                  <div>AI / ML</div>
+                </div>
+                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
+                  <IoLogoBuffer size={55} style={{ fill: "#4C6F4F" }} />
+                  Web3
+                </div>
+                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5 hel">
+                  <SiMusicbrainz size={55} style={{ fill: "#75EC75" }} />
+                  Open Innovation
+                </div>
+              </div>
+              <div className="flex text-3xl gap-16 md:gap-24 mt-16 flex-wrap md:flex-nowrap hel">
+                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
+                  <GiHealthNormal size={55} style={{ fill: "#2f2" }} />
+                  Healthcare
+                </div>
+                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
+                  <MdOutlineCastForEducation
+                    size={55}
+                    style={{ fill: "#4eff4e" }}
+                  />
+                  Edtech
+                </div>
+                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
+                  <RiMoneyDollarCircleFill
+                    size={55}
+                    style={{ fill: "#18b318" }}
+                  />
+                  Fintech
+                </div>
+                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
+                  <VscTools size={55} style={{ fill: "#22ff22" }} />
+                  Utility
+                </div>
+              </div>
             </div>
           </section>
           {/* <section className="">
@@ -292,11 +320,11 @@ const Uhack = () => {
             <div className="hel txt-shdw h-56 text-3xl">To Be Announced...</div>
           </section> */}
           <section className="uhf">
-            <div className="atmosphere hel text-5xl mt-32 title-txt-shdw">
+            <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw mt-24 md:mt-32">
               FAQs
             </div>
-            <div className="hel">
-              <div className="faqs text-black ">
+            <div className="hel ">
+              <div className="faqs text-black w-full md:w-10/12">
                 {faqs.map((faq, index) => (
                   <FAQ
                     faq={faq}

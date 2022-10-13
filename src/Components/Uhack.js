@@ -2,28 +2,26 @@ import React, { useState } from "react";
 import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
 import FAQ from "./uhack-faq";
-import { FaRobot } from "react-icons/fa"
-import { IoLogoBuffer } from "react-icons/io"
-import { GiHealthNormal } from "react-icons/gi"
-import { MdOutlineCastForEducation } from "react-icons/md"
+import { FaRobot } from "react-icons/fa";
+import { IoLogoBuffer } from "react-icons/io";
+import { GiHealthNormal } from "react-icons/gi";
+import { MdOutlineCastForEducation } from "react-icons/md";
 // import { WiDayThunderstorm } from "react-icons/wi"
-import { SiMusicbrainz } from "react-icons/si"
+import { SiMusicbrainz } from "react-icons/si";
 
-import { RiMoneyDollarCircleFill } from "react-icons/ri"
-import { VscTools } from "react-icons/vsc"
-
-
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import { VscTools } from "react-icons/vsc";
 
 const Uhack = () => {
   React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    const script = document.createElement("script");
+    script.src = "https://apply.devfolio.co/v2/sdk.js";
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
     return () => {
       document.body.removeChild(script);
-    }
+    };
   }, []);
   const [faqs, setFaqs] = useState([
     {
@@ -112,7 +110,7 @@ const Uhack = () => {
           <section className=" flex flex-col-reverse  md:flex-row md:gap-32  ">
             <div className="basis-1/2 mt-8 md:mt-16 ">
               {/* <div className="atmosphere text-7xl">Uhack</div> */}
-              <div class="sn_glitch_forNHeading atmosphere uh-heading ">
+              <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
                 <div class="sn_line_forNHeading">Uhack</div>
                 <div class="sn_line_forNHeading">Uhack</div>
                 <div class="sn_line_forNHeading">Uhack</div>
@@ -123,7 +121,7 @@ const Uhack = () => {
                 <div class="sn_line_forNHeading">Uhack</div>
                 <div class="sn_line_forNHeading">Uhack</div>
               </div>
-              <div className="mt-4 text-l ">
+              <div className="md:mt-4  text-l mx-2 md:mx-0  text-center md:text-left">
                 UHack is here again folks!! One of the best hackathons of
                 Delhi-NCR region is here again, waiting for you to participate.
                 Its bigger, better and more fun than ever and surely, prizes
@@ -178,7 +176,7 @@ const Uhack = () => {
                   <p className="">12 Noon</p>
                 </div>
               </div>
-              <div className="devfolio-button">
+              <div className=" devfolio-button flex justify-center md:justify-start">
                 <div
                   class="apply-button"
                   data-hackathon-slug="YOUR-HACKATHON-SLUG"
@@ -186,16 +184,31 @@ const Uhack = () => {
                 ></div>
               </div>
             </div>
-            <div className="basis-1/2 flex justify-center mt-16 md:mt-0">
-              <img
-                src={require("./Assets/Images/images/uhack/uhack.8544fd4e.webp")}
-                alt="infox"
-                className="uh-img  w-4/5"
-              />
+            <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
+              <div>
+                <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
+                  <div class="sn_line_forNHeading">Uhack</div>
+                  <div class="sn_line_forNHeading">Uhack</div>
+                  <div class="sn_line_forNHeading">Uhack</div>
+                  <div class="sn_line_forNHeading">Uhack</div>
+                  <div class="sn_line_forNHeading">Uhack</div>
+                  <div class="sn_line_forNHeading">Uhack</div>
+                  <div class="sn_line_forNHeading">Uhack</div>
+                  <div class="sn_line_forNHeading">Uhack</div>
+                  <div class="sn_line_forNHeading">Uhack</div>
+                </div>
+              </div>
+              <div className="hel">
+                <img
+                  src={require("./Assets/Images/images/uhack/uhack.8544fd4e.webp")}
+                  alt="infox"
+                  className="uh-img   w-4/5"
+                />
+              </div>
             </div>
           </section>
 
-          <section className="mt-16 md:mt-32 ">
+          <section className="mt-32 ">
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>

@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
 import FAQ from "./uhack-faq";
+import { FaRobot } from "react-icons/fa"
+import { IoLogoBuffer } from "react-icons/io"
+import { GiHealthNormal } from "react-icons/gi"
+import { MdOutlineCastForEducation } from "react-icons/md"
+import { WiDayThunderstorm } from "react-icons/wi"
+import { SiMusicbrainz } from "react-icons/si"
+
+import { GiReceiveMoney } from "react-icons/gi"
+
+
 
 const Uhack = () => {
   const [faqs, setFaqs] = useState([
@@ -175,12 +185,21 @@ const Uhack = () => {
           </section>
           <section className="container mx-auto ">
             <div className="atmosphere hel text-5xl mt-32">
-              Tracks &amp; prizes
+              Categories
             </div>
             <div className="flex text-3xl gap-24 mt-16">
-              <div className="h-96 hel basis-1/3 uh-glass">cards</div>
-              <div className="h-96 hel basis-1/3 uh-glass">cards</div>
-              <div className="h-96 hel basis-1/3 uh-glass">cards</div>
+              <div className="h-96 hel basis-1/3 uh-glass"> <FaRobot size={55} style={{ fill: 'cyan' }} />AI/ML</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><IoLogoBuffer size={55} />Web3</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><SiMusicbrainz size={55} />Open innovation</div>
+            </div>
+            <div className="flex text-3xl gap-24 mt-16">
+              <div className="h-96 hel basis-1/3 uh-glass"><GiHealthNormal size={55} />Healthcare</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><MdOutlineCastForEducation size={55} />Edtech</div>
+              <div className="h-96 hel basis-1/3 uh-glass"><GiReceiveMoney size={55} />Fintech</div>
+
+            </div>
+            <div className="flex text-3xl gap-24 mt-16">
+              <div className="h-96 hel basis-1/3 uh-glass">Utilities</div>
             </div>
           </section>
           <section className="container mx-auto ">

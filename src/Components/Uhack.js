@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import Aos from "aos";
+
+import "aos/dist/aos.css";
+
 import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
 import FAQ from "./uhack-faq";
@@ -102,12 +106,159 @@ const Uhack = () => {
     );
   };
 
+    React.useEffect(() => {
+      Aos.init({ duration: 2000 });
+    });
+    const [width1, setWidth1] = React.useState(window.innerWidth);
+    const [height1, setHeight1] = React.useState(window.innerHeight);
+    React.useEffect(() => {
+      const handleWindowResize = () => {
+        setWidth1(window.innerWidth);
+
+        setHeight1(window.innerHeight);
+      };
+
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+    const useViewport = () => {
+      // Return both the height and width
+      return { width1, height1 };
+    };
+
+    const MyComponent1 = () => {
+      const { width1 } = useViewport();
+      // const { height } = useHeight();
+      const breakpoint1 = 1000;
+
+      return width1 < breakpoint1 ? (
+        <MobileComponent1 />
+      ) : (
+        <DesktopComponent1 />
+      );
+    };
+  
+  const DesktopComponent1 = () => {
+    return (
+      <div>
+        <div className="flex hel text-4xl md:text-7xl atmosphere title-txt-shdw">
+          ABOUT
+        </div>
+        <div className="legacy__about uh-bg md:mt-12" data-aos="fade-up">
+          <div className="about__left">
+            <div id="about-stats">
+              <div class="about-students">
+                <div id="about-students" class="circle-ripple">
+                  <span class="about-stat-num">5400+</span>
+                  <span class="about-stat-title">Registrations</span>
+                </div>
+                <div id="about-students-ripple-1" class="circle-ripple"></div>
+                <div id="about-students-ripple-2" class="circle-ripple"></div>
+                <div id="about-students-ripple-3" class="circle-ripple"></div>
+                <div id="about-students-ripple-4" class="circle-ripple"></div>
+                <div id="about-students-ripple-5" class="circle-ripple"></div>
+              </div>
+
+              <div class="about-colleges">
+                <div id="about-colleges" class="circle-ripple">
+                  <span class="about-stat-num">25+</span>
+                  <span class="about-stat-title">Teams</span>
+                </div>
+                <div id="about-colleges-ripple-1" class="circle-ripple"></div>
+                <div id="about-colleges-ripple-2" class="circle-ripple"></div>
+                <div id="about-colleges-ripple-3" class="circle-ripple"></div>
+                <div id="about-colleges-ripple-4" class="circle-ripple"></div>
+                <div id="about-colleges-ripple-5" class="circle-ripple"></div>
+              </div>
+              <div className="about-events">
+                <div id="about-events" class="circle-ripple">
+                  <span class="about-stat-num">24</span>
+                  <span class="about-stat-title">Hour</span>
+                </div>
+                <div id="about-events-ripple-1" class="circle-ripple"></div>
+                <div id="about-events-ripple-2" class="circle-ripple"></div>
+                <div id="about-events-ripple-3" class="circle-ripple"></div>
+                <div id="about-events-ripple-4" class="circle-ripple"></div>
+                <div id="about-events-ripple-5" class="circle-ripple"></div>
+              </div>
+            </div>
+          </div>
+          <div className="about__right">
+            <div id="about-content">
+
+              <div class="content-wrap mt-32">
+                <div class="content-line-wrap">
+                  <div class="before-content-line"></div>
+                </div>
+                <div class="content-text">
+                  UHack, a hackathon where programmers and other interested
+                  individuals collaborate to enhance or create new software. It
+                  provide an opportunity for contributors to strengthen soft
+                  skills like leadership, mentoring and communication. They
+                  offer risk-free situations where teamwork is encouraged,
+                  building interpersonal communication skills. This year UHack
+                  is back with seven tracks for you to hack into. There will be
+                  a prize for the top project on each track. Students will
+                  design technology projects from the very beginning and build
+                  upon what they have learned. Push the limits of your mind to
+                  make something amazing!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const MobileComponent1 = () => {
+    return (
+      <div className="aboutm" data-aos="fade-up">
+        <div className="aboutm-stats">
+          <div className="aboutm-students">
+            <span class="aboutm-number">6000+</span>
+            <span class="aboutm-number-head">students</span>
+          </div>
+          <div className="aboutm-colleges">
+            <span class="aboutm-number">120+</span>
+            <span class="aboutm-number-head">colleges</span>
+          </div>
+          <div className="aboutm-events">
+            <span class="aboutm-number">25+</span>
+            <span class="aboutm-number-head">events</span>
+          </div>
+        </div>
+        <div className="aboutm-content">
+          <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
+            ABOUT
+          </div>
+          <div class="mcontent-wrap ">
+            <div class="mcontent-line-wrap">
+              <div class="mbefore-content-line"></div>
+            </div>
+            <div class="mcontent-text">
+              UHack, a hackathon where programmers and other interested
+              individuals collaborate to enhance or create new software. It
+              provide an opportunity for contributors to strengthen soft skills
+              like leadership, mentoring and communication. They offer risk-free
+              situations where teamwork is encouraged, building interpersonal
+              communication skills. This year UHack is back with seven tracks
+              for you to hack into. There will be a prize for the top project on
+              each track. Students will design technology projects from the very
+              beginning and build upon what they have learned. Push the limits
+              of your mind to make something amazing!
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <>
       <MatrixRain />
       <div className="container mx-auto">
         <div className="md:pt-24  text-white">
-          <section className=" flex flex-col-reverse  md:flex-row md:gap-32  ">
+          <section className=" flex flex-col-reverse  md:flex-row md:gap-32  uh-bg">
             <div className="basis-1/2 mt-8 md:mt-16 ">
               {/* <div className="atmosphere text-7xl">Uhack</div> */}
               <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
@@ -125,10 +276,11 @@ const Uhack = () => {
                 UHack is here again folks!! One of the best hackathons of
                 Delhi-NCR region is here again, waiting for you to participate.
                 Its bigger, better and more fun than ever and surely, prizes
-                that can make you go berserk. So come up, work on your dreams
+                that can make you go berserk.
+                {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations
                 take out solutions that nobody has ever thought and get involved
-                in the heat with some of the best coders of the country.
+                in the heat with some of the best coders of the country. */}
               </div>
               <div className="flex md:mt-16 mt-8 gap-8 txt-shdw text-xl justify-center md:justify-start">
                 <div className="flex gap-2 ">
@@ -207,8 +359,12 @@ const Uhack = () => {
               </div>
             </div>
           </section>
-
-          <section className="mt-32 ">
+          <section>
+            <section className="md:mt-32 mt-16">
+              <MyComponent1 />
+            </section>
+          </section>
+          <section className=" mt-24 md:mt-32">
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
@@ -286,7 +442,7 @@ const Uhack = () => {
                   Web3
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col hel">
-                  <SiMusicbrainz size={55} style={{ fill: "r" }} />
+                  <SiMusicbrainz size={55} style={{ fill: "" }} />
                   Open Innovation
                 </div>
               </div>
@@ -296,17 +452,11 @@ const Uhack = () => {
                   Healthcare
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
-                  <MdOutlineCastForEducation
-                    size={55}
-                    style={{ fill: "r" }}
-                  />
+                  <MdOutlineCastForEducation size={55} style={{ fill: "r" }} />
                   Edtech
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
-                  <RiMoneyDollarCircleFill
-                    size={55}
-                    style={{ fill: "" }}
-                  />
+                  <RiMoneyDollarCircleFill size={55} style={{ fill: "" }} />
                   Fintech
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">

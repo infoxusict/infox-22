@@ -347,7 +347,7 @@ const Uhack = () => {
               </div>
               <div className="hel ">
                 <img
-                  src={require("./Assets/Images/images/uhack/2USICT-UHACK-2022.png")}
+                  src={require("./Assets/Images/images/uhack/USICT-HACK-2022.png")}
                   alt="infox"
                   className="uh-img  p-4 uh-bg w-4/5 "
                 />

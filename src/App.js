@@ -9,6 +9,7 @@ import Keeanu from "./Components/Keeanu";
 import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
+import Uhack from "./Components/Uhack";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
@@ -35,6 +36,9 @@ const App = () => {
           </Route>
           <Route exact path="/legacy">
             <Legacy />
+          </Route>
+          <Route exact path="/uhack">
+            <Uhack />
           </Route>
         </Switch>
         <Keeanu />

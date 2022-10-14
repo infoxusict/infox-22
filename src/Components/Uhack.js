@@ -185,7 +185,7 @@ const Uhack = () => {
                 <div class="content-line-wrap">
                   <div class="before-content-line"></div>
                 </div>
-                <div class="content-text">
+                <div class="content-text text-justify">
                   UHack, a hackathon where programmers and other interested
                   individuals collaborate to enhance or create new software. It
                   provide an opportunity for contributors to strengthen soft
@@ -230,7 +230,7 @@ const Uhack = () => {
             <div class="mcontent-line-wrap">
               <div class="mbefore-content-line"></div>
             </div>
-            <div class="mcontent-text">
+            <div class="mcontent-text text-justify">
               UHack, a hackathon where programmers and other interested
               individuals collaborate to enhance or create new software. It
               provide an opportunity for contributors to strengthen soft skills
@@ -253,7 +253,7 @@ const Uhack = () => {
       <MatrixRain />
       <div className="container mx-auto">
         <div className="md:pt-24  text-white">
-          <section className=" flex flex-col-reverse  md:flex-row md:gap-32  uh-bg">
+          <section className=" flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8">
             <div className="basis-1/2 mt-8 md:mt-16 ">
               {/* <div className="atmosphere text-7xl">Uhack</div> */}
               <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
@@ -267,7 +267,7 @@ const Uhack = () => {
                 <div class="sn_line_forNHeading">Uhack</div>
                 <div class="sn_line_forNHeading">Uhack</div>
               </div>
-              <div className="md:mt-4  text-l mx-8 md:mx-0  ">
+              <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
                 UHack is here again folks!! One of the best hackathons of
                 Delhi-NCR region is here again, waiting for you to participate.
                 Its bigger, better and more fun than ever and surely, prizes
@@ -345,9 +345,9 @@ const Uhack = () => {
                   <div class="sn_line_forNHeading">Uhack</div>
                 </div>
               </div>
-              <div className="hel ">
+              <div className="flex justify-center md:justify-end ">
                 <img
-                  src={require("./Assets/Images/images/uhack/USICT-HACK-2022.png")}
+                  src={require("./Assets/Images/images/uhack/1USICT-HACK-2022.png")}
                   alt="infox"
                   className="uh-img  p-4 uh-bg w-4/5 "
                 />
@@ -363,7 +363,7 @@ const Uhack = () => {
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-            <div className="flex flex-wrap md:flex-nowrap gap-12 mt-6 md:mt-14 hel uh-bg py-12">
+            <div className="flex flex-wrap md:flex-nowrap gap-12 mt-6 md:mt-14 hel uh-bg py-12 md:px-4">
               <a
                 href="https://devfolio.co"
                 target="_blank"
@@ -425,7 +425,7 @@ const Uhack = () => {
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw mt-24 md:mt-32">
               Categories
             </div>
-            <div className="uh-bg py-12 mt-12 mx-4">
+            <div className="uh-bg py-12 mt-12 mx-4 md:px-4">
               <div className="flex text-3xl flex-wrap-reverse gap-16 md:gap-24 md:flex-nowrap hel">
                 <div className="h-42 hel basis-1/3 flex flex-col  ">
                   {" "}

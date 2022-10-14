@@ -106,38 +106,34 @@ const Uhack = () => {
     );
   };
 
-    React.useEffect(() => {
-      Aos.init({ duration: 2000 });
-    });
-    const [width1, setWidth1] = React.useState(window.innerWidth);
-    const [height1, setHeight1] = React.useState(window.innerHeight);
-    React.useEffect(() => {
-      const handleWindowResize = () => {
-        setWidth1(window.innerWidth);
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  });
+  const [width1, setWidth1] = React.useState(window.innerWidth);
+  const [height1, setHeight1] = React.useState(window.innerHeight);
+  React.useEffect(() => {
+    const handleWindowResize = () => {
+      setWidth1(window.innerWidth);
 
-        setHeight1(window.innerHeight);
-      };
-
-      window.addEventListener("resize", handleWindowResize);
-      return () => window.removeEventListener("resize", handleWindowResize);
-    }, []);
-    const useViewport = () => {
-      // Return both the height and width
-      return { width1, height1 };
+      setHeight1(window.innerHeight);
     };
 
-    const MyComponent1 = () => {
-      const { width1 } = useViewport();
-      // const { height } = useHeight();
-      const breakpoint1 = 1000;
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+  const useViewport = () => {
+    // Return both the height and width
+    return { width1, height1 };
+  };
 
-      return width1 < breakpoint1 ? (
-        <MobileComponent1 />
-      ) : (
-        <DesktopComponent1 />
-      );
-    };
-  
+  const MyComponent1 = () => {
+    const { width1 } = useViewport();
+    // const { height } = useHeight();
+    const breakpoint1 = 1000;
+
+    return width1 < breakpoint1 ? <MobileComponent1 /> : <DesktopComponent1 />;
+  };
+
   const DesktopComponent1 = () => {
     return (
       <div>
@@ -149,7 +145,7 @@ const Uhack = () => {
             <div id="about-stats">
               <div class="about-students">
                 <div id="about-students" class="circle-ripple">
-                  <span class="about-stat-num">5400+</span>
+                  <span class="about-stat-num">5800+</span>
                   <span class="about-stat-title">Registrations</span>
                 </div>
                 <div id="about-students-ripple-1" class="circle-ripple"></div>
@@ -185,7 +181,6 @@ const Uhack = () => {
           </div>
           <div className="about__right">
             <div id="about-content">
-
               <div class="content-wrap mt-32">
                 <div class="content-line-wrap">
                   <div class="before-content-line"></div>
@@ -193,7 +188,7 @@ const Uhack = () => {
                 <div class="content-text">
                   UHack, a hackathon where programmers and other interested
                   individuals collaborate to enhance or create new software. It
-                  provide an opportunity for contributors to strengthen soft
+                  provide an opportunity for contributors to strengthen soft
                   skills like leadership, mentoring and communication. They
                   offer risk-free situations where teamwork is encouraged,
                   building interpersonal communication skills. This year UHack
@@ -215,16 +210,16 @@ const Uhack = () => {
       <div className="aboutm" data-aos="fade-up">
         <div className="aboutm-stats">
           <div className="aboutm-students">
-            <span class="aboutm-number">6000+</span>
+            <span class="aboutm-number">5800+</span>
             <span class="aboutm-number-head">students</span>
           </div>
           <div className="aboutm-colleges">
-            <span class="aboutm-number">120+</span>
-            <span class="aboutm-number-head">colleges</span>
+            <span class="aboutm-number">25+</span>
+            <span class="aboutm-number-head">Teams</span>
           </div>
           <div className="aboutm-events">
-            <span class="aboutm-number">25+</span>
-            <span class="aboutm-number-head">events</span>
+            <span class="aboutm-number">24</span>
+            <span class="aboutm-number-head">Hour</span>
           </div>
         </div>
         <div className="aboutm-content">
@@ -352,7 +347,7 @@ const Uhack = () => {
               </div>
               <div className="hel ">
                 <img
-                  src={require("./Assets/Images/images/uhack/USICT-UHACK-2022.png")}
+                  src={require("./Assets/Images/images/uhack/2USICT-UHACK-2022.png")}
                   alt="infox"
                   className="uh-img  p-4 uh-bg w-4/5 "
                 />
@@ -430,38 +425,70 @@ const Uhack = () => {
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw mt-24 md:mt-32">
               Categories
             </div>
-            <div className="uh-bg py-12 mt-12">
+            <div className="uh-bg py-12 mt-12 mx-4">
               <div className="flex text-3xl flex-wrap-reverse gap-16 md:gap-24 md:flex-nowrap hel">
                 <div className="h-42 hel basis-1/3 flex flex-col  ">
                   {" "}
-                  <FaRobot size={55} style={{ fill: "r" }} />
+                  <FaRobot size={55} style={{ fill: "" }} />
                   <div>AI / ML</div>
+                  <div className="text-sm text-center mt-2">
+                    Algorithm that can make predictions through pattern
+                    recognition.
+                  </div>
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col ">
-                  <IoLogoBuffer size={55} style={{ fill: "r" }} />
-                  Web3
+                  <IoLogoBuffer size={55} style={{ fill: "" }} />
+                  <div>Web3</div>
+                  <div className="text-sm text-center mt-2">
+                    Concept for a new version of the World Wide Web that
+                    incorporates decentralisation, blockchain technologies, and
+                    token-based economics.
+                  </div>
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col hel">
                   <SiMusicbrainz size={55} style={{ fill: "" }} />
-                  Open Innovation
+                  <div>Open Innovation</div>
+                  <div className="text-sm text-center mt-2">
+                    Integrates internal and external concepts to create
+                    architectures and systems whose specifications are
+                    established by a business model.
+                  </div>
                 </div>
               </div>
               <div className="flex text-3xl gap-16 md:gap-24 mt-16 flex-wrap md:flex-nowrap hel">
-                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
+                <div className="h-42 hel md:basis-1/3 flex flex-col ">
                   <GiHealthNormal size={55} style={{ fill: "" }} />
-                  Healthcare
+                  <div>Healthcare</div>
+                  <div className="text-sm text-center mt-2">
+                    IT tools or software designed to increase hospital
+                    productivity, provide new insights into medicines and
+                    treatments, or improve overall healthcare quality.
+                  </div>
                 </div>
-                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
-                  <MdOutlineCastForEducation size={55} style={{ fill: "r" }} />
-                  Edtech
+                <div className="h-42 hel md:basis-1/3 flex flex-col ">
+                  <MdOutlineCastForEducation size={55} style={{ fill: "" }} />
+                  <div>Edtech</div>
+                  <div className="text-sm text-center mt-2">
+                    Using technology to enhance education's effect, delivery,
+                    and user experience.
+                  </div>
                 </div>
-                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
+                <div className="h-42 hel md:basis-1/3 flex flex-col ">
                   <RiMoneyDollarCircleFill size={55} style={{ fill: "" }} />
-                  Fintech
+                  <div>Fintech</div>
+                  <div className="text-sm text-center mt-2">
+                    Facilitates the quick and affordable transfer of money and
+                    the settlement of overseas invoices.
+                  </div>
                 </div>
-                <div className="h-42 hel md:basis-1/3 flex flex-col gap-2 md:gap-5">
+                <div className="h-42 hel md:basis-1/3 flex flex-col ">
                   <VscTools size={55} style={{ fill: "" }} />
-                  Utility
+                  <div>Utility</div>
+                  <div className="text-sm text-center mt-2">
+                    Entails figuring out ways to incorporate a product into a
+                    customer's lifestyle by highlighting how it can meet the
+                    needs of the customer by solving a problem.
+                  </div>
                 </div>
               </div>
             </div>

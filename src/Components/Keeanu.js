@@ -69,6 +69,9 @@ const Keeanu = () => {
       </div>
       <div className="booth">
         <img
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          }}
           className="booth-img"
           id="booth-img"
           src={require("./Assets/Images/images/phonebooth.png")}

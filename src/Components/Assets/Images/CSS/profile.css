@@ -137,7 +137,7 @@ border-radius: 2vw;
     top:15vw;
     left:1.5vw;
     font-family: "mechtech";
-    color: white !important;
+    color: rgba(255, 255, 255, 0.377) !important;
     opacity: 0.9;
     font-size: 2vw;
 }
@@ -152,7 +152,7 @@ border-radius: 2vw;
 
 .profileData2 h6 {
     /* font-style: italic; */
-    color: #6CDE01;
+    color: #6cde01bb;
     position: relative;
     top:13vw;
     font-size: 1.4vw;

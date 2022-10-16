@@ -105,9 +105,9 @@ const EventCardProfile = () => {
           <button class="btn">More Info</button>
         </div>
       </div>
-      {/* <div class="card">
+      <div class="card">
         <div class="content">
-          <h2 class="title">Explore The Galaxy</h2>
+          <h2 class="title">Clash Of Companies</h2>
           <p class="copy">
             Samrat <br />
             Shivesh
@@ -115,7 +115,18 @@ const EventCardProfile = () => {
           </p>
           <button class="btn">More Info</button>
         </div>
-      </div> */}
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Clash Of Companies</h2>
+          <p class="copy">
+            Samrat <br />
+            Shivesh
+            <br /> Tejasva
+          </p>
+          <button class="btn">More Info</button>
+        </div>
+      </div>
     </main>
   );
 };

@@ -298,7 +298,7 @@ const Uhack = () => {
                       fill="white"
                     ></path>{" "}
                   </svg>
-                  <p> 17th November 2022</p>
+                  <p> 18th November 2022</p>
                 </div>
                 <div className="flex gap-2">
                   <svg
@@ -320,7 +320,7 @@ const Uhack = () => {
                       fill="white"
                     ></path>{" "}
                   </svg>
-                  <p className="">12 Noon</p>
+                  <p className="">2 PM</p>
                 </div>
               </div>
               <div className=" devfolio-button flex justify-center md:justify-start">
@@ -363,7 +363,7 @@ const Uhack = () => {
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-            <div className="flex flex-wrap md:flex-nowrap gap-12 mt-6 md:mt-14 hel uh-bg py-12 md:px-4">
+            <div className="grid  grid-cols-2 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
               <a
                 href="https://devfolio.co"
                 target="_blank"
@@ -386,7 +386,7 @@ const Uhack = () => {
                   alt="Filecoin-logo"
                 />
               </a>
-              <a
+              {/* <a
                 href="https://polygon.technology/"
                 target="_blank"
                 rel="noreferrer"
@@ -396,7 +396,7 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
                   alt="Polygon-log "
                 />
-              </a>
+              </a> */}
               <a
                 href="https://replit.com"
                 target="_blank"
@@ -408,7 +408,7 @@ const Uhack = () => {
                   alt="Replit-logo"
                 />
               </a>
-              <a
+              {/* <a
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
@@ -417,6 +417,17 @@ const Uhack = () => {
                 <img
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
                   alt="Solana-logo"
+                />
+              </a> */}
+              <a
+                href="https://wolfram.com"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
+                  alt="Wolfram-logo"
                 />
               </a>
             </div>

@@ -42,7 +42,7 @@ const Uhack = () => {
     {
       question: "What is the theme of the Hackathon?",
       answer:
-        "There will be few options of programming challenges provided, which are AI/ML, Web3, Open innovation. Healthcare, Edtech,  Utility or IOT.",
+        "There will be few options of programming challenges provided, which are AI/ML, Web3, Open innovation. Healthcare, Edtech,  Utility etc",
       open: false,
     },
     {
@@ -81,7 +81,7 @@ const Uhack = () => {
     {
       question: "What time is the hackathon's beginning and ending?",
       answer:
-        "The hackathon will start at 12 Noon on November 17 and end at 12 Noon on November 18.",
+        "The hackathon will start at 2pm on November 18 and end at 2 pm on November 19.",
       open: false,
     },
     {

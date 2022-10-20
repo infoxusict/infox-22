@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "./Assets/Images/CSS/Footer.css";
 
+
 // import MatrixRain from "./MatrixRain";
 
 const Footer = () => {
@@ -39,7 +40,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="customerList text-lg div-text-lg">
-                  <Link className="customerListA " to="/team">
+                  <Link className="customerListA " to="/event">
                     Venue
                   </Link>
                 </li>
@@ -51,7 +52,10 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links text-lg div-text-lg">
                 <li className="companyFoot text-lg div-text-lg">
-                  <Link className="footAcompany" to="/team">
+                  <Link
+                    className="footAcompany"
+                    to="/team"
+                  >
                     About us
                   </Link>
                 </li>
@@ -68,7 +72,10 @@ const Footer = () => {
                 Pages
               </h3>
               <ul className="list-unstyled links">
-                <li className="furtherInformation text-lg div-text-lg" style={{marginBottom: "0px"}}>
+                <li
+                  className="furtherInformation text-lg div-text-lg"
+                  style={{ marginBottom: "0px" }}
+                >
                   <a
                     rel="noreferrer"
                     className="furtherInformationA"

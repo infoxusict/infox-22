@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Aos from "aos";
-
-import "aos/dist/aos.css";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 
 import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
@@ -42,7 +41,8 @@ const Uhack = () => {
     {
       question: "What is the theme of the Hackathon?",
       answer:
-        "There will be few options of programming challenges provided, which are AI/ML, Web3, Open innovation. Healthcare, Edtech,  Utility or IOT.",
+        "There will be few options of programming challenges provided, which are AI/ML, Web3, Open innovation. Healthcare, Edtech,  Utility etc",
+
       open: false,
     },
     {
@@ -81,7 +81,8 @@ const Uhack = () => {
     {
       question: "What time is the hackathon's beginning and ending?",
       answer:
-        "The hackathon will start at 12 Noon on November 17 and end at 12 Noon on November 18.",
+        "The hackathon will start at 2pm on November 18 and end at 2 pm on November 19.",
+
       open: false,
     },
     {
@@ -106,9 +107,11 @@ const Uhack = () => {
     );
   };
 
-  React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  });
+
+  // React.useEffect(() => {
+  //   Aos.init({ duration: 2000 });
+  // });
+
   const [width1, setWidth1] = React.useState(window.innerWidth);
   const [height1, setHeight1] = React.useState(window.innerHeight);
   React.useEffect(() => {
@@ -140,7 +143,7 @@ const Uhack = () => {
         <div className="flex hel text-4xl md:text-7xl atmosphere title-txt-shdw">
           ABOUT
         </div>
-        <div className="legacy__about uh-bg md:mt-12" data-aos="fade-up">
+        <div className="legacy__about uh-bg md:mt-12" >
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">
@@ -207,7 +210,7 @@ const Uhack = () => {
   };
   const MobileComponent1 = () => {
     return (
-      <div className="aboutm" data-aos="fade-up">
+      <div className="aboutm">
         <div className="aboutm-stats">
           <div className="aboutm-students">
             <span class="aboutm-number">5800+</span>
@@ -298,7 +301,8 @@ const Uhack = () => {
                       fill="white"
                     ></path>{" "}
                   </svg>
-                  <p> 17th November 2022</p>
+                  <p> 18th November 2022</p>
+
                 </div>
                 <div className="flex gap-2">
                   <svg
@@ -320,7 +324,8 @@ const Uhack = () => {
                       fill="white"
                     ></path>{" "}
                   </svg>
-                  <p className="">12 Noon</p>
+                  <p className="">2 PM</p>
+
                 </div>
               </div>
               <div className=" devfolio-button flex justify-center md:justify-start">
@@ -363,7 +368,8 @@ const Uhack = () => {
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-            <div className="flex flex-wrap md:flex-nowrap gap-12 mt-6 md:mt-14 hel uh-bg py-12 md:px-4">
+            <div className="grid  grid-cols-2 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
+
               <a
                 href="https://devfolio.co"
                 target="_blank"
@@ -386,7 +392,7 @@ const Uhack = () => {
                   alt="Filecoin-logo"
                 />
               </a>
-              <a
+              {/* <a
                 href="https://polygon.technology/"
                 target="_blank"
                 rel="noreferrer"
@@ -396,7 +402,7 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
                   alt="Polygon-log "
                 />
-              </a>
+              </a> */}
               <a
                 href="https://replit.com"
                 target="_blank"
@@ -408,7 +414,8 @@ const Uhack = () => {
                   alt="Replit-logo"
                 />
               </a>
-              <a
+              {/* <a
+
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
@@ -418,6 +425,18 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
                   alt="Solana-logo"
                 />
+              </a> */}
+              <a
+                href="https://wolfram.com"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
+                  alt="Wolfram-logo"
+                />
+
               </a>
             </div>
           </section>
@@ -432,8 +451,9 @@ const Uhack = () => {
                   <FaRobot size={55} style={{ fill: "" }} />
                   <div>AI / ML</div>
                   <div className="text-sm text-center mt-2">
-                    Algorithm that can make predictions through pattern
-                    recognition.
+                    The capacity of a machine to replicate intelligent human
+                    behaviour is referred to as machine learning in the field of
+                    artificial intelligence.
                   </div>
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col ">

@@ -1,11 +1,11 @@
 import "./Assets/Images/CSS/aboutus.css";
 import React from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 export default function About() {
-  React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  });
+  // React.useEffect(() => {
+  //   Aos.init({ duration: 2000 });
+  // });
   const [width1, setWidth1] = React.useState(window.innerWidth);
   const [height1, setHeight1] = React.useState(window.innerHeight);
   React.useEffect(() => {
@@ -33,7 +33,7 @@ export default function About() {
   const DesktopComponent1 = () => {
     return (
       <div>
-        <div className="legacy__about" data-aos="fade-up">
+        <div className="legacy__about" >
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">
@@ -104,7 +104,7 @@ export default function About() {
   };
   const MobileComponent1 = () => {
     return (
-      <div className="aboutm" data-aos="fade-up">
+      <div className="aboutm">
         <div className="aboutm-stats">
           <div className="aboutm-students">
             <span class="aboutm-number">6000+</span>

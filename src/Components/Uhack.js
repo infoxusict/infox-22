@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Aos from "aos";
+// import Aos from "aos";
 
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 
 import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
@@ -106,9 +106,9 @@ const Uhack = () => {
     );
   };
 
-  React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  });
+  // React.useEffect(() => {
+  //   Aos.init({ duration: 2000 });
+  // });
   const [width1, setWidth1] = React.useState(window.innerWidth);
   const [height1, setHeight1] = React.useState(window.innerHeight);
   React.useEffect(() => {
@@ -140,7 +140,7 @@ const Uhack = () => {
         <div className="flex hel text-4xl md:text-7xl atmosphere title-txt-shdw">
           ABOUT
         </div>
-        <div className="legacy__about uh-bg md:mt-12" data-aos="fade-up">
+        <div className="legacy__about uh-bg md:mt-12" >
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">
@@ -207,7 +207,7 @@ const Uhack = () => {
   };
   const MobileComponent1 = () => {
     return (
-      <div className="aboutm" data-aos="fade-up">
+      <div className="aboutm">
         <div className="aboutm-stats">
           <div className="aboutm-students">
             <span class="aboutm-number">5800+</span>
@@ -443,8 +443,9 @@ const Uhack = () => {
                   <FaRobot size={55} style={{ fill: "" }} />
                   <div>AI / ML</div>
                   <div className="text-sm text-center mt-2">
-                    Algorithm that can make predictions through pattern
-                    recognition.
+                    The capacity of a machine to replicate intelligent human
+                    behaviour is referred to as machine learning in the field of
+                    artificial intelligence.
                   </div>
                 </div>
                 <div className="h-42 hel md:basis-1/3 flex flex-col ">

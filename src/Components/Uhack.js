@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 // import Aos from "aos";
-
 // import "aos/dist/aos.css";
 
 import "./Assets/Images/CSS/uhack.css";
@@ -43,6 +42,7 @@ const Uhack = () => {
       question: "What is the theme of the Hackathon?",
       answer:
         "There will be few options of programming challenges provided, which are AI/ML, Web3, Open innovation. Healthcare, Edtech,  Utility etc",
+
       open: false,
     },
     {
@@ -82,6 +82,7 @@ const Uhack = () => {
       question: "What time is the hackathon's beginning and ending?",
       answer:
         "The hackathon will start at 2pm on November 18 and end at 2 pm on November 19.",
+
       open: false,
     },
     {
@@ -106,9 +107,11 @@ const Uhack = () => {
     );
   };
 
+
   // React.useEffect(() => {
   //   Aos.init({ duration: 2000 });
   // });
+
   const [width1, setWidth1] = React.useState(window.innerWidth);
   const [height1, setHeight1] = React.useState(window.innerHeight);
   React.useEffect(() => {
@@ -299,6 +302,7 @@ const Uhack = () => {
                     ></path>{" "}
                   </svg>
                   <p> 18th November 2022</p>
+
                 </div>
                 <div className="flex gap-2">
                   <svg
@@ -321,6 +325,7 @@ const Uhack = () => {
                     ></path>{" "}
                   </svg>
                   <p className="">2 PM</p>
+
                 </div>
               </div>
               <div className=" devfolio-button flex justify-center md:justify-start">
@@ -364,6 +369,7 @@ const Uhack = () => {
               Sponsors
             </div>
             <div className="grid  grid-cols-2 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
+
               <a
                 href="https://devfolio.co"
                 target="_blank"
@@ -409,6 +415,7 @@ const Uhack = () => {
                 />
               </a>
               {/* <a
+
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
@@ -429,6 +436,7 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
                   alt="Wolfram-logo"
                 />
+
               </a>
             </div>
           </section>

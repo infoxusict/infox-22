@@ -117,7 +117,6 @@ const Uhack = () => {
   React.useEffect(() => {
     const handleWindowResize = () => {
       setWidth1(window.innerWidth);
-
       setHeight1(window.innerHeight);
     };
 
@@ -143,7 +142,7 @@ const Uhack = () => {
         <div className="flex hel text-4xl md:text-7xl atmosphere title-txt-shdw">
           ABOUT
         </div>
-        <div className="legacy__about uh-bg md:mt-12" >
+        <div className="legacy__about uh-bg " >
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">
@@ -302,7 +301,6 @@ const Uhack = () => {
                     ></path>{" "}
                   </svg>
                   <p> 18th November 2022</p>
-
                 </div>
                 <div className="flex gap-2">
                   <svg
@@ -325,7 +323,6 @@ const Uhack = () => {
                     ></path>{" "}
                   </svg>
                   <p className="">2 PM</p>
-
                 </div>
               </div>
               <div className=" devfolio-button flex justify-center md:justify-start">
@@ -364,12 +361,11 @@ const Uhack = () => {
               <MyComponent1 />
             </section>
           </section>
-          <section className=" mt-24 md:mt-32">
+          <section className=" mt-24 ">
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-            <div className="grid  grid-cols-2 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
-
+            <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
               <a
                 href="https://devfolio.co"
                 target="_blank"
@@ -414,6 +410,28 @@ const Uhack = () => {
                   alt="Replit-logo"
                 />
               </a>
+              <a
+                href="https://www.digitalocean.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/Do-logo.png")}
+                  alt="Do-logo"
+                />
+              </a>
+              <a
+                href="https://gen.xyz/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 wolfram-logo basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/xyz-logo.png")}
+                  alt="Replit-logo"
+                />
+              </a>
               {/* <a
 
                 href="https://solana.com"
@@ -430,7 +448,7 @@ const Uhack = () => {
                 href="https://wolfram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="md:basis-1/5 spon-logo-width basis-2/5"
+                className="md:basis-1/5 wolfram-logo basis-2/5"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
@@ -446,11 +464,11 @@ const Uhack = () => {
             </div>
             <div className="uh-bg py-12 mt-12 mx-4 md:px-4">
               <div className="flex text-3xl flex-wrap-reverse gap-16 md:gap-24 md:flex-nowrap hel">
-                <div className="h-42 hel basis-1/3 flex flex-col  ">
+                <div className="h-42 hel md:basis-1/3 flex flex-col  ">
                   {" "}
                   <FaRobot size={55} style={{ fill: "" }} />
                   <div>AI / ML</div>
-                  <div className="text-sm text-center mt-2">
+                  <div className="text-sm text-center mt-2 ">
                     The capacity of a machine to replicate intelligent human
                     behaviour is referred to as machine learning in the field of
                     artificial intelligence.

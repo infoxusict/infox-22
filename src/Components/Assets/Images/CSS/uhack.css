@@ -3,8 +3,11 @@
   justify-content: center;
   align-items: center;
 }
-.spon-logo-width{
-max-width: 18rem;
+.spon-logo-width {
+  max-width: 18rem;
+}
+.wolfram-logo {
+  max-width: 12rem;
 }
 .uh-glass {
   background: rgba(255, 255, 255, 0.024);
@@ -18,11 +21,10 @@ max-width: 18rem;
   align-items: center;
   overflow: hidden;
 }
-.uh-bg{
-    background: rgba(255, 255, 255, 0.011);
+.uh-bg {
+  background: rgba(255, 255, 255, 0.011);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(6px);
-
 }
 
 .faqs {
@@ -37,7 +39,7 @@ max-width: 18rem;
   margin: 15px;
   padding: 15px;
   /* background: rgba(255, 255, 255, 0.4); */
-  backdrop-filter: blur(6px) ;
+  backdrop-filter: blur(6px);
   border-radius: 10px;
   border: 1px solid rgb(255, 255, 255);
   color: white;
@@ -48,10 +50,9 @@ max-width: 18rem;
   position: relative;
   font-size: 20px;
   padding-right: 80px;
-  transition: all 0.4s ease .5ms;
+  transition: all 0.4s ease 0.5ms;
   font-weight: 500;
-  text-shadow: 0.5px 0.5px 0.5px #2f2;
-
+  text-shadow: 0.5px 0.5px 0.5px pink;
 }
 
 .faqs .faq .faq-question::after {
@@ -62,14 +63,14 @@ max-width: 18rem;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  transition: all 0.2s ease .5ms ;
+  transition: all 0.2s ease 0.5ms;
 }
 
 .faqs .faq .faq-answer {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.2s ease .5ms  ;
+  transition: all 0.2s ease 0.5ms;
 }
 
 .faqs .faq.open .faq-question {
@@ -84,17 +85,15 @@ max-width: 18rem;
   max-height: 300px;
   opacity: 1;
 }
-.uhf{
+.uhf {
   margin-bottom: 5rem;
 }
-.txt-shdw{
-text-shadow: 1px 1px 2px pink;
+.txt-shdw {
+  text-shadow: 1px 1px 2px pink;
 }
-.title-txt-shdw{
-text-shadow: 2px 2px 2px pink;
+.title-txt-shdw {
+  text-shadow: 2px 2px 2px pink;
 }
-.devfolio-button{
+.devfolio-button {
   margin-top: 5vw;
 }
-
-

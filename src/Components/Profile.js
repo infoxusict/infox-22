@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
 // import Cards from "./ScheduleCards";
-// import EventCardProfile from "./EventProfile";
+import EventCardProfile from "./EventProfile";
 import "./Assets/Images/CSS/profile.css";
-// import ProfileCard from "./ProfileCard";
+import ProfileCard from "./ProfileCard";
 import jwt_decode from "jwt-decode";
+
+var userDetails={
+
+}
 
 const Profile = () => {
   const [userCredentials, setUserCredentials] = React.useState({
@@ -14,6 +18,17 @@ const Profile = () => {
     image: "",
     googleId: "",
   });
+  const [profileDATA, setprofileDATA] = React.useState({
+      name: "",
+      email: "",
+      image: "",
+      googleId: "",
+      key: "",
+      college: "",
+      contact: null,
+      gradYear: null,
+  });
+  const [isShown,setIsShown] = useState(false)
   const handleCallbackResponse = async (response) => {
     console.log("JWT ID TOKEN: ", response.credential);
     var userObject = await jwt_decode(response.credential);
@@ -41,6 +56,7 @@ const Profile = () => {
       image: userObject.picture,
       googleId: userObject.sub,
     });
+      
     console.log(userCredentials);
     if (userObject.email_verified) {
       const res = await fetch(
@@ -58,6 +74,21 @@ const Profile = () => {
       console.log(finalres.authKey);
       window.localStorage.setItem("authkey", finalres.authKey);
     }
+    setTimeout(async () => {
+      const getDetailsRes = await fetch("https://infoxpression.herokuapp.com/user/getDetails",{
+        method:"POST",
+        headers:{
+          "Content-type": "application/json",
+          "authToken": finalres.authKey
+        },
+        referrerPolicy: "origin-when-cross-origin"
+      });
+      console.log(finaldetailsres);
+      var finaldetailsres = await getDetailsRes.json();
+      userDetails=finaldetailsres;
+      console.log(finaldetailsres);
+      setIsShown(true);
+    }, 1000);
   };
   React.useEffect(() => {
     /* global google */
@@ -99,12 +130,14 @@ const Profile = () => {
           >
             Get Started
           </div>
-          {/* <EventCardProfile /> */}
-          <div id="googlebtn"></div>
+          {
+            isShown? <><EventCardProfile />
+            <div className="profilePart">
+              <ProfileCard name={userDetails.name} image={userDetails.image} gradYear={userDetails.gradYear} college={userDetails.college}/>
+          </div></> :
+            <div id="googlebtn"></div>
+          }
         </div>
-        {/* <div className="profilePart">
-          <ProfileCard />
-        </div> */}
       </div>
     </>
   );

@@ -6,23 +6,32 @@ import EventCardProfile from "./EventProfile";
 import "./Assets/Images/CSS/profile.css";
 import ProfileCard from "./ProfileCard";
 import jwt_decode from "jwt-decode";
-import { useState } from "react";
 
 const Profile = () => {
-  const [userCredentials, setUserCredentials] = useState({
-    name: null,
-    profile: null,
-    pic: null,
-    googleId: null,
+  const [userCredentials, setUserCredentials] = React.useState({
+    name: "",
+    email: "",
+    pic: "",
+    googleId: "",
   });
-  const handleCallbackResponse = (response) => {
+  const handleCallbackResponse = async (response) => {
     console.log("JWT ID TOKEN: ", response.credential);
-    var userObject = jwt_decode(response.credential);
-    console.log(userObject);
-    console.log(userObject.email);
-    console.log(userObject.name);
-    console.log(userObject.picture);
-    console.log(userObject.sub);
+    var userObject = await jwt_decode(response.credential);
+    // console.log(userObject);
+    // console.log(userObject.email);
+    // console.log(userObject.name);
+    // console.log(userObject.picture);
+    // console.log(userObject.sub);
+    const tempuserObject = {
+      name: userObject.name,
+      email: userObject.email,
+      pic: userObject.picture,
+      googleId: userObject.sub,
+    };
+
+    console.log(tempuserObject);
+    setUserCredentials({ tempuserObject });
+    console.log(userCredentials);
     if (userObject.email_verified) {
       // redirect
     }

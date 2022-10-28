@@ -1,109 +1,111 @@
-.ParticipantProfile{
+.ParticipantProfile {
     display: flex;
     width: 90vw;
-    margin:auto;
+    margin: auto;
     margin-bottom: 20vw;
 }
-.profileTitle{
+
+.profileTitle {
     margin: 10vw 0vw 4vw 7vw;
 }
-.ProfileHeading{
+
+.ProfileHeading {
     /* color: rgb(255, 255, 255); */
     margin: 0vw 0vw 0vw 4vw;
     /* text-shadow:  0.2vw 0.16vw 4px rgb(10, 228, 10); */
     font-size: 2.2vw;
-    
+
 }
 
 
-.programs{
+.programs {
     justify-content: space-around;
 }
-.eventsParticipated{
+
+.eventsParticipated {
     display: flex;
     flex-wrap: wrap;
     width: 65vw;
     margin: auto;
 }
-.profilePart{
-     /* height: 40vw; */
-     width: 30vw;
-     
-     
+
+.profilePart {
+    /* height: 40vw; */
+    width: 30vw;
+
+
 }
 
 /* ____________________________________ Profile Card_________________________ */
-.profileCard{
-    width:28vw;
-    margin:auto;
-    /* margin-bottom: 300px !important; */
+.profileCard {
+    width: 28vw;
+    margin: auto;
     height: 47vw;
-    top:26vw;
-    /* right:4vw; */
-
+    top: 26vw;
     background: linear-gradient(134.03deg, rgba(255, 255, 255, 0.4) -47.9%, rgba(255, 255, 255, 0.08) 116.08%);
-box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(7.5px);
-border-radius: 2vw;
-
-    
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7.5px);
+    border-radius: 2vw;
+    position: sticky;
+    top: 20px;
 }
-.profilelogo{
+
+.profilelogo {
     position: absolute;
-    width:10vw;
+    width: 10vw;
 }
 
-.profilepic{
-	--img-url: url(https://cdna.artstation.com/p/assets/images/images/044/357/866/large/sm-bonin-neo-manson-04.jpg?1639756945);
+.profilepic {
+    --img-url: url(https://cdna.artstation.com/p/assets/images/images/044/357/866/large/sm-bonin-neo-manson-04.jpg?1639756945);
     /* height:4vw;
     width: 4vw; */
 }
 
 .headshot {
-	flex-shrink: 0;
-	margin: 1.5vw;
-	/* height: calc(120px + 6vw); */
-	height: 15vw;
-	/* width: calc(120px + 6vw); */
-	width: 15vw;
-	border: 0.5vw solid transparent;
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	background-size: cover;
-	box-sizing: border-box;
-	box-shadow: 0 0 5px 5px rgba(7, 6, 6, 0.5);
+    flex-shrink: 0;
+    margin: 1.5vw;
+    /* height: calc(120px + 6vw); */
+    height: 15vw;
+    /* width: calc(120px + 6vw); */
+    width: 15vw;
+    border: 0.5vw solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-size: cover;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 5px rgba(7, 6, 6, 0.5);
     position: absolute;
-    top:6vw;
-    left:5vw;
+    top: 6vw;
+    left: 5vw;
 }
 
 .headshot-2 {
-	border-radius: 50%;
-	background-image: var(--img-url), linear-gradient(to bottom right, #25dd34, #169246, #09661d);
+    border-radius: 50%;
+    background-image: var(--img-url), linear-gradient(to bottom right, #25dd34, #169246, #09661d);
 }
 
-.profilebox{
+.profilebox {
     height: 15vw;
     background-color: rgb(10, 10, 10);
     border-radius: 2vw;
-    border-bottom-left-radius:0px ;
-    border-bottom-right-radius:0px ;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     border-bottom: solid rgb(209, 206, 206) 0.1vw;
 }
 
-.profileData{
+.profileData {
     background-color: rgb(206, 208, 209);
     height: 4vw;
     margin-bottom: .5vw;
 }
 
-.profileData h3{
-    
+.profileData h3 {
+
     font-family: "atmospheric";
     color: aliceblue;
     position: relative;
-    top:10vw;
-    
+    top: 10vw;
+
     font-size: 2.3vw;
     text-align: center;
 }
@@ -124,7 +126,7 @@ border-radius: 2vw;
     padding-right: 10px;
 } */
 
-.profileData2{  
+.profileData2 {
     font-size: 1.8vw;
     width: 25vw;
     text-align: center;
@@ -132,21 +134,21 @@ border-radius: 2vw;
     padding-right: 10px;
 }
 
-.profileData2 h5{
+.profileData2 h5 {
     position: relative;
-    top:15vw;
-    left:1.5vw;
+    top: 15vw;
+    left: 1.5vw;
     font-family: "mechtech";
     color: white !important;
     opacity: 0.9;
     font-size: 2vw;
 }
 
-.college_title{
+.college_title {
     color: rgb(10, 10, 10);
     position: relative;
-    top:12.5vw;
-    left:1.5vw;
+    top: 12.5vw;
+    left: 1.5vw;
     font-family: "serif";
 }
 
@@ -154,7 +156,7 @@ border-radius: 2vw;
     /* font-style: italic; */
     color: #6CDE01;
     position: relative;
-    top:13vw;
+    top: 13vw;
     font-size: 1.4vw;
     width: 25vw;
     /* text-align: center; */
@@ -180,124 +182,127 @@ border-radius: 2vw;
 }
 
 @media (max-width: 700px) {
-    .ProfileHeading{
+    .ProfileHeading {
         font-size: 4vw;
         margin: 4vw 0vw 4vw 2vw;
     }
-    .ParticipantProfile{
-      flex-direction: column-reverse;
-      /* background-color: #09661d; */
+
+    .ParticipantProfile {
+        flex-direction: column-reverse;
+        /* background-color: #09661d; */
     }
-    .eventsParticipated{
+
+    .eventsParticipated {
         width: 90vw;
     }
     .page-content {
         grid-gap: 2vw;
         padding: 1vw;
         justify-content: center;
-     }
-     .card {
+    }
+    .card {
         padding: 1vw;
         width: 40vw;
         height: 55vw !important;
-     }
-     .copy {
+    }
+    .copy {
         margin: 4vw;
         font-size: 3.2vw;
-     }
-     .title {
+    }
+    .title {
         font-size: 4vw;
-     }
-     .btn {
+    }
+    .btn {
         font-size: 1.5vw;
-     }
-     .profileCard{
+    }
+
+    .profileCard {
         rotate: -90deg;
         margin: -22vw 0vw -22vw 27vw;
         height: 90vw;
         width: 35vw;
-     }
-     .profilelogo{
+    }
+
+    .profilelogo {
         rotate: -90deg;
         margin: 0vw 10vw 0vw 23vw;
     }
-    
+
     .headshot {
-       rotate: 90deg;
-       left: 2vw;
-    }  
+        rotate: 90deg;
+        left: 2vw;
+    }
     .headshot-2 {
         height: 23vw;
         width: 23vw;
     }
-    
-    .profileData h3{
+
+    .profileData h3 {
         rotate: 90deg;
-        top:36vw;
+        top: 36vw;
         left: -2vw;
         font-size: 4vw;
         width: 60vw;
     }
-    
-    .profileData2{
+
+    .profileData2 {
         rotate: 90deg;
-        top:35vw;
-        left:-15vw;
+        top: 35vw;
+        left: -15vw;
         font-size: 4vw;
         width: 55vw;
-    } 
-    .profileData2 h5{
-        top:18vw;
-        left:25vw;
+    }
+
+    .profileData2 h5 {
+        top: 18vw;
+        left: 25vw;
         font-size: 4vw;
         width: 55vw;
-       
-    } 
+
+    }
 
 
-    .profileData2 h6{
-        top:15vw;
-        left:30vw;
+    .profileData2 h6 {
+        top: 15vw;
+        left: 30vw;
         font-size: 2.8vw;
         width: 55vw;
-    } 
-    .profileTitle{
+    }
+
+    .profileTitle {
         margin-top: 20vw;
     }
-    
-  } 
-  @media (max-width: 500px) {
-    .ProfileHeading{
+
+}
+@media (max-width: 500px) {
+    .ProfileHeading {
         font-size: 6vw;
     }
-     .copy {
+    .copy {
         font-size: 3.9vw;
-     }
-     .title {
+    }
+    .title {
         font-size: 5vw;
-     }
-     .btn {
+    }
+    .btn {
         font-size: 2.2vw;
-    }   
-    .profileData h3{
+    }
+
+    .profileData h3 {
         font-size: 5vw;
         width: 60vw;
         left: -4.5vw;
     }
-    
-    .profileQuote{
-        top:37vw;
-        left:-13vw;
+
+    .profileQuote {
+        top: 37vw;
+        left: -13vw;
         font-size: 2.9vw;
         width: 50vw;
         line-height: 3.3vw;
-    }    
-    .profileTitle{
+    }
+
+    .profileTitle {
         margin-top: 30vw;
-    } 
-  } 
-
-
-  
-
-  
+    }
+}

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
 // import Cards from "./ScheduleCards";
-import EventCardProfile from "./EventProfile";
+// import EventCardProfile from "./EventProfile";
 import "./Assets/Images/CSS/profile.css";
-import ProfileCard from "./ProfileCard";
+// import ProfileCard from "./ProfileCard";
 import jwt_decode from "jwt-decode";
 
 const Profile = () => {
@@ -30,7 +30,13 @@ const Profile = () => {
     };
 
     console.log(tempuserObject);
-    setUserCredentials({ tempuserObject });
+    setUserCredentials({
+      ...tempuserObject,
+      name: userObject.name,
+      email: userObject.email,
+      pic: userObject.picture,
+      googleId: userObject.sub,
+    });
     console.log(userCredentials);
     if (userObject.email_verified) {
       // redirect
@@ -71,9 +77,10 @@ const Profile = () => {
               fontFamily: "atmospheric",
               color: "#6CDE01",
               paddingBottom: "1vw",
+              margin: "0vw 9vw 2vw 26vw",
             }}
           >
-            Registered Events
+            Get Started
           </div>
           {/* <EventCardProfile /> */}
           <div id="googlebtn"></div>

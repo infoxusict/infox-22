@@ -11,7 +11,7 @@ const Profile = () => {
   const [userCredentials, setUserCredentials] = React.useState({
     name: "",
     email: "",
-    pic: "",
+    image: "",
     googleId: "",
   });
   const handleCallbackResponse = async (response) => {
@@ -27,6 +27,10 @@ const Profile = () => {
       email: userObject.email,
       pic: userObject.picture,
       googleId: userObject.sub,
+      key: "<h1>thisisinfoxpression</h1>",
+      college: "usict",
+      contact: 958222222222,
+      gradYear: 2024,
     };
 
     console.log(tempuserObject);
@@ -34,12 +38,22 @@ const Profile = () => {
       ...tempuserObject,
       name: userObject.name,
       email: userObject.email,
-      pic: userObject.picture,
+      image: userObject.pic,
       googleId: userObject.sub,
     });
     console.log(userCredentials);
     if (userObject.email_verified) {
-      // redirect
+      const res = await fetch(
+        "https://infoxpression.herokuapp.com/user/auth/google",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(tempuserObject),
+          referrerPolicy: "origin-when-cross-origin",
+        }
+      );
     }
   };
   React.useEffect(() => {

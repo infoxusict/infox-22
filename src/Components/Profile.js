@@ -20,14 +20,14 @@ const Profile = () => {
     // console.log(userObject);
     // console.log(userObject.email);
     // console.log(userObject.name);
-    // console.log(userObject.picture);
+    console.log(userObject.picture);
     // console.log(userObject.sub);
     const tempuserObject = {
       name: userObject.name,
       email: userObject.email,
-      pic: userObject.picture,
+      image: userObject.picture,
       googleId: userObject.sub,
-      key: "<h1>thisisinfoxpression</h1>",
+      key: "<h1>Newprogrammakinginprogress</h1>",
       college: "usict",
       contact: 958222222222,
       gradYear: 2024,
@@ -38,7 +38,7 @@ const Profile = () => {
       ...tempuserObject,
       name: userObject.name,
       email: userObject.email,
-      image: userObject.pic,
+      image: userObject.picture,
       googleId: userObject.sub,
     });
     console.log(userCredentials);
@@ -54,6 +54,9 @@ const Profile = () => {
           referrerPolicy: "origin-when-cross-origin",
         }
       );
+      var finalres = await res.json();
+      console.log(finalres.authKey);
+      window.localStorage.setItem("authkey", finalres.authKey);
     }
   };
   React.useEffect(() => {

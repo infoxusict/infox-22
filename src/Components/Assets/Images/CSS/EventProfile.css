@@ -5,7 +5,17 @@
 .programs{
     justify-content: flex-start;
 }
-
+.page-content{
+  height: 29vw;
+  overflow: scroll;
+  /* background: rgba(44, 43, 43, 0.13) */
+  ;
+}
+@media (max-width: 500px) {
+  .page-content{
+      height: 60vw;
+  }
+}
 
 .Ccard{
     display: block;

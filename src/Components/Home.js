@@ -19,7 +19,6 @@ const Home = (props) => {
           <div className="svggg">
             <div className="homeLogo">
               <video
-                className="video"
                 autoPlay="autoPlay"
                 muted
                 loop

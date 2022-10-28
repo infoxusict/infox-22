@@ -7,6 +7,7 @@
 
 .profileTitle {
     margin: 10vw 0vw 4vw 7vw;
+    
 }
 
 .ProfileHeading {
@@ -14,7 +15,7 @@
     margin: 0vw 0vw 0vw 4vw;
     /* text-shadow:  0.2vw 0.16vw 4px rgb(10, 228, 10); */
     font-size: 2.2vw;
-
+    
 }
 
 
@@ -179,6 +180,9 @@
 }
 .shadows:hover {
     text-shadow: -16px 6px 15px #055520;
+}
+#googlebtn{
+    margin: 0vw 0vw 0vw 28.5vw;
 }
 
 @media (max-width: 700px) {

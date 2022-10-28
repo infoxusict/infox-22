@@ -1,5 +1,5 @@
 .sponsers {
-  margin-top: 25vh;
+  margin-top: 5vh;
   color: white;
 }
 .sponsers h1 {
@@ -127,4 +127,9 @@
 
 .previous_sponsors{
   font-size: 5vw !important;
+}
+@media (max-width: 800px) {
+  .sponsers {
+  margin-top: 15vh;
+}
 }

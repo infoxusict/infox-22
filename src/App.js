@@ -11,6 +11,8 @@ import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
 import Uhack from "./Components/Uhack";
 import ScrollToTop from "./Components/scrollToTop";
+import Contact from "./Components/Contact";
+import Map from "./Components/Map";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
@@ -41,6 +43,12 @@ const App = () => {
           </Route>
           <Route exact path="/uhack">
             <Uhack />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/reach">
+            <Map />
           </Route>
         </Switch>
         <Keeanu />

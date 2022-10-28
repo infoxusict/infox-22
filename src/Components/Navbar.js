@@ -90,6 +90,11 @@ const Navbar = () => {
               <span>UHACK</span>
             </Link>
           </li>
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <Link to="/contact" class="navigation__link">
+              <span>Contact us</span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

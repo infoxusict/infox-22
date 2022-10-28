@@ -6,6 +6,7 @@ import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
 import FAQ from "./uhack-faq";
 import { FaRobot } from "react-icons/fa";
+
 import { IoLogoBuffer } from "react-icons/io";
 import { GiHealthNormal } from "react-icons/gi";
 import { MdOutlineCastForEducation } from "react-icons/md";
@@ -300,7 +301,7 @@ const Uhack = () => {
                       fill="white"
                     ></path>{" "}
                   </svg>
-                  <p> 18th November 2022</p>
+                  <p> 18th-19th Nov'22</p>
                 </div>
                 <div className="flex gap-2">
                   <svg

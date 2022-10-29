@@ -158,7 +158,8 @@
     color: #6cde01bb;
     position: relative;
     top: 13vw;
-    font-size: 1.4vw;
+    font-size: 3vw;
+    letter-spacing: 0.1em;
     width: 25vw;
     /* text-align: center; */
     padding-left: 12px;

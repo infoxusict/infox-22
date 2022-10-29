@@ -8,7 +8,7 @@ import "./Assets/Images/CSS/modal.css";
 //can add more data on req
 // use modal.js dont use modal1.js (it is a comp linked to modal.js)
 
-export default function Modal({ data, buttonName }) {
+export default function Modal({ data, buttonName }, props) {
   const [openModal, setOpenModal] = useState(false);
   return (
     <div>

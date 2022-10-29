@@ -6,10 +6,14 @@ import EventCardProfile from "./EventProfile";
 import "./Assets/Images/CSS/profile.css";
 import ProfileCard from "./ProfileCard";
 import jwt_decode from "jwt-decode";
+import Modal from "./Modal";
 
-var userDetails={
-
-}
+var userDetails = {};
+const modalObject = [
+  { question: "college", placeholder: "college" },
+  { question: "gradYear", placeholder: "gradYear" },
+  { question: "contact", placeholder: "contact" },
+];
 
 const Profile = () => {
   const [userCredentials, setUserCredentials] = React.useState({
@@ -19,24 +23,26 @@ const Profile = () => {
     googleId: "",
   });
   const [profileDATA, setprofileDATA] = React.useState({
-      name: "",
-      email: "",
-      image: "",
-      googleId: "",
-      key: "",
-      college: "",
-      contact: null,
-      gradYear: null,
+    name: "",
+    email: "",
+    image: "",
+    googleId: "",
+    key: "",
+    college: "",
+    contact: null,
+    gradYear: null,
   });
-  const [isShown,setIsShown] = useState(false)
+  const [isShown, setIsShown] = useState(false);
+  const [isModalShown, setIsModalShown] = useState(false);
   const handleCallbackResponse = async (response) => {
     console.log("JWT ID TOKEN: ", response.credential);
     var userObject = await jwt_decode(response.credential);
     // console.log(userObject);
     // console.log(userObject.email);
     // console.log(userObject.name);
-    console.log(userObject.picture);
+    // console.log(userObject.picture);
     // console.log(userObject.sub);
+
     const tempuserObject = {
       name: userObject.name,
       email: userObject.email,
@@ -56,38 +62,45 @@ const Profile = () => {
       image: userObject.picture,
       googleId: userObject.sub,
     });
-      
-    console.log(userCredentials);
+
+    // console.log(userCredentials);
     if (userObject.email_verified) {
-      const res = await fetch(
-        "https://infoxpression.herokuapp.com/user/auth/google",
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(tempuserObject),
-          referrerPolicy: "origin-when-cross-origin",
-        }
-      );
-      var finalres = await res.json();
-      console.log(finalres.authKey);
-      window.localStorage.setItem("authkey", finalres.authKey);
+      setTimeout(() => {
+        setIsModalShown(true);
+      }, 500);
+
+      // const res = await fetch(
+      //   "https://infoxpression.herokuapp.com/user/auth/google",
+      //   {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-type": "application/json",
+      //     },
+      //     body: JSON.stringify(tempuserObject),
+      //     referrerPolicy: "origin-when-cross-origin",
+      //   }
+      // );
+      // var finalres = await res.json();
+      // console.log(finalres.authKey);
+      // window.localStorage.setItem("authkey", finalres.authKey);
     }
     setTimeout(async () => {
-      const getDetailsRes = await fetch("https://infoxpression.herokuapp.com/user/getDetails",{
-        method:"POST",
-        headers:{
-          "Content-type": "application/json",
-          "authToken": finalres.authKey
-        },
-        referrerPolicy: "origin-when-cross-origin"
-      });
-      console.log(finaldetailsres);
-      var finaldetailsres = await getDetailsRes.json();
-      userDetails=finaldetailsres;
-      console.log(finaldetailsres);
-      setIsShown(true);
+      // const getDetailsRes = await fetch(
+      //   "https://infoxpression.herokuapp.com/user/getDetails",
+      //   {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-type": "application/json",
+      //       authToken: finalres.authKey,
+      //     },
+      //     referrerPolicy: "origin-when-cross-origin",
+      //   }
+      // );
+      // console.log(finaldetailsres);
+      // var finaldetailsres = await getDetailsRes.json();
+      // userDetails = finaldetailsres;
+      // console.log(finaldetailsres);
+      // setIsShown(true);
     }, 1000);
   };
   React.useEffect(() => {
@@ -130,13 +143,26 @@ const Profile = () => {
           >
             Get Started
           </div>
-          {
-            isShown? <><EventCardProfile />
-            <div className="profilePart">
-              <ProfileCard name={userDetails.name} image={userDetails.image} gradYear={userDetails.gradYear} college={userDetails.college}/>
-          </div></> :
+          {isModalShown ? (
+            <Modal data={modalObject} buttonName="Complete Registration" />
+          ) : (
+            <></>
+          )}
+          {isShown ? (
+            <>
+              <EventCardProfile />
+              <div className="profilePart">
+                <ProfileCard
+                  name={userDetails.name}
+                  image={userDetails.image}
+                  gradYear={userDetails.gradYear}
+                  college={userDetails.college}
+                />
+              </div>
+            </>
+          ) : (
             <div id="googlebtn"></div>
-          }
+          )}
         </div>
       </div>
     </>

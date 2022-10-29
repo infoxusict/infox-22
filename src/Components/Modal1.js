@@ -35,7 +35,7 @@ export default function Modal1({ closeModal, data }) {
         >
           &times;
         </button>
-        <form action="">
+        <form action="" method="POST">
           {listItems()}
           {/* {data.map((item, i) => {
             // <div>

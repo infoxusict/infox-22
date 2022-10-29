@@ -1,18 +1,23 @@
-export default function Modal1({ closeModal, data }) {
+export default function Modal1({ closeModal, data, tempuserObject }) {
   // const listItems = data.map(({ question }) => {
   //   <div>
   //     <label htmlFor={question}>{question}</label>
   //     <input type="text" name={question}></input>;
   //   </div>;
   // });
+  
 
   const listItems = () => {
+    const modalChange= (e) =>{
+      
+    }
     return (
       <div>
         {data.map((item, i) => (
           <div>
             <label htmlFor="Github">{item.question}</label>
             <input
+              onchange={modalChange}
               type="text"
               name={item.question}
               placeholder={item.placeholder}

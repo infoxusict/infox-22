@@ -9,6 +9,17 @@ import jwt_decode from "jwt-decode";
 import Modal from "./Modal";
 
 var userDetails = {};
+var tempuserObject = {
+  name: "",
+  email: "",
+  image: "",
+  googleId: "",
+  key: "<h1>Newprogrammakinginprogress</h1>",
+  college: "",
+  contact: null,
+  gradYear: null,
+};
+
 const modalObject = [
   { question: "college", placeholder: "college" },
   { question: "gradYear", placeholder: "gradYear" },
@@ -43,7 +54,7 @@ const Profile = () => {
     // console.log(userObject.picture);
     // console.log(userObject.sub);
 
-    const tempuserObject = {
+    tempuserObject = {
       name: userObject.name,
       email: userObject.email,
       image: userObject.picture,
@@ -54,19 +65,21 @@ const Profile = () => {
       gradYear: 2024,
     };
 
-    console.log(tempuserObject);
-    setUserCredentials({
-      ...tempuserObject,
-      name: userObject.name,
-      email: userObject.email,
-      image: userObject.picture,
-      googleId: userObject.sub,
-    });
+
 
     // console.log(userCredentials);
     if (userObject.email_verified) {
       setTimeout(() => {
         setIsModalShown(true);
+        // console.log(tempuserObject);
+    setUserCredentials(userCredentials=>({
+      ...userCredentials,
+      name: userObject.name,
+      email: userObject.email,
+      image: userObject.picture,
+      googleId: userObject.sub,
+    }));
+    console.log(userCredentials)
       }, 500);
 
       // const res = await fetch(
@@ -144,7 +157,7 @@ const Profile = () => {
             Get Started
           </div>
           {isModalShown ? (
-            <Modal data={modalObject} buttonName="Complete Registration" />
+            <Modal data={modalObject} buttonName="Complete Registration" tempuserObject={tempuserObject}/>
           ) : (
             <></>
           )}

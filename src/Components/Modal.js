@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, {useState } from "react";
 import Modal1 from "./Modal1";
 import "./Assets/Images/CSS/modal.css";
 
@@ -8,7 +8,7 @@ import "./Assets/Images/CSS/modal.css";
 //can add more data on req
 // use modal.js dont use modal1.js (it is a comp linked to modal.js)
 
-export default function Modal({ data, buttonName, tempuserObject, setAuthKey, userDetails, setprofileDATA}) {
+export default function Modal({ data, buttonName, tempuserObject, setAuthKey, userDetails, setprofileDATA,profileDATA}) {
   const [openModal, setOpenModal] = useState(false);
   console.log(tempuserObject)
   return (

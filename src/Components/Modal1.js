@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Modal1({ closeModal, data, tempuserObject, setAuthKey, userDetails, setprofileDATA}) {
+export default function Modal1({ closeModal, data, tempuserObject, setAuthKey, userDetails, profileDATA, setprofileDATA}) {
   // const listItems = data.map(({ question }) => {
   //   <div>
   //     <label htmlFor={question}>{question}</label>
@@ -39,8 +39,9 @@ export default function Modal1({ closeModal, data, tempuserObject, setAuthKey, u
     );
     // console.log(finaldetailsres);
     var finaldetailsres = await getDetailsRes.json();
+    console.log(finaldetailsres)
     userDetails=finaldetailsres;
-    setprofileDATA({finaldetailsres})
+    setprofileDATA(finaldetailsres)
 
     // console.log(".....................................")
     // console.log(finaldetailsres)

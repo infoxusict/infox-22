@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
 // import Cards from "./ScheduleCards";
-import EventCardProfile from "./EventProfile";
+// import EventCardProfile from "./EventProfile";
 import "./Assets/Images/CSS/profile.css";
 import ProfileCard from "./ProfileCard";
 import jwt_decode from "jwt-decode";
@@ -33,11 +33,9 @@ const Profile = () => {
     image: "",
     googleId: "",
   });
-  const [profileDATA, setprofileDATA] = React.useState({
-   
-  });
-  const [isShown, setIsShown] = useState(false);
-  const [isModalShown, setIsModalShown] = useState(false);
+  const [profileDATA, setprofileDATA] = React.useState({});
+  // const [isShown, setIsShown] = useState(false);
+  // const [isModalShown, setIsModalShown] = useState(false);
   const [isAuthKey, setAuthKey] = useState(false);
 
   useEffect(() => {
@@ -56,21 +54,22 @@ const Profile = () => {
               referrerPolicy: "origin-when-cross-origin",
             }
           );
-          console.log(finaldetailsres);
           var finaldetailsres = await getDetailsRes.json();
           userDetails = finaldetailsres;
+          setprofileDATA(finaldetailsres)
           // console.log(finaldetailsres);
         setAuthKey(true);
       }
       
     };
-    setInterval(() => {
-      console.log(profileDATA);
-    }, 2000);
     
     ifSignIn();
+    // eslint-disable-next-line
   }, []);
-
+  
+  setInterval(() => {
+    console.log(profileDATA);
+  }, 2000);
   const handleCallbackResponse = async (response) => {
     console.log("JWT ID TOKEN: ", response.credential);
     var userObject = await jwt_decode(response.credential);
@@ -94,7 +93,7 @@ const Profile = () => {
     // console.log(userCredentials);
     if (userObject.email_verified) {
       setTimeout(() => {
-        setIsModalShown(true);
+        // setIsModalShown(true);
         // console.log(tempuserObject);
         setUserCredentials((userCredentials) => ({
           ...userCredentials,
@@ -152,6 +151,7 @@ const Profile = () => {
       theme: "outline",
       size: "large",
     });
+    // eslint-disable-next-line
   }, []);
   return (
     <>
@@ -180,12 +180,13 @@ const Profile = () => {
           >
             Get Started
           </div>
-          {isModalShown ? (
+          {!isAuthKey ? (
             <Modal
               data={modalObject}
               buttonName="Complete Registration"
               tempuserObject={tempuserObject}
               userDetails={userDetails}
+              profileDATA={profileDATA}
               setprofileDATA={setprofileDATA}
               setAuthKey={setAuthKey}
             />
@@ -197,10 +198,10 @@ const Profile = () => {
               {/* <EventCardProfile /> */}
               <div className="profilePart">
                 <ProfileCard
-                  name={userDetails.name}
-                  image={userDetails.image}
-                  gradYear={userDetails.gradYear}
-                  college={userDetails.college}
+                  name={profileDATA.name}
+                  image={profileDATA.image}
+                  gradYear={profileDATA.gradYear}
+                  college={profileDATA.college}
                 />
               </div>
             </>

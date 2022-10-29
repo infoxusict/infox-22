@@ -34,25 +34,40 @@ const Profile = () => {
     googleId: "",
   });
   const [profileDATA, setprofileDATA] = React.useState({
-    name: "",
-    email: "",
-    image: "",
-    googleId: "",
-    key: "",
-    college: "",
-    contact: null,
-    gradYear: null,
+   
   });
   const [isShown, setIsShown] = useState(false);
   const [isModalShown, setIsModalShown] = useState(false);
-  const [isAthkey, setAthkey] = useState(false);
+  const [isAuthKey, setAuthKey] = useState(false);
 
   useEffect(() => {
-    const ifSignIn = () => {
+    const ifSignIn  = async () => {
       var x = localStorage.getItem("authkey");
-      setAthkey(true);
+      console.log(userDetails)
+      if (x != null){
+        const getDetailsRes = await fetch(
+            "https://infoxpression.herokuapp.com/user/getDetails",
+            {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+                authToken: localStorage.getItem("authkey"),
+              },
+              referrerPolicy: "origin-when-cross-origin",
+            }
+          );
+          console.log(finaldetailsres);
+          var finaldetailsres = await getDetailsRes.json();
+          userDetails = finaldetailsres;
+          // console.log(finaldetailsres);
+        setAuthKey(true);
+      }
+      
     };
-
+    setInterval(() => {
+      console.log(profileDATA);
+    }, 2000);
+    
     ifSignIn();
   }, []);
 
@@ -170,13 +185,16 @@ const Profile = () => {
               data={modalObject}
               buttonName="Complete Registration"
               tempuserObject={tempuserObject}
+              userDetails={userDetails}
+              setprofileDATA={setprofileDATA}
+              setAuthKey={setAuthKey}
             />
           ) : (
             <></>
           )}
-          {isAthkey ? (
+          {isAuthKey ? (
             <>
-              <EventCardProfile />
+              {/* <EventCardProfile /> */}
               <div className="profilePart">
                 <ProfileCard
                   name={userDetails.name}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Modal1({ closeModal, data, tempuserObject }) {
+export default function Modal1({ closeModal, data, tempuserObject, setAuthKey, userDetails, setprofileDATA}) {
   // const listItems = data.map(({ question }) => {
   //   <div>
   //     <label htmlFor={question}>{question}</label>
@@ -24,14 +24,35 @@ export default function Modal1({ closeModal, data, tempuserObject }) {
       }
     );
     var finalres = await res.json();
-    console.log(finalres.authKey);
+    // console.log(finalres.authKey);
     window.localStorage.setItem("authkey", finalres.authKey);
+    const getDetailsRes = await fetch(
+      "https://infoxpression.herokuapp.com/user/getDetails",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          authToken: localStorage.getItem("authkey"),
+        },
+        referrerPolicy: "origin-when-cross-origin",
+      }
+    );
+    // console.log(finaldetailsres);
+    var finaldetailsres = await getDetailsRes.json();
+    userDetails=finaldetailsres;
+    setprofileDATA({finaldetailsres})
+
+    // console.log(".....................................")
+    // console.log(finaldetailsres)
+    // console.log("inModal",userDetails)
+    setAuthKey(true);
+    // window.location.reload;
   };
 
   const listItems = () => {
     const modalChange = (e) => {
       setmodalInput({ ...modalInput, [e.target.name]: e.target.value });
-      console.log(modalInput);
+      // console.log(modalInput);
       tempuserObject.college = modalInput.college;
       tempuserObject.gradYear = modalInput.gradYear;
       tempuserObject.contact = modalInput.contact;
@@ -60,7 +81,7 @@ export default function Modal1({ closeModal, data, tempuserObject }) {
         <button
           className="close-modal"
           onClick={() => {
-            console.log(data);
+            // console.log(data);
             closeModal(false);
           }}
         >
@@ -97,7 +118,7 @@ export default function Modal1({ closeModal, data, tempuserObject }) {
                 tempuserObject.college = modalInput.college;
                 tempuserObject.gradYear = modalInput.gradYear;
                 tempuserObject.contact = modalInput.contact;
-                console.log(tempuserObject);
+                // console.log(tempuserObject);
                 handleClick();
               }}
             />

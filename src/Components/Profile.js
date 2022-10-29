@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
 // import Cards from "./ScheduleCards";
@@ -45,6 +45,17 @@ const Profile = () => {
   });
   const [isShown, setIsShown] = useState(false);
   const [isModalShown, setIsModalShown] = useState(false);
+  const [isAthkey, setAthkey] = useState(false);
+
+  useEffect(() => {
+    const ifSignIn = () => {
+      var x = localStorage.getItem("authkey");
+      setAthkey(true);
+    };
+
+    ifSignIn();
+  }, []);
+
   const handleCallbackResponse = async (response) => {
     console.log("JWT ID TOKEN: ", response.credential);
     var userObject = await jwt_decode(response.credential);
@@ -65,21 +76,19 @@ const Profile = () => {
       gradYear: 2024,
     };
 
-
-
     // console.log(userCredentials);
     if (userObject.email_verified) {
       setTimeout(() => {
         setIsModalShown(true);
         // console.log(tempuserObject);
-    setUserCredentials(userCredentials=>({
-      ...userCredentials,
-      name: userObject.name,
-      email: userObject.email,
-      image: userObject.picture,
-      googleId: userObject.sub,
-    }));
-    console.log(userCredentials)
+        setUserCredentials((userCredentials) => ({
+          ...userCredentials,
+          name: userObject.name,
+          email: userObject.email,
+          image: userObject.picture,
+          googleId: userObject.sub,
+        }));
+        console.log(userCredentials);
       }, 500);
 
       // const res = await fetch(
@@ -157,11 +166,15 @@ const Profile = () => {
             Get Started
           </div>
           {isModalShown ? (
-            <Modal data={modalObject} buttonName="Complete Registration" tempuserObject={tempuserObject}/>
+            <Modal
+              data={modalObject}
+              buttonName="Complete Registration"
+              tempuserObject={tempuserObject}
+            />
           ) : (
             <></>
           )}
-          {isShown ? (
+          {isAthkey ? (
             <>
               <EventCardProfile />
               <div className="profilePart">

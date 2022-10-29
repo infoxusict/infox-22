@@ -39,105 +39,59 @@ const Profile = () => {
   const [isAuthKey, setAuthKey] = useState(false);
 
   useEffect(() => {
-    const ifSignIn  = async () => {
-      var x = localStorage.getItem("authkey");
-      console.log(userDetails)
-      if (x != null){
-        const getDetailsRes = await fetch(
-            "https://infoxpression.herokuapp.com/user/getDetails",
-            {
-              method: "POST",
-              headers: {
-                "Content-type": "application/json",
-                authToken: localStorage.getItem("authkey"),
-              },
-              referrerPolicy: "origin-when-cross-origin",
-            }
-          );
-          var finaldetailsres = await getDetailsRes.json();
-          userDetails = finaldetailsres;
-          setprofileDATA(finaldetailsres)
-          // console.log(finaldetailsres);
-        setAuthKey(true);
-      }
-      
-    };
-    
-    ifSignIn();
     // eslint-disable-next-line
   }, []);
-  
-  setInterval(() => {
-    console.log(profileDATA);
-  }, 2000);
+
   const handleCallbackResponse = async (response) => {
     console.log("JWT ID TOKEN: ", response.credential);
     var userObject = await jwt_decode(response.credential);
-    // console.log(userObject);
-    // console.log(userObject.email);
-    // console.log(userObject.name);
-    // console.log(userObject.picture);
-    // console.log(userObject.sub);
 
-    tempuserObject = {
-      name: userObject.name,
-      email: userObject.email,
-      image: userObject.picture,
-      googleId: userObject.sub,
-      key: "<h1>Newprogrammakinginprogress</h1>",
-      college: "usict",
-      contact: 958222222222,
-      gradYear: 2024,
-    };
-
-    // console.log(userCredentials);
+    // console.log(tempuserObject);
     if (userObject.email_verified) {
-      setTimeout(() => {
-        // setIsModalShown(true);
-        // console.log(tempuserObject);
-        setUserCredentials((userCredentials) => ({
-          ...userCredentials,
-          name: userObject.name,
-          email: userObject.email,
-          image: userObject.picture,
-          googleId: userObject.sub,
-        }));
-        console.log(userCredentials);
-      }, 500);
-
-      // const res = await fetch(
-      //   "https://infoxpression.herokuapp.com/user/auth/google",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-type": "application/json",
-      //     },
-      //     body: JSON.stringify(tempuserObject),
-      //     referrerPolicy: "origin-when-cross-origin",
-      //   }
-      // );
-      // var finalres = await res.json();
-      // console.log(finalres.authKey);
-      // window.localStorage.setItem("authkey", finalres.authKey);
+      tempuserObject = {
+        name: userObject.name,
+        email: userObject.email,
+        image: userObject.picture,
+        googleId: userObject.sub,
+        key: "<h1>Newprogrammakinginprogress</h1>",
+        college: "",
+        contact: null,
+        gradYear: null,
+      };
+      const resCheck = await fetch(
+        "https://infoxpression.herokuapp.com/user/auth/google/chk",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(tempuserObject),
+          referrerPolicy: "origin-when-cross-origin",
+        }
+      );
+      var checkres = await resCheck.json();
+      console.log(checkres);
+      if (checkres.success) {
+        localStorage.setItem("authkey", checkres.authKey);
+        const getDetailsRes = await fetch(
+          "https://infoxpression.herokuapp.com/user/getDetails",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+              authToken: localStorage.getItem("authkey"),
+            },
+            referrerPolicy: "origin-when-cross-origin",
+          }
+        );
+        // console.log(finaldetailsres);
+        var finaldetailsres = await getDetailsRes.json();
+        console.log(finaldetailsres);
+        userDetails = finaldetailsres;
+        setprofileDATA(finaldetailsres);
+        setAuthKey(true);
+      }
     }
-    setTimeout(async () => {
-      // const getDetailsRes = await fetch(
-      //   "https://infoxpression.herokuapp.com/user/getDetails",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-type": "application/json",
-      //       authToken: finalres.authKey,
-      //     },
-      //     referrerPolicy: "origin-when-cross-origin",
-      //   }
-      // );
-      // console.log(finaldetailsres);
-      // var finaldetailsres = await getDetailsRes.json();
-      // userDetails = finaldetailsres;
-      // console.log(finaldetailsres);
-      // setIsShown(true);
-    }, 1000);
   };
   React.useEffect(() => {
     /* global google */
@@ -151,6 +105,30 @@ const Profile = () => {
       theme: "outline",
       size: "large",
     });
+    const ifSignIn = async () => {
+      var x = localStorage.getItem("authkey");
+      console.log(userDetails);
+      if (x != null) {
+        const getDetailsRes = await fetch(
+          "https://infoxpression.herokuapp.com/user/getDetails",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+              authToken: localStorage.getItem("authkey"),
+            },
+            referrerPolicy: "origin-when-cross-origin",
+          }
+        );
+        var finaldetailsres = await getDetailsRes.json();
+        userDetails = finaldetailsres;
+        setprofileDATA(finaldetailsres);
+        // console.log(finaldetailsres);
+        setAuthKey(true);
+      }
+    };
+
+    ifSignIn();
     // eslint-disable-next-line
   }, []);
   return (

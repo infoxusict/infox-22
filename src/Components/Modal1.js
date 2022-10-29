@@ -1,5 +1,13 @@
 import { useState } from "react";
-export default function Modal1({ closeModal, data, tempuserObject, setAuthKey, userDetails, profileDATA, setprofileDATA}) {
+export default function Modal1({
+  closeModal,
+  data,
+  tempuserObject,
+  setAuthKey,
+  userDetails,
+  profileDATA,
+  setprofileDATA,
+}) {
   // const listItems = data.map(({ question }) => {
   //   <div>
   //     <label htmlFor={question}>{question}</label>
@@ -12,6 +20,7 @@ export default function Modal1({ closeModal, data, tempuserObject, setAuthKey, u
     contact: null,
   });
   const handleClick = async () => {
+    console.log(tempuserObject);
     const res = await fetch(
       "https://infoxpression.herokuapp.com/user/auth/google",
       {
@@ -24,7 +33,7 @@ export default function Modal1({ closeModal, data, tempuserObject, setAuthKey, u
       }
     );
     var finalres = await res.json();
-    // console.log(finalres.authKey);
+    console.log(finalres);
     window.localStorage.setItem("authkey", finalres.authKey);
     const getDetailsRes = await fetch(
       "https://infoxpression.herokuapp.com/user/getDetails",
@@ -39,9 +48,9 @@ export default function Modal1({ closeModal, data, tempuserObject, setAuthKey, u
     );
     // console.log(finaldetailsres);
     var finaldetailsres = await getDetailsRes.json();
-    console.log(finaldetailsres)
-    userDetails=finaldetailsres;
-    setprofileDATA(finaldetailsres)
+    console.log(finaldetailsres);
+    userDetails = finaldetailsres;
+    setprofileDATA(finaldetailsres);
 
     // console.log(".....................................")
     // console.log(finaldetailsres)

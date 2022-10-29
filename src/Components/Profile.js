@@ -9,7 +9,7 @@ import jwt_decode from "jwt-decode";
 import Modal from "./Modal";
 
 var userDetails = {};
-var tempuserObject = {
+export var tempuserObject = {
   name: "",
   email: "",
   image: "",
@@ -27,12 +27,6 @@ const modalObject = [
 ];
 
 const Profile = () => {
-  const [userCredentials, setUserCredentials] = React.useState({
-    name: "",
-    email: "",
-    image: "",
-    googleId: "",
-  });
   const [profileDATA, setprofileDATA] = React.useState({});
   // const [isShown, setIsShown] = useState(false);
   // const [isModalShown, setIsModalShown] = useState(false);

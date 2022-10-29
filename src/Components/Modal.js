@@ -1,5 +1,6 @@
 import React, {useState } from "react";
 import Modal1 from "./Modal1";
+import { tempuserObject } from "./Profile";
 import "./Assets/Images/CSS/modal.css";
 
 // How to use:
@@ -8,7 +9,7 @@ import "./Assets/Images/CSS/modal.css";
 //can add more data on req
 // use modal.js dont use modal1.js (it is a comp linked to modal.js)
 
-export default function Modal({ data, buttonName, tempuserObject, setAuthKey, userDetails, setprofileDATA,profileDATA}) {
+export default function Modal({ data, buttonName, setAuthKey, userDetails, setprofileDATA,profileDATA}) {
   const [openModal, setOpenModal] = useState(false);
   console.log(tempuserObject)
   return (

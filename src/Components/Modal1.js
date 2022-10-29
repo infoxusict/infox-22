@@ -1,19 +1,12 @@
 import { useState } from "react";
+import { tempuserObject } from "./Profile";
 export default function Modal1({
   closeModal,
   data,
-  tempuserObject,
   setAuthKey,
   userDetails,
-  profileDATA,
   setprofileDATA,
 }) {
-  // const listItems = data.map(({ question }) => {
-  //   <div>
-  //     <label htmlFor={question}>{question}</label>
-  //     <input type="text" name={question}></input>;
-  //   </div>;
-  // });
   const [modalInput, setmodalInput] = useState({
     college: "",
     gradYear: null,
@@ -46,23 +39,16 @@ export default function Modal1({
         referrerPolicy: "origin-when-cross-origin",
       }
     );
-    // console.log(finaldetailsres);
     var finaldetailsres = await getDetailsRes.json();
     console.log(finaldetailsres);
     userDetails = finaldetailsres;
     setprofileDATA(finaldetailsres);
-
-    // console.log(".....................................")
-    // console.log(finaldetailsres)
-    // console.log("inModal",userDetails)
     setAuthKey(true);
-    // window.location.reload;
   };
 
   const listItems = () => {
     const modalChange = (e) => {
       setmodalInput({ ...modalInput, [e.target.name]: e.target.value });
-      // console.log(modalInput);
       tempuserObject.college = modalInput.college;
       tempuserObject.gradYear = modalInput.gradYear;
       tempuserObject.contact = modalInput.contact;

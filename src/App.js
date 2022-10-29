@@ -13,6 +13,7 @@ import Uhack from "./Components/Uhack";
 import ScrollToTop from "./Components/scrollToTop";
 import Contact from "./Components/Contact";
 import Map from "./Components/Map";
+import EvenTemp from "./Components/evenTemp";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
@@ -32,9 +33,9 @@ const App = () => {
           <Route exact path="/event">
             <Schedule />
           </Route>
-          <Route exact path="/event/name">
+          {/* <Route exact path="/event/name">
             <EventTemplate />
-          </Route>
+          </Route> */}
           <Route exact path="/team">
             <TeamPage />
           </Route>
@@ -49,6 +50,9 @@ const App = () => {
           </Route>
           <Route exact path="/reach">
             <Map />
+          </Route>
+          <Route exact path="/event/name">
+            <EvenTemp />
           </Route>
         </Switch>
         <Keeanu />

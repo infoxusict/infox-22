@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
 // import Cards from "./ScheduleCards";
@@ -35,7 +35,7 @@ const Profile = () => {
   const ifSignIn = async () => {
     var x = localStorage.getItem("authkey");
     // console.log(userDetails);
-    if (x != null && x != undefined) {
+    if (x != null && x !== undefined) {
       const getDetailsRes = await fetch(
         "https://infoxpression.herokuapp.com/user/getDetails",
         {
@@ -96,7 +96,7 @@ const Profile = () => {
       var checkres = await resCheck.json();
       console.log(checkres);
       // if reponse of posting data is success, then setting the auth key to local storage
-      if (checkres.success && checkres.authKey != undefined) {
+      if (checkres.success && checkres.authKey !== undefined) {
         localStorage.setItem("authkey", checkres.authKey);
 
         // as we get the auth key we can fetch the data from db

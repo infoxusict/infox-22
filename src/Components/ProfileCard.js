@@ -9,7 +9,7 @@ export default function ProfileCard(props) {
         alt=""
       />
       <div className="profilebox"></div>
-      <div className="profilepic">
+      <div className="profilepic" style={{}}>
         <div class="headshot headshot-2"></div>
       </div>
       <div className="profileData">
@@ -17,9 +17,7 @@ export default function ProfileCard(props) {
       </div>
 
       <div className="profileData2">
-        <h6 className="shadows">
-          {props.college}{" "}
-        </h6>
+        <h6 className="shadows">{props.college} </h6>
         <h5>{props.gradYear}</h5>
         {/* <h4 className="college_title">College</h4> */}
       </div>

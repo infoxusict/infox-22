@@ -1,4 +1,3 @@
-
 .ParticipantProfile {
     display: flex;
     width: 90vw;
@@ -7,16 +6,14 @@
 }
 
 .profileTitle {
-    margin: 10vw 0vw 4vw 7vw;
+    margin: 10vw 0vw 4vw 6vw;
     
 }
 
 .ProfileHeading {
-    /* color: rgb(255, 255, 255); */
-    margin: 0vw 0vw 0vw 4vw;
-    /* text-shadow:  0.2vw 0.16vw 4px rgb(10, 228, 10); */
+    margin: 0vw 1vw 4vw 37vw;
+    margin: auto;
     font-size: 2.2vw;
-    
 }
 
 
@@ -27,8 +24,11 @@
 .eventsParticipated {
     display: flex;
     flex-wrap: wrap;
-    width: 65vw;
+    width: 90vw;
     /* margin: auto; */
+}
+.bigbbb{
+    display: flex;
 }
 
 .profilePart {
@@ -184,13 +184,13 @@
     text-shadow: -16px 6px 15px #055520;
 }
 #googlebtn{
-    margin: 0vw 0vw 0vw 28.5vw;
+    margin: auto;
 }
 
 @media (max-width: 700px) {
     .ProfileHeading {
         font-size: 4vw;
-        margin: 4vw 0vw 4vw 2vw;
+        /* margin: 4vw 0vw 4vw 2vw; */
     }
 
     .ParticipantProfile {
@@ -282,6 +282,7 @@
 }
 @media (max-width: 500px) {
     .ProfileHeading {
+        margin:2vw auto 5vw auto;
         font-size: 6vw;
     }
     .copy {

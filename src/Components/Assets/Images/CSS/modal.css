@@ -1,15 +1,50 @@
 .show-modal {
-  font-size: 2vh;
+  font-size: 1vw;
   font-weight: 600;
-  padding: 1vh 1vw;
-  margin: 2vh 1vh;
+  padding: 1.5vh 2.5vh;
+  margin: 2vw 3vw;
   border: none;
   background-color: #2f2;
   color: #fff;
   border-radius: 6vh;
   cursor: pointer;
 }
-
+@media screen and (max-width: 395px){
+  .show-modal{
+    margin: 2vw 0vw 7vw 25vw;
+  }
+}
+@media screen and (max-width: 1100px){
+  .show-modal {
+    font-size: 1.3vw;
+    padding: 0.7vw 1.4vw;
+  }
+}
+@media screen and (max-width: 820px){
+  .show-modal {
+    font-size: 2vw;
+    padding: 0.7vw 1.4vw;
+  }
+}
+@media screen and (max-width: 700px){
+  .show-modal {
+    font-size: 2.1vw;
+    padding:1.5vh 2.5vh;
+  }
+}
+@media screen and (max-width: 500px){
+  .show-modal {
+    font-size: 3vw;
+    padding:1.5vh 2.5vh;
+  }
+}
+@media screen and (max-width: 400px){
+  .show-modal {
+    font-size: 3.7vw;
+    padding:1.5vh 2.5vh;
+    margin: 2vw 0vw 7vw 21.5vw;
+  }
+}
 .show-modal:hover {
   background-color: rgba(34, 255, 34, 0.7);
 }

@@ -25,7 +25,7 @@ const Footer = () => {
                 src={require("./Assets/Images/aswd.png")}
                 width="108px"
                 alt="Infox'22 logo"
-                srcset=""
+                srcSet=""
               />
             </div>
             <div className="">

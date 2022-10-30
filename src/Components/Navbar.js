@@ -26,8 +26,8 @@ const Navbar = () => {
     //   <div className="nav-svg" style={{display: "flex", justifyContent: "center", width: "100%" }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.76 27.94" width="40%">
     //     <defs>
     //     </defs>
-    //     <g class="a">
-    //       <path class="b" d="M21.12,106.08s4.48.64,9.36,8.16c0,0,10.74,19.68,22.08,19.68H186.24s8.83,2.19,20.16-14.16c0,0,6.56-11.2,12.48-13.68Z" transform="translate(-21.12 -106.08)"/>
+    //     <g className="a">
+    //       <path className="b" d="M21.12,106.08s4.48.64,9.36,8.16c0,0,10.74,19.68,22.08,19.68H186.24s8.83,2.19,20.16-14.16c0,0,6.56-11.2,12.48-13.68Z" transform="translate(-21.12 -106.08)"/>
     //     </g>
     //   </svg>
     //   </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
     //     <Link to="/event/name"><div className="nav-con"><h4>Event</h4></div></Link>
     //   </div>
     // </div>
-    <div class="navigation">
+    <div className="navigation">
       <div>
         <ul>
           <li>
@@ -55,64 +55,64 @@ const Navbar = () => {
       </div>
       <input
         type="checkbox"
-        class="navigation__checkbox"
+        className="navigation__checkbox"
         id="navi-toggle"
         onClick={handleNavIndex}
       ></input>
 
-      <label for="navi-toggle" class="navigation__button">
-        <span class="navigation__icon">&nbsp;</span>
+      <label htmlFor="navi-toggle" className="navigation__button">
+        <span className="navigation__icon">&nbsp;</span>
       </label>
 
-      <div class="navigation__background" id="navigation__background">
+      <div className="navigation__background" id="navigation__background">
         &nbsp;
       </div>
 
-      <nav class="navigation__nav" id="navigation__nav">
+      <nav className="navigation__nav" id="navigation__nav">
       
-        <ul class="navigation__list">
-          {/* <li class="navigation__item">
-            <a href="/#/team" class="navigation__link">
+        <ul className="navigation__list">
+          {/* <li className="navigation__item">
+            <a href="/#/team" className="navigation__link">
               About Us
             </a>
           </li>
-          <li class="navigation__item">
-            <a href="/#/event" class="navigation__link">
+          <li className="navigation__item">
+            <a href="/#/event" className="navigation__link">
              Events
             </a>
           </li>
-          <li class="navigation__item">
-            <a href="/#/legacy" class="navigation__link">
+          <li className="navigation__item">
+            <a href="/#/legacy" className="navigation__link">
              Legacy
             </a>
           </li>
-          <li class="navigation__item">
-            <a href="/#/contact" class="navigation__link">
+          <li className="navigation__item">
+            <a href="/#/contact" className="navigation__link">
              Contact Us
             </a>
           </li>
-          <li class="navigation__item">
-            <a href="/#/event" class="navigation__link">
+          <li className="navigation__item">
+            <a href="/#/event" className="navigation__link">
               Register
             </a> */}
           {/* </li> */}
-          <li class="navigation__item" onClick={handleNavToggle}>
-            <Link to="/legacy" class="navigation__link">
+          <li className="navigation__item" onClick={handleNavToggle}>
+            <Link to="/legacy" className="navigation__link">
               <span>Legacy</span>
             </Link>
           </li>
-          <li class="navigation__item" onClick={handleNavToggle}>
-            <Link to="/event" class="navigation__link">
+          <li className="navigation__item" onClick={handleNavToggle}>
+            <Link to="/event" className="navigation__link">
               <span>Schedule</span>
             </Link>
           </li>
-          <li class="navigation__item" onClick={handleNavToggle}>
-            <Link to="/team" class="navigation__link">
+          <li className="navigation__item" onClick={handleNavToggle}>
+            <Link to="/team" className="navigation__link">
               <span>Team</span>
             </Link>
           </li>
-          {/* <li class="navigation__item" onClick={handleNavToggle}>
-            <a href="#/reach" class="navigation__link">
+          {/* <li className="navigation__item" onClick={handleNavToggle}>
+            <a href="#/reach" className="navigation__link">
               <span>Reach Us</span>
             </a>
           </li> */}

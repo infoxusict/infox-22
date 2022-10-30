@@ -10,6 +10,7 @@ import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
 import Profile from "./Components/Profile"
+import Loader from "./Components/Loader";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
@@ -40,6 +41,14 @@ const App = () => {
 
           <Route exact path="/Profile">
             <Profile />
+          </Route>
+
+          <Route exact path="/event/cssb1911">
+            <EventTemplate />
+          </Route>
+
+          <Route exact path="/loader">
+            <Loader />
           </Route>
 
         </Switch>

@@ -6,7 +6,7 @@ import Loader from "./Loader";
 // import photo from "./aa.png";
 var eventId;
 var eventobj={}
-const eventTemp =() =>{
+const EventTemp =() =>{
   return (
     <div className="et-background">
     {/* <MatrixRain/> */}
@@ -123,12 +123,13 @@ export default function EventTemplate() {
       referrerPolicy:'origin-when-cross-origin'
     })
     const finalEventDetails= await res.json()
-    if(finalEventDetails.success)
+    console.log(finalEventDetails);
+    if(finalEventDetails.status)
     {
+      console.log("Succes is true")
       setisLoaded(true);
       eventobj=finalEventDetails.event;
     }
-    console.log(finalEventDetails.event);
   }
   React.useEffect(()=>{
      const url = window.location.href;
@@ -142,7 +143,7 @@ export default function EventTemplate() {
     <>
     {
       isLoaded ? 
-      <eventTemp/>
+      <EventTemp/>
     :
     <><Loader/></>
     }

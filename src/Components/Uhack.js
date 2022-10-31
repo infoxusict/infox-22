@@ -63,7 +63,7 @@ const Uhack = () => {
       question:
         "What parameters were used to choose the teams for shortlisting?",
       answer:
-        "On the basis of their concise summaries of their project concepts, the registered participants will be narrowed down.",
+        "On the basis of their github profile and resumes, the registered participants will be narrowed down.",
       open: false,
     },
     {
@@ -329,7 +329,7 @@ const Uhack = () => {
               <div className=" devfolio-button flex justify-center md:justify-start">
                 <div
                   class="apply-button"
-                  data-hackathon-slug="YOUR-HACKATHON-SLUG"
+                  data-hackathon-slug="uhack5"
                   data-button-theme="dark-inverted"
                 ></div>
               </div>
@@ -368,6 +368,17 @@ const Uhack = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
               <a
+                href="https://polygon.technology/"
+                target="_blank"
+                rel="noreferrer"
+                className="basis-2/5 md:basis-1/5 spon-logo-width"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
+                  alt="Polygon-log "
+                />
+              </a>
+              <a
                 href="https://devfolio.co"
                 target="_blank"
                 rel="noreferrer"
@@ -389,17 +400,7 @@ const Uhack = () => {
                   alt="Filecoin-logo"
                 />
               </a>
-              {/* <a
-                href="https://polygon.technology/"
-                target="_blank"
-                rel="noreferrer"
-                className="basis-2/5 md:basis-1/5 spon-logo-width"
-              >
-                <img
-                  src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
-                  alt="Polygon-log "
-                />
-              </a> */}
+
               <a
                 href="https://replit.com"
                 target="_blank"
@@ -433,8 +434,7 @@ const Uhack = () => {
                   alt="Replit-logo"
                 />
               </a>
-              {/* <a
-
+              <a
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
@@ -444,7 +444,7 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
                   alt="Solana-logo"
                 />
-              </a> */}
+              </a>
               <a
                 href="https://wolfram.com"
                 target="_blank"
@@ -455,7 +455,28 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
                   alt="Wolfram-logo"
                 />
-
+              </a>
+              <a
+                href="https://www.echo3d.co/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/echo-logo.png")}
+                  alt="echo-logo"
+                />
+              </a>
+              <a
+                href="https://www.taskade.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/taskade-logo.png")}
+                  alt="taskade-logo"
+                />
               </a>
             </div>
           </section>

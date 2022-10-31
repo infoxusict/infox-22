@@ -6,6 +6,7 @@ import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
 import FAQ from "./uhack-faq";
 import { FaRobot } from "react-icons/fa";
+
 import { IoLogoBuffer } from "react-icons/io";
 import { GiHealthNormal } from "react-icons/gi";
 import { MdOutlineCastForEducation } from "react-icons/md";
@@ -62,7 +63,7 @@ const Uhack = () => {
       question:
         "What parameters were used to choose the teams for shortlisting?",
       answer:
-        "On the basis of their concise summaries of their project concepts, the registered participants will be narrowed down.",
+        "On the basis of their github profile and resumes, the registered participants will be narrowed down.",
       open: false,
     },
     {
@@ -117,7 +118,6 @@ const Uhack = () => {
   React.useEffect(() => {
     const handleWindowResize = () => {
       setWidth1(window.innerWidth);
-
       setHeight1(window.innerHeight);
     };
 
@@ -143,7 +143,8 @@ const Uhack = () => {
         <div className="flex hel text-4xl md:text-7xl atmosphere title-txt-shdw">
           ABOUT
         </div>
-        <div className="legacy__about uh-bg md:mt-12" >
+        <div className="legacy__about uh-bg " >
+
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">
@@ -301,7 +302,7 @@ const Uhack = () => {
                       fill="white"
                     ></path>{" "}
                   </svg>
-                  <p> 18th November 2022</p>
+                  <p> 18th-19th Nov'22</p>
 
                 </div>
                 <div className="flex gap-2">
@@ -331,7 +332,7 @@ const Uhack = () => {
               <div className=" devfolio-button flex justify-center md:justify-start">
                 <div
                   class="apply-button"
-                  data-hackathon-slug="YOUR-HACKATHON-SLUG"
+                  data-hackathon-slug="uhack5"
                   data-button-theme="dark-inverted"
                 ></div>
               </div>
@@ -364,11 +365,22 @@ const Uhack = () => {
               <MyComponent1 />
             </section>
           </section>
-          <section className=" mt-24 md:mt-32">
+          <section className=" mt-24 ">
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-            <div className="grid  grid-cols-2 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
+              <a
+                href="https://polygon.technology/"
+                target="_blank"
+                rel="noreferrer"
+                className="basis-2/5 md:basis-1/5 spon-logo-width"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
+                  alt="Polygon-log "
+                />
+              </a>
 
               <a
                 href="https://devfolio.co"
@@ -392,25 +404,38 @@ const Uhack = () => {
                   alt="Filecoin-logo"
                 />
               </a>
-              {/* <a
-                href="https://polygon.technology/"
-                target="_blank"
-                rel="noreferrer"
-                className="basis-2/5 md:basis-1/5 spon-logo-width"
-              >
-                <img
-                  src={require("./Assets/Images/images/uhack/Polygon-logo.png")}
-                  alt="Polygon-log "
-                />
-              </a> */}
+
               <a
                 href="https://replit.com"
+
                 target="_blank"
                 rel="noreferrer"
                 className="md:basis-1/5 spon-logo-width basis-2/5"
               >
                 <img
                   src={require("./Assets/Images/images/uhack/Replit-logo.png")}
+                  alt="Replit-logo"
+                />
+              </a> */}
+              <a
+                href="https://www.digitalocean.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/Do-logo.png")}
+                  alt="Do-logo"
+                />
+              </a>
+              <a
+                href="https://gen.xyz/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 wolfram-logo basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/xyz-logo.png")}
                   alt="Replit-logo"
                 />
               </a>
@@ -438,6 +463,39 @@ const Uhack = () => {
                 />
 
               </a>
+              <a
+                href="https://wolfram.com"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 wolfram-logo basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
+                  alt="Wolfram-logo"
+                />
+              </a>
+              <a
+                href="https://www.echo3d.co/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/echo-logo.png")}
+                  alt="echo-logo"
+                />
+              </a>
+              <a
+                href="https://www.taskade.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/taskade-logo.png")}
+                  alt="taskade-logo"
+                />
+              </a>
             </div>
           </section>
           <section className="container mx-auto ">
@@ -446,11 +504,11 @@ const Uhack = () => {
             </div>
             <div className="uh-bg py-12 mt-12 mx-4 md:px-4">
               <div className="flex text-3xl flex-wrap-reverse gap-16 md:gap-24 md:flex-nowrap hel">
-                <div className="h-42 hel basis-1/3 flex flex-col  ">
+                <div className="h-42 hel md:basis-1/3 flex flex-col  ">
                   {" "}
                   <FaRobot size={55} style={{ fill: "" }} />
                   <div>AI / ML</div>
-                  <div className="text-sm text-center mt-2">
+                  <div className="text-sm text-center mt-2 ">
                     The capacity of a machine to replicate intelligent human
                     behaviour is referred to as machine learning in the field of
                     artificial intelligence.

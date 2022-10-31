@@ -326,7 +326,6 @@ const Uhack = () => {
                     ></path>{" "}
                   </svg>
                   <p className="">2 PM</p>
-
                 </div>
               </div>
               <div className=" devfolio-button flex justify-center md:justify-start">
@@ -369,7 +368,9 @@ const Uhack = () => {
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-x-12 mt-6 md:mt-14 uh-bg py-12 md:px-4">
+
+            <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-y-12 md:gap-x-12 mt-6 md:mt-14 uh-bg py-16 md:px-16">
+
               <a
                 href="https://polygon.technology/"
                 target="_blank"
@@ -416,7 +417,7 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Replit-logo.png")}
                   alt="Replit-logo"
                 />
-              </a> */}
+              </a>
               <a
                 href="https://www.digitalocean.com/"
                 target="_blank"
@@ -439,8 +440,7 @@ const Uhack = () => {
                   alt="Replit-logo"
                 />
               </a>
-              {/* <a
-
+              <a
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
@@ -450,7 +450,8 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
                   alt="Solana-logo"
                 />
-              </a> */}
+              </a>
+
               <a
                 href="https://wolfram.com"
                 target="_blank"
@@ -458,10 +459,31 @@ const Uhack = () => {
                 className="md:basis-1/5 spon-logo-width basis-2/5"
               >
                 <img
-                  src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
+                  src={require("./Assets/Images/images/uhack/wolfram-alpha-logo.png")}
                   alt="Wolfram-logo"
                 />
-
+              </a>
+              <a
+                href="https://www.echo3d.co/"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/echo-logo.png")}
+                  alt="echo-logo"
+                />
+              </a>
+              <a
+                href="https://www.taskade.com/"
+                target="_blank"
+                rel="noreferrer"
+                className=" spon-logo-width taska"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/taskade-logo.png")}
+                  alt="taskade-logo"
+                />
               </a>
               <a
                 href="https://wolfram.com"

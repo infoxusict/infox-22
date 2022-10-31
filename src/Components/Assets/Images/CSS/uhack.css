@@ -97,3 +97,7 @@
 .devfolio-button {
   margin-top: 5vw;
 }
+.taska{
+grid-column-start: 2;
+grid-column-end: 3;
+}

@@ -157,8 +157,6 @@ const Profile = () => {
             style={{
               fontFamily: "atmospheric",
               color: "#6CDE01",
-              // paddingBottom: "1vw",
-              // margin: "0vw 9vw 2vw 26vw",
             }}
           >
             {!isAuthKey ? "Get Started" : "Register Events"}
@@ -178,6 +176,7 @@ const Profile = () => {
           )}
           {isAuthKey ? (
             <>
+            <div className="bigbbb">
               <EventCardProfile />
               <div className="profilePart">
                 <ProfileCard
@@ -186,6 +185,7 @@ const Profile = () => {
                   gradYear={profileDATA.gradYear}
                   college={profileDATA.college}
                 />
+                </div>
               </div>
             </>
           ) : (

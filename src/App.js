@@ -43,7 +43,7 @@ const App = () => {
             <Profile />
           </Route>
 
-          <Route exact path="/event/cssb1911">
+          <Route exact path="/event">
             <EventTemplate />
           </Route>
 

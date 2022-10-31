@@ -6,7 +6,7 @@ import TeamPage from "./Components/teampage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Keeanu from "./Components/Keeanu";
 // import EventCard from "./Components/EventCard";
-import EventTemplate from "./Components/EventTemplate";
+// import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
 import Uhack from "./Components/Uhack";

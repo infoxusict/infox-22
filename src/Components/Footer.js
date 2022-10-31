@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Footer.css";
 import { FaDiscord } from "react-icons/fa";
 
+
 // import MatrixRain from "./MatrixRain";
 
 const Footer = () => {
@@ -56,7 +57,10 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links text-lg div-text-lg">
                 <li className="companyFoot text-lg div-text-lg">
-                  <Link className="footAcompany" to="/team">
+                  <Link
+                    className="footAcompany"
+                    to="/team"
+                  >
                     About us
                   </Link>
                 </li>

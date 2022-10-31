@@ -11,9 +11,11 @@ import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
 import Uhack from "./Components/Uhack";
 import ScrollToTop from "./Components/scrollToTop";
+
 import Contact from "./Components/Contact";
 import Map from "./Components/Map";
 import EvenTemp from "./Components/evenTemp";
+
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 

@@ -144,6 +144,7 @@ const Uhack = () => {
           ABOUT
         </div>
         <div className="legacy__about uh-bg " >
+
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">
@@ -302,6 +303,7 @@ const Uhack = () => {
                     ></path>{" "}
                   </svg>
                   <p> 18th-19th Nov'22</p>
+
                 </div>
                 <div className="flex gap-2">
                   <svg
@@ -324,6 +326,7 @@ const Uhack = () => {
                     ></path>{" "}
                   </svg>
                   <p className="">2 PM</p>
+
                 </div>
               </div>
               <div className=" devfolio-button flex justify-center md:justify-start">
@@ -378,6 +381,7 @@ const Uhack = () => {
                   alt="Polygon-log "
                 />
               </a>
+
               <a
                 href="https://devfolio.co"
                 target="_blank"
@@ -403,6 +407,7 @@ const Uhack = () => {
 
               <a
                 href="https://replit.com"
+
                 target="_blank"
                 rel="noreferrer"
                 className="md:basis-1/5 spon-logo-width basis-2/5"
@@ -411,7 +416,7 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Replit-logo.png")}
                   alt="Replit-logo"
                 />
-              </a>
+              </a> */}
               <a
                 href="https://www.digitalocean.com/"
                 target="_blank"
@@ -434,7 +439,8 @@ const Uhack = () => {
                   alt="Replit-logo"
                 />
               </a>
-              <a
+              {/* <a
+
                 href="https://solana.com"
                 target="_blank"
                 rel="noreferrer"
@@ -444,6 +450,18 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
                   alt="Solana-logo"
                 />
+              </a> */}
+              <a
+                href="https://wolfram.com"
+                target="_blank"
+                rel="noreferrer"
+                className="md:basis-1/5 spon-logo-width basis-2/5"
+              >
+                <img
+                  src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
+                  alt="Wolfram-logo"
+                />
+
               </a>
               <a
                 href="https://wolfram.com"

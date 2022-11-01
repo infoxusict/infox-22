@@ -89,8 +89,10 @@ const EventCardProfile = () => {
         events.map((event) => {
           // console.log(`/event/${event.eventId}`);
           return (
-            <div class="card">
+            <div class="card" style={{backgroundImage: `url(${event.eventPic})`}}>
+              
               <div class="content">
+
                 <h2 class="title">{event.eventName}</h2>
                 <p class="copy">
                   Samrat <br />

@@ -62,7 +62,7 @@ const App = () => {
 
           {
             events.map((event) => {
-              console.log(`/event/${event.eventId}`);
+              // console.log(`/event/${event.eventId}`);
               return <Route exact path={`/event/${event.eventId}`}>
                 <EvenTemp data={event}/>
               </Route>

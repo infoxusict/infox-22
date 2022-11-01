@@ -54,7 +54,7 @@ const EvenTemp = (props) => {
                     fill="white"
                   ></path>{" "}
                 </svg>
-                <p> Date</p>
+                <p> {props.data.date}</p>
               </div>
               <div className="flex gap-2 hel">
                 <svg
@@ -119,37 +119,34 @@ const EvenTemp = (props) => {
         <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw mt-24 md:mt-32">
           Information
         </div>
-        <div className="  uh-bg mt-8 p-4 mb-16 md:mb-32 pb-16">
-          <div className="container mx-auto flex gap-6 flex-col md:flex-row ">
-            <div className="basis-2/6">
+        <div className="  uh-bg mt-8 px-4 md:px-12 py-8 mb-16 md:mb-32 pb-16">
+          <div className="container  ">
+            <div className="">
               <h4 className="subheading txt-shdw">About</h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate minimm eveniet illo? Quo odit, nihil
-                consectetur beatae eaque ab voluptatem? Voluptas.
-              </p>
+              <ul>
+                {props.data.description.map((item) => {
+                  console.log(item);
+                  return (<li>{item}</li>)
+                })}
+              </ul>
             </div>
-            <div className="basis-2/6">
-              {" "}
-              <h4 className="subheading txt-shdw txt-shdw">Structure</h4>
+          </div>
+          <div className="container  ">
+            <div className="">
+              <h4 className="subheading txt-shdw">Rules</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate mi eveniet illo? Quo odit, nihil consectetur
-                beatae eaque ab voluptatem? Voluptas.
-              </p>
-            </div>
-            <div className="basis-2/6">
-              {" "}
-              <h4 className="subheading txt-shdw">Timeline</h4>
-              <p>
-                Lorem, ips eveniet illo? Quo odit, nihil consectetur beatae
-                eaque ab voluptatem? Voluptas.
+                <ul>
+                  {props.data.rules.map((item) => {
+                    console.log(item);
+                    return (<li>{item}</li>)
+                  })}
+                </ul>
               </p>
             </div>
           </div>
           <div className="container mx-auto flex gap-6 flex-col md:flex-row ">
             <div className="basis-2/6">
-              <h4 className="subheading txt-shdw">Rules</h4>
+              <h4 className="subheading txt-shdw">Timeline</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Deserunt cupiditate minieveniet illo? Quo odit, nihil
@@ -160,9 +157,12 @@ const EvenTemp = (props) => {
               {" "}
               <h4 className="subheading txt-shdw">Prize</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate llo? Quo odit, nihil consectetur beatae
-                eaque ab voluptatem? Voluptas.
+              <ul>
+                {props.data.prize.map((item) => {
+                  console.log(item);
+                  return (<li>{item}</li>)
+                })}
+              </ul>
               </p>
             </div>
             <div className="basis-2/6">

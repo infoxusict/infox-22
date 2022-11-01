@@ -161,6 +161,7 @@ const Profile = () => {
           >
             {!isAuthKey ? "Get Started" : "Register Events"}
           </div>
+          <div className="registeer">
           {isModalShown && !isAuthKey ? (
             <Modal
               data={modalObject}
@@ -191,6 +192,7 @@ const Profile = () => {
           ) : (
             <div id="googlebtn"></div>
           )}
+        </div>
         </div>
       </div>
     </>

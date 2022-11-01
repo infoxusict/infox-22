@@ -485,39 +485,6 @@ const Uhack = () => {
                   alt="taskade-logo"
                 />
               </a>
-              <a
-                href="https://wolfram.com"
-                target="_blank"
-                rel="noreferrer"
-                className="md:basis-1/5 wolfram-logo basis-2/5"
-              >
-                <img
-                  src={require("./Assets/Images/images/uhack/Wolfram-logo.png")}
-                  alt="Wolfram-logo"
-                />
-              </a>
-              <a
-                href="https://www.echo3d.co/"
-                target="_blank"
-                rel="noreferrer"
-                className="md:basis-1/5 spon-logo-width basis-2/5"
-              >
-                <img
-                  src={require("./Assets/Images/images/uhack/echo-logo.png")}
-                  alt="echo-logo"
-                />
-              </a>
-              <a
-                href="https://www.taskade.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="md:basis-1/5 spon-logo-width basis-2/5"
-              >
-                <img
-                  src={require("./Assets/Images/images/uhack/taskade-logo.png")}
-                  alt="taskade-logo"
-                />
-              </a>
             </div>
           </section>
           <section className="container mx-auto ">

@@ -10,8 +10,11 @@ export default function ProfileCard(props) {
         alt=""
       />
       <div className="profilebox"></div>
-      <div className="profilepic" style={{}}>
-        <div class="headshot headshot-2"></div>
+      <div className="profilepic"  
+       style={{}}
+       > 
+        <img class="headshot headshot-2"
+        src={props.image} ></img>
       </div>
       <div className="profileData">
         <h3>{props.name} </h3>

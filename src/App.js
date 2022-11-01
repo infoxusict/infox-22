@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
@@ -16,14 +16,32 @@ import Modal1 from "./Components/Modal1";
 import TeamModal from "./Components/TeamModal";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
+import EvenTemp from "./Components/evenTemp";
 
 const App = () => {
 
-  const modalObject = [
-    { question: "college", placeholder: "college" },
-    { question: "gradYear", placeholder: "gradYear" },
-    { question: "contact", placeholder: "contact" },
-  ];
+  // let events = [];
+  const [events,setEvents] = useState([]);
+
+  const getAllEvents = async () => {
+    const response = await fetch('https://infoxpression.herokuapp.com/event/get_all_event', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ key: "<h1>Newprogrammakinginprogress</h1>" })
+    });
+
+    const json = await response.json();
+    setEvents(json);
+
+    console.log(json);
+  }
+
+  useEffect(() => {
+    getAllEvents();
+  }, [])
+
 
   return (
     <>
@@ -42,6 +60,18 @@ const App = () => {
           <Route exact path="/event/name">
             <EventTemplate />
           </Route>
+
+          {/* Mapping Events */}
+
+          {
+            events.map((event) => {
+              // console.log(`/event/${event.eventId}`);
+              return <Route exact path={`/event/${event.eventId}`}>
+                <EvenTemp data={event}/>
+              </Route>
+            })
+          }
+
           <Route exact path="/team">
             <TeamPage />
           </Route>

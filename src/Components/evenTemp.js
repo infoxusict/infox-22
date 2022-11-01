@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MatrixRain from "./MatrixRain";
 import { TiLocation } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
 import "./Assets/Images/CSS/uhack.css"
 import "./Assets/Images/CSS/teammodal.css"
@@ -12,7 +12,7 @@ const EvenTemp = (props) => {
   const [teamCode, setTeamcode] = useState('');
   const [teamName, setTeamName] = useState('');
   const [teamID, setTeamID] = useState('');
-
+  const history = useHistory();
 
 
   const onChangCeode = (event) => {
@@ -23,16 +23,24 @@ const EvenTemp = (props) => {
     setTeamName(event.target.value);
   }
 
-  const registerModal = ()=>
-  {
+  const registerModal = () => {
+
+    if (localStorage.getItem('authkey') === null || localStorage.getItem('authkey') === undefined) {
+      history.push('/profile');
+      return
+    }
+
     setRegister(true);
+    // change here
     document.getElementById('getBlur').style.opacity = 0.05;
-    document.getElementById('root').style.overflowY = "hidden";
-  }
+    document.getElementById('getBlur').style.overflowY = 'hidden';
+  } 
 
 
   const createTeam = async (e) => {
     e.preventDefault();
+
+
     console.log(props.data.eventId);
     console.log(teamName);
     const response = await fetch(`https://infoxpression.herokuapp.com/team/gen_code`, {
@@ -49,8 +57,8 @@ const EvenTemp = (props) => {
     console.log(json)
     setTeamID(json.teamId);
     setRegister(false);
+    // correct here
     document.getElementById('getBlur').style.opacity = 1;
-
   }
 
   return (

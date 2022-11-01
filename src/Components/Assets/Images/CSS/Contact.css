@@ -6,9 +6,9 @@
     height: 200px;
 }
 
-.neoh_fn_pagetitle {
+/* .neoh_fn_pagetitle {
     padding: 100px 100px 20px 50px;
-}
+} */ 
 
 .neoh_fn_contact_page {
     padding: 50px;
@@ -78,7 +78,7 @@ input{
 }
 
 .myHeadSection {
-    margin-top: 15vh;
+    /* margin-top: 15vh; */
     padding: 0px !important;
 }
 .neoh_fn_contact_page {
@@ -221,7 +221,7 @@ input{
     text-decoration: none;
     color: #aaa;
     border-bottom: 1px solid #414141;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
 .neoh_fn_contact_page .info_list .email:hover {
@@ -264,4 +264,9 @@ input{
     .HeadH3Res{
         font-size: 2rem;
     }
+}
+@media screen and (max-width: 800px) {
+  .neoh_fn_contact_page .container {
+    width: 80%;
+  }
 }

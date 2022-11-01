@@ -12,7 +12,7 @@
   color: #6cde01;
 }
 .footer-20192 {
-  background-color: #000000f3;
+  background-color: #000000;
   /* position: relative; */
   bottom: 0;
   color: #fff;
@@ -168,7 +168,10 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding: 0;
-  margin-top: 3rem;
+}
+.fooer-n{
+  margin-top: 2rem;
+
 }
 
 .footer-20192 .copyright {

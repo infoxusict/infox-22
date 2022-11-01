@@ -1,13 +1,15 @@
 import React from 'react'
+import MatrixRain from './MatrixRain'
 import "./Assets/Images/CSS/Contact.css"
 const Contact = () => {
   return (
     <>
-      <div className="neoh_fn_main" data-footer-sticky="">
+      <MatrixRain/>
+      <div className="neoh_fn_main uh-bg pt-16" data-footer-sticky="">
         {/* Content */}
         <div className="neoh_fn_content">
           {/* Page Title */}
-          <div className="neoh_fn_pagetitle myHeadSection">
+          <div className="neoh_fn_pagetitle myHeadSection ">
             <div className="bg_color" />
             <div className="pt_content">
               <div className="container" style={{width: "100vw", minWidth: "auto"}}>
@@ -30,7 +32,7 @@ const Contact = () => {
           </div>
           {/* !Page Title */}
           {/* Contact Page */}
-          <div className="neoh_fn_contact_page">
+          <div className="neoh_fn_contact_page  ">
             <div className="container">
               <div className="mw_500">
                 <form

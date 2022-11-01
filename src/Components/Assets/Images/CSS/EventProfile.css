@@ -22,7 +22,7 @@
     height: 18rem;
     width: 30%;
     position: relative;
-    background-image: url("../images/nat-4.jpg");
+    /* background-image: url("../images/nat-4.jpg"); */
     margin: 2vw 2vw 2vw 0vw;
     border-radius: 1vw;
     transition: all 0.5s;
@@ -82,7 +82,7 @@ width: 100%;
     margin: 1vw;
 } */
 .layer:hover{
-      background: url("../images/nat-4.jpg");
+      /* background: url("../images/nat-4.jpg"); */
       /* filter: blur(3px); */
       
     }

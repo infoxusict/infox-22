@@ -11,10 +11,20 @@ import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
 import Profile from "./Components/Profile"
 import Loader from "./Components/Loader";
+import Modal from "./Components/Modal";
+import Modal1 from "./Components/Modal1";
+import TeamModal from "./Components/TeamModal";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
 const App = () => {
+
+  const modalObject = [
+    { question: "college", placeholder: "college" },
+    { question: "gradYear", placeholder: "gradYear" },
+    { question: "contact", placeholder: "contact" },
+  ];
+
   return (
     <>
       <Router>
@@ -45,6 +55,21 @@ const App = () => {
 
           <Route exact path="/event">
             <EventTemplate />
+          </Route>
+
+          {/* <Route exact path="/modal">
+          <Modal data={modalObject}
+              // buttonName="Complete Registration"
+              // tempuserObject={tempuserObject}
+              // userDetails={userDetails}
+              // profileDATA={profileDATA}
+              // setprofileDATA={setprofileDATA}
+              // setAuthKey={setAuthKey}
+              />
+          </Route> */}
+
+          <Route path="/modal">
+            <TeamModal/>
           </Route>
 
           <Route exact path="/loader">

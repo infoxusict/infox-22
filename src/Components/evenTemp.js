@@ -1,16 +1,108 @@
-import React from "react";
+import React, { useState } from "react";
 import MatrixRain from "./MatrixRain";
 import { TiLocation } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
 import "./Assets/Images/CSS/uhack.css"
+import "./Assets/Images/CSS/teammodal.css"
 
 const EvenTemp = (props) => {
+
+  const [register, setRegister] = useState(false);
+  const [teamCode, setTeamcode] = useState('');
+  const [teamName, setTeamName] = useState('');
+  const [teamID, setTeamID] = useState('');
+  const history = useHistory();
+
+
+  const onChangCeode = (event) => {
+    setTeamcode(event.target.value);
+  }
+
+  const onChangeName = (event) => {
+    setTeamName(event.target.value);
+  }
+
+  const registerModal = () => {
+
+    if (localStorage.getItem('authkey') === null || localStorage.getItem('authkey') === undefined) {
+      history.push('/profile');
+      return
+    }
+
+    setRegister(true);
+    // change here
+    document.getElementById('getBlur').style.opacity = 0.05;
+    document.getElementById('getBlur').style.overflowY = 'hidden';
+  } 
+
+
+  const createTeam = async (e) => {
+    e.preventDefault();
+
+
+    console.log(props.data.eventId);
+    console.log(teamName);
+    const response = await fetch(`https://infoxpression.herokuapp.com/team/gen_code`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authToken': localStorage.getItem('authkey')
+      },
+      body: JSON.stringify({ eventId: props.data.eventId, teamName: teamName })
+    });
+
+    // eslint-disable-next-line
+    const json = await response.json();
+    console.log(json)
+    setTeamID(json.teamId);
+    setRegister(false);
+    // correct here
+    document.getElementById('getBlur').style.opacity = 1;
+  }
+
   return (
     <>
       <MatrixRain />
       <div className=" container mx-auto text-white md:pt-24">
-        <section className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8">
+        {register && <>
+          <div id='team-modal' className='glass'>
+            <div id="create-modal">
+              <h2 className='h2 atmosphere'>Create Team</h2>
+              <form action="" id='create-form' onSubmit={createTeam}>
+                <input type="text" id='team-name' placeholder="Enter Team Name" value={teamName} onChange={onChangeName} />
+                <button type="submit" id='create-btn'>
+                  {/* <Link href="https://google.com" className="register team-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </Link> */}
+                  Create
+                </button>
+              </form>
+              {teamID}
+            </div>
+            {/* <hr /> */}
+            <h2 className='h2 glitch' id='or' >OR</h2>
+            <div id="join-modal">
+              <h2 className='h2 atmosphere'>Join Team</h2>
+              <form action="" id='join-form'>
+                <input type="text" id='team-code' placeholder="Enter a team code to join" value={teamCode} onChange={onChangCeode} />
+                <button type="submit" >
+                  <Link href="https://google.com" className="register team-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Join Team
+                  </Link>
+                </button>
+              </form>
+            </div>
+          </div>
+        </>}
+        <section className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8" id="getBlur">
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
             <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
@@ -84,13 +176,13 @@ const EvenTemp = (props) => {
               </div>
             </div>
             <div className=" devfolio-button flex justify-center md:justify-start ">
-              <Link to="/" className="register ">
+              <button to="/" className="register " onClick={registerModal}>
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Register
-              </Link>
+              </button>
             </div>
           </div>
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
@@ -157,12 +249,12 @@ const EvenTemp = (props) => {
               {" "}
               <h4 className="subheading txt-shdw">Prize</h4>
               <p>
-              <ul>
-                {props.data.prize.map((item) => {
-                  console.log(item);
-                  return (<li>{item}</li>)
-                })}
-              </ul>
+                <ul>
+                  {props.data.prize.map((item) => {
+                    console.log(item);
+                    return (<li>{item}</li>)
+                  })}
+                </ul>
               </p>
             </div>
             <div className="basis-2/6">

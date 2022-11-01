@@ -303,7 +303,6 @@ const Uhack = () => {
                     ></path>{" "}
                   </svg>
                   <p> 18th-19th Nov'22</p>
-
                 </div>
                 <div className="flex gap-2">
                   <svg
@@ -370,7 +369,7 @@ const Uhack = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-6 md:gap-y-12 md:gap-x-12 mt-6 md:mt-14 uh-bg py-16 md:px-16">
-
+            <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-12 md:gap-y-20 md:gap-x-12 mt-6 md:mt-14 uh-bg py-16 md:px-16">
               <a
                 href="https://polygon.technology/"
                 target="_blank"
@@ -408,7 +407,6 @@ const Uhack = () => {
 
               <a
                 href="https://replit.com"
-
                 target="_blank"
                 rel="noreferrer"
                 className="md:basis-1/5 spon-logo-width basis-2/5"
@@ -437,7 +435,7 @@ const Uhack = () => {
               >
                 <img
                   src={require("./Assets/Images/images/uhack/xyz-logo.png")}
-                  alt="Replit-logo"
+                  alt="xyz-logo"
                 />
               </a>
               <a
@@ -474,6 +472,7 @@ const Uhack = () => {
                   alt="echo-logo"
                 />
               </a>
+
               <a
                 href="https://www.taskade.com/"
                 target="_blank"

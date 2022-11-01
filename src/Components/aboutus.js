@@ -93,7 +93,7 @@ export default function About() {
                   <div class="before-content-line"></div>
                 </div>
                 <div class="content-text">
-                InfoXpression is the annual tech carnival of the University School of Information and Communication Technology to test one’s technical acumen over three days of intense, engaging, andfun events.Attracting active participation of students from over 250 colleges across North India, InfoXpression is acelebrationwhichfocuses on the promotion of Technology and Innovation, allowing participants to showcase their technical expertise and learn many new things in the process. Itaims toinvolvea plethora of competitions, workshops and guest lectures by eminent personalities.
+                InfoXpression is the annual tech carnival of the University School of Information and Communication Technology to test one’s technical acumen over three days of intense, engaging, and fun events. Attracting active participation of students from over 250 colleges across North India, InfoXpression is acelebration which focuses on the promotion of Technology and Innovation, allowing participants to showcase their technical expertise and learn many new things in the process. It aims to involve a plethora of competitions, workshops and guest lectures by eminent personalities.
                 </div>
               </div>
             </div>
@@ -130,7 +130,16 @@ export default function About() {
               <div class="mbefore-content-line"></div>
             </div>
             <div class="mcontent-text">
-            InfoXpression is the annual tech carnival of the University School of Information and Communication Technology to test one’s technical acumen over three days of intense, engaging, andfun events.Attracting active participation of students from over 250 colleges across North India, InfoXpression is acelebrationwhichfocuses on the promotion of Technology and Innovation, allowing participants to showcase their technical expertise and learn many new things in the process. Itaims toinvolvea plethora of competitions, workshops and guest lectures by eminent personalities.
+              InfoXpression is the annual tech carnival of the University School
+              of Information and Communication Technology to test one’s
+              technical acumen over three days of intense, engaging, and fun
+              events. Attracting active participation of students from over 250
+              colleges across North India, InfoXpression is acelebration which
+              focuses on the promotion of Technology and Innovation, allowing
+              participants to showcase their technical expertise and learn many
+              new things in the process. It aims to involve a plethora of
+              competitions, workshops and guest lectures by eminent
+              personalities.
             </div>
           </div>
         </div>

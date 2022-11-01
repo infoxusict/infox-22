@@ -33,7 +33,7 @@
 }
 
 .eventsParticipated {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     width: 90vw;
     /* height: 30vw; */

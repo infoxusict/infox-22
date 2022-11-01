@@ -185,7 +185,7 @@ const Profile = () => {
             {isAuthKey ? (
               <>
                 <div className="bigbbb">
-                  <EventCardProfile />
+                  <EventCardProfile events = {profileDATA.events} />
                   <div className="profilePart">
                     <ProfileCard
                       name={profileDATA.name}

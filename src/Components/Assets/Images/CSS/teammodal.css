@@ -18,7 +18,7 @@
     border-radius: 10px;
     color: lime;
     /* margin-top: 4vh; */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
     /* background-color: aquamarine; */
     justify-content: space-around;
     position: fixed !important;
@@ -101,4 +101,10 @@ input[type="text"]{
     color: limegreen !important;
     margin: auto;
     font-size: 3vh;
+}
+.cont{
+    display: flex;    
+    justify-content: center;
+    margin: auto;
+    width: 30vw;
 }

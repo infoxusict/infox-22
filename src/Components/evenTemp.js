@@ -34,6 +34,7 @@ const EvenTemp = (props) => {
     // change here
     document.getElementById('getBlur').style.opacity = 0.05;
     document.getElementById('getBlur').style.overflowY = 'hidden';
+    // document.getElementById('getBlur').style.overflow = 'hidden';
   } 
 
 
@@ -66,6 +67,7 @@ const EvenTemp = (props) => {
       <MatrixRain />
       <div className=" container mx-auto text-white md:pt-24">
         {register && <>
+        <div className="cont">
           <div id='team-modal' className='glass'>
             <div id="create-modal">
               <h2 className='h2 atmosphere'>Create Team</h2>
@@ -101,6 +103,7 @@ const EvenTemp = (props) => {
               </form>
             </div>
           </div>
+        </div>
         </>}
         <section className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8" id="getBlur">
           <div className="basis-1/2 mt-8 md:mt-16 ">

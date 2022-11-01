@@ -166,7 +166,7 @@ const Profile = () => {
               color: "#6CDE01",
             }}
           >
-            {!isAuthKey ? "Get Started" : "Register Events"}
+            {!isAuthKey ? "Get Started" : "Registered Events"}
           </div>
           <div className="registeer">
             {isModalShown && !isAuthKey ? (
@@ -197,7 +197,9 @@ const Profile = () => {
                 </div>
               </>
             ) : (
+              <div className="ggbtn">
               <div id="googlebtn"></div>
+              </div>
             )}
           </div>
         </div>

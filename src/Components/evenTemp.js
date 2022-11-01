@@ -62,6 +62,30 @@ const EvenTemp = (props) => {
     document.getElementById('getBlur').style.opacity = 1;
   }
 
+  const joinTeam = async (e) => {
+    e.preventDefault();
+
+
+    console.log(props.data.eventId);
+    console.log(teamID);
+    const response = await fetch(`https://infoxpression.herokuapp.com/team/join`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authToken': localStorage.getItem('authkey')
+      },
+      body: JSON.stringify({ eventId: props.data.eventId, teamId: teamID })
+    });
+
+    // eslint-disable-next-line
+    const json = await response.json();
+    console.log(json)
+    setTeamID(json.teamId);
+    setRegister(false);
+    // correct here
+    document.getElementById('getBlur').style.opacity = 1;
+  }
+
   return (
     <>
       <MatrixRain />
@@ -89,16 +113,16 @@ const EvenTemp = (props) => {
             <h2 className='h2 glitch' id='or' >OR</h2>
             <div id="join-modal">
               <h2 className='h2 atmosphere'>Join Team</h2>
-              <form action="" id='join-form'>
+              <form id='join-form' onSubmit={joinTeam}>
                 <input type="text" id='team-code' placeholder="Enter a team code to join" value={teamCode} onChange={onChangCeode} />
-                <button type="submit" >
-                  <Link href="https://google.com" className="register team-btn">
+                <button type="submit" className="register team-btn">
+                  {/* <Link href="https://google.com" >
+                  </Link> */}
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     Join Team
-                  </Link>
                 </button>
               </form>
             </div>

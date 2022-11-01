@@ -26,6 +26,7 @@ const modalObject = [
   { question: "contact", placeholder: "contact" },
 ];
 
+
 const Profile = () => {
   const [profileDATA, setprofileDATA] = React.useState({});
   const [isModalShown, setIsModalShown] = useState(false);
@@ -121,19 +122,25 @@ const Profile = () => {
     }
   };
   React.useEffect(() => {
+
     /* global google */
-    google.accounts.id.initialize({
-      client_id:
-        "272494210674-pij8m84sh3852areuj5cn6jpukais005.apps.googleusercontent.com",
-      callback: handleCallbackResponse,
-    });
+    const func = async () => {
+      await google.accounts.id.initialize({
+        client_id:
+          "272494210674-pij8m84sh3852areuj5cn6jpukais005.apps.googleusercontent.com",
+        callback: handleCallbackResponse,
+      });
 
-    google.accounts.id.renderButton(document.getElementById("googlebtn"), {
-      theme: "outline",
-      size: "large",
-    });
+      await google.accounts.id.renderButton(document.getElementById("googlebtn"), {
+        theme: "outline",
+        size: "large",
+      });
 
-    ifSignIn();
+      await ifSignIn();
+    }
+
+    func();
+    
     // eslint-disable-next-line
   }, []);
   return (
@@ -162,37 +169,37 @@ const Profile = () => {
             {!isAuthKey ? "Get Started" : "Register Events"}
           </div>
           <div className="registeer">
-          {isModalShown && !isAuthKey ? (
-            <Modal
-              data={modalObject}
-              buttonName="Complete Registration"
-              tempuserObject={tempuserObject}
-              userDetails={userDetails}
-              profileDATA={profileDATA}
-              setprofileDATA={setprofileDATA}
-              setAuthKey={setAuthKey}
-            />
-          ) : (
-            <></>
-          )}
-          {isAuthKey ? (
-            <>
-            <div className="bigbbb">
-              <EventCardProfile />
-              <div className="profilePart">
-                <ProfileCard
-                  name={profileDATA.name}
-                  image={profileDATA.image}
-                  gradYear={profileDATA.gradYear}
-                  college={profileDATA.college}
-                />
+            {isModalShown && !isAuthKey ? (
+              <Modal
+                data={modalObject}
+                buttonName="Complete Registration"
+                tempuserObject={tempuserObject}
+                userDetails={userDetails}
+                profileDATA={profileDATA}
+                setprofileDATA={setprofileDATA}
+                setAuthKey={setAuthKey}
+              />
+            ) : (
+              <></>
+            )}
+            {isAuthKey ? (
+              <>
+                <div className="bigbbb">
+                  <EventCardProfile />
+                  <div className="profilePart">
+                    <ProfileCard
+                      name={profileDATA.name}
+                      image={profileDATA.image}
+                      gradYear={profileDATA.gradYear}
+                      college={profileDATA.college}
+                    />
+                  </div>
                 </div>
-              </div>
-            </>
-          ) : (
-            <div id="googlebtn"></div>
-          )}
-        </div>
+              </>
+            ) : (
+              <div id="googlebtn"></div>
+            )}
+          </div>
         </div>
       </div>
     </>

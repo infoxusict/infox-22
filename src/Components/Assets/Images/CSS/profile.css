@@ -33,7 +33,7 @@
 }
 
 .eventsParticipated {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     width: 90vw;
     /* height: 30vw; */
@@ -96,6 +96,7 @@
 .headshot-2 {
     border-radius: 50%;
     background-image: var(--img-url), linear-gradient(to bottom right, #25dd34, #169246, #09661d);
+    /* background-image: var(--img-url), linear-gradient(to bottom right, #cecece, #5d7165, #333b33); */
 }
 
 .profilebox {

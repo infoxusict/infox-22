@@ -21,6 +21,8 @@
     backdrop-filter: blur(5px);
     /* background-color: aquamarine; */
     justify-content: space-around;
+    position: fixed !important;
+    z-index: 99999 !important;
 }
 
 #create-modal, #join-modal{

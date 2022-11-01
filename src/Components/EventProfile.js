@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/EventProfile.css";
 
+
 const EventCardProfile = () => {
+
+  const [events, setEvents] = useState([]);
+
+  const getAllEvents = async () => {
+    const response = await fetch('https://infoxpression.herokuapp.com/event/get_all_event', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ key: "<h1>Newprogrammakinginprogress</h1>" })
+    });
+
+    const json = await response.json();
+    setEvents(json);
+
+    console.log(json);
+  }
+
+  useEffect(() => {
+    getAllEvents();
+  }, [])
+
   return (
     //   <div className="programs" id='programs'>
     //       <div id="#Ccard" className="Ccard">
@@ -61,18 +85,29 @@ const EventCardProfile = () => {
 
     //   </div>
     <main class="page-content">
-      <div class="card">
-        <div class="content">
-          <h2 class="title">Crypto Maniacs</h2>
-          <p class="copy">
-            Samrat <br />
-            Shivesh
-            <br /> Tejasva
-          </p>
-          <button class="btn">More Info</button>
-        </div>
-      </div>
-      <div class="card">
+      {
+        events.map((event) => {
+          // console.log(`/event/${event.eventId}`);
+          return (
+            <div class="card" style={{backgroundImage: `url(${event.eventPic})`}}>
+              
+              <div class="content">
+
+                <h2 class="title">{event.eventName}</h2>
+                <p class="copy">
+                  Samrat <br />
+                  Shivesh
+                  <br /> Tejasva
+                </p>
+                <Link class="btn" to={`/event/${event.eventId}`} >More Info</Link>
+              </div>
+            </div>
+            // {event.eventPic}
+          )
+        })
+      }
+
+      {/* <div class="card">
         <div class="content">
           <h2 class="title">UHack</h2>
           <p class="copy">
@@ -126,7 +161,7 @@ const EventCardProfile = () => {
           </p>
           <button class="btn">More Info</button>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 };

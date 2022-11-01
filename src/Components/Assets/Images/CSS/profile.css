@@ -4,7 +4,18 @@
     margin:auto;
     margin-bottom: 8vw;
 }
-
+.registeer{
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+}
+@media (max-width: 900px) {
+    .registeer{
+        display: flex;
+        width: 50vw;
+        flex-direction: row;
+    }
+}
 .profileTitle {
     margin: 10vw 0vw 4vw 6vw;
     
@@ -25,7 +36,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 90vw;
-    /* margin: auto; */
+    /* height: 30vw; */
+    margin:10vw auto;
 }
 .bigbbb{
     display: flex;
@@ -107,7 +119,6 @@
     color: aliceblue;
     position: relative;
     top: 10vw;
-
     font-size: 2.3vw;
     text-align: center;
 }
@@ -159,12 +170,12 @@
     color: #6cde01bb;
     position: relative;
     top: 13vw;
-    font-size: 3vw;
+    font-size: 1.42vw;
     letter-spacing: 0.1em;
-    width: 25vw;
+    width: 26vw;
     /* text-align: center; */
-    padding-left: 12px;
-    padding-right: 10px;
+    /* padding-left: 12px; */
+    /* padding-right: 10px; */
     opacity: 0.8;
 }
 
@@ -194,17 +205,23 @@
     }
 
     .ParticipantProfile {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse !important;
         /* background-color: #09661d; */
     }
 
     .eventsParticipated {
+        margin: 20vw auto;
+        /* height: 50vw; */
         width: 90vw;
+    }
+    .bigbbb{
+        flex-direction: column-reverse !important;
     }
     .page-content {
         grid-gap: 2vw;
         padding: 1vw;
         justify-content: center;
+        flex-direction: column-reverse !important;
     }
     .card {
         padding: 1vw;
@@ -282,8 +299,12 @@
 }
 @media (max-width: 500px) {
     .ProfileHeading {
-        margin:2vw auto 5vw auto;
+        margin:3vw auto 20vw auto;
         font-size: 6vw;
+    }
+    .eventsParticipated{
+        /* height: 70vw; */
+        margin: 15vw 0vw 20vw 0vw;
     }
     .copy {
         font-size: 3.9vw;
@@ -298,7 +319,9 @@
     .profileData h3 {
         font-size: 5vw;
         width: 60vw;
-        left: -4.5vw;
+        left: -2.5vw;
+        bottom: -4vw;
+        top: 38vw;
     }
 
     .profileQuote {

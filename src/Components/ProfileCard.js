@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function ProfileCard(props) {
+
   return (
     <div className="profileCard">
       <img
@@ -17,7 +18,7 @@ export default function ProfileCard(props) {
       </div>
 
       <div className="profileData2">
-        <h6 className="shadows">{props.college} </h6>
+        <h6 className="shadows">{props.college}</h6>
         <h5>{props.gradYear}</h5>
         {/* <h4 className="college_title">College</h4> */}
       </div>

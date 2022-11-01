@@ -367,7 +367,8 @@ const Uhack = () => {
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-
+            
+            
             <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-12 md:gap-y-20 md:gap-x-12 mt-6 md:mt-14 uh-bg py-16 md:px-16">
               <a
                 href="https://polygon.technology/"
@@ -447,6 +448,7 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
                   alt="Solana-logo"
                 />
+                
               </a>
 
               <a
@@ -471,7 +473,6 @@ const Uhack = () => {
                   alt="echo-logo"
                 />
               </a>
-
               <a
                 href="https://www.taskade.com/"
                 target="_blank"

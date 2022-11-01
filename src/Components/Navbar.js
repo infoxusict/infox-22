@@ -69,7 +69,6 @@ const Navbar = () => {
       </div>
 
       <nav class="navigation__nav" id="navigation__nav">
-      
         <ul class="navigation__list">
           {/* <li class="navigation__item">
             <a href="/#/team" class="navigation__link">
@@ -111,11 +110,11 @@ const Navbar = () => {
               <span>Team</span>
             </Link>
           </li>
-          {/* <li class="navigation__item" onClick={handleNavToggle}>
-            <a href="#/reach" class="navigation__link">
-              <span>Reach Us</span>
-            </a>
-          </li> */}
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <Link to="/uhack" class="navigation__link">
+              <span>UHACK</span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

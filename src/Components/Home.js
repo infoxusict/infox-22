@@ -76,7 +76,8 @@ const Home = (props) => {
               >
                 OCTOBER 2022
               </h3> */}
-              <p style={{ textAlign: "center" }}>
+                <p style={{ textAlign: "center" }}> 
+                  17th - 19th NOVEMBER 2022 <br/>
                 TECHFEST USICT | GGSIPU <br />
                 CELEBRATING THE SENSE OF BELONGING
               </p>

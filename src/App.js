@@ -10,6 +10,8 @@ import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
 import Profile from "./Components/Profile"
+import Uhack from "./Components/Uhack";
+import ScrollToTop from "./Components/scrollToTop";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
@@ -18,6 +20,7 @@ const App = () => {
     <>
       <Router>
         {/* <Navbar_3/> */}
+        <ScrollToTop />
         <Navbar />
         <Switch>
           <Route exact path="/">
@@ -42,6 +45,9 @@ const App = () => {
             <Profile />
           </Route>
 
+          <Route exact path="/uhack">
+            <Uhack />
+          </Route>
         </Switch>
         <Keeanu />
         <Footer />

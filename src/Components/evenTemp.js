@@ -3,9 +3,9 @@ import MatrixRain from "./MatrixRain";
 import { TiLocation } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
+import "./Assets/Images/CSS/uhack.css"
 
-
-const EvenTemp = () => {
+const EvenTemp = (props) => {
   return (
     <>
       <MatrixRain />
@@ -14,15 +14,15 @@ const EvenTemp = () => {
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
             <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div class="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
             <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
@@ -96,20 +96,20 @@ const EvenTemp = () => {
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
             <div>
               <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+                <div class="sn_line_forNHeading">{props.data.eventName}</div>
               </div>
             </div>
             <div className="flex justify-center md:justify-center ">
               <img
-                src={require("./Assets/Images/images/uhack/1USICT-HACK-2022.png")}
+                src={props.data.eventPic}
                 alt="infox"
                 className="uh-img  p-4 uh-bg w-4/5 "
               />

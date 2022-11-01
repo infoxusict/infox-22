@@ -33,6 +33,12 @@ const Footer = () => {
               <p className="copyright text-base">
                 <p>&copy; 2022</p>
               </p>
+              {/* <img
+                src={require("./Assets/Images/aswd.png")}
+                width="108px"
+                alt="Infox'22 logo"
+                srcSet=""
+              /> */}
             </div>
             <div className="">
               <h3 className="customer atmosphere text-lg da-color-green mb-5 mt-12 md:mt-0">

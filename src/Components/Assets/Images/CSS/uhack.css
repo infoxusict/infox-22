@@ -94,9 +94,9 @@
 .title-txt-shdw {
   text-shadow: 2px 2px 2px pink;
 }
-.devfolio-button {
-  margin-top: 5vw;
-}
+/* .devfolio-button {
+  margin-top: 25vh;
+} */
 .taska{
 grid-column-start: 2;
 grid-column-end: 3;

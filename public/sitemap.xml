@@ -7,6 +7,12 @@
       <priority>1</priority>
 </url>
 <url>
+      <loc>https://infoxpression.tech/uhack</loc>
+      <lastmod>2022-11-02</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+</url>
+<url>
       <loc>https://infoxpression.tech/legacy</loc>
       <lastmod>2022-08-25</lastmod>
       <changefreq>weekly</changefreq>
@@ -22,6 +28,18 @@
       <loc>https://infoxpression.tech/team</loc>
       <lastmod>2022-08-25</lastmod>
       <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://infoxpression.tech/contact</loc>
+      <lastmod>2022-11-02</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://infoxpression.tech/reach</loc>
+      <lastmod>2022-11-02</lastmod>
+      <changefreq>monthly</changefreq>
       <priority>0.5</priority>
 </url>
 </urlset>

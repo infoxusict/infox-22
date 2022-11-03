@@ -17,6 +17,7 @@ import TeamModal from "./Components/TeamModal";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 import EvenTemp from "./Components/evenTemp";
+import Event from "./Components/Event";
 
 const App = () => {
 
@@ -87,16 +88,9 @@ const App = () => {
             <EventTemplate />
           </Route>
 
-          {/* <Route exact path="/modal">
-          <Modal data={modalObject}
-              // buttonName="Complete Registration"
-              // tempuserObject={tempuserObject}
-              // userDetails={userDetails}
-              // profileDATA={profileDATA}
-              // setprofileDATA={setprofileDATA}
-              // setAuthKey={setAuthKey}
-              />
-          </Route> */}
+          <Route exact path="/sch-event">
+            <Event/>
+          </Route>
 
           <Route path="/modal">
             <TeamModal/>

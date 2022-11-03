@@ -57,10 +57,7 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links text-lg div-text-lg">
                 <li className="companyFoot text-lg div-text-lg">
-                  <Link
-                    className="footAcompany"
-                    to="/team"
-                  >
+                  <Link className="footAcompany" to="/team">
                     About us
                   </Link>
                 </li>
@@ -213,7 +210,7 @@ const Footer = () => {
                   <a
                     rel="noreferrer"
                     className="listSocialA"
-                    href="https://discord.gg/ZXeWtmYE"
+                    href="https://discord.gg/KF5hfB84"
                     target="_blank"
                   >
                     <FaDiscord size={30} />

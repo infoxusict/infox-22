@@ -44,6 +44,8 @@
   border-bottom: 1px solid rgb(255, 255, 255);
   color: white;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
 }
 
 .faqs .faq .faq-question {
@@ -71,6 +73,7 @@
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease 0.5ms;
+  
 }
 
 .faqs .faq.open .faq-question {
@@ -79,7 +82,9 @@
 
 .faqs .faq.open .faq-question::after {
   content: "-";
+  
 }
+
 
 .faqs .faq.open .faq-answer {
   max-height: 300px;
@@ -94,15 +99,9 @@
 .title-txt-shdw {
   text-shadow: 2px 2px 2px pink;
 }
-<<<<<<< HEAD
-.devfolio-button {
-  margin-top: 5vw;
-}
-=======
 /* .devfolio-button {
   margin-top: 25vh;
 } */
->>>>>>> origin/uhack
 .taska{
 grid-column-start: 2;
 grid-column-end: 3;

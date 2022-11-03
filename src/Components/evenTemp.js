@@ -92,18 +92,18 @@ const EvenTemp = (props) => {
       <div className=" container mx-auto text-white md:pt-24">
         {register && <>
         <div className="cont">
-          <div id='team-modal' className='glass'>
+          <div id='team-modal' className='container glass paddingg'>
             <div id="create-modal">
               <h2 className='h2 atmosphere'>Create Team</h2>
               <form action="" id='create-form' onSubmit={createTeam}>
                 <input type="text" id='team-name' placeholder="Enter Team Name" value={teamName} onChange={onChangeName} />
-                <button type="submit" id='create-btn'>
+                <button type="submit" className="register team-btn" id='create-btn'>
                   {/* <Link href="https://google.com" className="register team-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
                   </Link> */}
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                   Create
                 </button>
               </form>

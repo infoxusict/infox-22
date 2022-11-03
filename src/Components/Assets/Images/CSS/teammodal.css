@@ -1,37 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap');
 
-#join-parent{
+/* #join-parent{
     height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+} */
 
 #team-modal{
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: auto;
     width: 50vw;
-    height: 70vh;
-    /* border: 2px solid limegreen; */
     border-radius: 10px;
     color: lime;
-    /* margin-top: 4vh; */
+    padding: 1vw;
     backdrop-filter: blur(15px);
-    /* background-color: aquamarine; */
-    justify-content: space-around;
     position: fixed !important;
-    z-index: 99999 !important;
+    z-index: 2 !important;
 }
 
 #create-modal, #join-modal{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
+.team-btn{
+  margin: 1.5vw auto;
+  font-size: 16px;
+}
 .h2{
     font-size: 5vh;
     font-weight: 600;
@@ -47,34 +48,22 @@
     justify-content: center;
 }
 
-input[type="text"]{
+#team-code, #team-name{
     border-radius: 10px;
     margin-top: 3vh;
     height: 6vh;
-    width: 60%;
-    font-size: 3vh;
+    width: 110%;
+    font-size: 1.2vw;
     color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 2px solid limegreen;
+    border: 1px solid limegreen;
     outline: none;
     padding: 1vh;
     font-family: Roboto;
 }
-
-/* #create-btn{ */
-    /* margin-top: 3vh;
-    background-color: whitesmoke;
-    width: 40%;
-    border-radius: 6px;
-    height: 7vh;
-    color: black;
-    font-size: 2vh;
-    font-weight: 600; */
-    /* color: aqua; */
-/* } */
 
 #join-form{
     width: 60%;
@@ -85,26 +74,71 @@ input[type="text"]{
     justify-content: center;
 }
 
-.team-btn{
-    margin:auto;
-    margin-top: 3vh;
-    /* background-color: whitesmoke;
-    width: 40%;
-    border-radius: 6px;
-    height: 5vh;
-    color: black;
-    font-size: 2vh;
-    font-weight: 600; */
-}
-
 #or{
     color: limegreen !important;
-    margin: auto;
-    font-size: 3vh;
+    margin: 1vw auto;
+    font-size: 26px;
 }
 .cont{
     display: flex;    
     justify-content: center;
     margin: auto;
-    width: 30vw;
+    width: 50vw;
 }
+
+@media screen and (max-width: 1000px){
+    #team-modal{
+        width: 70vw;
+    }
+    .h2{
+        font-size: 3.5vw;
+    }
+    #team-code, #team-name{
+        font-size: 19px;
+    }
+    .team-btn{
+        margin: 4vw auto;
+        font-size: 14px;
+    }
+    #or{
+        margin: 1.5vw auto;
+        font-size: 24px;
+    }
+    .padding{
+        margin-top: 6vw;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    #team-modal{
+        margin-top: 18vw;
+    }
+  }  
+
+  @media screen and (max-width: 570px){
+    #team-modal{
+        margin-top: 120px;
+        width: 90vw;
+    }
+    .h2{
+        font-size: 24px;
+    }
+    #team-code, #team-name{
+        font-size: 15px;
+        height: 5vh;
+        width: 150%;
+
+    }
+    .team-btn{
+        margin: 7vw auto;
+        font-size: 11px;
+        padding: 16px;
+    }
+    #or{
+        margin: 3.5vw auto;
+        font-size: 20px;
+    }
+    .padding{
+        margin-top: 6vw;
+    }
+  }  

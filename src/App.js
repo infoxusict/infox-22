@@ -11,9 +11,13 @@ import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
 import Profile from "./Components/Profile"
 import Loader from "./Components/Loader";
+import Modal from "./Components/Modal";
+import Modal1 from "./Components/Modal1";
+import TeamModal from "./Components/TeamModal";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 import EvenTemp from "./Components/evenTemp";
+import Event from "./Components/Event";
 
 const App = () => {
 
@@ -82,6 +86,14 @@ const App = () => {
 
           <Route exact path="/event">
             <EventTemplate />
+          </Route>
+
+          <Route exact path="/sch-event">
+            <Event/>
+          </Route>
+
+          <Route path="/modal">
+            <TeamModal/>
           </Route>
 
           <Route exact path="/loader">

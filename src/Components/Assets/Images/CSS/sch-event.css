@@ -1,0 +1,85 @@
+.sch-event-card{
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    justify-content:space-around;
+    /* background-color: bisque; */
+    border: 1px solid lime;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 6vh;
+    color: whitesmoke;
+    backdrop-filter: blur(5px);
+    margin: 4vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    /* transition: all 0.5s; */
+}
+
+
+.sch-event-info{
+    /* float: right; */
+    width: 17vw;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.sch-event-name{
+    /* color: rgb(43, 43, 43); */
+    font-size: 4vh;
+    /* float: left; */
+    width: fit-content;
+    /* left: 0% !important; */
+    margin-top: 0.5vh;
+    font-weight: 700;
+    /* text-justify: newspaper; */
+}
+
+.sch-date-venue{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.sch-event-date{
+    width: auto;
+    color: rgb(188, 187, 187);
+}
+
+.sch-event-desc{
+    float: right;
+}
+
+.sch-event-pic{
+    width: 13vw;
+}
+
+
+
+.sch-event-img{
+    border-radius: 10px;
+    float: left;
+    margin-top: -5vh;
+    margin-bottom: 5vh;
+    transition: all 0.3s;
+}
+
+.sch-event-img:hover{
+    margin-top: -6vh;
+}
+
+.sch-event-team-btn{
+    margin-bottom: 4vh;
+}
+
+.sch-event-parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20vh;
+}

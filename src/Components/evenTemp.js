@@ -109,6 +109,7 @@ const EvenTemp = (props) => {
               </form>
               {teamID}
             </div>
+            {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
             {/* <hr /> */}
             <h2 className='h2 glitch' id='or' >OR</h2>
             <div id="join-modal">
@@ -144,9 +145,7 @@ const EvenTemp = (props) => {
               <div class="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
             <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-              cupiditate minimm eveniet illo? Quo odit, nihil consectetur beatae
-              eaque ab voluptatem? Voluptas.
+              {props.data.description[0]}
               {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations
                 take out solutions that nobody has ever thought and get involved

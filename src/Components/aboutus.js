@@ -1,11 +1,11 @@
 import "./Assets/Images/CSS/aboutus.css";
 import React from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 export default function About() {
-  React.useEffect(() => {
-    Aos.init({ duration: 2000 });
-  });
+  // React.useEffect(() => {
+  //   Aos.init({ duration: 2000 });
+  // });
   const [width1, setWidth1] = React.useState(window.innerWidth);
   const [height1, setHeight1] = React.useState(window.innerHeight);
   React.useEffect(() => {
@@ -33,8 +33,7 @@ export default function About() {
   const DesktopComponent1 = () => {
     return (
       <div>
-        <div className="legacy__about" data-aos="fade-up">
-        {/* <div className="legacy__about"> */}
+        <div className="legacy__about" >
           <div className="about__left">
             <div id="about-stats">
               <div class="about-students">
@@ -94,7 +93,7 @@ export default function About() {
                   <div class="before-content-line"></div>
                 </div>
                 <div class="content-text">
-                InfoXpression is the annual tech carnival of the University School of Information and Communication Technology to test one’s technical acumen over three days of intense, engaging, andfun events.Attracting active participation of students from over 250 colleges across North India, InfoXpression is acelebrationwhichfocuses on the promotion of Technology and Innovation, allowing participants to showcase their technical expertise and learn many new things in the process. Itaims toinvolvea plethora of competitions, workshops and guest lectures by eminent personalities.
+                InfoXpression is the annual tech carnival of the University School of Information and Communication Technology to test one’s technical acumen over three days of intense, engaging, and fun events. Attracting active participation of students from over 250 colleges across North India, InfoXpression is acelebration which focuses on the promotion of Technology and Innovation, allowing participants to showcase their technical expertise and learn many new things in the process. It aims to involve a plethora of competitions, workshops and guest lectures by eminent personalities.
                 </div>
               </div>
             </div>
@@ -105,8 +104,7 @@ export default function About() {
   };
   const MobileComponent1 = () => {
     return (
-      // <div className="aboutm" data-aos="fade-up">
-        <div className="aboutm" >
+      <div className="aboutm">
         <div className="aboutm-stats">
           <div className="aboutm-students">
             <span class="aboutm-number">6000+</span>
@@ -132,7 +130,16 @@ export default function About() {
               <div class="mbefore-content-line"></div>
             </div>
             <div class="mcontent-text">
-            InfoXpression is the annual tech carnival of the University School of Information and Communication Technology to test one’s technical acumen over three days of intense, engaging, andfun events.Attracting active participation of students from over 250 colleges across North India, InfoXpression is acelebrationwhichfocuses on the promotion of Technology and Innovation, allowing participants to showcase their technical expertise and learn many new things in the process. Itaims toinvolvea plethora of competitions, workshops and guest lectures by eminent personalities.
+              InfoXpression is the annual tech carnival of the University School
+              of Information and Communication Technology to test one’s
+              technical acumen over three days of intense, engaging, and fun
+              events. Attracting active participation of students from over 250
+              colleges across North India, InfoXpression is acelebration which
+              focuses on the promotion of Technology and Innovation, allowing
+              participants to showcase their technical expertise and learn many
+              new things in the process. It aims to involve a plethora of
+              competitions, workshops and guest lectures by eminent
+              personalities.
             </div>
           </div>
         </div>

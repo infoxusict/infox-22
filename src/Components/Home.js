@@ -10,15 +10,15 @@ import Banner from "./Banner";
 const Home = (props) => {
  
   return (
-    
     <section id="Home">
-      <Banner/>
+      <Banner />
       <MatrixRain />
       <div className="animationFrame" id="svgggg">
         <div className="whole-hero">
           <div className="svggg">
             <div className="homeLogo">
               <video
+                className="video"
                 autoPlay="autoPlay"
                 muted
                 loop
@@ -66,8 +66,8 @@ const Home = (props) => {
                   INFOXPRESSION
                 </div>
               </div>
-            <div className="home-svg-con svgg">
-              {/* <h3
+              <div className="home-svg-con svgg">
+                {/* <h3
                 style={{
                   textAlign: "center",
                   fontWeight: "bold",
@@ -76,11 +76,12 @@ const Home = (props) => {
               >
                 OCTOBER 2022
               </h3> */}
-              <p style={{ textAlign: "center" }}>
-                TECHFEST USICT | GGSIPU <br />
-                CELEBRATING THE SENSE OF BELONGING
-              </p>
-            </div>
+                <p style={{ textAlign: "center" }}>
+                  17th - 19th NOVEMBER 2022 <br />
+                  TECHFEST USICT | GGSIPU <br />
+                  CELEBRATING THE SENSE OF BELONGING
+                </p>
+              </div>
             </div>
           </div>
           <SponserNew />

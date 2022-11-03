@@ -64,7 +64,7 @@ input[type="text"]{
     font-family: Roboto;
 }
 
-#create-btn{
+/* #create-btn{ */
     /* margin-top: 3vh;
     background-color: whitesmoke;
     width: 40%;
@@ -74,7 +74,7 @@ input[type="text"]{
     font-size: 2vh;
     font-weight: 600; */
     /* color: aqua; */
-}
+/* } */
 
 #join-form{
     width: 60%;

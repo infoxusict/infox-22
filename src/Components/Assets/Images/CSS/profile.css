@@ -4,16 +4,16 @@
     margin:auto;
     margin-bottom: 8vw;
 }
-.registeer{
+/* .registeer{
     display: flex;
     width: 50vw;
     flex-direction: row;
-}
+} */
 @media (max-width: 900px) {
     .registeer{
-        display: flex;
-        width: 50vw;
-        flex-direction: row;
+        /* display: flex; */
+        /* width: 50vw; */
+        /* flex-direction: row; */
     }
 }
 .profileTitle {
@@ -37,7 +37,7 @@
     flex-wrap: wrap;
     width: 90vw;
     /* height: 30vw; */
-    margin:10vw auto;
+    /* margin:10vw auto; */
 }
 .bigbbb{
     display: flex;
@@ -195,8 +195,14 @@
 .shadows:hover {
     text-shadow: -16px 6px 15px #055520;
 }
+.ggbtn{
+    display: flex;
+    justify-items: center;
+    /* height: 20vw; */
+}
 #googlebtn{
-    margin: auto;
+    padding: 1.5vh 2.5vh;
+    margin: 5vw auto 0vw auto;
 }
 
 @media (max-width: 700px) {

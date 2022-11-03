@@ -9,7 +9,7 @@ import Keeanu from "./Components/Keeanu";
 // import EventTemplate from "./Components/EventTemplate";
 import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
-import Profile from "./Components/Profile"
+import Profile from "./Components/Profile";
 import Loader from "./Components/Loader";
 import Modal from "./Components/Modal";
 import Modal1 from "./Components/Modal1";
@@ -23,33 +23,33 @@ import EvenTemp from "./Components/evenTemp";
 
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
-import EvenTemp from "./Components/evenTemp";
 import Event from "./Components/Event";
 
 const App = () => {
-
   // let events = [];
-  const [events,setEvents] = useState([]);
+  const [events, setEvents] = useState([]);
 
   const getAllEvents = async () => {
-    const response = await fetch('https://infoxpression.herokuapp.com/event/get_all_event', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ key: "<h1>Newprogrammakinginprogress</h1>" })
-    });
+    const response = await fetch(
+      "https://infoxpression.herokuapp.com/event/get_all_event",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ key: "<h1>Newprogrammakinginprogress</h1>" }),
+      }
+    );
 
     const json = await response.json();
     setEvents(json);
 
     console.log(json);
-  }
+  };
 
   useEffect(() => {
     getAllEvents();
-  }, [])
-
+  }, []);
 
   return (
     <>
@@ -72,14 +72,14 @@ const App = () => {
 
           {/* Mapping Events */}
 
-          {
-            events.map((event) => {
-              // console.log(`/event/${event.eventId}`);
-              return <Route exact path={`/event/${event.eventId}`}>
-                <EvenTemp data={event}/>
+          {events.map((event) => {
+            // console.log(`/event/${event.eventId}`);
+            return (
+              <Route exact path={`/event/${event.eventId}`}>
+                <EvenTemp data={event} />
               </Route>
-            })
-          }
+            );
+          })}
 
           <Route exact path="/team">
             <TeamPage />
@@ -92,16 +92,12 @@ const App = () => {
             <Profile />
           </Route>
 
-          <Route exact path="/event">
-            <EventTemplate />
-          </Route>
-
           <Route exact path="/sch-event">
-            <Event/>
+            <Event />
           </Route>
 
           <Route path="/modal">
-            <TeamModal/>
+            <TeamModal />
           </Route>
 
           <Route exact path="/loader">

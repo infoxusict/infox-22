@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { GiPaddleSteamer } from 'react-icons/gi';
 import "./Assets/Images/CSS/sch-event.css"
 import MatrixRain from './MatrixRain'
 
@@ -29,6 +30,14 @@ function Event() {
   return (
     <div className='sch-event-parent'>
     <MatrixRain/>
+    <h1
+                  className="fn_title theme HeadH3Res pb-9"
+                  data-wait={1000}
+                  data-speed={8}
+                  style={{width: "100vw"}}
+                >
+                  Events
+                </h1>
     {events && events.map( (event)=>
         (
     <div className='sch-event-card'>

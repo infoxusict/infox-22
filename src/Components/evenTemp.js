@@ -34,7 +34,7 @@ const EvenTemp = (props) => {
     console.log("hi");
     // change here
     document.getElementById('getBlur').style.opacity = 0.05;
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
   } 
 
 

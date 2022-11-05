@@ -31,11 +31,11 @@ const EvenTemp = (props) => {
     }
 
     setRegister(true);
-    console.log("hi");
+    // console.log("hi");
     // change here
     document.getElementById('getBlur').style.opacity = 0.05;
     document.body.style.overflow = "hidden";
-  } 
+  }
 
 
   const createTeam = async (e) => {
@@ -56,10 +56,12 @@ const EvenTemp = (props) => {
     // eslint-disable-next-line
     const json = await response.json();
     console.log(json)
+    alert("Team already exist");
     setTeamID(json.teamId);
     setRegister(false);
     // correct here
     document.getElementById('getBlur').style.opacity = 1;
+    document.body.style.overflow = "scroll";
   }
 
   const joinTeam = async (e) => {

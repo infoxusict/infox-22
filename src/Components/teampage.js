@@ -14,16 +14,16 @@ export default function TeamPage() {
       <MatrixRain />
       <div className=""></div>
 
-      <div class="sn_glitch_forNHeading atmosphere sn_teamheading">
-        <div class="sn_line_forNHeading">OUR TEAM</div>
-        <div class="sn_line_forNHeading">OUR TEAM</div>
-        <div class="sn_line_forNHeading">OUR TEAM</div>
-        <div class="sn_line_forNHeading">OUR TEAM</div>
-        <div class="sn_line_forNHeading">OUR TEAM</div>
-        <div class="sn_line_forNHeading">OUR TEAM</div>
-        <div class="sn_line_forNHeading">OUR TEAM</div>
-        <div class="sn_line_forNHeading">OUR TEAM</div>
-        <div class="sn_line_forNHeading">OUR TEAM</div>
+      <div className="sn_glitch_forNHeading atmosphere sn_teamheading">
+        <div className="sn_line_forNHeading">OUR TEAM</div>
+        <div className="sn_line_forNHeading">OUR TEAM</div>
+        <div className="sn_line_forNHeading">OUR TEAM</div>
+        <div className="sn_line_forNHeading">OUR TEAM</div>
+        <div className="sn_line_forNHeading">OUR TEAM</div>
+        <div className="sn_line_forNHeading">OUR TEAM</div>
+        <div className="sn_line_forNHeading">OUR TEAM</div>
+        <div className="sn_line_forNHeading">OUR TEAM</div>
+        <div className="sn_line_forNHeading">OUR TEAM</div>
       </div>
 
       <div className="teampage__headingdown"></div>

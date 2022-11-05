@@ -37,39 +37,39 @@ export default function About() {
         {/* <div className="legacy__about"> */}
           <div className="about__left">
             <div id="about-stats">
-              <div class="about-students">
-                <div id="about-students" class="circle-ripple">
-                  <span class="about-stat-num">9000+</span>
-                  <span class="about-stat-title">students</span>
+              <div className="about-students">
+                <div id="about-students" className="circle-ripple">
+                  <span className="about-stat-num">9000+</span>
+                  <span className="about-stat-title">students</span>
                 </div>
-                <div id="about-students-ripple-1" class="circle-ripple"></div>
-                <div id="about-students-ripple-2" class="circle-ripple"></div>
-                <div id="about-students-ripple-3" class="circle-ripple"></div>
-                <div id="about-students-ripple-4" class="circle-ripple"></div>
-                <div id="about-students-ripple-5" class="circle-ripple"></div>
+                <div id="about-students-ripple-1" className="circle-ripple"></div>
+                <div id="about-students-ripple-2" className="circle-ripple"></div>
+                <div id="about-students-ripple-3" className="circle-ripple"></div>
+                <div id="about-students-ripple-4" className="circle-ripple"></div>
+                <div id="about-students-ripple-5" className="circle-ripple"></div>
               </div>
 
-              <div class="about-colleges">
-                <div id="about-colleges" class="circle-ripple">
-                  <span class="about-stat-num">250+</span>
-                  <span class="about-stat-title">colleges</span>
+              <div className="about-colleges">
+                <div id="about-colleges" className="circle-ripple">
+                  <span className="about-stat-num">250+</span>
+                  <span className="about-stat-title">colleges</span>
                 </div>
-                <div id="about-colleges-ripple-1" class="circle-ripple"></div>
-                <div id="about-colleges-ripple-2" class="circle-ripple"></div>
-                <div id="about-colleges-ripple-3" class="circle-ripple"></div>
-                <div id="about-colleges-ripple-4" class="circle-ripple"></div>
-                <div id="about-colleges-ripple-5" class="circle-ripple"></div>
+                <div id="about-colleges-ripple-1" className="circle-ripple"></div>
+                <div id="about-colleges-ripple-2" className="circle-ripple"></div>
+                <div id="about-colleges-ripple-3" className="circle-ripple"></div>
+                <div id="about-colleges-ripple-4" className="circle-ripple"></div>
+                <div id="about-colleges-ripple-5" className="circle-ripple"></div>
               </div>
               <div className="about-events">
-                <div id="about-events" class="circle-ripple">
-                  <span class="about-stat-num">24+</span>
-                  <span class="about-stat-title">events</span>
+                <div id="about-events" className="circle-ripple">
+                  <span className="about-stat-num">24+</span>
+                  <span className="about-stat-title">events</span>
                 </div>
-                <div id="about-events-ripple-1" class="circle-ripple"></div>
-                <div id="about-events-ripple-2" class="circle-ripple"></div>
-                <div id="about-events-ripple-3" class="circle-ripple"></div>
-                <div id="about-events-ripple-4" class="circle-ripple"></div>
-                <div id="about-events-ripple-5" class="circle-ripple"></div>
+                <div id="about-events-ripple-1" className="circle-ripple"></div>
+                <div id="about-events-ripple-2" className="circle-ripple"></div>
+                <div id="about-events-ripple-3" className="circle-ripple"></div>
+                <div id="about-events-ripple-4" className="circle-ripple"></div>
+                <div id="about-events-ripple-5" className="circle-ripple"></div>
               </div>
             </div>
           </div>
@@ -78,22 +78,22 @@ export default function About() {
               {/* <h1 className="glitch" data-text="ABOUT">
                 ABOUT
               </h1> */}
-              <div class="sn_glitch_forNHeading atmosphere">
-            <div class="sn_line_forNHeading">ABOUT</div>
-            <div class="sn_line_forNHeading">ABOUT</div>
-            <div class="sn_line_forNHeading">ABOUT</div>
-            <div class="sn_line_forNHeading">ABOUT</div>
-            <div class="sn_line_forNHeading">ABOUT</div>
-            <div class="sn_line_forNHeading">ABOUT</div>
-            <div class="sn_line_forNHeading">ABOUT</div>
-            <div class="sn_line_forNHeading">ABOUT</div>
-            <div class="sn_line_forNHeading">ABOUT</div>
+              <div className="sn_glitch_forNHeading atmosphere">
+            <div className="sn_line_forNHeading">ABOUT</div>
+            <div className="sn_line_forNHeading">ABOUT</div>
+            <div className="sn_line_forNHeading">ABOUT</div>
+            <div className="sn_line_forNHeading">ABOUT</div>
+            <div className="sn_line_forNHeading">ABOUT</div>
+            <div className="sn_line_forNHeading">ABOUT</div>
+            <div className="sn_line_forNHeading">ABOUT</div>
+            <div className="sn_line_forNHeading">ABOUT</div>
+            <div className="sn_line_forNHeading">ABOUT</div>
           </div>
-              <div class="content-wrap">
-                <div class="content-line-wrap">
-                  <div class="before-content-line"></div>
+              <div className="content-wrap">
+                <div className="content-line-wrap">
+                  <div className="before-content-line"></div>
                 </div>
-                <div class="content-text">
+                <div className="content-text">
                 InfoXpression is the annual tech carnival of the University School of Information and Communication Technology to test one’s technical acumen over three days of intense, engaging, andfun events.Attracting active participation of students from over 250 colleges across North India, InfoXpression is acelebrationwhichfocuses on the promotion of Technology and Innovation, allowing participants to showcase their technical expertise and learn many new things in the process. Itaims toinvolvea plethora of competitions, workshops and guest lectures by eminent personalities.
                 </div>
               </div>
@@ -109,16 +109,16 @@ export default function About() {
         <div className="aboutm" >
         <div className="aboutm-stats">
           <div className="aboutm-students">
-            <span class="aboutm-number">6000+</span>
-            <span class="aboutm-number-head">students</span>
+            <span className="aboutm-number">6000+</span>
+            <span className="aboutm-number-head">students</span>
           </div>
           <div className="aboutm-colleges">
-            <span class="aboutm-number">120+</span>
-            <span class="aboutm-number-head">colleges</span>
+            <span className="aboutm-number">120+</span>
+            <span className="aboutm-number-head">colleges</span>
           </div>
           <div className="aboutm-events">
-            <span class="aboutm-number">25+</span>
-            <span class="aboutm-number-head">events</span>
+            <span className="aboutm-number">25+</span>
+            <span className="aboutm-number-head">events</span>
           </div>
         </div>
         <div className="aboutm-content">
@@ -127,11 +127,11 @@ export default function About() {
               ABOUT
             </span>
           </div>
-          <div class="mcontent-wrap">
-            <div class="mcontent-line-wrap">
-              <div class="mbefore-content-line"></div>
+          <div className="mcontent-wrap">
+            <div className="mcontent-line-wrap">
+              <div className="mbefore-content-line"></div>
             </div>
-            <div class="mcontent-text">
+            <div className="mcontent-text">
             InfoXpression is the annual tech carnival of the University School of Information and Communication Technology to test one’s technical acumen over three days of intense, engaging, andfun events.Attracting active participation of students from over 250 colleges across North India, InfoXpression is acelebrationwhichfocuses on the promotion of Technology and Innovation, allowing participants to showcase their technical expertise and learn many new things in the process. Itaims toinvolvea plethora of competitions, workshops and guest lectures by eminent personalities.
             </div>
           </div>

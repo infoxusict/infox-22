@@ -67,14 +67,14 @@ const EvenTemp = (props) => {
 
 
     console.log(props.data.eventId);
-    console.log(teamID);
+    console.log(teamCode);
     const response = await fetch(`https://infoxpression.herokuapp.com/team/join`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'authToken': localStorage.getItem('authkey')
       },
-      body: JSON.stringify({ eventId: props.data.eventId, teamId: teamID })
+      body: JSON.stringify({ eventId: props.data.eventId, teamId: teamCode })
     });
 
     // eslint-disable-next-line

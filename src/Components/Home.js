@@ -37,32 +37,32 @@ const Home = (props) => {
               </video>
             </div>
             <div className="home-textCon">
-              <div class="sn_glitch atmosphere">
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+              <div className="sn_glitch atmosphere">
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
                   INFOXPRESSION
                 </div>
               </div>

@@ -29,16 +29,16 @@ const Glimpses = () => {
   return (
     <div style={{ width: "100%", marginTop: "25vh" }}>
       <div className="animate" style={{ opacity: 1 }}>
-        <div class="sn_glitch_forNHeading atmosphere sn_glimpses" data-aos="fade-up">
-          <div class="sn_line_forNHeading">GLIMPSES</div>
-          <div class="sn_line_forNHeading">GLIMPSES</div>
-          <div class="sn_line_forNHeading">GLIMPSES</div>
-          <div class="sn_line_forNHeading">GLIMPSES</div>
-          <div class="sn_line_forNHeading">GLIMPSES</div>
-          <div class="sn_line_forNHeading">GLIMPSES</div>
-          <div class="sn_line_forNHeading">GLIMPSES</div>
-          <div class="sn_line_forNHeading">GLIMPSES</div>
-          <div class="sn_line_forNHeading">GLIMPSES</div>
+        <div className="sn_glitch_forNHeading atmosphere sn_glimpses" data-aos="fade-up">
+          <div className="sn_line_forNHeading">GLIMPSES</div>
+          <div className="sn_line_forNHeading">GLIMPSES</div>
+          <div className="sn_line_forNHeading">GLIMPSES</div>
+          <div className="sn_line_forNHeading">GLIMPSES</div>
+          <div className="sn_line_forNHeading">GLIMPSES</div>
+          <div className="sn_line_forNHeading">GLIMPSES</div>
+          <div className="sn_line_forNHeading">GLIMPSES</div>
+          <div className="sn_line_forNHeading">GLIMPSES</div>
+          <div className="sn_line_forNHeading">GLIMPSES</div>
         </div>
         <div style={{ width: "100%" }} className="carousel" data-aos="fade-up">
           <div className="wrapper">

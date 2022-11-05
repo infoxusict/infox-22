@@ -122,7 +122,7 @@ export default function Modal1({
         </form>
       </div>
       <div
-        class="overlay"
+        className="overlay"
         onClick={() => {
           closeModal(false);
         }}

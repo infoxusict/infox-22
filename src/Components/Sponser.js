@@ -14,16 +14,16 @@ export default function Sponser() {
         {/* <h1 className="glitch previous_sponsors" data-text="Previous Sponsors">
           Previous Sponsors
         </h1> */}
-        <div class="sn_glitch_forNHeading atmosphere sn_exSpon">
-            <div class="sn_line_forNHeading">past sponsors</div>
-            <div class="sn_line_forNHeading">past sponsors</div>
-            <div class="sn_line_forNHeading">past sponsors</div>
-            <div class="sn_line_forNHeading">past sponsors</div>
-            <div class="sn_line_forNHeading">past sponsors</div>
-            <div class="sn_line_forNHeading">past sponsors</div>
-            <div class="sn_line_forNHeading">past sponsors</div>
-            <div class="sn_line_forNHeading">past sponsors</div>
-            <div class="sn_line_forNHeading">past sponsors</div>
+        <div className="sn_glitch_forNHeading atmosphere sn_exSpon">
+            <div className="sn_line_forNHeading">past sponsors</div>
+            <div className="sn_line_forNHeading">past sponsors</div>
+            <div className="sn_line_forNHeading">past sponsors</div>
+            <div className="sn_line_forNHeading">past sponsors</div>
+            <div className="sn_line_forNHeading">past sponsors</div>
+            <div className="sn_line_forNHeading">past sponsors</div>
+            <div className="sn_line_forNHeading">past sponsors</div>
+            <div className="sn_line_forNHeading">past sponsors</div>
+            <div className="sn_line_forNHeading">past sponsors</div>
           </div>
         <div className="sponsers-whole">
           <div className="left">

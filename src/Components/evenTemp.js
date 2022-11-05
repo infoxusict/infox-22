@@ -60,7 +60,7 @@ const EvenTemp = (props) => {
       // if(JSON.stringify(json.error) == `"Already Exist"`){
       //   setResult("Already exist");
       // }
-      if(JSON.stringify(json.error) == undefined){
+      if(JSON.stringify(json.error) === undefined){
         setResult("Already exist");
       }
     console.log(json);
@@ -106,47 +106,69 @@ const EvenTemp = (props) => {
     <>
       <MatrixRain />
       <div className=" container mx-auto text-white md:pt-24">
-        {register && <>
-        <div className="cont">
-          <div id='team-modal' className='container glass paddingg'>
-            <div id="create-modal">
-              <h2 className='h2 atmosphere'>Create Team</h2>
-              <form action="" id='create-form' onSubmit={createTeam}>
-                <input type="text" id='team-name' placeholder="Enter Team Name" value={teamName} onChange={onChangeName} />
-                <button type="submit" className="register team-btn" id='create-btn'>
-                  {/* <Link href="https://google.com" className="register team-btn">
+        {register && (
+          <>
+            <div className="cont">
+              <div id="team-modal" className="container glass paddingg">
+                <div id="create-modal">
+                  <h2 className="h2 atmosphere">Create Team</h2>
+                  <form action="" id="create-form" onSubmit={createTeam}>
+                    <input
+                      type="text"
+                      id="team-name"
+                      placeholder="Enter Team Name"
+                      value={teamName}
+                      onChange={onChangeName}
+                    />
+                    <button
+                      type="submit"
+                      className="register team-btn "
+                      id="create-btn"
+                    >
+                      {/* <Link href="https://google.com" className="register team-btn">
                   </Link> */}
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  Create
-                </button>
-              </form>
-              {teamID}
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      Create
+                    </button>
+                  </form>
+                  {teamID}
+                </div>
+                {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
+                {/* <hr /> */}
+                <h2 className="h2 glitch" id="or">
+                  OR
+                </h2>
+                <div id="join-modal">
+                  <h2 className="h2 atmosphere">Join Team</h2>
+                  <form id="join-form" onSubmit={joinTeam}>
+                    <input
+                      type="text"
+                      id="team-code"
+                      placeholder="Enter a team code to join"
+                      value={teamCode}
+                      onChange={onChangCeode}
+                    />
+                    <button type="submit" className="register team-btn hel">
+                  
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      Join Team
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
-            {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
-            {/* <hr /> */}
-            <h2 className='h2 glitch' id='or' >OR</h2>
-            <div id="join-modal">
-              <h2 className='h2 atmosphere'>Join Team</h2>
-              <form id='join-form' onSubmit={joinTeam}>
-                <input type="text" id='team-code' placeholder="Enter a team code to join" value={teamCode} onChange={onChangCeode} />
-                <button type="submit" className="register team-btn">
-                  {/* <Link href="https://google.com" >
-                  </Link> */}
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Join Team
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-        </>}
-        <section className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8" id="getBlur">
+          </>
+        )}
+        <section
+          className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8"
+          id="getBlur"
+        >
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
             <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
@@ -167,8 +189,8 @@ const EvenTemp = (props) => {
                 take out solutions that nobody has ever thought and get involved
                 in the heat with some of the best coders of the country. */}
             </div>
-            <div className="flex md:mt-16 mt-8 gap-8 txt-shdw text-xl justify-center md:justify-start">
-              <div className="flex gap-2 hel">
+            <div className="flex md:mt-16 mt-8 gap-8 txt-shdw text-xl justify-center md:justify-start flex-wrap ">
+              <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <svg
                   // style="color: #000"
                   xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +212,7 @@ const EvenTemp = (props) => {
                 </svg>
                 <p> {props.data.date}</p>
               </div>
-              <div className="flex gap-2 hel">
+              <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <svg
                   // style="color: white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +234,7 @@ const EvenTemp = (props) => {
                 </svg>
                 <p className="">Time</p>
               </div>
-              <div className="flex gap-2 hel">
+              <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <TiLocation size={33} className="" />
                 <p className="">Location</p>
               </div>
@@ -229,7 +251,7 @@ const EvenTemp = (props) => {
           </div>
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
             <div>
-              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
+              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block ml-12">
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
@@ -260,7 +282,7 @@ const EvenTemp = (props) => {
               <ul>
                 {props.data.description.map((item) => {
                   console.log(item);
-                  return (<li>{item}</li>)
+                  return <li>{item}</li>;
                 })}
               </ul>
             </div>
@@ -272,7 +294,7 @@ const EvenTemp = (props) => {
                 <ul>
                   {props.data.rules.map((item) => {
                     console.log(item);
-                    return (<li>{item}</li>)
+                    return <li>{item}</li>;
                   })}
                 </ul>
               </p>
@@ -294,7 +316,7 @@ const EvenTemp = (props) => {
                 <ul>
                   {props.data.prize.map((item) => {
                     console.log(item);
-                    return (<li>{item}</li>)
+                    return <li>{item}</li>;
                   })}
                 </ul>
               </p>

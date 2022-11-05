@@ -64,6 +64,8 @@
   margin-top: -5vh;
   margin-bottom: 5vh;
   transition: all 0.3s;
+  width:175px;
+  height: 175px;
 }
 
 .sch-event-img:hover {

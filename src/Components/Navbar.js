@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Navbar.css";
 const Navbar = () => {
-
   let countt = 0;
   const handleNavIndex = () => {
     if (countt === 0) {
@@ -13,13 +12,12 @@ const Navbar = () => {
       document.getElementById("navigation__nav").style.zIndex = -1;
       document.getElementById("navigation__background").style.zIndex = -1;
       countt = 0;
-
     }
   };
   const handleNavToggle = () => {
-    if (countt===1){
-    document.getElementById("navi-toggle").click();
-  }
+    if (countt === 1) {
+      document.getElementById("navi-toggle").click();
+    }
   };
   return (
     // <div className='navbar' id='navbar' style={{display : "flex", justifyContent: "center", width: "100%"}}>
@@ -119,10 +117,15 @@ const Navbar = () => {
             <Link to="/sch-event" className="navigation__link">
               <span>Events</span>
             </Link>
-            </li>
+          </li>
           <li class="navigation__item" onClick={handleNavToggle}>
             <Link to="/contact" className="navigation__link">
               <span>Contact us</span>
+            </Link>
+          </li>
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <Link to="/profile" className="navigation__link">
+              <span>Profile</span>
             </Link>
           </li>
           {/* <li class="navigation__item" onClick={handleNavToggle}>

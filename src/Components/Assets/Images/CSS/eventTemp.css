@@ -64,9 +64,9 @@
 /*s.register:nth-child(1){
     /* filter: hue-rotate(270deg); */
 /* } */
-.register:nth-child(2) {
+/* .register:nth-child(2) {
   filter: hue-rotate(110deg);
-}
+} */
 .register span {
   position: absolute;
   display: block;

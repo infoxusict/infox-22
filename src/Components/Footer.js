@@ -33,12 +33,6 @@ const Footer = () => {
               <p className="copyright text-base">
                 <p>&copy; 2022</p>
               </p>
-              {/* <img
-                src={require("./Assets/Images/aswd.png")}
-                width="108px"
-                alt="Infox'22 logo"
-                srcSet=""
-              /> */}
             </div>
             <div className="">
               <h3 className="customer atmosphere text-lg da-color-green mb-5 mt-12 md:mt-0">
@@ -63,10 +57,7 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links text-lg div-text-lg">
                 <li className="companyFoot text-lg div-text-lg">
-                  <Link
-                    className="footAcompany"
-                    to="/team"
-                  >
+                  <Link className="footAcompany" to="/team">
                     About us
                   </Link>
                 </li>
@@ -219,7 +210,7 @@ const Footer = () => {
                   <a
                     rel="noreferrer"
                     className="listSocialA"
-                    href="https://discord.gg/ZXeWtmYE"
+                    href="https://discord.gg/KF5hfB84"
                     target="_blank"
                   >
                     <FaDiscord size={30} />

@@ -1,8 +1,14 @@
+.modalbox{
+  margin: auto;
+  width: 70vw;
+  /* height: 30vw; */
+  text-align: center;
+}
 .show-modal {
   font-size: 1vw;
   font-weight: 600;
   padding: 1.5vh 2.5vh;
-  margin: 2vw 3vw;
+  margin: 6vw 3vw 0vw 3vw;
   border: none;
   background-color: #2f2;
   color: #fff;
@@ -41,8 +47,8 @@
 @media screen and (max-width: 400px){
   .show-modal {
     font-size: 3.7vw;
-    padding:1.5vh 2.5vh;
-    margin: 2vw 0vw 7vw 21.5vw;
+    /* padding:1.5vh 2.5vh; */
+    margin: 0;
   }
 }
 .show-modal:hover {
@@ -83,8 +89,8 @@
   background: none;
 }
 
-.close-modal:hover {
-}
+/* .close-modal:hover {
+} */
 
 .modal {
   position: absolute;

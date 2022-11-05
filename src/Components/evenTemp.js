@@ -1,16 +1,136 @@
-import React from "react";
+import React, { useState } from "react";
 import MatrixRain from "./MatrixRain";
 import { TiLocation } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
 import "./Assets/Images/CSS/uhack.css"
+import "./Assets/Images/CSS/teammodal.css"
 
 const EvenTemp = (props) => {
+
+  const [register, setRegister] = useState(false);
+  const [teamCode, setTeamcode] = useState('');
+  const [teamName, setTeamName] = useState('');
+  const [teamID, setTeamID] = useState('');
+  const history = useHistory();
+
+
+  const onChangCeode = (event) => {
+    setTeamcode(event.target.value);
+  }
+
+  const onChangeName = (event) => {
+    setTeamName(event.target.value);
+  }
+
+  const registerModal = () => {
+
+    if (localStorage.getItem('authkey') === null || localStorage.getItem('authkey') === undefined) {
+      history.push('/profile');
+      return
+    }
+
+    setRegister(true);
+    console.log("hi");
+    // change here
+    document.getElementById('getBlur').style.opacity = 0.05;
+    document.body.style.overflow = "hidden";
+  } 
+
+
+  const createTeam = async (e) => {
+    e.preventDefault();
+
+
+    console.log(props.data.eventId);
+    console.log(teamName);
+    const response = await fetch(`https://infoxpression.herokuapp.com/team/gen_code`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authToken': localStorage.getItem('authkey')
+      },
+      body: JSON.stringify({ eventId: props.data.eventId, teamName: teamName })
+    });
+
+    // eslint-disable-next-line
+    const json = await response.json();
+    console.log(json)
+    setTeamID(json.teamId);
+    setRegister(false);
+    // correct here
+    document.getElementById('getBlur').style.opacity = 1;
+  }
+
+  const joinTeam = async (e) => {
+    e.preventDefault();
+
+
+    console.log(props.data.eventId);
+    console.log(teamID);
+    const response = await fetch(`https://infoxpression.herokuapp.com/team/join`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authToken': localStorage.getItem('authkey')
+      },
+      body: JSON.stringify({ eventId: props.data.eventId, teamId: teamID })
+    });
+
+    // eslint-disable-next-line
+    const json = await response.json();
+    console.log(json)
+    setTeamID(json.teamId);
+    setRegister(false);
+    // correct here
+    document.getElementById('getBlur').style.opacity = 1;
+  }
+
   return (
     <>
       <MatrixRain />
       <div className=" container mx-auto text-white md:pt-24">
-        <section className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8">
+        {register && <>
+        <div className="cont">
+          <div id='team-modal' className='container glass paddingg'>
+            <div id="create-modal">
+              <h2 className='h2 atmosphere'>Create Team</h2>
+              <form action="" id='create-form' onSubmit={createTeam}>
+                <input type="text" id='team-name' placeholder="Enter Team Name" value={teamName} onChange={onChangeName} />
+                <button type="submit" className="register team-btn" id='create-btn'>
+                  {/* <Link href="https://google.com" className="register team-btn">
+                  </Link> */}
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Create
+                </button>
+              </form>
+              {teamID}
+            </div>
+            {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
+            {/* <hr /> */}
+            <h2 className='h2 glitch' id='or' >OR</h2>
+            <div id="join-modal">
+              <h2 className='h2 atmosphere'>Join Team</h2>
+              <form id='join-form' onSubmit={joinTeam}>
+                <input type="text" id='team-code' placeholder="Enter a team code to join" value={teamCode} onChange={onChangCeode} />
+                <button type="submit" className="register team-btn">
+                  {/* <Link href="https://google.com" >
+                  </Link> */}
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Join Team
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        </>}
+        <section className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8" id="getBlur">
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
             <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
@@ -25,9 +145,7 @@ const EvenTemp = (props) => {
               <div class="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
             <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-              cupiditate minimm eveniet illo? Quo odit, nihil consectetur beatae
-              eaque ab voluptatem? Voluptas.
+              {props.data.description[0]}
               {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations
                 take out solutions that nobody has ever thought and get involved
@@ -54,7 +172,7 @@ const EvenTemp = (props) => {
                     fill="white"
                   ></path>{" "}
                 </svg>
-                <p> Date</p>
+                <p> {props.data.date}</p>
               </div>
               <div className="flex gap-2 hel">
                 <svg
@@ -84,13 +202,13 @@ const EvenTemp = (props) => {
               </div>
             </div>
             <div className=" devfolio-button flex justify-center md:justify-start ">
-              <Link to="/" className="register ">
+              <button to="/" className="register " onClick={registerModal}>
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Register
-              </Link>
+              </button>
             </div>
           </div>
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
@@ -119,37 +237,34 @@ const EvenTemp = (props) => {
         <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw mt-24 md:mt-32">
           Information
         </div>
-        <div className="  uh-bg mt-8 p-4 mb-16 md:mb-32 pb-16">
-          <div className="container mx-auto flex gap-6 flex-col md:flex-row ">
-            <div className="basis-2/6">
+        <div className="  uh-bg mt-8 px-4 md:px-12 py-8 mb-16 md:mb-32 pb-16">
+          <div className="container  ">
+            <div className="">
               <h4 className="subheading txt-shdw">About</h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate minimm eveniet illo? Quo odit, nihil
-                consectetur beatae eaque ab voluptatem? Voluptas.
-              </p>
+              <ul>
+                {props.data.description.map((item) => {
+                  console.log(item);
+                  return (<li>{item}</li>)
+                })}
+              </ul>
             </div>
-            <div className="basis-2/6">
-              {" "}
-              <h4 className="subheading txt-shdw txt-shdw">Structure</h4>
+          </div>
+          <div className="container  ">
+            <div className="">
+              <h4 className="subheading txt-shdw">Rules</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate mi eveniet illo? Quo odit, nihil consectetur
-                beatae eaque ab voluptatem? Voluptas.
-              </p>
-            </div>
-            <div className="basis-2/6">
-              {" "}
-              <h4 className="subheading txt-shdw">Timeline</h4>
-              <p>
-                Lorem, ips eveniet illo? Quo odit, nihil consectetur beatae
-                eaque ab voluptatem? Voluptas.
+                <ul>
+                  {props.data.rules.map((item) => {
+                    console.log(item);
+                    return (<li>{item}</li>)
+                  })}
+                </ul>
               </p>
             </div>
           </div>
           <div className="container mx-auto flex gap-6 flex-col md:flex-row ">
             <div className="basis-2/6">
-              <h4 className="subheading txt-shdw">Rules</h4>
+              <h4 className="subheading txt-shdw">Timeline</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Deserunt cupiditate minieveniet illo? Quo odit, nihil
@@ -160,9 +275,12 @@ const EvenTemp = (props) => {
               {" "}
               <h4 className="subheading txt-shdw">Prize</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate llo? Quo odit, nihil consectetur beatae
-                eaque ab voluptatem? Voluptas.
+                <ul>
+                  {props.data.prize.map((item) => {
+                    console.log(item);
+                    return (<li>{item}</li>)
+                  })}
+                </ul>
               </p>
             </div>
             <div className="basis-2/6">

@@ -13,7 +13,7 @@ export default function Modal({ data, buttonName, setAuthKey, userDetails, setpr
   const [openModal, setOpenModal] = useState(false);
   console.log(tempuserObject)
   return (
-    <div>
+    <div className="modalbox">
       <button
         className="show-modal"
         onClick={() => {

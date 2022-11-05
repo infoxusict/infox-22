@@ -257,8 +257,8 @@ const Uhack = () => {
       <MatrixRain />
       <div className="container mx-auto">
         <div className="md:pt-24  text-white">
-          <section className=" flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8">
-            <div className="basis-1/2 mt-8 md:mt-16 ">
+          <section className=" flex flex-col-reverse  md:flex-row md:gap-32 pb-16 uh-bg md:pl-8">
+            <div className="basis-1/2 mt-8 md:mt-16 md:pl-8">
               {/* <div className="atmosphere text-7xl">Uhack</div> */}
               <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
                 <div class="sn_line_forNHeading">Uhack</div>
@@ -327,7 +327,7 @@ const Uhack = () => {
                   <p className="">2 PM</p>
                 </div>
               </div>
-              <div className=" devfolio-button flex justify-center md:justify-start">
+              <div className=" mt-12 md:mt-48 flex justify-center md:justify-start">
                 <div
                   class="apply-button"
                   data-hackathon-slug="uhack5"
@@ -351,7 +351,7 @@ const Uhack = () => {
               </div>
               <div className="flex justify-center md:justify-end ">
                 <img
-                  src={require("./Assets/Images/images/uhack/1USICT-HACK-2022.png")}
+                  src={require("./Assets/Images/images/uhack/uhack-poster.png")}
                   alt="infox"
                   className="uh-img  p-4 uh-bg w-4/5 "
                 />

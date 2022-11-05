@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
 // import Cards from "./ScheduleCards";
-// import EventCardProfile from "./EventProfile";
+import EventCardProfile from "./EventProfile";
 import "./Assets/Images/CSS/profile.css";
-// import ProfileCard from "./ProfileCard";
+import ProfileCard from "./ProfileCard";
 import jwt_decode from "jwt-decode";
 import Modal from "./Modal";
 
@@ -25,6 +25,7 @@ const modalObject = [
   { question: "gradYear", placeholder: "gradYear" },
   { question: "contact", placeholder: "contact" },
 ];
+
 
 const Profile = () => {
   const [profileDATA, setprofileDATA] = React.useState({});
@@ -121,19 +122,25 @@ const Profile = () => {
     }
   };
   React.useEffect(() => {
+
     /* global google */
-    google.accounts.id.initialize({
-      client_id:
-        "272494210674-pij8m84sh3852areuj5cn6jpukais005.apps.googleusercontent.com",
-      callback: handleCallbackResponse,
-    });
+    const func = async () => {
+      await google.accounts.id.initialize({
+        client_id:
+          "272494210674-pij8m84sh3852areuj5cn6jpukais005.apps.googleusercontent.com",
+        callback: handleCallbackResponse,
+      });
 
-    google.accounts.id.renderButton(document.getElementById("googlebtn"), {
-      theme: "outline",
-      size: "large",
-    });
+      await google.accounts.id.renderButton(document.getElementById("googlebtn"), {
+        theme: "outline",
+        size: "large",
+      });
 
-    ifSignIn();
+      await ifSignIn();
+    }
+
+    func();
+    
     // eslint-disable-next-line
   }, []);
   return (
@@ -159,38 +166,42 @@ const Profile = () => {
               color: "#6CDE01",
             }}
           >
-            {!isAuthKey ? "Get Started" : "Register Events"}
+            {!isAuthKey ? "Get Started" : "Registered Events"}
           </div>
-          {isModalShown && !isAuthKey ? (
-            <Modal
-              data={modalObject}
-              buttonName="Complete Registration"
-              tempuserObject={tempuserObject}
-              userDetails={userDetails}
-              profileDATA={profileDATA}
-              setprofileDATA={setprofileDATA}
-              setAuthKey={setAuthKey}
-            />
-          ) : (
-            <></>
-          )}
-          {isAuthKey ? (
-            <>
-            <div className="bigbbb">
-              <EventCardProfile />
-              <div className="profilePart">
-                <ProfileCard
-                  name={profileDATA.name}
-                  image={profileDATA.image}
-                  gradYear={profileDATA.gradYear}
-                  college={profileDATA.college}
-                />
+          <div className="registeer">
+            {isModalShown && !isAuthKey ? (
+              <Modal
+                data={modalObject}
+                buttonName="Complete Registration"
+                tempuserObject={tempuserObject}
+                userDetails={userDetails}
+                profileDATA={profileDATA}
+                setprofileDATA={setprofileDATA}
+                setAuthKey={setAuthKey}
+              />
+            ) : (
+              <></>
+            )}
+            {isAuthKey ? (
+              <>
+                <div className="bigbbb">
+                  <EventCardProfile events = {profileDATA.events} />
+                  <div className="profilePart">
+                    <ProfileCard
+                      name={profileDATA.name}
+                      image={profileDATA.image}
+                      gradYear={profileDATA.gradYear}
+                      college={profileDATA.college}
+                    />
+                  </div>
                 </div>
+              </>
+            ) : (
+              <div className="ggbtn">
+              <div id="googlebtn"></div>
               </div>
-            </>
-          ) : (
-            <div id="googlebtn"></div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </>

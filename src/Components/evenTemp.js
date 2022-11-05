@@ -13,6 +13,7 @@ const EvenTemp = (props) => {
   const [teamName, setTeamName] = useState('');
   const [teamID, setTeamID] = useState('');
   const history = useHistory();
+  const [Result, setResult] = React.useState("Registration Complete");
 
 
   const onChangCeode = (event) => {
@@ -35,7 +36,7 @@ const EvenTemp = (props) => {
     // change here
     document.getElementById('getBlur').style.opacity = 0.05;
     document.body.style.overflow = "hidden";
-  }
+  } 
 
 
   const createTeam = async (e) => {
@@ -55,9 +56,22 @@ const EvenTemp = (props) => {
 
     // eslint-disable-next-line
     const json = await response.json();
-    console.log(json)
-    alert("Team already exist");
+    const changeResult = () => {
+      // if(JSON.stringify(json.error) == `"Already Exist"`){
+      //   setResult("Already exist");
+      // }
+      if(JSON.stringify(json.error) == undefined){
+        setResult("Already exist");
+      }
+    console.log(json);
+    alert(Result);
+      // if(JSON.stringify(json.success) == "True"){
+      //   setResult("Already exist");
+      // }
+    };
+    changeResult();
     setTeamID(json.teamId);
+    // alert(JSON.stringify(json.error));
     setRegister(false);
     // correct here
     document.getElementById('getBlur').style.opacity = 1;

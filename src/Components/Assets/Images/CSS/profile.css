@@ -10,11 +10,11 @@
     flex-direction: row;
 } */
 @media (max-width: 900px) {
-    .registeer{
+    /* .registeer{ */
         /* display: flex; */
         /* width: 50vw; */
         /* flex-direction: row; */
-    }
+    /* } */
 }
 .profileTitle {
     margin: 10vw 0vw 4vw 6vw;

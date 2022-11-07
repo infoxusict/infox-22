@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MatrixRain from "./MatrixRain";
 import { TiLocation } from "react-icons/ti";
+import { ImCross } from "react-icons/im";
 import { Link, useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
 import "./Assets/Images/CSS/uhack.css"
@@ -128,8 +129,13 @@ const EvenTemp = (props) => {
             <div className="cont">
               <div id="team-modal" className="container glass paddingg">
                 <div id="create-modal">
-                <button className="cross" onClick={leave} style={{color: "white "}}>cross</button>
-                  <h2 className="h2 atmosphere">Create Team</h2>
+                  <button
+                    className="cross md:text-xl text-xs absolute md:right-7 md:top-7 right-5 top-5"
+                    onClick={leave}
+                  >
+                    <ImCross/>
+                  </button>
+                  <h2 className="h2 atmosphere pt-5">Create Team</h2>
                   <form action="" id="create-form" onSubmit={createTeam}>
                     <input
                       type="text"
@@ -153,13 +159,15 @@ const EvenTemp = (props) => {
                     </button>
                   </form>
                   {createError}
-                  <div><Toaster /></div>
+                  <div>
+                    <Toaster />
+                  </div>
                   {teamID}
                 </div>
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
                 {/* <hr /> */}
                 <h2 className="h2 glitch" id="or">
-                  OR 
+                  OR
                 </h2>
                 <div id="join-modal">
                   <h2 className="h2 atmosphere">Join Team</h2>
@@ -187,7 +195,7 @@ const EvenTemp = (props) => {
         )}
         <section
           className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg  md:pl-24"
-          id="getBlur" 
+          id="getBlur"
         >
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
@@ -260,7 +268,11 @@ const EvenTemp = (props) => {
               </div>
             </div>
             <div className=" devfolio-button flex justify-center md:justify-start ">
-              <button to="/" className="register !mt-24 md:!mt-32" onClick={registerModal}>
+              <button
+                to="/"
+                className="register !mt-24 md:!mt-32"
+                onClick={registerModal}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -298,7 +310,6 @@ const EvenTemp = (props) => {
         <div className="  uh-bg mt-8 px-4 md:px-12 py-8 mb-16 md:mb-32 pb-16">
           {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row "> */}
           <div className="container mx-auto flex gap-6 flex-col ">
-
             <div className="basis-1/2 ">
               <h4 className="subheading txt-shdw">About</h4>
               <p>{props.data.about}</p>
@@ -310,11 +321,9 @@ const EvenTemp = (props) => {
                 <ul>{props.data.rules}</ul>
               </p>
             </div>
-            
           </div>
           {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row md:mt-7"> */}
           <div className="container mx-auto flex gap-6 flex-col  md:mt-7">
-
             <div className="basis-2/6">
               <h4 className="subheading txt-shdw">Team Size</h4>
               <p>{props.data.teamSize}</p>

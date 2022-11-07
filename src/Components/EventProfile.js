@@ -4,6 +4,8 @@ import "./Assets/Images/CSS/EventProfile.css";
 
 const EventCardProfile = (props) => {
   console.log(props.events);
+  console.log(props.events.eventId);
+
   return (
     <main className="page-content">
       {props.events.length != 0 ? (
@@ -21,10 +23,13 @@ const EventCardProfile = (props) => {
                 {event.teamName}
                 {event.teamId}
                 <p className="copy">
+                  {event.teamLead}
+                  <br />
                   {event.members.map((item) => {
                     return item;
                   })}
                 </p>
+
                 <Link className="btn" to={`/event/${event.eventId}`}>
                   More Info
                 </Link>
@@ -303,17 +308,15 @@ const EventCardProfile = (props) => {
             <span>Do it Now!</span>
           </div>
           <div>
-            <button
-              to="/"
-              className="register"
-              // onClick={registerModal}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Register
-            </button>
+            <Link to="/sch-event">
+              <button to="/" className="register">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Register
+              </button>
+            </Link>
           </div>
         </div>
       )}

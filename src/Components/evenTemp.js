@@ -76,7 +76,7 @@ const EvenTemp = (props) => {
     // correct here
     document.getElementById('getBlur').style.opacity = 1;
     document.body.style.overflow = "scroll";
-    history.push('./profile');
+    history.push('/profile');
   }
 
   const joinTeam = async (e) => {
@@ -108,7 +108,7 @@ const EvenTemp = (props) => {
     setRegister(false);
     // correct here
     document.getElementById('getBlur').style.opacity = 1;
-    history.push('./profile');
+    history.push('/profile');
   }
   function leave(){
     // var element = document.getElementById("team-modal");

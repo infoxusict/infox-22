@@ -5,6 +5,10 @@ import { Link, useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
 import "./Assets/Images/CSS/uhack.css"
 import "./Assets/Images/CSS/teammodal.css"
+import {Toaster, toast} from "react-hot-toast"
+
+// import { ToastContainer, toast } from 'react-toastify';
+  // import 'react-toastify/dist/ReactToastify.css';
 
 const EvenTemp = (props) => {
   console.log(props.data.eventPic)
@@ -61,6 +65,7 @@ const EvenTemp = (props) => {
     const json = await response.json();
 
     if (json.success === false) {
+      toast.error(json.error);
       setCreateError(json.error)
       return;
     }
@@ -71,6 +76,7 @@ const EvenTemp = (props) => {
     // correct here
     document.getElementById('getBlur').style.opacity = 1;
     document.body.style.overflow = "scroll";
+    history.push('/profile');
   }
 
   const joinTeam = async (e) => {
@@ -93,6 +99,7 @@ const EvenTemp = (props) => {
     console.log(json)
 
     if (json.success === false) {
+      toast.error(json.error);
       setJoinError(json.error)
       return;
     }
@@ -101,8 +108,17 @@ const EvenTemp = (props) => {
     setRegister(false);
     // correct here
     document.getElementById('getBlur').style.opacity = 1;
+    history.push('/profile');
   }
-
+  function leave(){
+    // var element = document.getElementById("team-modal");
+    // window.location.reload();
+    setRegister(false);
+    document.getElementById('getBlur').style.opacity = 1;
+    document.body.style.overflow = "visible";
+    // element.style.display = "none";
+    console.log("hehehehehe");
+}
   return (
     <>
       <MatrixRain />
@@ -112,6 +128,7 @@ const EvenTemp = (props) => {
             <div className="cont">
               <div id="team-modal" className="container glass paddingg">
                 <div id="create-modal">
+                <button className="cross" onClick={leave} style={{color: "white "}}>cross</button>
                   <h2 className="h2 atmosphere">Create Team</h2>
                   <form action="" id="create-form" onSubmit={createTeam}>
                     <input
@@ -135,13 +152,14 @@ const EvenTemp = (props) => {
                       Create
                     </button>
                   </form>
-                  {joinError}
+                  {createError}
+                  <div><Toaster /></div>
                   {teamID}
                 </div>
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
                 {/* <hr /> */}
                 <h2 className="h2 glitch" id="or">
-                  OR
+                  OR 
                 </h2>
                 <div id="join-modal">
                   <h2 className="h2 atmosphere">Join Team</h2>
@@ -154,7 +172,6 @@ const EvenTemp = (props) => {
                       onChange={onChangCeode}
                     />
                     <button type="submit" className="register team-btn hel">
-
                       <span></span>
                       <span></span>
                       <span></span>
@@ -169,8 +186,8 @@ const EvenTemp = (props) => {
           </>
         )}
         <section
-          className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8"
-          id="getBlur"
+          className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg  md:pl-24"
+          id="getBlur" 
         >
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
@@ -186,7 +203,7 @@ const EvenTemp = (props) => {
               <div class="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
             <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
-              {props.data.description}
+              {props.data.tagline}
               {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations
                 take out solutions that nobody has ever thought and get involved
@@ -235,15 +252,15 @@ const EvenTemp = (props) => {
                     fill="white"
                   ></path>{" "}
                 </svg>
-                <p className="">Time</p>
+                <p className="w-24">{props.data.time}</p>
               </div>
               <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <TiLocation size={33} className="" />
-                <p className="">Location</p>
+                <p className="">{props.data.venue}</p>
               </div>
             </div>
             <div className=" devfolio-button flex justify-center md:justify-start ">
-              <button to="/" className="register " onClick={registerModal}>
+              <button to="/" className="register !mt-24 md:!mt-32" onClick={registerModal}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -254,7 +271,7 @@ const EvenTemp = (props) => {
           </div>
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
             <div>
-              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block ml-12">
+              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
@@ -279,48 +296,42 @@ const EvenTemp = (props) => {
           Information
         </div>
         <div className="  uh-bg mt-8 px-4 md:px-12 py-8 mb-16 md:mb-32 pb-16">
-          <div className="container  ">
-            <div className="">
+          {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row "> */}
+          <div className="container mx-auto flex gap-6 flex-col ">
+
+            <div className="basis-1/2 ">
               <h4 className="subheading txt-shdw">About</h4>
-              <ul>
-                {props.data.about}
-              </ul>
+              <p>{props.data.about}</p>
             </div>
-          </div>
-          <div className="container  ">
-            <div className="">
+            <div className="basis-1/2">
+              {" "}
               <h4 className="subheading txt-shdw">Rules</h4>
               <p>
-                <ul>
-                  {props.data.rules}
-                </ul>
+                <ul>{props.data.rules}</ul>
               </p>
             </div>
+            
           </div>
-          <div className="container mx-auto flex gap-6 flex-col md:flex-row ">
+          {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row md:mt-7"> */}
+          <div className="container mx-auto flex gap-6 flex-col  md:mt-7">
+
             <div className="basis-2/6">
-              <h4 className="subheading txt-shdw">Timeline</h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate minieveniet illo? Quo odit, nihil
-                consectetur beatae eaque ab voluptatem? Voluptas.
-              </p>
+              <h4 className="subheading txt-shdw">Team Size</h4>
+              <p>{props.data.teamSize}</p>
             </div>
             <div className="basis-2/6">
               {" "}
               <h4 className="subheading txt-shdw">Prize</h4>
               <p>
-                <ul>
-                  {props.data.prize}  
-                </ul>
+                <ul>{props.data.prize}</ul>
               </p>
             </div>
             <div className="basis-2/6">
               {" "}
               <h4 className="subheading txt-shdw">Contact Us</h4>
               <p>
-                {props.data.contact.map((item)=>{
-                  return <li>{item}</li>
+                {props.data.contact.map((item) => {
+                  return <li>{item}</li>;
                 })}
               </p>
             </div>

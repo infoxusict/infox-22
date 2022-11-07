@@ -23,8 +23,11 @@
 
 .ProfileHeading {
     margin: 0vw 1vw 4vw 37vw;
-    margin: auto;
     font-size: 2.2vw;
+}
+.reggg{
+    margin: 0vw 1vw 4vw -37vw;
+    /* margin:  !important; */
 }
 
 
@@ -198,6 +201,7 @@
 .ggbtn{
     display: flex;
     justify-items: center;
+    margin: 0vw -2vw 1vw 1vw !important;
     /* height: 20vw; */
 }
 #googlebtn{

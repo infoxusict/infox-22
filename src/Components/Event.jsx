@@ -49,6 +49,19 @@ function Event() {
               <div className="sch-event-card">
                 <div className="sch-event-pic">
                   <img src={event.eventPic} className="sch-event-img" alt="" />
+                  <button className="mt-12 mb-4 b1n">
+                    <a
+                      href={"http://localhost:3000/event/" + event.eventId}
+                      className="register teams-btn text-xs q12"
+                    >
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      Visit Event
+                    </a>
+                  </button>
+                
                 </div>
                 <div className="sch-event-info">
                   <h2 className="sch-event-name mt-6 text-2xl  atmosphere">
@@ -59,21 +72,10 @@ function Event() {
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
                   <h3 className="sch-event-desc line-clamp-1">
-                    {event.description[0].split("", 150)}...
+                    {event.about}
                   </h3>
-                  <button className="mt-12 mb-4">
-                    <a
-                      href={"http://localhost:3000/event/" + event.eventId}
-                      className="register teams-btn text-xs "
-                    >
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      Visit Event
-                    </a>
-                  </button>
-                </div>
+                  
+              </div>
               </div>
             ))}
         </div>

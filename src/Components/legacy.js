@@ -77,22 +77,22 @@ export default function Legacy() {
               LEGACY
             </span>
           </div> */}
-          <div className="sn_glitch_forNHeading atmosphere">
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
+          <div class="sn_glitch_forNHeading atmosphere">
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
           </div>
           <div className="hero__left-desc">
             <span>
               InfoXpression2022 edition is set to continue its legacy as one of
-              the biggest techfest of GGSIPU (USICT).This year, InfoX aims to
-              be bigger, bolder, and better.
+              the biggest techfest of GGSIPU (USICT).This year, InfoX aims to be
+              bigger, bolder, and better.
             </span>
           </div>
         </div>
@@ -106,21 +106,21 @@ export default function Legacy() {
             </div>
             <Slider
               sliderData={sliderData1}
-              gridclassName="slider-3"
+              gridClass="slider-3"
               width="20"
               height="22.5"
               xSlide="reverse"
             />
             <Slider
               sliderData={sliderData2}
-              gridclassName="slider-2"
+              gridClass="slider-2"
               width="30"
               height="45"
               ySlide="true"
             />
             <Slider
               sliderData={sliderData3}
-              gridclassName="slider-1"
+              gridClass="slider-1"
               width="50"
               height="45"
             />
@@ -142,16 +142,16 @@ export default function Legacy() {
               LEGACY
             </span>
           </div> */}
-          <div className="sn_glitch_forNHeading atmosphere phone_lagecy">
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
-            <div className="sn_line_forNHeading">LEGACY</div>
+          <div class="sn_glitch_forNHeading atmosphere phone_lagecy">
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
+            <div class="sn_line_forNHeading">LEGACY</div>
           </div>
           {/* <div className="hero__left-desc">
             <span>
@@ -171,21 +171,21 @@ export default function Legacy() {
             </div>
             <Slider
               sliderData={sliderData1}
-              gridclassName="slider-3"
+              gridClass="slider-3"
               width="40"
               height="25"
               xSlide="reverse"
             />
             <Slider
               sliderData={sliderData2}
-              gridclassName="slider-2"
+              gridClass="slider-2"
               width="60"
               height="50"
               // ySlide="true"
             />
             <Slider
               sliderData={sliderData3}
-              gridclassName="slider-1"
+              gridClass="slider-1"
               width="100"
               height="50"
             />

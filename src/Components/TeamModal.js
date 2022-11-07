@@ -7,6 +7,7 @@ function TeamModal() {
     return (
         <div id='join-parent'>
             <MatrixRain />
+            
             <div id='team-modal' className='glass'>
                 <div id="create-modal">
                     <h2 className='h2 atmosphere'>Create Team</h2>

@@ -5,6 +5,8 @@ import { Link, useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
 import "./Assets/Images/CSS/uhack.css"
 import "./Assets/Images/CSS/teammodal.css"
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const EvenTemp = (props) => {
   console.log(props.data.eventPic)
@@ -61,6 +63,7 @@ const EvenTemp = (props) => {
     const json = await response.json();
 
     if (json.success === false) {
+      const notifyC = () => toast(json.error);
       setCreateError(json.error)
       return;
     }
@@ -93,6 +96,7 @@ const EvenTemp = (props) => {
     console.log(json)
 
     if (json.success === false) {
+      const notifyJ = () => toast(json.error);
       setJoinError(json.error)
       return;
     }
@@ -102,7 +106,15 @@ const EvenTemp = (props) => {
     // correct here
     document.getElementById('getBlur').style.opacity = 1;
   }
-
+  function leave(){
+    // var element = document.getElementById("team-modal");
+    // window.location.reload();
+    setRegister(false);
+    document.getElementById('getBlur').style.opacity = 1;
+    document.body.style.overflow = "visible";
+    // element.style.display = "none";
+    console.log("hehehehehe");
+}
   return (
     <>
       <MatrixRain />
@@ -112,6 +124,7 @@ const EvenTemp = (props) => {
             <div className="cont">
               <div id="team-modal" className="container glass paddingg">
                 <div id="create-modal">
+                <button className="cross" onClick={leave} style={{color: "white "}}>cross</button>
                   <h2 className="h2 atmosphere">Create Team</h2>
                   <form action="" id="create-form" onSubmit={createTeam}>
                     <input
@@ -135,7 +148,8 @@ const EvenTemp = (props) => {
                       Create
                     </button>
                   </form>
-                  {createError}
+                  {/* {notifyC} */}
+                  {/* <ToastContainer /> */}
                   {teamID}
                 </div>
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
@@ -161,7 +175,8 @@ const EvenTemp = (props) => {
                       Join Team
                     </button>
                   </form>
-                  {joinError}
+                  {/* {notifyJ} */}
+                  {/* <ToastContainer /> */}
                 </div>
               </div>
             </div>

@@ -36,33 +36,60 @@ const Home = (props) => {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="home-textCon">
+            <div className="home-textCon ">
               <div className="sn_glitch atmosphere">
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div className="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
               </div>
@@ -76,8 +103,8 @@ const Home = (props) => {
               >
                 OCTOBER 2022
               </h3> */}
-                <p style={{ textAlign: "center" }}>
-                  17th - 19th NOVEMBER 2022 <br />
+                <p style={{ textAlign: "center" }} className="md:translate-y-16 md:text-xl">
+                  18th - 20th NOVEMBER 2022 <br />
                   TECHFEST USICT | GGSIPU <br />
                   CELEBRATING THE SENSE OF BELONGING
                 </p>

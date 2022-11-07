@@ -156,7 +156,7 @@ const Profile = () => {
               color: "#6CDE01",
             }}
           >
-            {!isAuthKey ? "Get Started" :<h1 className="reggg">Registered enent</h1>}
+            {!isAuthKey ? "Get Started" :<h1 className="reggg">Registered Event</h1>}
             
           </div>
           <div className="registeer">

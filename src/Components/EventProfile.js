@@ -4,11 +4,11 @@ import "./Assets/Images/CSS/EventProfile.css";
 
 const EventCardProfile = (props) => {
   console.log(props.events);
-  console.log(props.events.eventId);
+  console.log(props.events);
 
   return (
     <main className="page-content">
-      {props.events.length != 0 ? (
+      {props.events.length !== 0 ? (
         props.events.map((event) => {
           return (
             <div
@@ -21,16 +21,22 @@ const EventCardProfile = (props) => {
               <div className="content">
                 <h2 className="title">{event.eventId.eventName}</h2>
                 {event.teamName}
+                <br />
                 {event.teamId}
                 <p className="copy">
                   {event.teamLead}
                   <br />
                   {event.members.map((item) => {
-                    return item;
+                    return (
+                      <>
+                    {item}
+                    <br/>
+                      </>
+                    );
                   })}
                 </p>
 
-                <Link className="btn" to={`/event/${event.eventId}`}>
+                <Link className="btn" to={`/event/${event.eventId.eventId}`}>
                   More Info
                 </Link>
               </div>

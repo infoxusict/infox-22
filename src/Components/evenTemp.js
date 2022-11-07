@@ -14,6 +14,8 @@ const EvenTemp = (props) => {
   const [teamID, setTeamID] = useState('');
   const history = useHistory();
   const [Result, setResult] = React.useState("Registration Complete");
+  const [joinError, setJoinError] = useState('');
+  const [createError, setCreateError] = useState('');
 
 
   const onChangCeode = (event) => {
@@ -36,7 +38,7 @@ const EvenTemp = (props) => {
     // change here
     document.getElementById('getBlur').style.opacity = 0.05;
     document.body.style.overflow = "hidden";
-  } 
+  }
 
 
   const createTeam = async (e) => {
@@ -56,20 +58,12 @@ const EvenTemp = (props) => {
 
     // eslint-disable-next-line
     const json = await response.json();
-    const changeResult = () => {
-      // if(JSON.stringify(json.error) == `"Already Exist"`){
-      //   setResult("Already exist");
-      // }
-      if(JSON.stringify(json.error) === undefined){
-        setResult("Already exist");
-      }
-    console.log(json);
-    alert(Result);
-      // if(JSON.stringify(json.success) == "True"){
-      //   setResult("Already exist");
-      // }
-    };
-    changeResult();
+
+    if (json.success === false) {
+      setCreateError(json.error)
+      return;
+    }
+
     setTeamID(json.teamId);
     // alert(JSON.stringify(json.error));
     setRegister(false);
@@ -96,6 +90,12 @@ const EvenTemp = (props) => {
     // eslint-disable-next-line
     const json = await response.json();
     console.log(json)
+
+    if (json.success === false) {
+      setJoinError(json.error)
+      return;
+    }
+
     setTeamID(json.teamId);
     setRegister(false);
     // correct here
@@ -134,6 +134,7 @@ const EvenTemp = (props) => {
                       Create
                     </button>
                   </form>
+                  {joinError}
                   {teamID}
                 </div>
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
@@ -152,7 +153,7 @@ const EvenTemp = (props) => {
                       onChange={onChangCeode}
                     />
                     <button type="submit" className="register team-btn hel">
-                  
+
                       <span></span>
                       <span></span>
                       <span></span>
@@ -160,6 +161,7 @@ const EvenTemp = (props) => {
                       Join Team
                     </button>
                   </form>
+                  {joinError}
                 </div>
               </div>
             </div>
@@ -183,7 +185,7 @@ const EvenTemp = (props) => {
               <div class="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
             <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
-              {props.data.description[0]}
+              {/* {props.data.description[0]} */}
               {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations
                 take out solutions that nobody has ever thought and get involved
@@ -280,10 +282,10 @@ const EvenTemp = (props) => {
             <div className="">
               <h4 className="subheading txt-shdw">About</h4>
               <ul>
-                {props.data.description.map((item) => {
+                {/* {props.data.description.map((item) => {
                   console.log(item);
                   return <li>{item}</li>;
-                })}
+                })} */}
               </ul>
             </div>
           </div>
@@ -292,10 +294,10 @@ const EvenTemp = (props) => {
               <h4 className="subheading txt-shdw">Rules</h4>
               <p>
                 <ul>
-                  {props.data.rules.map((item) => {
+                  {/* {props.data.rules.map((item) => {
                     console.log(item);
                     return <li>{item}</li>;
-                  })}
+                  })} */}
                 </ul>
               </p>
             </div>
@@ -314,10 +316,10 @@ const EvenTemp = (props) => {
               <h4 className="subheading txt-shdw">Prize</h4>
               <p>
                 <ul>
-                  {props.data.prize.map((item) => {
+                  {/* {props.data.prize.map((item) => {
                     console.log(item);
                     return <li>{item}</li>;
-                  })}
+                  })} */}
                 </ul>
               </p>
             </div>

@@ -7,6 +7,7 @@ import "./Assets/Images/CSS/uhack.css"
 import "./Assets/Images/CSS/teammodal.css"
 
 const EvenTemp = (props) => {
+  console.log(props.data.eventPic)
 
   const [register, setRegister] = useState(false);
   const [teamCode, setTeamcode] = useState('');
@@ -183,7 +184,7 @@ const EvenTemp = (props) => {
               <div class="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
             <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
-              {props.data.description[0]}
+              {props.data.description}
               {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations
                 take out solutions that nobody has ever thought and get involved
@@ -280,10 +281,7 @@ const EvenTemp = (props) => {
             <div className="">
               <h4 className="subheading txt-shdw">About</h4>
               <ul>
-                {props.data.description.map((item) => {
-                  console.log(item);
-                  return <li>{item}</li>;
-                })}
+                {props.data.about}
               </ul>
             </div>
           </div>
@@ -292,10 +290,7 @@ const EvenTemp = (props) => {
               <h4 className="subheading txt-shdw">Rules</h4>
               <p>
                 <ul>
-                  {props.data.rules.map((item) => {
-                    console.log(item);
-                    return <li>{item}</li>;
-                  })}
+                  {props.data.rules}
                 </ul>
               </p>
             </div>
@@ -314,10 +309,7 @@ const EvenTemp = (props) => {
               <h4 className="subheading txt-shdw">Prize</h4>
               <p>
                 <ul>
-                  {props.data.prize.map((item) => {
-                    console.log(item);
-                    return <li>{item}</li>;
-                  })}
+                  {props.data.prize}  
                 </ul>
               </p>
             </div>
@@ -325,9 +317,9 @@ const EvenTemp = (props) => {
               {" "}
               <h4 className="subheading txt-shdw">Contact Us</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate minit, nihil consectetur beatae eaque ab
-                voluptatem? Voluptas.
+                {props.data.contact.map((item)=>{
+                  return <li>{item}</li>
+                })}
               </p>
             </div>
           </div>

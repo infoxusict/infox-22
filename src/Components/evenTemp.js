@@ -236,7 +236,7 @@ const EvenTemp = (props) => {
                     fill="white"
                   ></path>{" "}
                 </svg>
-                <p className="">{props.data.time}</p>
+                <p className="w-24">{props.data.time}</p>
               </div>
               <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <TiLocation size={33} className="" />
@@ -244,7 +244,7 @@ const EvenTemp = (props) => {
               </div>
             </div>
             <div className=" devfolio-button flex justify-center md:justify-start ">
-              <button to="/" className="register " onClick={registerModal}>
+              <button to="/" className="register !mt-24 md:!mt-32" onClick={registerModal}>
                 <span></span>
                 <span></span>
                 <span></span>

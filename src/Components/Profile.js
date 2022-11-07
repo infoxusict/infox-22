@@ -26,7 +26,6 @@ const modalObject = [
   { question: "contact", placeholder: "contact" },
 ];
 
-
 const Profile = () => {
   const [profileDATA, setprofileDATA] = React.useState({});
   const [isModalShown, setIsModalShown] = useState(false);
@@ -36,17 +35,16 @@ const Profile = () => {
   const ifSignIn = async () => {
     var x = localStorage.getItem("authkey");
     if (x != null && x !== undefined) {
-      fetch(
-        "https://infoxpression.herokuapp.com/user/getDetails",
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-            authToken: localStorage.getItem("authkey"),
-          },
-          referrerPolicy: "origin-when-cross-origin",
-        }
-      ).then(res => res.json()).then(res => setprofileDATA(res))
+      fetch("https://infoxpression.herokuapp.com/user/getDetails", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          authToken: localStorage.getItem("authkey"),
+        },
+        referrerPolicy: "origin-when-cross-origin",
+      })
+        .then((res) => res.json())
+        .then((res) => setprofileDATA(res));
       setAuthKey(true);
       return true;
     }
@@ -97,23 +95,21 @@ const Profile = () => {
         localStorage.setItem("authkey", checkres.authKey);
 
         // as we get the auth key we can fetch the data from db
-        fetch(
-          "https://infoxpression.herokuapp.com/user/getDetails",
-          {
-            method: "POST",
-            headers: {
-              "Content-type": "application/json",
-              authToken: localStorage.getItem("authkey"),
-            },
-            referrerPolicy: "origin-when-cross-origin",
-          }
-        ).then(res => res.json()).then(res => setprofileDATA(res));
+        fetch("https://infoxpression.herokuapp.com/user/getDetails", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+            authToken: localStorage.getItem("authkey"),
+          },
+          referrerPolicy: "origin-when-cross-origin",
+        })
+          .then((res) => res.json())
+          .then((res) => setprofileDATA(res));
         setAuthKey(true);
       }
     }
   };
   React.useEffect(() => {
-
     /* global google */
     const func = async () => {
       await google.accounts.id.initialize({
@@ -122,16 +118,19 @@ const Profile = () => {
         callback: handleCallbackResponse,
       });
 
-      await google.accounts.id.renderButton(document.getElementById("googlebtn"), {
-        theme: "outline",
-        size: "large",
-      });
+      await google.accounts.id.renderButton(
+        document.getElementById("googlebtn"),
+        {
+          theme: "outline",
+          size: "large",
+        }
+      );
 
       await ifSignIn();
-    }
+    };
 
     func();
-    
+    console.log(profileDATA);
     // eslint-disable-next-line
   }, []);
   return (
@@ -177,7 +176,7 @@ const Profile = () => {
             {isAuthKey && profileDATA?.events ? (
               <>
                 <div className="bigbbb">
-                  <EventCardProfile events = {profileDATA.events} />
+                  <EventCardProfile events={profileDATA.events} />
                   <div className="profilePart">
                     <ProfileCard
                       name={profileDATA.name}
@@ -190,7 +189,7 @@ const Profile = () => {
               </>
             ) : (
               <div className="ggbtn">
-              <div id="googlebtn"></div>
+                <div id="googlebtn"></div>
               </div>
             )}
           </div>

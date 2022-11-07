@@ -5,8 +5,10 @@ import { Link, useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
 import "./Assets/Images/CSS/uhack.css"
 import "./Assets/Images/CSS/teammodal.css"
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import {Toaster, toast} from "react-hot-toast"
+
+// import { ToastContainer, toast } from 'react-toastify';
+  // import 'react-toastify/dist/ReactToastify.css';
 
 const EvenTemp = (props) => {
   console.log(props.data.eventPic)
@@ -63,7 +65,7 @@ const EvenTemp = (props) => {
     const json = await response.json();
 
     if (json.success === false) {
-      const notifyC = () => toast(json.error);
+      toast.error(json.error);
       setCreateError(json.error)
       return;
     }
@@ -97,7 +99,7 @@ const EvenTemp = (props) => {
     console.log(json)
 
     if (json.success === false) {
-      const notifyJ = () => toast(json.error);
+      toast.error(json.error);
       setJoinError(json.error)
       return;
     }
@@ -150,8 +152,8 @@ const EvenTemp = (props) => {
                       Create
                     </button>
                   </form>
-                  {/* {notifyC} */}
-                  {/* <ToastContainer /> */}
+                  {createError}
+                  <div><Toaster /></div>
                   {teamID}
                 </div>
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
@@ -177,8 +179,7 @@ const EvenTemp = (props) => {
                       Join Team
                     </button>
                   </form>
-                  {/* {notifyJ} */}
-                  {/* <ToastContainer /> */}
+                  {joinError}
                 </div>
               </div>
             </div>

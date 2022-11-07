@@ -2,18 +2,29 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Assets/Images/CSS/teammodal.css"
 import MatrixRain from './MatrixRain'
+import {Toaster, toast} from "react-hot-toast"
 
-function TeamModal() {
-    return (
+// function TeamModal() {
+//     const [teamName, setteamName] = React.useState(false)
+    
+    
+    const checkValid = ()=>{
+//         if(teamName.length == 0){
+//             toast.error("Team Name Not Entered !!!!");
+//         }
+//     } 
+    return 
+        (
+        
         <div id='join-parent'>
             <MatrixRain />
-            
+
             <div id='team-modal' className='glass'>
                 <div id="create-modal">
                     <h2 className='h2 atmosphere'>Create Team</h2>
                     <form action="" id='create-form'>
-                        <input type="text" id='team-name' />
-                        <button type="submit" id='create-btn'>
+                        <input type="text" id='team-name'  />
+                        <button type="submit" id='create-btn'onClick={checkValid}>
                             <Link href="https://google.com" className="register team-btn">
                                 <span></span>
                                 <span></span>

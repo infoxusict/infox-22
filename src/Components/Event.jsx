@@ -59,7 +59,7 @@ function Event() {
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
                   <h3 className="sch-event-desc line-clamp-1">
-                    {event.description[0].split("", 150)}...
+                    {event.about}...
                   </h3>
                   <button className="mt-12 mb-4">
                     <a

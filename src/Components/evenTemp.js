@@ -71,6 +71,7 @@ const EvenTemp = (props) => {
     // correct here
     document.getElementById('getBlur').style.opacity = 1;
     document.body.style.overflow = "scroll";
+    history.push('./profile');
   }
 
   const joinTeam = async (e) => {
@@ -101,6 +102,7 @@ const EvenTemp = (props) => {
     setRegister(false);
     // correct here
     document.getElementById('getBlur').style.opacity = 1;
+    history.push('./profile');
   }
 
   return (
@@ -141,7 +143,7 @@ const EvenTemp = (props) => {
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
                 {/* <hr /> */}
                 <h2 className="h2 glitch" id="or">
-                  OR
+                  OR 
                 </h2>
                 <div id="join-modal">
                   <h2 className="h2 atmosphere">Join Team</h2>

@@ -253,7 +253,7 @@ const EvenTemp = (props) => {
           </div>
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
             <div>
-              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block ml-12">
+              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
                 <div class="sn_line_forNHeading">{props.data.eventName}</div>
@@ -278,7 +278,9 @@ const EvenTemp = (props) => {
           Information
         </div>
         <div className="  uh-bg mt-8 px-4 md:px-12 py-8 mb-16 md:mb-32 pb-16">
-          <div className="container mx-auto flex gap-6 flex-col md:flex-row ">
+          {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row "> */}
+          <div className="container mx-auto flex gap-6 flex-col ">
+
             <div className="basis-1/2 ">
               <h4 className="subheading txt-shdw">About</h4>
               <p>{props.data.about}</p>
@@ -292,7 +294,9 @@ const EvenTemp = (props) => {
             </div>
             
           </div>
-          <div className="container mx-auto flex gap-6 flex-col md:flex-row md:mt-7">
+          {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row md:mt-7"> */}
+          <div className="container mx-auto flex gap-6 flex-col  md:mt-7">
+
             <div className="basis-2/6">
               <h4 className="subheading txt-shdw">Team Size</h4>
               <p>{props.data.teamSize}</p>

@@ -135,7 +135,7 @@ const EvenTemp = (props) => {
                       Create
                     </button>
                   </form>
-                  {joinError}
+                  {createError}
                   {teamID}
                 </div>
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}

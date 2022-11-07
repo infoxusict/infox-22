@@ -8,13 +8,15 @@ const EventCardProfile = (props) => {
 		<main className="page-content">
 			{props.events && props.events.map((event) => {
 				return (
-					<div className="card" style={{ backgroundImage: `url(${event.eventPic})` }}>
+					<div className="card" style={{ backgroundImage: `url(${event.eventId.eventPic})` , backgroundSize : "cover" }}>
 						<div className="content">
-							<h2 className="title">{event.eventName}</h2>
+							<h2 className="title">{event.eventId.eventName}</h2>
+              {event.teamName}
+              {event.teamId}
 							<p className="copy">
-								Samrat <br />
-								Shivesh
-								<br /> Tejasva
+								{event.members.map((item)=>{
+                  return item;
+                })}
 							</p>
 							<Link className="btn" to={`/event/${event.eventId}`}>
 								More Info

@@ -90,17 +90,32 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <a href="/#/event" className="navigation__link">
-              Register
-            </a> */}
+            Register
+          </a> */}
           {/* </li> */}
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <Link to="/profile" className="navigation__link">
+              <span>Profile</span>
+            </Link>
+          </li>
           <li className="navigation__item" onClick={handleNavToggle}>
             <Link to="/legacy" className="navigation__link">
               <span>Legacy</span>
             </Link>
           </li>
           <li className="navigation__item" onClick={handleNavToggle}>
+            <Link to="/sch-event" className="navigation__link">
+              <span>Events</span>
+            </Link>
+          </li>
+          {/* <li className="navigation__item" onClick={handleNavToggle}>
             <Link to="/event" className="navigation__link">
               <span>Schedule</span>
+            </Link>
+          </li> */}
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <Link to="/uhack" class="navigation__link">
+              <span>UHACK</span>
             </Link>
           </li>
           <li className="navigation__item" onClick={handleNavToggle}>
@@ -109,23 +124,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li class="navigation__item" onClick={handleNavToggle}>
-            <Link to="/uhack" class="navigation__link">
-              <span>UHACK</span>
-            </Link>
-          </li>
-          <li className="navigation__item" onClick={handleNavToggle}>
-            <Link to="/sch-event" className="navigation__link">
-              <span>Events</span>
-            </Link>
-          </li>
-          <li class="navigation__item" onClick={handleNavToggle}>
             <Link to="/contact" className="navigation__link">
               <span>Contact us</span>
-            </Link>
-          </li>
-          <li class="navigation__item" onClick={handleNavToggle}>
-            <Link to="/profile" className="navigation__link">
-              <span>Profile</span>
             </Link>
           </li>
           {/* <li class="navigation__item" onClick={handleNavToggle}>

@@ -92,9 +92,9 @@
 .navigation__link:link,
 .navigation__link:visited {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -249,9 +249,9 @@
 .navigation__link:link,
 .navigation__link:visited {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;

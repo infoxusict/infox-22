@@ -35,9 +35,8 @@ const Profile = () => {
   //function to check whether user is signed up already
   const ifSignIn = async () => {
     var x = localStorage.getItem("authkey");
-    // console.log(userDetails);
     if (x != null && x !== undefined) {
-      const getDetailsRes = await fetch(
+      fetch(
         "https://infoxpression.herokuapp.com/user/getDetails",
         {
           method: "POST",
@@ -47,10 +46,7 @@ const Profile = () => {
           },
           referrerPolicy: "origin-when-cross-origin",
         }
-      );
-      var finaldetailsres = await getDetailsRes.json();
-      userDetails = finaldetailsres;
-      setprofileDATA(finaldetailsres);
+      ).then(res => res.json()).then(res => setprofileDATA(res))
       setAuthKey(true);
       return true;
     }
@@ -101,7 +97,7 @@ const Profile = () => {
         localStorage.setItem("authkey", checkres.authKey);
 
         // as we get the auth key we can fetch the data from db
-        const getDetailsRes = await fetch(
+        fetch(
           "https://infoxpression.herokuapp.com/user/getDetails",
           {
             method: "POST",
@@ -111,12 +107,7 @@ const Profile = () => {
             },
             referrerPolicy: "origin-when-cross-origin",
           }
-        );
-        // console.log(finaldetailsres);
-        var finaldetailsres = await getDetailsRes.json();
-        console.log(finaldetailsres);
-        userDetails = finaldetailsres;
-        setprofileDATA(finaldetailsres);
+        ).then(res => res.json()).then(res => setprofileDATA(res));
         setAuthKey(true);
       }
     }
@@ -145,17 +136,17 @@ const Profile = () => {
   }, []);
   return (
     <>
-      <MatrixRain />
-      <div class="sn_glitch_forNHeading atmosphere sn_teamheading profileTitle">
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
+      {/* <MatrixRain /> */}
+      <div className="sn_glitch_forNHeading atmosphere sn_teamheading profileTitle">
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
       </div>
       <div className="ParticipantProfile">
         <div className="eventsParticipated">
@@ -182,7 +173,7 @@ const Profile = () => {
             ) : (
               <></>
             )}
-            {isAuthKey ? (
+            {isAuthKey && profileDATA?.events ? (
               <>
                 <div className="bigbbb">
                   <EventCardProfile events = {profileDATA.events} />

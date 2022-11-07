@@ -15,6 +15,8 @@ const EvenTemp = (props) => {
   const [teamID, setTeamID] = useState('');
   const history = useHistory();
   const [Result, setResult] = React.useState("Registration Complete");
+  const [joinError, setJoinError] = useState('');
+  const [createError, setCreateError] = useState('');
 
 
   const onChangCeode = (event) => {
@@ -37,7 +39,7 @@ const EvenTemp = (props) => {
     // change here
     document.getElementById('getBlur').style.opacity = 0.05;
     document.body.style.overflow = "hidden";
-  } 
+  }
 
 
   const createTeam = async (e) => {
@@ -57,20 +59,12 @@ const EvenTemp = (props) => {
 
     // eslint-disable-next-line
     const json = await response.json();
-    const changeResult = () => {
-      // if(JSON.stringify(json.error) == `"Already Exist"`){
-      //   setResult("Already exist");
-      // }
-      if(JSON.stringify(json.error) === undefined){
-        setResult("Already exist");
-      }
-    console.log(json);
-    alert(Result);
-      // if(JSON.stringify(json.success) == "True"){
-      //   setResult("Already exist");
-      // }
-    };
-    changeResult();
+
+    if (json.success === false) {
+      setCreateError(json.error)
+      return;
+    }
+
     setTeamID(json.teamId);
     // alert(JSON.stringify(json.error));
     setRegister(false);
@@ -97,6 +91,12 @@ const EvenTemp = (props) => {
     // eslint-disable-next-line
     const json = await response.json();
     console.log(json)
+
+    if (json.success === false) {
+      setJoinError(json.error)
+      return;
+    }
+
     setTeamID(json.teamId);
     setRegister(false);
     // correct here
@@ -135,6 +135,7 @@ const EvenTemp = (props) => {
                       Create
                     </button>
                   </form>
+                  {joinError}
                   {teamID}
                 </div>
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
@@ -160,6 +161,7 @@ const EvenTemp = (props) => {
                       Join Team
                     </button>
                   </form>
+                  {joinError}
                 </div>
               </div>
             </div>

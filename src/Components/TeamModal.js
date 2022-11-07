@@ -2,20 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Assets/Images/CSS/teammodal.css"
 import MatrixRain from './MatrixRain'
-import {Toaster, toast} from "react-hot-toast"
+import { toast} from "react-hot-toast"
 
-// function TeamModal() {
-//     const [teamName, setteamName] = React.useState(false)
+function TeamModal() {
+    // eslint-disable-next-line
+    const [teamName, setteamName] = React.useState(false)
     
     
     const checkValid = ()=>{
-//         if(teamName.length == 0){
-//             toast.error("Team Name Not Entered !!!!");
-//         }
-//     } 
-    return 
-        (
-        
+        if(teamName.length === 0){
+            toast.error("Team Name Not Entered !!!!");
+        }
+    } 
+    return (
         <div id='join-parent'>
             <MatrixRain />
 
@@ -57,4 +56,4 @@ import {Toaster, toast} from "react-hot-toast"
     )
 }
 
-export default TeamModal
+export default TeamModal;

@@ -115,7 +115,7 @@ export default function EventTemplate() {
   // History.push('/loader')
   const getEventDetails = async () => {
     const res = await fetch(
-      "https://infoxpression.herokuapp.com/event/get_event",
+      `${process.env.REACT_APP_BACKEND_URL}event/get_event`,
       {
         method: "POST",
         headers: {

@@ -32,7 +32,7 @@ const App = () => {
 
   const getAllEvents = async () => {
     const response = await fetch(
-      "https://infoxpression.herokuapp.com/event/get_all_event",
+      `${process.env.REACT_APP_BACKEND_URL}event/get_all_event`,
       {
         method: "POST",
         headers: {

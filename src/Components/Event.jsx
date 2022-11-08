@@ -4,11 +4,12 @@ import "./Assets/Images/CSS/sch-event.css";
 import MatrixRain from "./MatrixRain";
 
 function Event() {
+  console.log(process.env.REACT_APP_BACKEND_URL)
   const [events, setEvents] = useState([]);
 
   const getAllEvents = async () => {
     const response = await fetch(
-      "https://infoxpression.herokuapp.com/event/get_all_event",
+      `${process.env.REACT_APP_BACKEND_URL}event/get_all_event`,
       {
         method: "POST",
         headers: {
@@ -51,8 +52,8 @@ function Event() {
                   <img src={event.eventPic} className="sch-event-img" alt="" />
                   <button className="mt-12 mb-4 b1n">
                     <a
-                      href={"http://localhost:3000/event/" + event.eventId}
-                      className="register teams-btn text-xs q12"
+                      href={"/event/" + event.eventId}
+                      className="register teams-btn text-xs q12" 
                     >
                       <span></span>
                       <span></span>

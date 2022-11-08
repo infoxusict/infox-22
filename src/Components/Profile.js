@@ -35,7 +35,7 @@ const Profile = () => {
   const ifSignIn = async () => {
     var x = localStorage.getItem("authkey");
     if (x != null && x !== undefined) {
-      fetch("https://infoxpression.herokuapp.com/user/getDetails", {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}user/getDetails`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -79,7 +79,7 @@ const Profile = () => {
 
       // request to post data to db
       const resCheck = await fetch(
-        "https://infoxpression.herokuapp.com/user/auth/google/chk",
+        `${process.env.REACT_APP_BACKEND_URL}user/auth/google/chk`,
         {
           method: "POST",
           headers: {
@@ -96,7 +96,7 @@ const Profile = () => {
         localStorage.setItem("authkey", checkres.authKey);
 
         // as we get the auth key we can fetch the data from db
-        fetch("https://infoxpression.herokuapp.com/user/getDetails", {
+        fetch(`${process.env.REACT_APP_BACKEND_URL}user/getDetails`, {
           method: "POST",
           headers: {
             "Content-type": "application/json",

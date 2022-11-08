@@ -54,22 +54,16 @@ const EvenTemp = (props) => {
       toast.error("Please enter valid Team Name");
       return;
     }
-    // console.log(props.data.eventId);
-    // console.log(teamName);
-    const response = await fetch(
-      `https://infoxpression.herokuapp.com/team/gen_code`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          authToken: localStorage.getItem("authkey"),
-        },
-        body: JSON.stringify({
-          eventId: props.data.eventId,
-          teamName: teamName,
-        }),
-      }
-    );
+    console.log(props.data.eventId);
+    console.log(teamName);
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/gen_code`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authToken': localStorage.getItem('authkey')
+      },
+      body: JSON.stringify({ eventId: props.data.eventId, teamName: teamName })
+    });
 
     // eslint-disable-next-line
     const json = await response.json();
@@ -96,19 +90,16 @@ const EvenTemp = (props) => {
       toast.error("Please enter valid Team Code");
       return;
     }
-    // console.log(props.data.eventId);
-    // console.log(teamCode);
-    const response = await fetch(
-      `https://infoxpression.herokuapp.com/team/join`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          authToken: localStorage.getItem("authkey"),
-        },
-        body: JSON.stringify({ eventId: props.data.eventId, teamId: teamCode }),
-      }
-    );
+    console.log(props.data.eventId);
+    console.log(teamCode);
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/join`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authToken': localStorage.getItem('authkey')
+      },
+      body: JSON.stringify({ eventId: props.data.eventId, teamId: teamCode })
+    });
 
     // eslint-disable-next-line
     const json = await response.json();

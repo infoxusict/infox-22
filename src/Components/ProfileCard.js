@@ -29,7 +29,7 @@ export default function ProfileCard(props) {
     <div className="profileCard">
       <img
         className="profilelogo"
-        src="https://infoxpression.tech/static/media/aswd.a0dd4d343e8754fcfb94.png"
+        src="/static/media/aswd.a0dd4d343e8754fcfb94.png"
         alt=""
       />
 

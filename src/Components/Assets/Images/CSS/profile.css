@@ -73,10 +73,11 @@
     width: 10vw;
 }
 
-.profilepic {
-    --img-url: url(https://cdna.artstation.com/p/assets/images/images/044/357/866/large/sm-bonin-neo-manson-04.jpg?1639756945);
-    /* height:4vw;
-    width: 4vw; */
+.profilepic > img {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 #logoutbtn{

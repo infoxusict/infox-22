@@ -37,12 +37,12 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links ">
                 <li className="customerList text-lg div-text-lg">
-                  <Link className="customerListA" to="/sch-event">
+                  <Link className="customerListA" to="/events">
                     Dates
                   </Link>
                 </li>
                 <li className="customerList text-lg div-text-lg">
-                  <Link className="customerListA " to="/sch-event">
+                  <Link className="customerListA " to="/events">
                     Venue
                   </Link>
                 </li>

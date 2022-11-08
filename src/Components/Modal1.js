@@ -16,7 +16,7 @@ export default function Modal1({
   const handleClick = async () => {
     // console.log(tempuserObject);
     const res = await fetch(
-      "https://infoxpression.herokuapp.com/user/auth/google",
+      `${process.env.REACT_APP_BACKEND_URL}user/auth/google`,
       {
         method: "POST",
         headers: {
@@ -30,7 +30,7 @@ export default function Modal1({
     // console.log(finalres);
     window.localStorage.setItem("authkey", finalres.authKey);
     const getDetailsRes = await fetch(
-      "https://infoxpression.herokuapp.com/user/getDetails",
+      `${process.env.REACT_APP_BACKEND_URL}user/getDetails`,
       {
         method: "POST",
         headers: {

@@ -125,9 +125,9 @@ export default function Modal1({
                 } else if (modalInput.GraduationYear === "") {
                   // // console.log("GradY");
                   toast.error("Enter your Graduation Year");
-                } else if (modalInput.Contact === "") {
+                } else if (modalInput.Contact === "" || modalInput.Contact.length<10) {
                   // // console.log("conta");
-                  toast.error("Enter your Contact Information");
+                  toast.error("Enter your Correct Contact Information");
                 } else {
                   handleClick();
                 }

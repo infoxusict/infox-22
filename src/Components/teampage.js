@@ -6,15 +6,14 @@ import "./Assets/Images/CSS/Contact.css";
 import Team from "./team";
 import MatrixRain from "./MatrixRain";
 // import Contact from "./Contact";
-import Map from "./Map";
 
 export default function TeamPage() {
   return (
-    <div className="teampage">
+    <div className="teampage md:mb-24 mb-8">
       <MatrixRain />
       <div className=""></div>
 
-      <div class="sn_glitch_forNHeading atmosphere sn_teamheading">
+      <div class="sn_glitch_forNHeading atmosphere sn_teamheading mt-6">
         <div class="sn_line_forNHeading">OUR TEAM</div>
         <div class="sn_line_forNHeading">OUR TEAM</div>
         <div class="sn_line_forNHeading">OUR TEAM</div>
@@ -188,21 +187,8 @@ export default function TeamPage() {
           gmail="nishant.ola22@gmail.com"
           photo="./Assets/Images/teams/suraj.jpg.png"
         />
-        <Team
-          ringColor="#692839"
-          circleColor="#13a39a"
-          name="Toyeesh Sinha"
-          team="Web Team"
-          position="Full Stack Developer"
-          // Quote=""
-          linkedin="https://www.linkedin.com/in/toyeesh-sinha"
-          github="https://www.github.com/sinha-toyeesh"
-          gmail="toyeshsainik@gmail.com"
-          photo="./Assets/Images/teams/toyeesh.jpg"
-        />
       </div>
       {/* <Contact /> */}
-      <Map />
     </div>
   );
 }

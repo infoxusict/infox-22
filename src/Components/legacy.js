@@ -91,8 +91,8 @@ export default function Legacy() {
           <div className="hero__left-desc">
             <span>
               InfoXpression2022 edition is set to continue its legacy as one of
-              the biggest tech-fest of GGSIPU (USICT).This year, InfoX aims to
-              be bigger, bolder, and better.
+              the biggest techfest of GGSIPU (USICT).This year, InfoX aims to be
+              bigger, bolder, and better.
             </span>
           </div>
         </div>

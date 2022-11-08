@@ -26,7 +26,6 @@ const modalObject = [
   { question: "contact", placeholder: "contact" },
 ];
 
-
 const Profile = () => {
   const [profileDATA, setprofileDATA] = React.useState({});
   const [isModalShown, setIsModalShown] = useState(false);
@@ -35,22 +34,17 @@ const Profile = () => {
   //function to check whether user is signed up already
   const ifSignIn = async () => {
     var x = localStorage.getItem("authkey");
-    // console.log(userDetails);
     if (x != null && x !== undefined) {
-      const getDetailsRes = await fetch(
-        "https://infoxpression.herokuapp.com/user/getDetails",
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-            authToken: localStorage.getItem("authkey"),
-          },
-          referrerPolicy: "origin-when-cross-origin",
-        }
-      );
-      var finaldetailsres = await getDetailsRes.json();
-      userDetails = finaldetailsres;
-      setprofileDATA(finaldetailsres);
+      fetch("https://infoxpression.herokuapp.com/user/getDetails", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          authToken: localStorage.getItem("authkey"),
+        },
+        referrerPolicy: "origin-when-cross-origin",
+      })
+        .then((res) => res.json())
+        .then((res) => setprofileDATA(res));
       setAuthKey(true);
       return true;
     }
@@ -79,6 +73,7 @@ const Profile = () => {
       await ifSignIn();
       //setting to show modal
       setTimeout(() => {
+        document.getElementById("hideMe").style.display = 'none';
         setIsModalShown(true);
       }, 1600);
 
@@ -101,28 +96,21 @@ const Profile = () => {
         localStorage.setItem("authkey", checkres.authKey);
 
         // as we get the auth key we can fetch the data from db
-        const getDetailsRes = await fetch(
-          "https://infoxpression.herokuapp.com/user/getDetails",
-          {
-            method: "POST",
-            headers: {
-              "Content-type": "application/json",
-              authToken: localStorage.getItem("authkey"),
-            },
-            referrerPolicy: "origin-when-cross-origin",
-          }
-        );
-        // console.log(finaldetailsres);
-        var finaldetailsres = await getDetailsRes.json();
-        console.log(finaldetailsres);
-        userDetails = finaldetailsres;
-        setprofileDATA(finaldetailsres);
+        fetch("https://infoxpression.herokuapp.com/user/getDetails", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+            authToken: localStorage.getItem("authkey"),
+          },
+          referrerPolicy: "origin-when-cross-origin",
+        })
+          .then((res) => res.json())
+          .then((res) => setprofileDATA(res));
         setAuthKey(true);
       }
     }
   };
   React.useEffect(() => {
-
     /* global google */
     const func = async () => {
       await google.accounts.id.initialize({
@@ -131,31 +119,34 @@ const Profile = () => {
         callback: handleCallbackResponse,
       });
 
-      await google.accounts.id.renderButton(document.getElementById("googlebtn"), {
-        theme: "outline",
-        size: "large",
-      });
+      await google.accounts.id.renderButton(
+        document.getElementById("googlebtn"),
+        {
+          theme: "outline",
+          size: "large",
+        }
+      );
 
       await ifSignIn();
-    }
+    };
 
     func();
-    
+    console.log(profileDATA);
     // eslint-disable-next-line
   }, []);
   return (
     <>
-      <MatrixRain />
-      <div class="sn_glitch_forNHeading atmosphere sn_teamheading profileTitle">
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
-        <div class="sn_line_forNHeading">PROFILE</div>
+      {/* <MatrixRain /> */}
+      <div className="sn_glitch_forNHeading atmosphere sn_teamheading profileTitle">
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>  
+        <div className="sn_line_forNHeading">PROFILE</div>
       </div>
       <div className="ParticipantProfile">
         <div className="eventsParticipated">
@@ -166,7 +157,8 @@ const Profile = () => {
               color: "#6CDE01",
             }}
           >
-            {!isAuthKey ? "Get Started" : "Registered Events"}
+            {!isAuthKey ? "Get Started" :<h1 className="reggg">Registered Event</h1>}
+            
           </div>
           <div className="registeer">
             {isModalShown && !isAuthKey ? (
@@ -182,10 +174,10 @@ const Profile = () => {
             ) : (
               <></>
             )}
-            {isAuthKey ? (
+            {isAuthKey && profileDATA?.events ? (
               <>
                 <div className="bigbbb">
-                  <EventCardProfile events = {profileDATA.events} />
+                  <EventCardProfile events={profileDATA.events} />
                   <div className="profilePart">
                     <ProfileCard
                       name={profileDATA.name}
@@ -197,8 +189,8 @@ const Profile = () => {
                 </div>
               </>
             ) : (
-              <div className="ggbtn">
-              <div id="googlebtn"></div>
+              <div className="ggbtn" id="hideMe">
+                <div id="googlebtn"></div>
               </div>
             )}
           </div>

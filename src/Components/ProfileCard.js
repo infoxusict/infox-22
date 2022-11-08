@@ -13,7 +13,7 @@ export default function ProfileCard(props) {
       <div className="profilepic"  
        style={{}}
        > 
-        <img class="headshot headshot-2"
+        <img className="headshot headshot-2"
         src={props.image} ></img>
       </div>
       <div className="profileData">

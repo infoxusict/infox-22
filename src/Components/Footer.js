@@ -1,17 +1,29 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Footer.css";
+import { FaDiscord } from "react-icons/fa";
+
 
 // import MatrixRain from "./MatrixRain";
 
 const Footer = () => {
   return (
     <>
-      <div className="footer-20192">
+      <div className="footer-20192 ">
         {/* <div className="site-section"> */}
         <div className="container">
           <div className="grid md:grid-cols-5 footer-grid ">
             <div className=" logo da-color-green">
+              <Link to="/" className="fooer-n">
+                {" "}
+                <img
+                  src={require("./Assets/Images/aswd.png")}
+                  width="108px"
+                  alt="Infox'22 logo"
+                  srcset=""
+                />
+              </Link>
+
               <Link to="/" className="footer-logo theme text-xl atmosphere ">
                 InfoXpression
               </Link>
@@ -21,12 +33,6 @@ const Footer = () => {
               <p className="copyright text-base">
                 <p>&copy; 2022</p>
               </p>
-              <img
-                src={require("./Assets/Images/aswd.png")}
-                width="108px"
-                alt="Infox'22 logo"
-                srcSet=""
-              />
             </div>
             <div className="">
               <h3 className="customer atmosphere text-lg da-color-green mb-5 mt-12 md:mt-0">
@@ -34,12 +40,12 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links ">
                 <li className="customerList text-lg div-text-lg">
-                  <Link className="customerListA" to="/event">
+                  <Link className="customerListA" to="/sch-event">
                     Dates
                   </Link>
                 </li>
                 <li className="customerList text-lg div-text-lg">
-                  <Link className="customerListA " to="/team">
+                  <Link className="customerListA " to="/sch-event">
                     Venue
                   </Link>
                 </li>
@@ -57,7 +63,7 @@ const Footer = () => {
                 </li>
                 {/* <li className = "companyFoot"><Link className="footAcompany" to="#">Careers</Link></li> */}
                 <li className="companyFoot text-lg div-text-lg">
-                  <Link className="footAcompany" to="/team">
+                  <Link className="footAcompany" to="/contact">
                     Contact us
                   </Link>
                 </li>
@@ -68,19 +74,17 @@ const Footer = () => {
                 Pages
               </h3>
               <ul className="list-unstyled links">
-                <li className="furtherInformation text-lg div-text-lg" style={{marginBottom: "0px"}}>
-                  <a
-                    rel="noreferrer"
-                    className="furtherInformationA companyFoot text-lg div-text-lg"
-                    href="https://forms.gle/bZgie3xMhq9CiwBU6"
-                    target="_blank"
-                  >
-                    Campus Ambassador
-                  </a>
-                </li>
-                <li className="furtherInformation mb-2 ">
-                  <Link className="furtherInformationA companyFoot text-lg div-text-lg" to="/legacy">
+                <li
+                  className="furtherInformation text-lg div-text-lg"
+                  style={{ marginBottom: "0px" }}
+                >
+                  <Link className="furtherInformationA " to="/legacy">
                     Legacy
+                  </Link>
+                </li>
+                <li className="furtherInformation mb-2 text-lg ">
+                  <Link className="furtherInformationA " to="/reach">
+                    Reach Us
                   </Link>
                 </li>
               </ul>
@@ -202,6 +206,16 @@ const Footer = () => {
                     </svg>
                   </Link>
                 </li> */}
+                <li className="socialList mb-1">
+                  <a
+                    rel="noreferrer"
+                    className="listSocialA"
+                    href="https://discord.gg/KF5hfB84"
+                    target="_blank"
+                  >
+                    <FaDiscord size={30} />
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

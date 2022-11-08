@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Assets/Images/CSS/Navbar.css";
 const Navbar = () => {
-
   let countt = 0;
   const handleNavIndex = () => {
     if (countt === 0) {
@@ -13,13 +12,12 @@ const Navbar = () => {
       document.getElementById("navigation__nav").style.zIndex = -1;
       document.getElementById("navigation__background").style.zIndex = -1;
       countt = 0;
-
     }
   };
   const handleNavToggle = () => {
-    if (countt===1){
-    document.getElementById("navi-toggle").click();
-  }
+    if (countt === 1) {
+      document.getElementById("navi-toggle").click();
+    }
   };
   return (
     // <div className='navbar' id='navbar' style={{display : "flex", justifyContent: "center", width: "100%"}}>
@@ -69,7 +67,6 @@ const Navbar = () => {
       </div>
 
       <nav className="navigation__nav" id="navigation__nav">
-      
         <ul className="navigation__list">
           {/* <li className="navigation__item">
             <a href="/#/team" className="navigation__link">
@@ -93,17 +90,32 @@ const Navbar = () => {
           </li>
           <li className="navigation__item">
             <a href="/#/event" className="navigation__link">
-              Register
-            </a> */}
+            Register
+          </a> */}
           {/* </li> */}
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <Link to="/profile" className="navigation__link">
+              <span>Profile</span>
+            </Link>
+          </li>
           <li className="navigation__item" onClick={handleNavToggle}>
             <Link to="/legacy" className="navigation__link">
               <span>Legacy</span>
             </Link>
           </li>
           <li className="navigation__item" onClick={handleNavToggle}>
+            <Link to="/sch-event" className="navigation__link">
+              <span>Events</span>
+            </Link>
+          </li>
+          {/* <li className="navigation__item" onClick={handleNavToggle}>
             <Link to="/event" className="navigation__link">
               <span>Schedule</span>
+            </Link>
+          </li> */}
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <Link to="/uhack" class="navigation__link">
+              <span>UHACK</span>
             </Link>
           </li>
           <li className="navigation__item" onClick={handleNavToggle}>
@@ -111,8 +123,13 @@ const Navbar = () => {
               <span>Team</span>
             </Link>
           </li>
-          {/* <li className="navigation__item" onClick={handleNavToggle}>
-            <a href="#/reach" className="navigation__link">
+          <li class="navigation__item" onClick={handleNavToggle}>
+            <Link to="/contact" className="navigation__link">
+              <span>Contact us</span>
+            </Link>
+          </li>
+          {/* <li class="navigation__item" onClick={handleNavToggle}>
+            <a href="#/reach" class="navigation__link">
               <span>Reach Us</span>
             </a>
           </li> */}

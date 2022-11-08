@@ -32,7 +32,7 @@ function Event() {
     <>
       <MatrixRain />
       <div className=" flex flex-wrap justify-evenly mt-20 md:mt-24">
-        <div class="sn_glitch_forNHeading atmosphere uh-heading  event-head">
+        <div class="sn_glitch_forNHeading atmosphere uh-heading  ">
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
@@ -43,16 +43,16 @@ function Event() {
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
         </div>
-        <div className="grid md:grid-cols-2 grid-col-1 ggg">
+        <div className="grid md:grid-cols-2 grid-col-1">
           {events &&
             events.map((event) => (
               <div className="sch-event-card">
                 <div className="sch-event-pic">
                   <img src={event.eventPic} className="sch-event-img" alt="" />
-                  <button className="mt-12 mb-4 b1n">
+                  <button className="mt-12 mb-4 hidden md:block">
                     <a
                       href={"http://localhost:3000/event/" + event.eventId}
-                      className="register teams-btn text-xs q12"
+                      className="register teams-btn text-xs "
                     >
                       <span></span>
                       <span></span>
@@ -62,8 +62,9 @@ function Event() {
                     </a>
                   </button>
                 </div>
+
                 <div className="sch-event-info">
-                  <h2 className="sch-event-name mt-6 text-2xl  atmosphere">
+                  <h2 className="sch-event-name mt-6 text-2xl  atmosphere break-normal">
                     {event.eventName}
                   </h2>
                   <div className="sch-date-venue">
@@ -73,9 +74,21 @@ function Event() {
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
                   <h3 className="sch-event-desc line-clamp-1">
-                    {event.tagline.slice(0, 100)}
+                    {event.about.split("", 90)}...
                   </h3>
                 </div>
+                <button className="mt-12 mb-4  md:hidden justify-start flex">
+                  <a
+                    href={"http://localhost:3000/event/" + event.eventId}
+                    className="register teams-btn text-xs "
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    More info
+                  </a>
+                </button>
               </div>
             ))}
         </div>

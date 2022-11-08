@@ -4,74 +4,79 @@ import { TiLocation } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
 import { useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
-import "./Assets/Images/CSS/uhack.css"
-import "./Assets/Images/CSS/teammodal.css"
-import {Toaster, toast} from "react-hot-toast"
+import "./Assets/Images/CSS/uhack.css";
+import "./Assets/Images/CSS/teammodal.css";
+import { Toaster, toast } from "react-hot-toast";
 
 // import { ToastContainer, toast } from 'react-toastify';
-  // import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const EvenTemp = (props) => {
-  console.log(props.data.eventPic)
+  // console.log(props.data.eventPic);
 
   const [register, setRegister] = useState(false);
-  const [teamCode, setTeamcode] = useState('');
-  const [teamName, setTeamName] = useState('');
-  const [teamID, setTeamID] = useState('');
+  const [teamCode, setTeamcode] = useState("");
+  const [teamName, setTeamName] = useState("");
+  const [teamID, setTeamID] = useState("");
   const history = useHistory();
   // const [Result, setResult] = React.useState("Registration Complete");
-  const [joinError, setJoinError] = useState('');
-  const [createError, setCreateError] = useState('');
-
+  const [joinError, setJoinError] = useState("");
+  const [createError, setCreateError] = useState("");
 
   const onChangCeode = (event) => {
     setTeamcode(event.target.value);
-  }
+  };
 
   const onChangeName = (event) => {
     setTeamName(event.target.value);
-  }
+  };
 
   const registerModal = () => {
-
-    if (localStorage.getItem('authkey') === null || localStorage.getItem('authkey') === undefined) {
-      history.push('/profile');
-      return
+    if (
+      localStorage.getItem("authkey") === null ||
+      localStorage.getItem("authkey") === undefined
+    ) {
+      history.push("/profile");
+      return;
     }
 
     setRegister(true);
-    // console.log("hi");
+    // // console.log("hi");
     // change here
-    document.getElementById('getBlur').style.opacity = 0.05;
+    document.getElementById("getBlur").style.opacity = 0.05;
     document.body.style.overflow = "hidden";
-  }
-
+  };
 
   const createTeam = async (e) => {
     e.preventDefault();
 
-    if(teamName.length<4)
-    {
+    if (teamName.length < 4) {
       toast.error("Please enter valid Team Name");
-      return ;
+      return;
     }
-    console.log(props.data.eventId);
-    console.log(teamName);
-    const response = await fetch(`https://infoxpression.herokuapp.com/team/gen_code`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'authToken': localStorage.getItem('authkey')
-      },
-      body: JSON.stringify({ eventId: props.data.eventId, teamName: teamName })
-    });
+    // console.log(props.data.eventId);
+    // console.log(teamName);
+    const response = await fetch(
+      `https://infoxpression.herokuapp.com/team/gen_code`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authToken: localStorage.getItem("authkey"),
+        },
+        body: JSON.stringify({
+          eventId: props.data.eventId,
+          teamName: teamName,
+        }),
+      }
+    );
 
     // eslint-disable-next-line
     const json = await response.json();
 
     if (json.success === false) {
       toast.error(json.error);
-      setCreateError(json.error)
+      setCreateError(json.error);
       return;
     }
 
@@ -79,55 +84,57 @@ const EvenTemp = (props) => {
     // alert(JSON.stringify(json.error));
     setRegister(false);
     // correct here
-    document.getElementById('getBlur').style.opacity = 1;
+    document.getElementById("getBlur").style.opacity = 1;
     document.body.style.overflow = "scroll";
-    history.push('/profile');
-  }
+    history.push("/profile");
+  };
 
   const joinTeam = async (e) => {
     e.preventDefault();
 
-    if(teamCode.length<5)
-    {
+    if (teamCode.length < 5) {
       toast.error("Please enter valid Team Code");
-      return ;
+      return;
     }
-    console.log(props.data.eventId);
-    console.log(teamCode);
-    const response = await fetch(`https://infoxpression.herokuapp.com/team/join`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'authToken': localStorage.getItem('authkey')
-      },
-      body: JSON.stringify({ eventId: props.data.eventId, teamId: teamCode })
-    });
+    // console.log(props.data.eventId);
+    // console.log(teamCode);
+    const response = await fetch(
+      `https://infoxpression.herokuapp.com/team/join`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authToken: localStorage.getItem("authkey"),
+        },
+        body: JSON.stringify({ eventId: props.data.eventId, teamId: teamCode }),
+      }
+    );
 
     // eslint-disable-next-line
     const json = await response.json();
-    console.log(json)
+    // console.log(json);
 
     if (json.success === false) {
       toast.error(json.error);
-      setJoinError(json.error)
+      setJoinError(json.error);
       return;
     }
 
     setTeamID(json.teamId);
     setRegister(false);
     // correct here
-    document.getElementById('getBlur').style.opacity = 1;
-    history.push('/profile');
-  }
-  function leave(){
+    document.getElementById("getBlur").style.opacity = 1;
+    history.push("/profile");
+  };
+  function leave() {
     // var element = document.getElementById("team-modal");
     // window.location.reload();
     setRegister(false);
-    document.getElementById('getBlur').style.opacity = 1;
+    document.getElementById("getBlur").style.opacity = 1;
     document.body.style.overflow = "visible";
     // element.style.display = "none";
-    console.log("hehehehehe");
-}
+    // console.log("hehehehehe");
+  }
   return (
     <>
       <MatrixRain />
@@ -141,7 +148,7 @@ const EvenTemp = (props) => {
                     className="cross md:text-xl text-xs absolute md:right-7 md:top-7 right-5 top-5"
                     onClick={leave}
                   >
-                    <ImCross/>
+                    <ImCross />
                   </button>
                   <h2 className="h2 atmosphere pt-5">Create Team</h2>
                   <form action="" id="create-form" onSubmit={createTeam}>
@@ -207,18 +214,18 @@ const EvenTemp = (props) => {
         >
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
-            <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+            <div className="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
-            <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify max-w-[10%]">
+            <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify md:max-w-[40%] ">
               {props.data.tagline}
               {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations
@@ -233,7 +240,7 @@ const EvenTemp = (props) => {
                   width="24"
                   height="24"
                   fill="currentColor"
-                  class="bi bi-calendar-date"
+                  className="bi bi-calendar-date"
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -246,7 +253,7 @@ const EvenTemp = (props) => {
                     fill="white"
                   ></path>{" "}
                 </svg>
-                <p> {props.data.date}</p>
+                <p className="w-24"> {props.data.date}</p>
               </div>
               <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <svg
@@ -255,7 +262,7 @@ const EvenTemp = (props) => {
                   width="24"
                   height="24"
                   fill="currentColor"
-                  class="bi bi-clock"
+                  className="bi bi-clock"
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -272,7 +279,7 @@ const EvenTemp = (props) => {
               </div>
               <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <TiLocation size={33} className="" />
-                <p className="">{props.data.venue}</p>
+                <p className="w-24">{props.data.venue}</p>
               </div>
             </div>
             <div className=" devfolio-button flex justify-center md:justify-start ">
@@ -291,16 +298,34 @@ const EvenTemp = (props) => {
           </div>
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
             <div>
-              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
               </div>
             </div>
             <div className="flex justify-center md:justify-center ">
@@ -325,9 +350,7 @@ const EvenTemp = (props) => {
             <div className="basis-1/2">
               {" "}
               <h4 className="subheading txt-shdw">Rules</h4>
-              <p>
-                <ul>{props.data.rules}</ul>
-              </p>
+              <ul>{props.data.rules}</ul>
             </div>
           </div>
           {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row md:mt-7"> */}
@@ -339,16 +362,14 @@ const EvenTemp = (props) => {
             <div className="basis-2/6">
               {" "}
               <h4 className="subheading txt-shdw">Prize</h4>
-              <p>
-                <ul>{props.data.prize}</ul>
-              </p>
+              <ul>{props.data.prize}</ul>
             </div>
             <div className="basis-2/6">
               {" "}
               <h4 className="subheading txt-shdw">Contact Us</h4>
               <p>
                 {props.data.contact.map((item) => {
-                  return <li>{item}</li>;
+                  return <li key={item}>{item}</li>;
                 })}
               </p>
             </div>

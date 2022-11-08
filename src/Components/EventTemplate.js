@@ -126,9 +126,9 @@ export default function EventTemplate() {
       }
     );
     const finalEventDetails = await res.json();
-    console.log(finalEventDetails);
+    // console.log(finalEventDetails);
     if (finalEventDetails.status) {
-      console.log("Succes is true");
+      // console.log("Succes is true");
       setisLoaded(true);
       eventobj = finalEventDetails.event;
     }
@@ -136,9 +136,9 @@ export default function EventTemplate() {
   React.useEffect(() => {
     const url = window.location.href;
     const urlArray = url.split("/");
-    console.log(urlArray);
+    // console.log(urlArray);
     eventId = urlArray[4];
-    console.log(eventId);
+    // console.log(eventId);
     getEventDetails();
   }, []);
   return (

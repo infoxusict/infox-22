@@ -21,7 +21,7 @@ function Event() {
     const json = await response.json();
     setEvents(json);
 
-    // console.log(json);
+    console.log(json);
   };
 
   useEffect(() => {
@@ -67,7 +67,9 @@ function Event() {
                     {event.eventName}
                   </h2>
                   <div className="sch-date-venue">
-                    <h3 className="sch-event-date">{event.date}, E block</h3>
+                    <h3 className="sch-event-date">
+                      {event.date}, {event.venue}
+                    </h3>
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
                   <h3 className="sch-event-desc line-clamp-1">

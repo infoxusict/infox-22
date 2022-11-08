@@ -6,7 +6,7 @@
   justify-content: flex-start;
 }
 .page-content {
-  height: 42vw;
+  height: 44vw;
   overflow: scroll;
   width: 59vw;
   margin: 3vw 1.3vw 0vw 0vw !important;
@@ -410,16 +410,11 @@
   }
 }
 .page-not {
-  height: 42vw;
-  /* overflow: scroll; */
+  height: 40vw;
   width: 59vw;
   margin: 3vw 1.3vw 0vw 0vw !important;
   font-size: 2rem;
-  /* font-weight: bold; */
-  /* height: 50vh; */
   color: #000;
-  /* background-color: #00e6f6; */
-  /* filter: blur(5px); */
   text-align: center;
   display: flex;
   align-items: center;
@@ -430,15 +425,10 @@
   text-shadow: 0 0 20px #2f2;
   color: #2f2;
   border-radius: 5vh;
-  /* border: 1px solid #2f2; */
   margin: 0vw 0vw 2vw 2vw !important;
 }
 
-.page-not-button1 {
-}
-
 .page-not-head {
-  /* height: 10vh; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -450,27 +440,73 @@
   align-items: center;
   height: 150px;
   width: 150px;
-  /* background-color: #2f2; */
-  /* width: 100%; */
-  /* justify-content: center; */
 }
 
 .page-not-atmos {
   font-family: toko-light;
   text-shadow: 0 0 0px #fff;
   color: #fff;
-
+  margin: -4vw 0vw 0vw 0vw !important;
   letter-spacing: 0.1rem;
-  font-size: 10vh;
+  font-size: 8vh;
+}
+@media (max-width: 1438px){
+  
+  .page-not-atmos {
+    font-family: toko-light;
+    text-shadow: 0 0 0px #fff;
+    color: #fff;
+    margin: -5vw 0vw 0vw 0vw !important;
+    letter-spacing: 0.1rem;
+    font-size: 5vh;
+  }
+  .page-not-atmo {
+    font-size: 2.3vh;
+  }
+}
+@media (max-width: 1168px){
+  .registerk{
+    margin: auto;
+
+    font-size: 16px;
+  }
+  .page-not-atmos {
+    margin: -66px 0vw 0vw 0vw !important;
+  }
+  .page-content-svg{
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .page-not-atmo {
+    font-size: 2.3vh;
+  }
 }
 
-@media (max-width: 768px) {
-  .page-not {
+@media (max-width: 950px){
+  .registerk{
+    margin: auto;
+
+    font-size: 10px;
+  }
+  .page-not-atmos {
+    margin: 0px 0vw 0vw 0vw !important;
+  }
+  .registerbkl{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* margin-right: 0 !important; */
+    margin:-50px auto;
+  }
+}
+
+/* @media (max-width: 768px) { */
+  /* .page-not {
     height: 90vh !important;
     width: 90vw;
     flex-direction: column;
   }
-}
+} */
 
 .st0 {
   display: none;
@@ -498,4 +534,17 @@
 }
 .st8 {
   fill: #009600;
+}
+@media (max-width: 700px){
+  .reggg{
+    /* margin: auto !important; */
+    text-align: center;
+  }
+  .page-not{
+   display: flex;
+   flex-direction: column !important;
+   width: 80vw;
+   margin: auto;
+
+  }
 }

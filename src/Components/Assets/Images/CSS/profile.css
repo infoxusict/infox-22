@@ -22,7 +22,8 @@
 }
 
 .ProfileHeading {
-    margin: 0vw 1vw 4vw 37vw;
+    /* margin: 0vw 1vw 4vw 37vw; */
+    text-align: center;
     font-size: 2.2vw;
 }
 .reggg{
@@ -204,7 +205,6 @@
     color: #6CDE01;
     letter-spacing: -0.05em;
     font-family: 'Anton', Arial, sans-serif;
-    user-select: none;
     text-transform: uppercase;
     font-size: 1.5vw;
     transition: all 0.25s ease-out;
@@ -215,7 +215,7 @@
 .ggbtn{
     display: flex;
     justify-items: center;
-    margin: 0vw -2vw 1vw 1vw !important;
+    /* margin: 0vw -2vw 1vw 1vw !important; */
     /* height: 20vw; */
 }
 #googlebtn{
@@ -226,7 +226,7 @@
 @media (max-width: 700px) {
     .ProfileHeading {
         font-size: 4vw;
-        /* margin: 4vw 0vw 4vw 2vw; */
+        margin: -7vw 0vw 4vw 28vw !important;
     }
 
     .ParticipantProfile {
@@ -245,13 +245,15 @@
     .page-content {
         grid-gap: 2vw;
         padding: 1vw;
+        height: 80vh;
         justify-content: center;
         flex-direction: column-reverse !important;
     }
     .card {
+        margin-top: 0;
         padding: 1vw;
-        width: 40vw;
-        height: 55vw !important;
+        width: 40vh;
+        height: 40vh !important;
     }
     .copy {
         margin: 4vw;
@@ -324,7 +326,7 @@
 }
 @media (max-width: 500px) {
     .ProfileHeading {
-        margin:3vw auto 20vw auto;
+        margin:3vw 0vw 20vw 19vw !important;
         font-size: 6vw;
     }
     .eventsParticipated{

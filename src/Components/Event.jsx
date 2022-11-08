@@ -32,7 +32,7 @@ function Event() {
     <>
       <MatrixRain />
       <div className=" flex flex-wrap justify-evenly mt-20 md:mt-24">
-        <div class="sn_glitch_forNHeading atmosphere uh-heading  ">
+        <div class="sn_glitch_forNHeading atmosphere uh-heading  event-head">
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
@@ -43,7 +43,7 @@ function Event() {
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
         </div>
-        <div className="grid md:grid-cols-2 grid-col-1">
+        <div className="grid md:grid-cols-2 grid-col-1 ggg">
           {events &&
             events.map((event) => (
               <div className="sch-event-card">
@@ -52,13 +52,13 @@ function Event() {
                   <button className="mt-12 mb-4 b1n">
                     <a
                       href={"http://localhost:3000/event/" + event.eventId}
-                      className="register teams-btn text-xs q12"
+                      className="register teams-btn text-xs q12" 
                     >
                       <span></span>
                       <span></span>
                       <span></span>
                       <span></span>
-                      Visit Event
+                      More info
                     </a>
                   </button>
                 
@@ -72,7 +72,7 @@ function Event() {
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
                   <h3 className="sch-event-desc line-clamp-1">
-                    {event.about}
+                    {event.tagline.slice(0,100)}
                   </h3>
                   
               </div>

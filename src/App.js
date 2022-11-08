@@ -24,6 +24,7 @@ import EvenTemp from "./Components/evenTemp";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 import Event from "./Components/Event";
+import ScheduleGrid from "./Components/ScheduleGrid";
 
 const App = () => {
   // let events = [];
@@ -63,7 +64,7 @@ const App = () => {
               <Home page="home" />
             </div>
           </Route>
-          <Route exact path="/event">
+          {/* <Route exact path="/event">
             <Schedule />
           </Route>
           {/* <Route exact path="/event/name">
@@ -94,6 +95,10 @@ const App = () => {
 
           <Route exact path="/sch-event">
             <Event />
+          </Route>
+
+          <Route exact path="/schedule">
+            <ScheduleGrid/>
           </Route>
 
           <Route path="/modal">

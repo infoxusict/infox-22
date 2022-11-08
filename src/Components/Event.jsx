@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { GiPaddleSteamer } from "react-icons/gi";
+
 import "./Assets/Images/CSS/sch-event.css";
 import MatrixRain from "./MatrixRain";
 
@@ -15,6 +16,7 @@ function Event() {
   const getAllEvents = async () => {
     const response = await fetch(
       "https://infoxpression.herokuapp.com/event/get_all_event",
+
       {
         method: "POST",
         headers: {
@@ -39,6 +41,7 @@ function Event() {
       <MatrixRain />
       <div className=" flex flex-wrap justify-evenly mt-20 md:mt-24">
         <div class="sn_glitch_forNHeading atmosphere uh-heading  ">
+
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
@@ -59,6 +62,7 @@ function Event() {
                     <a
                       href={"http://localhost:3000/event/" + event.eventId}
                       className="register teams-btn text-xs "
+
                     >
                       <span></span>
                       <span></span>
@@ -68,7 +72,6 @@ function Event() {
                     </a>
                   </button>
                 </div>
-
                 <div className="sch-event-info">
                   <h2 className="sch-event-name mt-6 text-2xl  atmosphere break-normal">
                     {event.eventName}
@@ -95,6 +98,7 @@ function Event() {
                     More info
                   </a>
                 </button>
+
               </div>
             ))}
         </div>

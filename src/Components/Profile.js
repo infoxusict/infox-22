@@ -73,6 +73,7 @@ const Profile = () => {
       await ifSignIn();
       //setting to show modal
       setTimeout(() => {
+        document.getElementById("hideMe").style.display = 'none';
         setIsModalShown(true);
       }, 1600);
 
@@ -188,7 +189,7 @@ const Profile = () => {
                 </div>
               </>
             ) : (
-              <div className="ggbtn">
+              <div className="ggbtn" id="hideMe">
                 <div id="googlebtn"></div>
               </div>
             )}

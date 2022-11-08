@@ -93,7 +93,7 @@ const App = () => {
             <Profile />
           </Route>
 
-          <Route exact path="/sch-event">
+          <Route exact path="/events">
             <Event />
           </Route>
 

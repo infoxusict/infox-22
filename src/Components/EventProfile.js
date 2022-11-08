@@ -5,8 +5,8 @@ import "./Assets/Images/CSS/EventProfile.css";
 import { Toaster, toast } from "react-hot-toast";
 
 const EventCardProfile = (props) => {
-  console.log(props.events);
-  console.log(props.events);
+  // console.log(props.events);
+  // console.log(props.events);
 
   const history = useHistory();
 

@@ -93,7 +93,7 @@ const Navbar = () => {
             Register
           </a> */}
           {/* </li> */}
-          <li class="navigation__item" onClick={handleNavToggle}>
+          <li className="navigation__item" onClick={handleNavToggle}>
             <Link to="/profile" className="navigation__link">
               <span>Profile</span>
             </Link>
@@ -113,8 +113,8 @@ const Navbar = () => {
               <span>Schedule</span>
             </Link>
           </li> */}
-          <li class="navigation__item" onClick={handleNavToggle}>
-            <Link to="/uhack" class="navigation__link">
+          <li className="navigation__item" onClick={handleNavToggle}>
+            <Link to="/uhack" className="navigation__link">
               <span>UHACK</span>
             </Link>
           </li>
@@ -123,13 +123,13 @@ const Navbar = () => {
               <span>Team</span>
             </Link>
           </li>
-          <li class="navigation__item" onClick={handleNavToggle}>
+          <li className="navigation__item" onClick={handleNavToggle}>
             <Link to="/contact" className="navigation__link">
               <span>Contact us</span>
             </Link>
           </li>
-          {/* <li class="navigation__item" onClick={handleNavToggle}>
-            <a href="#/reach" class="navigation__link">
+          {/* <li className="navigation__item" onClick={handleNavToggle}>
+            <a href="#/reach" className="navigation__link">
               <span>Reach Us</span>
             </a>
           </li> */}

@@ -27,9 +27,12 @@ const Glimpses = () => {
   };
 
   return (
-    <div style={{ width: "100%", marginTop: "25vh" }} className ="mb-32">
+    <div style={{ width: "100%", marginTop: "25vh" }} className="mb-32">
       <div className="animate" style={{ opacity: 1 }}>
-        <div className="sn_glitch_forNHeading atmosphere sn_glimpses" data-aos="fade-up">
+        <div
+          className="sn_glitch_forNHeading atmosphere sn_glimpses"
+          data-aos="fade-up"
+        >
           <div className="sn_line_forNHeading">GLIMPSES</div>
           <div className="sn_line_forNHeading">GLIMPSES</div>
           <div className="sn_line_forNHeading">GLIMPSES</div>
@@ -59,7 +62,7 @@ const Glimpses = () => {
               if (inView) {
                 count_iteration();
               }
-              console.log("inView :", inView);
+              // console.log("inView :", inView);
             }}
           >
             <div className="container1">
@@ -71,7 +74,8 @@ const Glimpses = () => {
             </div>
           </InView>
           <div className="wrapper">
-            <div className="container1"><span className="glimpses_text">Conducted</span>
+            <div className="container1">
+              <span className="glimpses_text">Conducted</span>
               <span className="num" data-val="24">
                 000+
               </span>

@@ -14,7 +14,7 @@ export default function Modal1({
     Contact: "",
   });
   const handleClick = async () => {
-    console.log(tempuserObject);
+    // console.log(tempuserObject);
     const res = await fetch(
       "https://infoxpression.herokuapp.com/user/auth/google",
       {
@@ -27,7 +27,7 @@ export default function Modal1({
       }
     );
     var finalres = await res.json();
-    console.log(finalres);
+    // console.log(finalres);
     window.localStorage.setItem("authkey", finalres.authKey);
     const getDetailsRes = await fetch(
       "https://infoxpression.herokuapp.com/user/getDetails",
@@ -41,7 +41,7 @@ export default function Modal1({
       }
     );
     var finaldetailsres = await getDetailsRes.json();
-    console.log(finaldetailsres);
+    // console.log(finaldetailsres);
     userDetails = finaldetailsres;
     setprofileDATA(finaldetailsres);
     setAuthKey(true);
@@ -79,7 +79,7 @@ export default function Modal1({
         <button
           className="close-modal"
           onClick={() => {
-            // console.log(data);
+            // // console.log(data);
             closeModal(false);
           }}
         >
@@ -113,20 +113,20 @@ export default function Modal1({
               type="submit"
               onClick={(e) => {
                 e.preventDefault();
-                // console.log(modalInput.GraduationYear);
+                // // console.log(modalInput.GraduationYear);
                 tempuserObject.College = modalInput.College;
                 tempuserObject.GraduationYear = modalInput.GraduationYear;
                 tempuserObject.Contact = modalInput.Contact;
-                console.log(tempuserObject);
+                // console.log(tempuserObject);
 
                 if (modalInput.College === "") {
-                  // console.log("coll");
+                  // // console.log("coll");
                   toast.error("Enter your College name");
                 } else if (modalInput.GraduationYear == "") {
-                  // console.log("GradY");
+                  // // console.log("GradY");
                   toast.error("Enter your Graduation Year");
                 } else if (modalInput.Contact == "") {
-                  // console.log("conta");
+                  // // console.log("conta");
                   toast.error("Enter your Contact Information");
                 } else {
                   handleClick();

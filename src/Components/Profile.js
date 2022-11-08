@@ -53,7 +53,7 @@ const Profile = () => {
 
   const handleCallbackResponse = async (response) => {
     // getting the jwt token and setting userObject as it response
-    console.log("JWT ID TOKEN: ", response.credential);
+    // console.log("JWT ID TOKEN: ", response.credential);
     var userObject = await jwt_decode(response.credential);
 
     // check is google btn click then doing some stuff
@@ -90,7 +90,7 @@ const Profile = () => {
         }
       );
       var checkres = await resCheck.json();
-      console.log(checkres);
+      // console.log(checkres);
       // if reponse of posting data is success, then setting the auth key to local storage
       if (checkres.success && checkres.authKey !== undefined) {
         localStorage.setItem("authkey", checkres.authKey);
@@ -131,7 +131,7 @@ const Profile = () => {
     };
 
     func();
-    console.log(profileDATA);
+    // console.log(profileDATA);
     // eslint-disable-next-line
   }, []);
   return (

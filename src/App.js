@@ -45,7 +45,7 @@ const App = () => {
     const json = await response.json();
     setEvents(json);
 
-    console.log(json);
+    // console.log(json);
   };
 
   useEffect(() => {
@@ -74,9 +74,9 @@ const App = () => {
           {/* Mapping Events */}
 
           {events.map((event) => {
-            // console.log(`/event/${event.eventId}`);
+            // // console.log(`/event/${event.eventId}`);
             return (
-              <Route exact path={`/event/${event.eventId}`}>
+              <Route key={event.eventId} exact path={`/event/${event.eventId}`}>
                 <EvenTemp data={event} />
               </Route>
             );
@@ -98,7 +98,7 @@ const App = () => {
           </Route>
 
           <Route exact path="/schedule">
-            <ScheduleGrid/>
+            <ScheduleGrid />
           </Route>
 
           <Route path="/modal">

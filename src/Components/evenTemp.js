@@ -12,7 +12,7 @@ import { Toaster, toast } from "react-hot-toast";
 // import 'react-toastify/dist/ReactToastify.css';
 
 const EvenTemp = (props) => {
-  console.log(props.data.eventPic);
+  // console.log(props.data.eventPic);
 
   const [register, setRegister] = useState(false);
   const [teamCode, setTeamcode] = useState("");
@@ -41,7 +41,7 @@ const EvenTemp = (props) => {
     }
 
     setRegister(true);
-    // console.log("hi");
+    // // console.log("hi");
     // change here
     document.getElementById("getBlur").style.opacity = 0.05;
     document.body.style.overflow = "hidden";
@@ -54,8 +54,8 @@ const EvenTemp = (props) => {
       toast.error("Please enter valid Team Name");
       return;
     }
-    console.log(props.data.eventId);
-    console.log(teamName);
+    // console.log(props.data.eventId);
+    // console.log(teamName);
     const response = await fetch(
       `https://infoxpression.herokuapp.com/team/gen_code`,
       {
@@ -96,8 +96,8 @@ const EvenTemp = (props) => {
       toast.error("Please enter valid Team Code");
       return;
     }
-    console.log(props.data.eventId);
-    console.log(teamCode);
+    // console.log(props.data.eventId);
+    // console.log(teamCode);
     const response = await fetch(
       `https://infoxpression.herokuapp.com/team/join`,
       {
@@ -112,7 +112,7 @@ const EvenTemp = (props) => {
 
     // eslint-disable-next-line
     const json = await response.json();
-    console.log(json);
+    // console.log(json);
 
     if (json.success === false) {
       toast.error(json.error);
@@ -133,7 +133,7 @@ const EvenTemp = (props) => {
     document.getElementById("getBlur").style.opacity = 1;
     document.body.style.overflow = "visible";
     // element.style.display = "none";
-    console.log("hehehehehe");
+    // console.log("hehehehehe");
   }
   return (
     <>
@@ -214,16 +214,16 @@ const EvenTemp = (props) => {
         >
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
-            <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
-              <div class="sn_line_forNHeading">{props.data.eventName}</div>
+            <div className="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
             <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify md:max-w-[40%] ">
               {props.data.tagline}
@@ -240,7 +240,7 @@ const EvenTemp = (props) => {
                   width="24"
                   height="24"
                   fill="currentColor"
-                  class="bi bi-calendar-date"
+                  className="bi bi-calendar-date"
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -262,7 +262,7 @@ const EvenTemp = (props) => {
                   width="24"
                   height="24"
                   fill="currentColor"
-                  class="bi bi-clock"
+                  className="bi bi-clock"
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -298,16 +298,34 @@ const EvenTemp = (props) => {
           </div>
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
             <div>
-              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
-                <div class="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
               </div>
             </div>
             <div className="flex justify-center md:justify-center ">
@@ -332,9 +350,7 @@ const EvenTemp = (props) => {
             <div className="basis-1/2">
               {" "}
               <h4 className="subheading txt-shdw">Rules</h4>
-              <p>
-                <ul>{props.data.rules}</ul>
-              </p>
+              <ul>{props.data.rules}</ul>
             </div>
           </div>
           {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row md:mt-7"> */}
@@ -346,16 +362,14 @@ const EvenTemp = (props) => {
             <div className="basis-2/6">
               {" "}
               <h4 className="subheading txt-shdw">Prize</h4>
-              <p>
-                <ul>{props.data.prize}</ul>
-              </p>
+              <ul>{props.data.prize}</ul>
             </div>
             <div className="basis-2/6">
               {" "}
               <h4 className="subheading txt-shdw">Contact Us</h4>
               <p>
                 {props.data.contact.map((item) => {
-                  return <li>{item}</li>;
+                  return <li key={item}>{item}</li>;
                 })}
               </p>
             </div>

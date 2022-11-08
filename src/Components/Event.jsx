@@ -58,7 +58,7 @@ function Event() {
                       <span></span>
                       <span></span>
                       <span></span>
-                      Visit Event
+                      More info
                     </a>
                   </button>
                 

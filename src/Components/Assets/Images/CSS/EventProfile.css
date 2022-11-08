@@ -451,9 +451,7 @@
   font-size: 8vh;
 }
 @media (max-width: 1438px){
-  .registerk{
-    font-size: 16px;
-  }
+  
   .page-not-atmos {
     font-family: toko-light;
     text-shadow: 0 0 0px #fff;
@@ -472,15 +470,6 @@
 
     font-size: 16px;
   }
-  .registerbkl{
-    width: 10vw ;
-    height: 9vw;
-    margin: 0;
-    text-align: center;
-    justify-content: center;
-    padding: 0;
-    font-size: 16px;
-  }
   .page-not-atmos {
     margin: -66px 0vw 0vw 0vw !important;
   }
@@ -493,13 +482,31 @@
   }
 }
 
-@media (max-width: 768px) {
-  .page-not {
+@media (max-width: 950px){
+  .registerk{
+    margin: auto;
+
+    font-size: 10px;
+  }
+  .page-not-atmos {
+    margin: 0px 0vw 0vw 0vw !important;
+  }
+  .registerbkl{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* margin-right: 0 !important; */
+    margin:-50px auto;
+  }
+}
+
+/* @media (max-width: 768px) { */
+  /* .page-not {
     height: 90vh !important;
     width: 90vw;
     flex-direction: column;
   }
-}
+} */
 
 .st0 {
   display: none;
@@ -527,4 +534,17 @@
 }
 .st8 {
   fill: #009600;
+}
+@media (max-width: 700px){
+  .reggg{
+    /* margin: auto !important; */
+    text-align: center;
+  }
+  .page-not{
+   display: flex;
+   flex-direction: column !important;
+   width: 80vw;
+   margin: auto;
+
+  }
 }

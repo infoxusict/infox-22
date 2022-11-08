@@ -51,7 +51,7 @@
   transition: 0.5s;
   letter-spacing: 4px;
   overflow: hidden;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   background-color: #050801;
   border-radius: 5px;
 }

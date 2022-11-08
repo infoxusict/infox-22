@@ -231,13 +231,15 @@
     .page-content {
         grid-gap: 2vw;
         padding: 1vw;
+        height: 80vh;
         justify-content: center;
         flex-direction: column-reverse !important;
     }
     .card {
+        margin-top: 0;
         padding: 1vw;
-        width: 40vw;
-        height: 55vw !important;
+        width: 40vh;
+        height: 40vh !important;
     }
     .copy {
         margin: 4vw;

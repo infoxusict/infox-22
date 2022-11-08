@@ -15,9 +15,9 @@ export var tempuserObject = {
   image: "",
   googleId: "",
   key: "<h1>Newprogrammakinginprogress</h1>",
-  College: "",
-  Contact: null,
-  GraduationYear: null,
+  college: "",
+  contact: null,
+  gradYear: null,
 };
 
 const modalObject = [
@@ -65,9 +65,9 @@ const Profile = () => {
         image: userObject.picture,
         googleId: userObject.sub,
         key: "<h1>Newprogrammakinginprogress</h1>",
-        College: "",
-        Contact: null,
-        GraduationYear: null,
+        college: "",
+        contact: null,
+        gradYear: null,
       };
 
       await ifSignIn();

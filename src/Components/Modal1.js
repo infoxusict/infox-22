@@ -50,9 +50,9 @@ export default function Modal1({
   const listItems = () => {
     const modalChange = (e) => {
       setmodalInput({ ...modalInput, [e.target.name]: e.target.value });
-      tempuserObject.College = modalInput.College;
-      tempuserObject.GraduationYear = modalInput.GraduationYear;
-      tempuserObject.Contact = modalInput.Contact;
+      tempuserObject.college = modalInput.College;
+      tempuserObject.gradYear = modalInput.GraduationYear;
+      tempuserObject.contact = modalInput.Contact;
     };
 
     return (
@@ -114,18 +114,18 @@ export default function Modal1({
               onClick={(e) => {
                 e.preventDefault();
                 // // console.log(modalInput.GraduationYear);
-                tempuserObject.College = modalInput.College;
-                tempuserObject.GraduationYear = modalInput.GraduationYear;
-                tempuserObject.Contact = modalInput.Contact;
-                // console.log(tempuserObject);
+                tempuserObject.college = modalInput.College;
+                tempuserObject.gradYear = modalInput.GraduationYear;
+                tempuserObject.contact = modalInput.Contact;
+                console.log(tempuserObject);
 
                 if (modalInput.College === "") {
                   // // console.log("coll");
                   toast.error("Enter your College name");
-                } else if (modalInput.GraduationYear == "") {
+                } else if (modalInput.GraduationYear === "") {
                   // // console.log("GradY");
                   toast.error("Enter your Graduation Year");
-                } else if (modalInput.Contact == "") {
+                } else if (modalInput.Contact === "") {
                   // // console.log("conta");
                   toast.error("Enter your Contact Information");
                 } else {

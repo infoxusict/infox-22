@@ -19,6 +19,12 @@ import EvenTemp from "./Components/evenTemp";
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
 
+// google analytics
+import ReactGA from "react-ga";
+const trackingId = "G-9D3DN4PEW0";
+
+ReactGA.initialize(trackingId);
+
 const App = () => {
   return (
     <>

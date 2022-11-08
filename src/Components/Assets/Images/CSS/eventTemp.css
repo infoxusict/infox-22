@@ -166,3 +166,9 @@
 .about-section{
   margin: 0 2rem 6rem 2.5rem;
 }
+
+
+.viewrules:hover
+{
+  color: #2f2 !important;
+}

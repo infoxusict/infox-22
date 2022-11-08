@@ -350,7 +350,9 @@ const EvenTemp = (props) => {
             <div className="basis-1/2">
               {" "}
               <h4 className="subheading txt-shdw">Rules</h4>
-              <ul>{props.data.rules}</ul>
+
+              <a href={props.data.rules} target="_blank" className="viewrules" rel="noopener noreferrer">Click here to view rules</a>
+
             </div>
           </div>
           {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row md:mt-7"> */}
@@ -369,7 +371,7 @@ const EvenTemp = (props) => {
               <h4 className="subheading txt-shdw">Contact Us</h4>
               <p>
                 {props.data.contact.map((item) => {
-                  return <li key={item}>{item}</li>;
+                  return <li className="list-none" key={item}>{item}</li>;
                 })}
               </p>
             </div>

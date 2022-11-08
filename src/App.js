@@ -97,9 +97,9 @@ const App = () => {
             <Event />
           </Route>
 
-          <Route exact path="/schedule">
+          {/* <Route exact path="/schedule">
             <ScheduleGrid/>
-          </Route>
+          </Route> */}
 
           <Route path="/modal">
             <TeamModal />

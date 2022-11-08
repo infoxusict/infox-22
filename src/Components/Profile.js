@@ -21,9 +21,9 @@ export var tempuserObject = {
 };
 
 const modalObject = [
-  { question: "College", placeholder: "College" },
-  { question: "GraduationYear", placeholder: "Graduation Year" },
-  { question: "Contact", placeholder: "Contact" },
+  { question: "College", placeholder: "Eg: USICT" },
+  { question: "GraduationYear", placeholder: "Eg: 2025" },
+  { question: "Contact", placeholder: "Eg: 99XXXXXX00" },
 ];
 
 const Profile = () => {

@@ -54,6 +54,7 @@
 
 .sch-event-desc {
   float: right;
+  word-wrap: break-word;
 }
 
 .sch-event-pic {

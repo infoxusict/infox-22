@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export default function Sponser() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   });
   return (
     <section>

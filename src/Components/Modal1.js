@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { tempuserObject } from "./Profile";
+import { Toaster, toast } from "react-hot-toast";
 export default function Modal1({
   closeModal,
   data,
@@ -8,9 +9,9 @@ export default function Modal1({
   setprofileDATA,
 }) {
   const [modalInput, setmodalInput] = useState({
-    college: "",
-    gradYear: null,
-    contact: null,
+    College: "",
+    GraduationYear: "",
+    Contact: "",
   });
   const handleClick = async () => {
     console.log(tempuserObject);
@@ -49,9 +50,9 @@ export default function Modal1({
   const listItems = () => {
     const modalChange = (e) => {
       setmodalInput({ ...modalInput, [e.target.name]: e.target.value });
-      tempuserObject.college = modalInput.college;
-      tempuserObject.gradYear = modalInput.gradYear;
-      tempuserObject.contact = modalInput.contact;
+      tempuserObject.College = modalInput.College;
+      tempuserObject.GraduationYear = modalInput.GraduationYear;
+      tempuserObject.Contact = modalInput.Contact;
     };
 
     return (
@@ -73,6 +74,7 @@ export default function Modal1({
 
   return (
     <>
+      <Toaster />
       <div className="modal">
         <button
           className="close-modal"
@@ -111,11 +113,24 @@ export default function Modal1({
               type="submit"
               onClick={(e) => {
                 e.preventDefault();
-                tempuserObject.college = modalInput.college;
-                tempuserObject.gradYear = modalInput.gradYear;
-                tempuserObject.contact = modalInput.contact;
-                // console.log(tempuserObject);
-                handleClick();
+                // console.log(modalInput.GraduationYear);
+                tempuserObject.College = modalInput.College;
+                tempuserObject.GraduationYear = modalInput.GraduationYear;
+                tempuserObject.Contact = modalInput.Contact;
+                console.log(tempuserObject);
+
+                if (modalInput.College === "") {
+                  // console.log("coll");
+                  toast.error("Enter your College name");
+                } else if (modalInput.GraduationYear == "") {
+                  // console.log("GradY");
+                  toast.error("Enter your Graduation Year");
+                } else if (modalInput.Contact == "") {
+                  // console.log("conta");
+                  toast.error("Enter your Contact Information");
+                } else {
+                  handleClick();
+                }
               }}
             />
           </div>

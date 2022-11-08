@@ -15,15 +15,15 @@ export var tempuserObject = {
   image: "",
   googleId: "",
   key: "<h1>Newprogrammakinginprogress</h1>",
-  college: "",
-  contact: null,
-  gradYear: null,
+  College: "",
+  Contact: null,
+  GraduationYear: null,
 };
 
 const modalObject = [
-  { question: "college", placeholder: "college" },
-  { question: "gradYear", placeholder: "gradYear" },
-  { question: "contact", placeholder: "contact" },
+  { question: "College", placeholder: "College" },
+  { question: "GraduationYear", placeholder: "Graduation Year" },
+  { question: "Contact", placeholder: "Contact" },
 ];
 
 const Profile = () => {
@@ -65,15 +65,15 @@ const Profile = () => {
         image: userObject.picture,
         googleId: userObject.sub,
         key: "<h1>Newprogrammakinginprogress</h1>",
-        college: "",
-        contact: null,
-        gradYear: null,
+        College: "",
+        Contact: null,
+        GraduationYear: null,
       };
 
       await ifSignIn();
       //setting to show modal
       setTimeout(() => {
-        document.getElementById("hideMe").style.display = 'none';
+        document.getElementById("hideMe").style.display = "none";
         setIsModalShown(true);
       }, 1600);
 
@@ -145,7 +145,7 @@ const Profile = () => {
         <div className="sn_line_forNHeading">PROFILE</div>
         <div className="sn_line_forNHeading">PROFILE</div>
         <div className="sn_line_forNHeading">PROFILE</div>
-        <div className="sn_line_forNHeading">PROFILE</div>  
+        <div className="sn_line_forNHeading">PROFILE</div>
         <div className="sn_line_forNHeading">PROFILE</div>
       </div>
       <div className="ParticipantProfile">
@@ -157,8 +157,11 @@ const Profile = () => {
               color: "#6CDE01",
             }}
           >
-            {!isAuthKey ? "Get Started" :<h1 className="reggg">Registered Event</h1>}
-            
+            {!isAuthKey ? (
+              "Get Started"
+            ) : (
+              <h1 className="reggg">Registered Events</h1>
+            )}
           </div>
           <div className="registeer">
             {isModalShown && !isAuthKey ? (
@@ -182,8 +185,9 @@ const Profile = () => {
                     <ProfileCard
                       name={profileDATA.name}
                       image={profileDATA.image}
-                      gradYear={profileDATA.gradYear}
-                      college={profileDATA.college}
+                      Graduation
+                      Year={profileDATA.GraduationYear}
+                      College={profileDATA.College}
                     />
                   </div>
                 </div>

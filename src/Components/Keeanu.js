@@ -16,22 +16,26 @@ const Keeanu = () => {
         document.documentElement.clientHeight;
       var scrolled1 = ((winScroll + winScroll / 10) / height) * 100;
       var scrolled2 = (winScroll / height) * 100;
-      // console.log("Scrolled2 is" + scrolled2)
+      // // console.log("Scrolled2 is" + scrolled2)
       if (Math.ceil(scrolled2) <= 1) {
-        // console.log("Scrolled2 is currently 1")
-        document.getElementById("keanuimg").style.animation ="keanumation 4s forwards";
-        document.getElementById("booth-img").style.animation ="keanumation 4s forwards";
-        document.getElementById("myBar").style.zIndex=19;
+        // // console.log("Scrolled2 is currently 1")
+        document.getElementById("keanuimg").style.animation =
+          "keanumation 4s forwards";
+        document.getElementById("booth-img").style.animation =
+          "keanumation 4s forwards";
+        document.getElementById("myBar").style.zIndex = 19;
         setInterval(() => {
           document.getElementById("keanuimg").style.opacity = "100%";
           document.getElementById("booth-img").style.opacity = "100%";
         }, 4000);
       }
       if (Math.ceil(scrolled2) >= 90) {
-        // console.log("Scrolled2 is currently 1")
-        document.getElementById("keanuimg").style.animation ="keanu_fade 0.5s forwards";
-        document.getElementById("booth-img").style.animation ="keanu_fade 0.5s forwards";
-        document.getElementById("myBar").style.zIndex=-1;
+        // // console.log("Scrolled2 is currently 1")
+        document.getElementById("keanuimg").style.animation =
+          "keanu_fade 0.5s forwards";
+        document.getElementById("booth-img").style.animation =
+          "keanu_fade 0.5s forwards";
+        document.getElementById("myBar").style.zIndex = -1;
         setInterval(() => {
           document.getElementById("keanuimg").style.opacity = "0%";
           document.getElementById("booth-img").style.opacity = "0%";
@@ -40,7 +44,7 @@ const Keeanu = () => {
       document.getElementById("myBar").style.width = scrolled1 + "%";
       setScrolled(scrolled1);
       // setH(scrolled1)
-      // console.log(scrolled1)
+      // // console.log(scrolled1)
     });
     // return window.removeEventListener("scroll",setH(window.scrollY))
   }, []);
@@ -72,7 +76,7 @@ const Keeanu = () => {
           onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
           }}
-          className="booth-img"
+          className="booth-img cursor-pointer"
           id="booth-img"
           src={require("./Assets/Images/images/phonebooth.png")}
           alt=""

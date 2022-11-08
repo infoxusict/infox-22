@@ -1,0 +1,366 @@
+.ParticipantProfile {
+    display: flex;
+    width: 90vw;
+    margin:auto;
+    margin-bottom: 8vw;
+}
+/* .registeer{
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+} */
+@media (max-width: 900px) {
+    /* .registeer{ */
+        /* display: flex; */
+        /* width: 50vw; */
+        /* flex-direction: row; */
+    /* } */
+}
+.profileTitle {
+    margin: 10vw 0vw 4vw 6vw;
+    
+}
+
+.ProfileHeading {
+    /* margin: 0vw 1vw 4vw 37vw; */
+    text-align: center;
+    font-size: 2.2vw;
+}
+.reggg{
+    margin: 0vw 1vw 4vw -37vw;
+    /* margin:  !important; */
+}
+
+
+.programs {
+    justify-content: space-around;
+}
+
+.eventsParticipated {
+    /* display: flex; */
+    flex-wrap: wrap;
+    width: 90vw;
+    /* height: 30vw; */
+    /* margin:10vw auto; */
+}
+.bigbbb{
+    display: flex;
+}
+
+.profilePart {
+    /* height: 40vw; */
+    width: 30vw;
+
+
+}
+
+/* ____________________________________ Profile Card_________________________ */
+.profileCard {
+    width: 28vw;
+    margin: auto;
+    height: 47vw;
+    top: 26vw;
+    background: linear-gradient(134.03deg, rgba(255, 255, 255, 0.4) -47.9%, rgba(255, 255, 255, 0.08) 116.08%);
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7.5px);
+    border-radius: 2vw;
+    position: sticky;
+    top: 20px;
+}
+
+.profilelogo {
+    position: absolute;
+    width: 10vw;
+}
+
+.profilepic > img {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#logoutbtn{
+    color:white;
+    position: relative;
+    left: 25vw;
+    top:44vw;
+    opacity: 0.5;
+    color: white;
+}
+
+.logoutimg{
+    width:2vw;
+    height: 2vw;
+}
+
+.headshot {
+    flex-shrink: 0;
+    margin: 1.5vw;
+    /* height: calc(120px + 6vw); */
+    height: 15vw;
+    /* width: calc(120px + 6vw); */
+    width: 15vw;
+    border: 0.5vw solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-size: cover;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 5px rgba(7, 6, 6, 0.5);
+    position: absolute;
+    top: 6vw;
+    left: 5vw;
+}
+
+.headshot-2 {
+    border-radius: 50%;
+    background-image: var(--img-url), linear-gradient(to bottom right, #25dd34, #169246, #09661d);
+    /* background-image: var(--img-url), linear-gradient(to bottom right, #cecece, #5d7165, #333b33); */
+}
+
+.profilebox {
+    height: 15vw;
+    background-color: rgb(10, 10, 10);
+    border-radius: 2vw;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: solid rgb(209, 206, 206) 0.1vw;
+}
+
+.profileData {
+    background-color: rgb(206, 208, 209);
+    height: 4vw;
+    margin-bottom: .5vw;
+}
+
+.profileData h3 {
+
+    font-family: "atmospheric";
+    color: aliceblue;
+    position: relative;
+    top: 10vw;
+    font-size: 2.3vw;
+    text-align: center;
+}
+
+/* .profileQuote{
+    font-family: "mechtech";
+    font-style: italic;
+    color: #fefefe;
+    position: relative;
+    top:13vw;
+    left:1.5vw;
+    font-size: 1.5vw;
+    width: 25vw;
+    text-align: center;
+    background-color: black;
+    opacity: 0.5;
+    padding-left: 10px;
+    padding-right: 10px;
+} */
+
+.profileData2 {
+    font-size: 1.8vw;
+    width: 25vw;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.profileData2 h5 {
+    position: relative;
+    top: 15vw;
+    left: 1.5vw;
+    font-family: "mechtech";
+    color: rgba(255, 255, 255, 0.377) !important;
+    opacity: 0.9;
+    font-size: 2vw;
+}
+
+.college_title {
+    color: rgb(10, 10, 10);
+    position: relative;
+    top: 12.5vw;
+    left: 1.5vw;
+    font-family: "serif";
+}
+
+.profileData2 h6 {
+    /* font-style: italic; */
+    color: #6cde01bb;
+    position: relative;
+    top: 13vw;
+    font-size: 1.42vw;
+    letter-spacing: 0.1em;
+    width: 26vw;
+    /* text-align: center; */
+    /* padding-left: 12px; */
+    /* padding-right: 10px; */
+    opacity: 0.8;
+}
+
+.shadows {
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: -15px 5px 20px #118b17;
+    color: #6CDE01;
+    letter-spacing: -0.05em;
+    font-family: 'Anton', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    transition: all 0.25s ease-out;
+}
+.shadows:hover {
+    text-shadow: -16px 6px 15px #055520;
+}
+.ggbtn{
+    display: flex;
+    justify-items: center;
+    /* margin: 0vw -2vw 1vw 1vw !important; */
+    /* height: 20vw; */
+}
+#googlebtn{
+    padding: 1.5vh 2.5vh;
+    margin: 5vw auto 0vw auto;
+}
+
+@media (max-width: 700px) {
+    .ProfileHeading {
+        font-size: 4vw;
+        margin: -7vw 0vw 4vw 28vw !important;
+    }
+
+    .ParticipantProfile {
+        flex-direction: column-reverse !important;
+        /* background-color: #09661d; */
+    }
+
+    .eventsParticipated {
+        margin: 20vw auto;
+        /* height: 50vw; */
+        width: 90vw;
+    }
+    .bigbbb{
+        flex-direction: column-reverse !important;
+    }
+    .page-content {
+        grid-gap: 2vw;
+        padding: 1vw;
+        height: 80vh;
+        justify-content: center;
+        flex-direction: column-reverse !important;
+    }
+    .card {
+        margin-top: 0;
+        padding: 1vw;
+        width: 40vh;
+        height: 40vh !important;
+    }
+    .copy {
+        margin: 4vw;
+        font-size: 3.2vw;
+    }
+    .title {
+        font-size: 4vw;
+    }
+    .btn {
+        font-size: 1.5vw;
+    }
+
+    .profileCard {
+        rotate: -90deg;
+        margin: -22vw 0vw -22vw 27vw;
+        height: 90vw;
+        width: 35vw;
+    }
+
+    .profilelogo {
+        rotate: -90deg;
+        margin: 0vw 10vw 0vw 23vw;
+    }
+
+    .headshot {
+        rotate: 90deg;
+        left: 2vw;
+    }
+    .headshot-2 {
+        height: 23vw;
+        width: 23vw;
+    }
+
+    .profileData h3 {
+        rotate: 90deg;
+        top: 36vw;
+        left: -2vw;
+        font-size: 4vw;
+        width: 60vw;
+    }
+
+    .profileData2 {
+        rotate: 90deg;
+        top: 35vw;
+        left: -15vw;
+        font-size: 4vw;
+        width: 55vw;
+    }
+
+    .profileData2 h5 {
+        top: 18vw;
+        left: 25vw;
+        font-size: 4vw;
+        width: 55vw;
+
+    }
+
+
+    .profileData2 h6 {
+        top: 15vw;
+        left: 30vw;
+        font-size: 2.8vw;
+        width: 55vw;
+    }
+
+    .profileTitle {
+        margin-top: 20vw;
+    }
+
+}
+@media (max-width: 500px) {
+    .ProfileHeading {
+        margin:3vw 0vw 20vw 19vw !important;
+        font-size: 6vw;
+    }
+    .eventsParticipated{
+        /* height: 70vw; */
+        margin: 15vw 0vw 20vw 0vw;
+    }
+    .copy {
+        font-size: 3.9vw;
+    }
+    .title {
+        font-size: 5vw;
+    }
+    .btn {
+        font-size: 2.2vw;
+    }
+
+    .profileData h3 {
+        font-size: 5vw;
+        width: 60vw;
+        left: -2.5vw;
+        bottom: -4vw;
+        top: 38vw;
+    }
+
+    .profileQuote {
+        top: 37vw;
+        left: -13vw;
+        font-size: 2.9vw;
+        width: 50vw;
+        line-height: 3.3vw;
+    }
+
+    .profileTitle {
+        margin-top: 30vw;
+    }
+}

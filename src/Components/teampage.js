@@ -106,7 +106,7 @@ export default function TeamPage() {
           name="Dhruv Aeron"
           team="Web Team"
           position="Full-Stack Developer"
-          Quote="I intend to live life not just exist.🤣"
+          Quote="I intend to live life not just exist."
           linkedin="www.linkedin.com/in/aerondhruv"
           github="https://github.com/Aeron2"
           gmail="dhruv.aeron3@gmail.com"
@@ -118,7 +118,7 @@ export default function TeamPage() {
           name="Dhruv Gupta"
           team="Web Team"
           position="Full-Stack Developer"
-          Quote="Where the focus goes, Energy flows 🌞"
+          Quote="Where the focus goes, Energy flows "
           linkedin="https://www.linkedin.com/in/dhruv-gupta-55034a228/"
           github="https://www.github.com/MR-DHRUV"
           gmail="dhruvgupta742@gmail.com"
@@ -181,11 +181,11 @@ export default function TeamPage() {
           name="Suraj Mishra"
           team="Web Team"
           // position=" Developer"
-          Quote="You eliminate competition by being yourself"
+          Quote="My life will be the best illustration of all my work."
           linkedin="https://www.linkedin.com/in/nishant-ola-490712228/"
           github="https://github.com/ola-nishant"
           gmail="nishant.ola22@gmail.com"
-          photo="./Assets/Images/teams/suraj.jpg.png"
+          photo="./Assets/Images/teams/suraj-headshot.jpeg"
         />
       </div>
       {/* <Contact /> */}

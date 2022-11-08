@@ -17,6 +17,15 @@ g {
   font-family: "kurinji";
   src: url("../fonts/Kurinji-Regular.otf");
 }
+@font-face {
+  font-family: "MechTech";
+  src: url("../fonts/MechTech-1mlZ.ttf");
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("../fonts/BAHNSCHRIFT.TTF");
+}
 
 .a {
   background: linear-gradient(lime, #02b002);

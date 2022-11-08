@@ -2,7 +2,7 @@
 // import Video from './Assets/Videos/startv.mp4'
 import "./Assets/Images/CSS/Home.css";
 import MatrixRain from "./MatrixRain";
-import SponserNew from './SponsersNew'
+import SponserNew from './SponsersNew';
 import Glimpses from "./Glimpses";
 import "aos/dist/aos.css";
 import Banner from "./Banner";
@@ -10,9 +10,8 @@ import Banner from "./Banner";
 const Home = (props) => {
  
   return (
-    
     <section id="Home">
-      <Banner/>
+      <Banner />
       <MatrixRain />
       <div className="animationFrame" id="svgggg">
         <div className="whole-hero">
@@ -37,38 +36,65 @@ const Home = (props) => {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="home-textCon">
-              <div class="sn_glitch atmosphere">
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+            <div className="home-textCon ">
+              <div className="sn_glitch atmosphere">
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
-                <div class="sn_line" style={{ fontFamily: "kurinji" }}>
+                <div
+                  className="sn_line md:text-6xl lg:text-9xl"
+                  style={{ fontFamily: "kurinji" }}
+                >
                   INFOXPRESSION
                 </div>
               </div>
-            <div className="home-svg-con svgg">
-              {/* <h3
+              <div className="home-svg-con svgg">
+                {/* <h3
                 style={{
                   textAlign: "center",
                   fontWeight: "bold",
@@ -77,12 +103,12 @@ const Home = (props) => {
               >
                 OCTOBER 2022
               </h3> */}
-                <p style={{ textAlign: "center" }}> 
-                  17th - 19th NOVEMBER 2022 <br/>
-                TECHFEST USICT | GGSIPU <br />
-                CELEBRATING THE SENSE OF BELONGING
-              </p>
-            </div>
+                <p style={{ textAlign: "center",fontWeight:"600", textShadow:"0px 0px 5px black", fontFamily:"Bahnschrift",width:"70vw", textJustify:"inter-word"}} className="md:translate-y-16 md:text-xl">
+                  <p className="front-date" style={{fontSize:"x-large"}}> 18th - 20th NOVEMBER</p>
+                  <p style={{transform:"scale(1.03,1.1)"}}>TECHFEST USICT | GGSIPU</p>
+                  <p style={{fontSize:"small"}} >CELEBRATING THE SENSE OF BELONGING</p>
+                </p>
+              </div>
             </div>
           </div>
           <SponserNew />

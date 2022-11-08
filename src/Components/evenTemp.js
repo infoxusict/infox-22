@@ -1,47 +1,237 @@
-import React from "react";
+import React, { useState } from "react";
 import MatrixRain from "./MatrixRain";
 import { TiLocation } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { ImCross } from "react-icons/im";
+import { useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
+import "./Assets/Images/CSS/uhack.css";
+import "./Assets/Images/CSS/teammodal.css";
+import { Toaster, toast } from "react-hot-toast";
 
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
-const EvenTemp = () => {
+const EvenTemp = (props) => {
+  // console.log(props.data.eventPic);
+
+  const [register, setRegister] = useState(false);
+  const [teamCode, setTeamcode] = useState("");
+  const [teamName, setTeamName] = useState("");
+  const [teamID, setTeamID] = useState("");
+  const history = useHistory();
+  // const [Result, setResult] = React.useState("Registration Complete");
+  const [joinError, setJoinError] = useState("");
+  const [createError, setCreateError] = useState("");
+
+  const onChangCeode = (event) => {
+    setTeamcode(event.target.value);
+  };
+
+  const onChangeName = (event) => {
+    setTeamName(event.target.value);
+  };
+
+  const registerModal = () => {
+    if (
+      localStorage.getItem("authkey") === null ||
+      localStorage.getItem("authkey") === undefined
+    ) {
+      history.push("/profile");
+      return;
+    }
+
+    setRegister(true);
+    // // console.log("hi");
+    // change here
+    document.getElementById("getBlur").style.opacity = 0.05;
+    document.body.style.overflow = "hidden";
+  };
+
+  const createTeam = async (e) => {
+    e.preventDefault();
+
+    if (teamName.length < 4) {
+      toast.error("Please enter valid Team Name");
+      return;
+    }
+    console.log(props.data.eventId);
+    console.log(teamName);
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/gen_code`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authToken': localStorage.getItem('authkey')
+      },
+      body: JSON.stringify({ eventId: props.data.eventId, teamName: teamName })
+    });
+
+    // eslint-disable-next-line
+    const json = await response.json();
+
+    if (json.success === false) {
+      toast.error(json.error);
+      setCreateError(json.error);
+      return;
+    }
+
+    setTeamID(json.teamId);
+    // alert(JSON.stringify(json.error));
+    setRegister(false);
+    // correct here
+    document.getElementById("getBlur").style.opacity = 1;
+    document.body.style.overflow = "scroll";
+    history.push("/profile");
+  };
+
+  const joinTeam = async (e) => {
+    e.preventDefault();
+
+    if (teamCode.length < 5) {
+      toast.error("Please enter valid Team Code");
+      return;
+    }
+    console.log(props.data.eventId);
+    console.log(teamCode);
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/join`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'authToken': localStorage.getItem('authkey')
+      },
+      body: JSON.stringify({ eventId: props.data.eventId, teamId: teamCode })
+    });
+
+    // eslint-disable-next-line
+    const json = await response.json();
+    // console.log(json);
+
+    if (json.success === false) {
+      toast.error(json.error);
+      setJoinError(json.error);
+      return;
+    }
+
+    setTeamID(json.teamId);
+    setRegister(false);
+    // correct here
+    document.getElementById("getBlur").style.opacity = 1;
+    history.push("/profile");
+  };
+  function leave() {
+    // var element = document.getElementById("team-modal");
+    // window.location.reload();
+    setRegister(false);
+    document.getElementById("getBlur").style.opacity = 1;
+    document.body.style.overflow = "visible";
+    // element.style.display = "none";
+    // console.log("hehehehehe");
+  }
   return (
     <>
       <MatrixRain />
       <div className=" container mx-auto text-white md:pt-24">
-        <section className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg md:pl-8">
+        {register && (
+          <>
+            <div className="cont">
+              <div id="team-modal" className="container glass paddingg">
+                <div id="create-modal">
+                  <button
+                    className="cross md:text-xl text-xs absolute md:right-7 md:top-7 right-5 top-5"
+                    onClick={leave}
+                  >
+                    <ImCross />
+                  </button>
+                  <h2 className="h2 atmosphere pt-5">Create Team</h2>
+                  <form action="" id="create-form" onSubmit={createTeam}>
+                    <input
+                      type="text"
+                      id="team-name"
+                      placeholder="Enter Team Name"
+                      value={teamName}
+                      onChange={onChangeName}
+                    />
+                    <button
+                      type="submit"
+                      className="register team-btn "
+                      id="create-btn"
+                    >
+                      {/* <Link href="https://google.com" className="register team-btn">
+                  </Link> */}
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      Create
+                    </button>
+                  </form>
+                  {createError}
+                  <div>
+                    <Toaster />
+                  </div>
+                  {teamID}
+                </div>
+                {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
+                {/* <hr /> */}
+                <h2 className="h2 glitch" id="or">
+                  OR
+                </h2>
+                <div id="join-modal">
+                  <h2 className="h2 atmosphere">Join Team</h2>
+                  <form id="join-form" onSubmit={joinTeam}>
+                    <input
+                      type="text"
+                      id="team-code"
+                      placeholder="Enter a team code to join"
+                      value={teamCode}
+                      onChange={onChangCeode}
+                    />
+                    <button type="submit" className="register team-btn hel">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      Join Team
+                    </button>
+                  </form>
+                  {joinError}
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+        <section
+          className="  flex flex-col-reverse  md:flex-row md:gap-32  uh-bg  md:pl-24"
+          id="getBlur"
+        >
           <div className="basis-1/2 mt-8 md:mt-16 ">
             {/* <div className="atmosphere text-7xl">Uhack</div> */}
-            <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
-              <div class="sn_line_forNHeading">Event</div>
+            <div className="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
+              <div className="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
-            <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-              cupiditate minimm eveniet illo? Quo odit, nihil consectetur beatae
-              eaque ab voluptatem? Voluptas.
+            <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify md:max-w-[40%] ">
+              {props.data.tagline}
               {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations
                 take out solutions that nobody has ever thought and get involved
                 in the heat with some of the best coders of the country. */}
             </div>
-            <div className="flex md:mt-16 mt-8 gap-8 txt-shdw text-xl justify-center md:justify-start">
-              <div className="flex gap-2 hel">
+            <div className="flex md:mt-16 mt-8 gap-8 txt-shdw text-xl justify-center md:justify-start flex-wrap ">
+              <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <svg
                   // style="color: #000"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
                   fill="currentColor"
-                  class="bi bi-calendar-date"
+                  className="bi bi-calendar-date"
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -54,16 +244,16 @@ const EvenTemp = () => {
                     fill="white"
                   ></path>{" "}
                 </svg>
-                <p> Date</p>
+                <p className="w-24"> {props.data.date}</p>
               </div>
-              <div className="flex gap-2 hel">
+              <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <svg
                   // style="color: white"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
                   fill="currentColor"
-                  class="bi bi-clock"
+                  className="bi bi-clock"
                   viewBox="0 0 16 16"
                 >
                   {" "}
@@ -76,40 +266,62 @@ const EvenTemp = () => {
                     fill="white"
                   ></path>{" "}
                 </svg>
-                <p className="">Time</p>
+                <p className="w-24">{props.data.time}</p>
               </div>
-              <div className="flex gap-2 hel">
+              <div className="flex gap-2 hel basis-1/3 md:basis-0">
                 <TiLocation size={33} className="" />
-                <p className="">Location</p>
+                <p className="w-24">{props.data.venue}</p>
               </div>
             </div>
             <div className=" devfolio-button flex justify-center md:justify-start ">
-              <Link to="/" className="register ">
+              <button
+                to="/"
+                className="register !mt-24 md:!mt-32"
+                onClick={registerModal}
+              >
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Register
-              </Link>
+              </button>
             </div>
           </div>
           <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
             <div>
-              <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
-                <div class="sn_line_forNHeading">Event</div>
+              <div className="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
+                <div className="sn_line_forNHeading">
+                  {props.data.eventName}
+                </div>
               </div>
             </div>
             <div className="flex justify-center md:justify-center ">
               <img
-                src={require("./Assets/Images/images/uhack/1USICT-HACK-2022.png")}
+                src={props.data.eventPic}
                 alt="infox"
                 className="uh-img  p-4 uh-bg w-4/5 "
               />
@@ -119,59 +331,39 @@ const EvenTemp = () => {
         <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw mt-24 md:mt-32">
           Information
         </div>
-        <div className="  uh-bg mt-8 p-4 mb-16 md:mb-32 pb-16">
-          <div className="container mx-auto flex gap-6 flex-col md:flex-row ">
-            <div className="basis-2/6">
+        <div className="  uh-bg mt-8 px-4 md:px-12 py-8 mb-16 md:mb-32 pb-16">
+          {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row "> */}
+          <div className="container mx-auto flex gap-6 flex-col ">
+            <div className="basis-1/2 ">
               <h4 className="subheading txt-shdw">About</h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate minimm eveniet illo? Quo odit, nihil
-                consectetur beatae eaque ab voluptatem? Voluptas.
-              </p>
+              <p>{props.data.about}</p>
             </div>
-            <div className="basis-2/6">
+            <div className="basis-1/2">
               {" "}
-              <h4 className="subheading txt-shdw txt-shdw">Structure</h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate mi eveniet illo? Quo odit, nihil consectetur
-                beatae eaque ab voluptatem? Voluptas.
-              </p>
-            </div>
-            <div className="basis-2/6">
-              {" "}
-              <h4 className="subheading txt-shdw">Timeline</h4>
-              <p>
-                Lorem, ips eveniet illo? Quo odit, nihil consectetur beatae
-                eaque ab voluptatem? Voluptas.
-              </p>
+              <h4 className="subheading txt-shdw">Rules</h4>
+
+              <a href={props.data.rules} target="_blank" className="viewrules" rel="noopener noreferrer">Click here to view rules</a>
+
             </div>
           </div>
-          <div className="container mx-auto flex gap-6 flex-col md:flex-row ">
+          {/* <div className="container mx-auto flex gap-6 flex-col md:flex-row md:mt-7"> */}
+          <div className="container mx-auto flex gap-6 flex-col  md:mt-7">
             <div className="basis-2/6">
-              <h4 className="subheading txt-shdw">Rules</h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate minieveniet illo? Quo odit, nihil
-                consectetur beatae eaque ab voluptatem? Voluptas.
-              </p>
+              <h4 className="subheading txt-shdw">Team Size</h4>
+              <p>{props.data.teamSize}</p>
             </div>
             <div className="basis-2/6">
               {" "}
               <h4 className="subheading txt-shdw">Prize</h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate llo? Quo odit, nihil consectetur beatae
-                eaque ab voluptatem? Voluptas.
-              </p>
+              <ul>{props.data.prize}</ul>
             </div>
             <div className="basis-2/6">
               {" "}
               <h4 className="subheading txt-shdw">Contact Us</h4>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt cupiditate minit, nihil consectetur beatae eaque ab
-                voluptatem? Voluptas.
+                {props.data.contact.map((item) => {
+                  return <li className="list-none" key={item}>{item}</li>;
+                })}
               </p>
             </div>
           </div>

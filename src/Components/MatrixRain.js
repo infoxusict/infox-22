@@ -3,8 +3,8 @@ import "./Assets/Images/CSS/MAtrixRain.css";
 
 var fps;
 var ph;
-var boody= document.body;
-var htmll=document.documentElement
+var boody = document.body;
+var htmll = document.documentElement;
 const MatrixRain = () => {
   const Rain = () => {
     var body = document.body,
@@ -56,7 +56,7 @@ const MatrixRain = () => {
           this.y = 0;
         } else {
           this.y += 1;
-          ph +=1;
+          ph += 1;
         }
       }
     }
@@ -70,7 +70,7 @@ const MatrixRain = () => {
         this.columns = this.canvasWidth / this.fontSize;
         this.symbols = [];
         this.#initialize();
-        // console.log(this.symbols)
+        // // console.log(this.symbols)
       }
       #initialize() {
         for (let i = 0; i < this.columns; i++) {
@@ -119,26 +119,30 @@ const MatrixRain = () => {
   };
 
   useEffect(() => {
-    setTimeout(()=>{
-      Rain()
-    },3000)
-    if(ph===Math.max(
-      boody.scrollHeight,
-      boody.offsetHeight,
-      htmll.clientHeight,
-      htmll.scrollHeight,
-      htmll.offsetHeight
-    ))
-    {
-      fps=30;
+    setTimeout(() => {
+      Rain();
+    }, 3000);
+    if (
+      ph ===
+      Math.max(
+        boody.scrollHeight,
+        boody.offsetHeight,
+        htmll.clientHeight,
+        htmll.scrollHeight,
+        htmll.offsetHeight
+      )
+    ) {
+      fps = 30;
     }
     // eslint-disable-next-line
   }, []);
 
   return (
-    <div>
-      <canvas id="canvas1"></canvas>
-    </div>
+    <>
+      <div>
+        <canvas id="canvas1"></canvas>
+      </div>
+    </>
   );
 };
 

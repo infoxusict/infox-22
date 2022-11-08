@@ -8,7 +8,7 @@ const Map = () => {
     <>
       <MatrixRain />
       <div className="uh-bg">
-        <div  className="pb-16 pt-24 container mx-auto">
+        <div className="pb-16 pt-24 container mx-auto">
           <h1 className="Reach_us_title -mb-8 md:mb-8">Reach us</h1>
           <div className="reach_us_stuff">
             <div className="mapdiv">

@@ -26,6 +26,12 @@ import EvenTemp from "./Components/evenTemp";
 import Event from "./Components/Event";
 import ScheduleGrid from "./Components/ScheduleGrid";
 
+// google analytics
+import ReactGA from "react-ga";
+const trackingId = "G-9D3DN4PEW0";
+
+ReactGA.initialize(trackingId);
+
 const App = () => {
   // let events = [];
   const [events, setEvents] = useState([]);

@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 export default function ProfileCard(props) {
   const [isAuthKey, setisAuthKey] = useState(false);
-
+console.log(props)
   const history = useHistory();
   const ifSignIn = async () => {
     var x = localStorage.getItem("authkey");
@@ -61,7 +61,7 @@ export default function ProfileCard(props) {
         </div>
       </div>
       <div className="profilepic" style={{}}>
-        <img className="headshot headshot-2" src={props.image}></img>
+        <img className="headshot headshot-2" src={props.image} alt=""></img>
       </div>
       <div className="profileData">
         <h3>{props.name} </h3>
@@ -69,7 +69,7 @@ export default function ProfileCard(props) {
 
       <div className="profileData2">
         <h6 className="shadows">{props.college}</h6>
-        <h5>{props.gradYear}</h5>
+        <h5>{props.year}</h5>
         {/* <h4 className="college_title">College</h4> */}
       </div>
     </div>

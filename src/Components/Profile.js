@@ -185,9 +185,8 @@ const Profile = () => {
                     <ProfileCard
                       name={profileDATA.name}
                       image={profileDATA.image}
-                      Graduation
-                      Year={profileDATA.GraduationYear}
-                      College={profileDATA.College}
+                      year={profileDATA.gradYear}
+                      college={profileDATA.college}
                     />
                   </div>
                 </div>

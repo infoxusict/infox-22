@@ -1,5 +1,6 @@
 .sch-par-div{
     height: max-content;
+    min-height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,7 +151,8 @@
  }
  #item-13 {
  
-    background-color: #0a8f0b; 
+    background-color: #24FEB6;
+    color: black; 
     grid-row-start: 2;
     grid-column-start: 2;
  
@@ -160,7 +162,8 @@
  }
  #item-14 {
  
-    background-color: #52ba31; 
+    background-color: #1FF1F7; 
+    color: black;
     grid-row-start: 3;
     grid-column-start: 4;
  
@@ -170,7 +173,8 @@
  }
  #item-15 {
  
-   background-color: #0a8f0b; 
+   background-color: #24FEB6;
+   color: black; 
     grid-row-start: 4;
     grid-column-start: 5;
  
@@ -190,7 +194,8 @@
  }
  #item-17 {
  
-   background-color: #52ba31; 
+   background-color: #1FF1F7; 
+   color: black;
    grid-row-start: 5;
     grid-column-start: 5;
  
@@ -210,7 +215,8 @@
  }
  #item-19 {
  
-   background-color: #0a8f0b; 
+   background-color: #24FEB6;
+   color: black; 
     grid-row-start: 6;
     grid-column-start: 8;
  
@@ -220,7 +226,8 @@
  }
  #item-20 {
  
-   background-color: #0a8f0b; 
+   background-color: #24FEB6;
+   color: black; 
    grid-row-start: 2;
     grid-column-start: 5;
  
@@ -240,7 +247,8 @@
  }
  #item-22 {
  
-   background-color: #52ba31; 
+   background-color: #1FF1F7; 
+   color: black;
    grid-row-start: 7;
     grid-column-start: 10;
  
@@ -300,7 +308,8 @@
  }
  #item-28 {
  
-   background-color: #0a8f0b; 
+   background-color: #24FEB6;
+   color: black; 
     grid-row-start: 8;
     grid-column-start: 3;
  
@@ -400,7 +409,8 @@
  }
  #item-38 {
  
-   background-color: #0a8f0b; 
+   background-color: #24FEB6;
+   color: black; 
     grid-row-start: 4;
     grid-column-start: 11;
  
@@ -417,6 +427,7 @@
     font-size: 20px;
     font-family: Poppins;
     border-radius: 5px;
+    margin-top: 1vh;
     /* background-blend-mode: lighten; */
     /* text-justify: kashida; */
     /* border-left: 1px solid grey; */

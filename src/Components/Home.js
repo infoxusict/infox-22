@@ -103,10 +103,10 @@ const Home = (props) => {
               >
                 OCTOBER 2022
               </h3> */}
-                <p style={{ textAlign: "center" }} className="md:translate-y-16 md:text-xl">
-                  18th - 20th NOVEMBER 2022 <br />
-                  TECHFEST USICT | GGSIPU <br />
-                  CELEBRATING THE SENSE OF BELONGING
+                <p style={{ textAlign: "center",fontWeight:"600", textShadow:"0px 0px 5px black", fontFamily:"Bahnschrift",width:"70vw", textJustify:"inter-word"}} className="md:translate-y-16 md:text-xl">
+                  <p className="front-date" style={{fontSize:"x-large"}}> 18th - 20th NOVEMBER</p>
+                  <p style={{transform:"scale(1.03,1.1)"}}>TECHFEST USICT | GGSIPU</p>
+                  <p style={{fontSize:"small"}} >CELEBRATING THE SENSE OF BELONGING</p>
                 </p>
               </div>
             </div>

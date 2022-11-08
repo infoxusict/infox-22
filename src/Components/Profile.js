@@ -144,7 +144,7 @@ const Profile = () => {
         <div className="sn_line_forNHeading">PROFILE</div>
         <div className="sn_line_forNHeading">PROFILE</div>
         <div className="sn_line_forNHeading">PROFILE</div>
-        <div className="sn_line_forNHeading">PROFILE</div>
+        <div className="sn_line_forNHeading">PROFILE</div>  
         <div className="sn_line_forNHeading">PROFILE</div>
       </div>
       <div className="ParticipantProfile">

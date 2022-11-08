@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MatrixRain from "./MatrixRain";
 import { TiLocation } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./Assets/Images/CSS/eventTemp.css";
 import "./Assets/Images/CSS/uhack.css"
 import "./Assets/Images/CSS/teammodal.css"
@@ -19,7 +19,7 @@ const EvenTemp = (props) => {
   const [teamName, setTeamName] = useState('');
   const [teamID, setTeamID] = useState('');
   const history = useHistory();
-  const [Result, setResult] = React.useState("Registration Complete");
+  // const [Result, setResult] = React.useState("Registration Complete");
   const [joinError, setJoinError] = useState('');
   const [createError, setCreateError] = useState('');
 
@@ -50,7 +50,11 @@ const EvenTemp = (props) => {
   const createTeam = async (e) => {
     e.preventDefault();
 
-
+    if(teamName.length<4)
+    {
+      toast.error("Please enter valid Team Name");
+      return ;
+    }
     console.log(props.data.eventId);
     console.log(teamName);
     const response = await fetch(`https://infoxpression.herokuapp.com/team/gen_code`, {
@@ -83,7 +87,11 @@ const EvenTemp = (props) => {
   const joinTeam = async (e) => {
     e.preventDefault();
 
-
+    if(teamCode.length<5)
+    {
+      toast.error("Please enter valid Team Code");
+      return ;
+    }
     console.log(props.data.eventId);
     console.log(teamCode);
     const response = await fetch(`https://infoxpression.herokuapp.com/team/join`, {
@@ -210,7 +218,7 @@ const EvenTemp = (props) => {
               <div class="sn_line_forNHeading">{props.data.eventName}</div>
               <div class="sn_line_forNHeading">{props.data.eventName}</div>
             </div>
-            <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
+            <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify max-w-[10%]">
               {props.data.tagline}
               {/*So come up, work on your dreams
                 for 24-hours non-stop and make it happen. Make your imaginations

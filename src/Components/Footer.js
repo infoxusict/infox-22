@@ -40,12 +40,12 @@ const Footer = () => {
               </h3>
               <ul className="list-unstyled links ">
                 <li className="customerList text-lg div-text-lg">
-                  <Link className="customerListA" to="/event">
+                  <Link className="customerListA" to="/sch-event">
                     Dates
                   </Link>
                 </li>
                 <li className="customerList text-lg div-text-lg">
-                  <Link className="customerListA " to="/event">
+                  <Link className="customerListA " to="/sch-event">
                     Venue
                   </Link>
                 </li>

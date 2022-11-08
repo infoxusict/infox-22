@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Keeanu from "./Components/Keeanu";
 // import EventCard from "./Components/EventCard";
 import EventTemplate from "./Components/EventTemplate";
-import Schedule from "./Components/Schedule";
+// import Schedule from "./Components/Schedule";
 import Legacy from "./Components/legacy";
 import Profile from "./Components/Profile"
 import Loader from "./Components/Loader";
@@ -18,6 +18,7 @@ import TeamModal from "./Components/TeamModal";
 // import Sponser from './Components/Sponser'
 import EvenTemp from "./Components/evenTemp";
 import Event from "./Components/Event";
+import ScheduleGrid from "./Components/ScheduleGrid";
 
 const App = () => {
 
@@ -55,9 +56,9 @@ const App = () => {
               <Home page="home" />
             </div>
           </Route>
-          <Route exact path="/event">
+          {/* <Route exact path="/event">
             <Schedule />
-          </Route>
+          </Route> */}
           <Route exact path="/event/name">
             <EventTemplate />
           </Route>
@@ -90,6 +91,10 @@ const App = () => {
 
           <Route exact path="/sch-event">
             <Event/>
+          </Route>
+
+          <Route exact path="/schedule">
+            <ScheduleGrid/>
           </Route>
 
           <Route path="/modal">

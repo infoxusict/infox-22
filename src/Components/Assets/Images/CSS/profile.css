@@ -78,6 +78,20 @@
     width: 4vw; */
 }
 
+#logoutbtn{
+    color:white;
+    position: relative;
+    left: 25vw;
+    top:44vw;
+    opacity: 0.5;
+    color: white;
+}
+
+.logoutimg{
+    width:2vw;
+    height: 2vw;
+}
+
 .headshot {
     flex-shrink: 0;
     margin: 1.5vw;

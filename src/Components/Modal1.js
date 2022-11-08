@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { tempuserObject } from "./Profile";
+import { Toaster, toast } from "react-hot-toast";
 export default function Modal1({
   closeModal,
   data,
@@ -8,12 +9,12 @@ export default function Modal1({
   setprofileDATA,
 }) {
   const [modalInput, setmodalInput] = useState({
-    college: "",
-    gradYear: null,
-    contact: null,
+    College: "",
+    GraduationYear: "",
+    Contact: "",
   });
   const handleClick = async () => {
-    console.log(tempuserObject);
+    // console.log(tempuserObject);
     const res = await fetch(
       "https://infoxpression.herokuapp.com/user/auth/google",
       {
@@ -26,7 +27,7 @@ export default function Modal1({
       }
     );
     var finalres = await res.json();
-    console.log(finalres);
+    // console.log(finalres);
     window.localStorage.setItem("authkey", finalres.authKey);
     const getDetailsRes = await fetch(
       "https://infoxpression.herokuapp.com/user/getDetails",
@@ -40,7 +41,7 @@ export default function Modal1({
       }
     );
     var finaldetailsres = await getDetailsRes.json();
-    console.log(finaldetailsres);
+    // console.log(finaldetailsres);
     userDetails = finaldetailsres;
     setprofileDATA(finaldetailsres);
     setAuthKey(true);
@@ -49,9 +50,9 @@ export default function Modal1({
   const listItems = () => {
     const modalChange = (e) => {
       setmodalInput({ ...modalInput, [e.target.name]: e.target.value });
-      tempuserObject.college = modalInput.college;
-      tempuserObject.gradYear = modalInput.gradYear;
-      tempuserObject.contact = modalInput.contact;
+      tempuserObject.college = modalInput.College;
+      tempuserObject.gradYear = modalInput.GraduationYear;
+      tempuserObject.contact = modalInput.Contact;
     };
 
     return (
@@ -73,11 +74,12 @@ export default function Modal1({
 
   return (
     <>
+      <Toaster />
       <div className="modal">
         <button
           className="close-modal"
           onClick={() => {
-            // console.log(data);
+            // // console.log(data);
             closeModal(false);
           }}
         >
@@ -111,11 +113,24 @@ export default function Modal1({
               type="submit"
               onClick={(e) => {
                 e.preventDefault();
-                tempuserObject.college = modalInput.college;
-                tempuserObject.gradYear = modalInput.gradYear;
-                tempuserObject.contact = modalInput.contact;
-                // console.log(tempuserObject);
-                handleClick();
+                // // console.log(modalInput.GraduationYear);
+                tempuserObject.college = modalInput.College;
+                tempuserObject.gradYear = modalInput.GraduationYear;
+                tempuserObject.contact = modalInput.Contact;
+                console.log(tempuserObject);
+
+                if (modalInput.College === "") {
+                  // // console.log("coll");
+                  toast.error("Enter your College name");
+                } else if (modalInput.GraduationYear === "") {
+                  // // console.log("GradY");
+                  toast.error("Enter your Graduation Year");
+                } else if (modalInput.Contact === "" || modalInput.Contact.length<10) {
+                  // // console.log("conta");
+                  toast.error("Enter your Correct Contact Information");
+                } else {
+                  handleClick();
+                }
               }}
             />
           </div>

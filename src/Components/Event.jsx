@@ -21,7 +21,7 @@ function Event() {
     const json = await response.json();
     setEvents(json);
 
-    console.log(json);
+    // console.log(json);
   };
 
   useEffect(() => {
@@ -52,7 +52,7 @@ function Event() {
                   <button className="mt-12 mb-4 b1n">
                     <a
                       href={"http://localhost:3000/event/" + event.eventId}
-                      className="register teams-btn text-xs q12" 
+                      className="register teams-btn text-xs q12"
                     >
                       <span></span>
                       <span></span>
@@ -61,7 +61,6 @@ function Event() {
                       More info
                     </a>
                   </button>
-                
                 </div>
                 <div className="sch-event-info">
                   <h2 className="sch-event-name mt-6 text-2xl  atmosphere">
@@ -72,10 +71,9 @@ function Event() {
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
                   <h3 className="sch-event-desc line-clamp-1">
-                    {event.tagline.slice(0,100)}
+                    {event.tagline.slice(0, 100)}
                   </h3>
-                  
-              </div>
+                </div>
               </div>
             ))}
         </div>

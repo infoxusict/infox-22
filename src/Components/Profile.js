@@ -21,9 +21,9 @@ export var tempuserObject = {
 };
 
 const modalObject = [
-  { question: "college", placeholder: "college" },
-  { question: "gradYear", placeholder: "gradYear" },
-  { question: "contact", placeholder: "contact" },
+  { question: "College", placeholder: "Eg: USICT" },
+  { question: "GraduationYear", placeholder: "Eg: 2025" },
+  { question: "Contact", placeholder: "Eg: 99XXXXXX00" },
 ];
 
 const Profile = () => {
@@ -53,7 +53,7 @@ const Profile = () => {
 
   const handleCallbackResponse = async (response) => {
     // getting the jwt token and setting userObject as it response
-    console.log("JWT ID TOKEN: ", response.credential);
+    // console.log("JWT ID TOKEN: ", response.credential);
     var userObject = await jwt_decode(response.credential);
 
     // check is google btn click then doing some stuff
@@ -73,7 +73,7 @@ const Profile = () => {
       await ifSignIn();
       //setting to show modal
       setTimeout(() => {
-        document.getElementById("hideMe").style.display = 'none';
+        document.getElementById("hideMe").style.display = "none";
         setIsModalShown(true);
       }, 1600);
 
@@ -90,7 +90,7 @@ const Profile = () => {
         }
       );
       var checkres = await resCheck.json();
-      console.log(checkres);
+      // console.log(checkres);
       // if reponse of posting data is success, then setting the auth key to local storage
       if (checkres.success && checkres.authKey !== undefined) {
         localStorage.setItem("authkey", checkres.authKey);
@@ -131,7 +131,7 @@ const Profile = () => {
     };
 
     func();
-    console.log(profileDATA);
+    // console.log(profileDATA);
     // eslint-disable-next-line
   }, []);
   return (
@@ -145,7 +145,7 @@ const Profile = () => {
         <div className="sn_line_forNHeading">PROFILE</div>
         <div className="sn_line_forNHeading">PROFILE</div>
         <div className="sn_line_forNHeading">PROFILE</div>
-        <div className="sn_line_forNHeading">PROFILE</div>  
+        <div className="sn_line_forNHeading">PROFILE</div>
         <div className="sn_line_forNHeading">PROFILE</div>
       </div>
       <div className="ParticipantProfile">
@@ -157,8 +157,11 @@ const Profile = () => {
               color: "#6CDE01",
             }}
           >
-            {!isAuthKey ? "Get Started" :<h1 className="reggg">Registered Event</h1>}
-            
+            {!isAuthKey ? (
+              "Get Started"
+            ) : (
+              <h1 className="reggg">Registered Events</h1>
+            )}
           </div>
           <div className="registeer">
             {isModalShown && !isAuthKey ? (
@@ -182,8 +185,9 @@ const Profile = () => {
                     <ProfileCard
                       name={profileDATA.name}
                       image={profileDATA.image}
-                      gradYear={profileDATA.gradYear}
-                      college={profileDATA.college}
+                      Graduation
+                      Year={profileDATA.GraduationYear}
+                      College={profileDATA.College}
                     />
                   </div>
                 </div>

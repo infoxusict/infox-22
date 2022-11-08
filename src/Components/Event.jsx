@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { GiPaddleSteamer } from "react-icons/gi";
+// import { GiPaddleSteamer } from "react-icons/gi";
 import "./Assets/Images/CSS/sch-event.css";
 import MatrixRain from "./MatrixRain";
 
 function Event() {
   const [events, setEvents] = useState([]);
-
+  const parseDate = (event) => {
+    const dd = event.date.slice(0, 2),
+      mm = event.date.slice(3, 5),
+      yyyy = event.date.slice(6, 10);
+    console.log(mm + "/" + dd + "/" + yyyy + " " + event.time);
+    return Date.parse(mm + "/" + dd + "/" + yyyy + " " + event.time);
+  };
   const getAllEvents = async () => {
     const response = await fetch(
       "https://infoxpression.herokuapp.com/event/get_all_event",
@@ -19,7 +25,7 @@ function Event() {
     );
 
     const json = await response.json();
-    setEvents(json);
+    setEvents(json.sort((a, b) => parseDate(a) - parseDate(b)));
 
     console.log(json);
   };

@@ -310,12 +310,12 @@ const EventCardProfile = (props) => {
           </div>
           <div className="page-not-head">
             <span className="page-not-atmos">Whoops!!</span>
-            <span>Haven't registered for any event!</span>
-            <span>Do it Now!</span>
+            <span className="page-not-atmo">Haven't registered for any event!</span>
+            <span className="page-not-atmo">Do it Now!</span>
           </div>
-          <div>
+          <div className="registerbkl">
             <Link to="/sch-event">
-              <button to="/" className="register">
+              <button to="/" className="register registerk">
                 <span></span>
                 <span></span>
                 <span></span>

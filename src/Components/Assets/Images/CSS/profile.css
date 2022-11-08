@@ -212,7 +212,7 @@
 @media (max-width: 700px) {
     .ProfileHeading {
         font-size: 4vw;
-        /* margin: 4vw 0vw 4vw 2vw; */
+        margin: -7vw 0vw 4vw 28vw !important;
     }
 
     .ParticipantProfile {
@@ -310,7 +310,7 @@
 }
 @media (max-width: 500px) {
     .ProfileHeading {
-        margin:3vw auto 20vw auto;
+        margin:3vw 0vw 20vw 19vw !important;
         font-size: 6vw;
     }
     .eventsParticipated{

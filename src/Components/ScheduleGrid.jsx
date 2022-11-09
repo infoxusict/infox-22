@@ -95,7 +95,7 @@ function ScheduleGrid() {
         <div className='sch-grid-event' id="item-35">&nbsp;19:30</div> */}
         <div className='sch-grid-event' id="item-36">&nbsp;Labs</div>
         {/* <div className='sch-grid-event' id="item-37">&nbsp;37</div> */}
-       {/* <div className='sch-grid-event' id="item-38">&nbsp;CTF</div>*/}
+       <div className='sch-grid-event' id="item-38-2">&nbsp;CTF</div>
        
       </div>
     </div>

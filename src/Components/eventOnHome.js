@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 // import { GiPaddleSteamer } from "react-icons/gi";
 
-
-
 function EventOnHome() {
   const [events, setEvents] = useState([]);
+  const [selectedevents, setSelectedEvents] = useState([]);
   const parseDate = (event) => {
     const dd = event.date.slice(0, 2),
       mm = event.date.slice(3, 5),
@@ -28,13 +27,19 @@ function EventOnHome() {
     const json = await response.json();
     setEvents(json.sort((a, b) => parseDate(a) - parseDate(b)));
 
-    console.log(json);
+    let selectedEve = [];
+    selectedEve.push(json[0]);
+    selectedEve.push(json[7]);
+    selectedEve.push(json[16]);
+    selectedEve.push(json[21]);
+    setSelectedEvents(selectedEve);
+    // console.log(selectedevents);
+    // console.log(json);
   };
 
   useEffect(() => {
     getAllEvents();
   }, []);
-      
 
   return (
     <>
@@ -52,7 +57,7 @@ function EventOnHome() {
         </div>
         <div className="grid md:grid-cols-2 grid-col-1">
           {events &&
-            events.map((event) => (
+            selectedevents.map((event) => (
               <div className="sch-event-card">
                 <div className="sch-event-pic">
                   <img src={event.eventPic} className="sch-event-img" alt="" />

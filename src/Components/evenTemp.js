@@ -74,13 +74,16 @@ const EvenTemp = (props) => {
       return;
     }
 
-    setTeamID(json.teamId);
-    // alert(JSON.stringify(json.error));
+    setTeamID(json.team.teamId);
     setRegister(false);
+    navigator.clipboard.writeText(json.team.teamId);
+    toast.success("Team ID copied to clipboard");
     // correct here
     document.getElementById("getBlur").style.opacity = 1;
     document.body.style.overflow = "scroll";
-    history.push("/profile");
+    setTimeout(() => {
+      history.push("/profile");
+    }, 3000);
   };
 
   const joinTeam = async (e) => {
@@ -112,6 +115,8 @@ const EvenTemp = (props) => {
     }
 
     setTeamID(json.teamId);
+    navigator.clipboard.writeText(json.teamId);
+    toast.success("Team ID copied to clipboard");
     setRegister(false);
     // correct here
     document.getElementById("getBlur").style.opacity = 1;
@@ -125,6 +130,13 @@ const EvenTemp = (props) => {
     document.body.style.overflow = "visible";
     // element.style.display = "none";
     // console.log("hehehehehe");
+  }
+  const registerClickHandle = () => {
+    if(props.data.eventId === "chess1811"){
+      window.open("https://forms.gle/zogf1sEPsrBsi3fF7", "_blank");
+    } else {
+      registerModal(); 
+    }
   }
   return (
     <>
@@ -164,11 +176,9 @@ const EvenTemp = (props) => {
                       Create
                     </button>
                   </form>
-                  {createError}
                   <div>
                     <Toaster />
                   </div>
-                  {teamID}
                 </div>
                 {/* {stateName && "bfeif iuregi ehgio4hgo"} */}
                 {/* <hr /> */}
@@ -193,7 +203,6 @@ const EvenTemp = (props) => {
                       Join Team
                     </button>
                   </form>
-                  {joinError}
                 </div>
               </div>
             </div>
@@ -277,7 +286,7 @@ const EvenTemp = (props) => {
               <button
                 to="/"
                 className="register !mt-24 md:!mt-32"
-                onClick={registerModal}
+                onClick={registerClickHandle}
               >
                 <span></span>
                 <span></span>

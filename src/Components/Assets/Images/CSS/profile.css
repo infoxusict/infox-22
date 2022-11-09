@@ -91,21 +91,11 @@
     -webkit-backdrop-filter: blur(10px);
 }
 
-#logoutbtn {
-    color: white;
-    position: relative;
-    left: 25vw;
-    top: 44vw;
-    opacity: 0.5;
-    color: white;
-    height: 35px;
-    width: 35px;
-}
-
-.discod-btn-da {
+#logoutbtn{
+    color:white;
     position: absolute;
-    /* left: 25vw; */
-    top: 44vw;
+    right: 1rem;
+    top: 1rem;
     opacity: 0.5;
     color: white;
     height: 35px;
@@ -375,7 +365,11 @@
     .profileTitle {
         margin-top: 20vw;
     }
-
+    #logoutbtn{
+        rotate: 90deg;
+        right: 80%;
+        top: 90%;
+    }
 }
 
 @media (max-width: 500px) {

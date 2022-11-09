@@ -61,8 +61,6 @@ function Event() {
                   <button className="mt-12 mb-4 hidden md:block">
                     <a
                       href={"/event/" + event.eventId}
-                      className="register teams-btn text-xs "
-
                     >
                       <span></span>
                       <span></span>

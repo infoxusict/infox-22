@@ -63,7 +63,10 @@ function EventOnHome() {
                 <div className="sch-event-pic">
                   <img src={event.eventPic} className="sch-event-img" alt="" />
                   <button className="mt-12 mb-4 hidden md:block">
-                    <a href={"/event/" + event.eventId}>
+                    <a
+                      href={"/event/" + event.eventId}
+                      className="register teams-btn text-xs q12"
+                    >
                       <span></span>
                       <span></span>
                       <span></span>
@@ -71,18 +74,6 @@ function EventOnHome() {
                       More info
                     </a>
                   </button>
-                  <button className="mt-12 mb-4  md:hidden justify-start flex">
-                  <Link
-                    href={"/event/" + event.eventId}
-                    className="register teams-btn text-xs "
-                  >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    More info
-                  </Link>
-                </button>
                 </div>
                 <div className="sch-event-info">
                   <h2 className="sch-event-name mt-6 text-2xl  atmosphere break-normal">
@@ -94,21 +85,19 @@ function EventOnHome() {
                     </h3>
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
-                  <h3 className="sch-event-desc line-clamp-1">
-                    {event.about.split("", 90)}...
-                  </h3>
+                  <h3 className="sch-event-desc">{event.about}</h3>
                 </div>
                 <button className="mt-12 mb-4  md:hidden justify-start flex">
-                  <Link
+                  <a
                     href={"/event/" + event.eventId}
-                    className="register teams-btn text-xs "
+                    className="register teams-btn text-xs"
                   >
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     More info
-                  </Link>
+                  </a>
                 </button>
               </div>
             ))}

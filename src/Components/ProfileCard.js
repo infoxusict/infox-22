@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 // import { useEffect } from "react/cjs/react.production.min";
 import { useHistory } from "react-router-dom";
-import { FaDiscord } from "react-icons/fa";
 
 export default function ProfileCard(props) {
   const [isAuthKey, setisAuthKey] = useState(false);
-console.log(props)
+  console.log(props);
   const history = useHistory();
   const ifSignIn = async () => {
     var x = localStorage.getItem("authkey");
@@ -30,7 +29,11 @@ console.log(props)
     <div className="relative">
       <div className="profileCard">
         {!isAuthKey && (
-          <button id="logoutbtn" className="absolute" onClickCapture={logoutUser}>
+          <button
+            id="logoutbtn"
+            className="absolute"
+            onClickCapture={logoutUser}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"
@@ -63,26 +66,12 @@ console.log(props)
           <h3>{props.name} </h3>
         </div>
 
-      <div className="profileData2">
-        <h6 className="shadows">{props.college}</h6>
-        <h5>{props.year}</h5>
-        <div className="discod-btn-da">
-          <a
-            rel="noreferrer"
-            href="https://discord.gg/Y6w42tmwWe"
-            target="_blank"
-          >
-            <FaDiscord size={33} />
-          </a>
-        </div>
-        {/* <h4 className="college_title">College</h4> */}
         <div className="profileData2">
           <h6 className="shadows">{props.college}</h6>
           <h5>{props.year}</h5>
           {/* <h4 className="college_title">College</h4> */}
         </div>
       </div>
-      </div>
-      <d></d>
+    </div>
   );
 }

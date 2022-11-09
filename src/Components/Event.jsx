@@ -41,7 +41,6 @@ function Event() {
       <MatrixRain />
       <div className=" flex flex-wrap justify-evenly mt-20 md:mt-24">
         <div class="sn_glitch_forNHeading atmosphere uh-heading  ">
-
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
           <div class="sn_line_forNHeading">Events</div>
@@ -59,9 +58,7 @@ function Event() {
                 <div className="sch-event-pic">
                   <img src={event.eventPic} className="sch-event-img" alt="" />
                   <button className="mt-12 mb-4 hidden md:block">
-                    <a
-                      href={"/event/" + event.eventId}
-                    >
+                    <a href={"/event/" + event.eventId}>
                       <span></span>
                       <span></span>
                       <span></span>
@@ -75,8 +72,8 @@ function Event() {
                     {event.eventName}
                   </h2>
                   <div className="sch-date-venue">
-                    <h3 className="sch-event-date">
-                      {event.date}, {event.venue}
+                    <h3 className="sch-event-date ">
+                      {event.date},  {event.venue},  {event.category}
                     </h3>
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
@@ -86,7 +83,7 @@ function Event() {
                 </div>
                 <button className="mt-12 mb-4  md:hidden justify-start flex">
                   <a
-                    href={"http://localhost:3000/event/" + event.eventId}
+                    href={"/event/" + event.eventId}
                     className="register teams-btn text-xs "
                   >
                     <span></span>
@@ -96,7 +93,6 @@ function Event() {
                     More info
                   </a>
                 </button>
-
               </div>
             ))}
         </div>

@@ -19,17 +19,31 @@
     position: relative;
     
  }
+.angry-grid-2 {
+    display: grid; 
+ 
+    grid-template-rows: 17vh 17vh 17vh 17vh 17vh 17vh 17vh;
+    grid-template-columns: 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw 6.2vw ;
+    /* margin: auto; */
+    /* margin-left: 5vw; */
+    /* gap: 5px; */
+    height: fit-content;
+    backdrop-filter: blur(2px);
+    position: relative;
+    
+ }
  .angry-grid-1 {
    display: grid; 
 
-   grid-template-rows: 17vh 17vh 17vh 17vh 17vh 17vh 17vh 17vh 17vh;
-   grid-template-columns: 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw 6.5vw ;
+   grid-template-rows: 17vh 17vh 17vh 17vh 17vh 17vh 17vh 17vh 17vh 17vh;
+   grid-template-columns: 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw 5.5vw ;
    /* margin: auto; */
    /* margin-left: 5vw; */
    /* gap: 5px; */
    height: fit-content;
    backdrop-filter: blur(2px);
    position: relative;
+   margin: auto;
    margin-bottom: 20vh;
 }
  .day2{
@@ -39,6 +53,14 @@
 
    font-weight: bold;
  
+
+}
+ .day3{
+   color: bisque;
+   text-align: center;
+   margin: 2vh;
+   font-weight: bold;
+   margin-bottom: 5vh;
  }
    
  #item-0 {
@@ -76,8 +98,8 @@
    background-color: #0a8f0b;
    grid-row-start: 9;
    grid-row-end: 10;
-   grid-column-start: 5;
-   grid-column-end: 10;
+   grid-column-start: 6;
+   grid-column-end: 11;
  }
 
  #item-27-1{
@@ -243,14 +265,14 @@
     grid-column-end: 8;
     
  }
- #item-14 {
+ #item-14-2 {
  
    background-color: #52ba31; 
    grid-row-start: 3;
    grid-column-start: 2;
 
    grid-row-end: 4;
-   grid-column-end: 4;
+   grid-column-end: 5;
    
 }
  #item-15 {
@@ -268,17 +290,17 @@
  
    background-color: #0a8f0b; 
     grid-row-start: 4;
-    grid-column-start: 7;
+    grid-column-start: 11;
  
     grid-row-end: 5;
-    grid-column-end:9;
+    grid-column-end:14;
     
  }
  #item-15-2 {
  
    background-color: #0a8f0b; 
     grid-row-start: 4;
-    grid-column-start: 3;
+    grid-column-start: 4;
  
     grid-row-end: 5;
     grid-column-end: 8;
@@ -309,10 +331,10 @@
  
    background-color: #52ba31; 
    grid-row-start: 5;
-    grid-column-start: 5;
+    grid-column-start: 14;
  
     grid-row-end: 6;
-    grid-column-end: 10;
+    grid-column-end: 18;
     
  }
  #item-17-2 {
@@ -350,11 +372,33 @@
  #item-19-1 {
  
    background-color: #0a8f0b; 
-    grid-row-start: 6;
+    grid-row-start: 10;
     grid-column-start: 2;
  
+    grid-row-end: 11;
+    grid-column-end: 6;
+    
+ }
+
+ #item-40-1 {
+ 
+   background-color: #0a8f0b; 
+    grid-row-start: 6;
+    grid-column-start: 12;
+ 
     grid-row-end: 7;
-    grid-column-end: 5;
+    grid-column-end: 16;
+    
+ }
+
+ #item-41-1 {
+ 
+   background-color: transparent; 
+    grid-row-start: 10;
+    grid-column-start: 1;
+ 
+    grid-row-end: 11;
+    grid-column-end: 2;
     
  }
  #item-19-2 {
@@ -382,10 +426,10 @@
  
    background-color: #0a8f0b; 
    grid-row-start: 2;
-    grid-column-start: 3;
+    grid-column-start: 4;
  
     grid-row-end: 3;
-    grid-column-end: 7;
+    grid-column-end: 10;
     
  }
  #item-20-2{
@@ -428,6 +472,41 @@
    grid-column-end: 2;
    
 }
+
+ #item-37-1 {
+ 
+   background-color: transparent; 
+   grid-row-start: 1;
+   grid-column-start: 15;
+
+   grid-row-end: 2;
+   grid-column-end: 16;
+   
+}
+
+ #item-38-1 {
+ 
+   background-color: transparent; 
+   grid-row-start: 1;
+   grid-column-start: 16;
+
+   grid-row-end: 2;
+   grid-column-end: 17;
+   
+}
+
+ #item-39-1 {
+ 
+   background-color: transparent; 
+   grid-row-start: 1;
+   grid-column-start: 17;
+
+   grid-row-end: 2;
+   grid-column-end: 18;
+   
+}
+
+
  #item-22 {
  
    background-color: #52ba31; 
@@ -443,10 +522,10 @@
  
    background-color: #52ba31; 
    grid-row-start: 7;
-    grid-column-start: 3;
+    grid-column-start: 4;
  
     grid-row-end: 8;
-    grid-column-end: 8;
+    grid-column-end: 12;
     
  }
  #item-23 {
@@ -514,10 +593,10 @@
  
    background-color: #0a8f0b; 
     grid-row-start: 8;
-    grid-column-start: 5;
+    grid-column-start: 6;
  
     grid-row-end: 9;
-    grid-column-end: 7;
+    grid-column-end: 10;
     
  }
  #item-29 {
@@ -543,7 +622,7 @@
 
  #item-30-1{
    background-color: #0a8f0b;
-   grid-column: 10/12;
+   grid-column: 11/13;
    grid-row: 2/3;
  }
  #item-31 {

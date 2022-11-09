@@ -36,11 +36,10 @@ console.log(props)
       <div className="profilebox">
         <div>
           {!isAuthKey ? (
-            <button id="logoutbtn" class="me-3" onClickCapture={logoutUser}>
+            <button id="logoutbtn" className="me-3" onClickCapture={logoutUser}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="35"
-                height="35"
+                
                 fill="currentColor"
                 class="bi bi-box-arrow-right"
                 viewBox="0 0 16 16"

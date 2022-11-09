@@ -1,9 +1,10 @@
 .ParticipantProfile {
     display: flex;
     width: 90vw;
-    margin:auto;
+    margin: auto;
     margin-bottom: 8vw;
 }
+
 /* .registeer{
     display: flex;
     width: 50vw;
@@ -11,14 +12,15 @@
 } */
 @media (max-width: 900px) {
     /* .registeer{ */
-        /* display: flex; */
-        /* width: 50vw; */
-        /* flex-direction: row; */
+    /* display: flex; */
+    /* width: 50vw; */
+    /* flex-direction: row; */
     /* } */
 }
+
 .profileTitle {
     margin: 10vw 0vw 4vw 6vw;
-    
+
 }
 
 .ProfileHeading {
@@ -26,11 +28,19 @@
     text-align: center;
     font-size: 2.2vw;
 }
-.reggg{
+
+.reggg {
     margin: 0vw 1vw 4vw -37vw;
     /* margin:  !important; */
 }
 
+@media (max-width : 780px) {
+    .reggg {
+        margin: 0vw 1vw 4vw -20vw;
+    }
+
+
+}
 
 .programs {
     justify-content: space-around;
@@ -43,7 +53,8 @@
     /* height: 30vw; */
     /* margin:10vw auto; */
 }
-.bigbbb{
+
+.bigbbb {
     display: flex;
 }
 
@@ -73,24 +84,45 @@
     width: 10vw;
 }
 
-.profilepic > img {
+.profilepic>img {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
-#logoutbtn{
-    color:white;
+#logoutbtn {
+    color: white;
     position: relative;
     left: 25vw;
-    top:44vw;
+    top: 44vw;
     opacity: 0.5;
     color: white;
+    height: 35px;
+    width: 35px;
 }
 
-.logoutimg{
-    width:2vw;
+#logoutbtn:hover {
+    color: #2f2;
+}
+
+@media (max-width : 700px) {
+    #logoutbtn {
+        left: 2vw;
+        top: 80vw;
+        height: 25px;
+        width: 25px;
+        transform: rotate(90deg);
+
+    }
+
+    .logoutimg {
+        width: 10px;
+    }
+}
+
+.logoutimg {
+    width: 2vw;
     height: 2vw;
 }
 
@@ -210,16 +242,19 @@
     font-size: 1.5vw;
     transition: all 0.25s ease-out;
 }
+
 .shadows:hover {
     text-shadow: -16px 6px 15px #055520;
 }
-.ggbtn{
+
+.ggbtn {
     display: flex;
     justify-items: center;
     /* margin: 0vw -2vw 1vw 1vw !important; */
     /* height: 20vw; */
 }
-#googlebtn{
+
+#googlebtn {
     padding: 1.5vh 2.5vh;
     margin: 5vw auto 0vw auto;
 }
@@ -240,9 +275,11 @@
         /* height: 50vw; */
         width: 90vw;
     }
-    .bigbbb{
+
+    .bigbbb {
         flex-direction: column-reverse !important;
     }
+
     .page-content {
         grid-gap: 2vw;
         padding: 1vw;
@@ -250,19 +287,23 @@
         justify-content: center;
         flex-direction: column-reverse !important;
     }
+
     .card {
         margin-top: 0;
         padding: 1vw;
         width: 40vh;
         height: 40vh !important;
     }
+
     .copy {
         margin: 4vw;
         font-size: 3.2vw;
     }
+
     .title {
         font-size: 4vw;
     }
+
     .btn {
         font-size: 1.5vw;
     }
@@ -283,6 +324,7 @@
         rotate: 90deg;
         left: 2vw;
     }
+
     .headshot-2 {
         height: 23vw;
         width: 23vw;
@@ -325,21 +367,26 @@
     }
 
 }
+
 @media (max-width: 500px) {
     .ProfileHeading {
-        margin:3vw 0vw 20vw 19vw !important;
+        margin: 3vw 0vw 20vw 19vw !important;
         font-size: 6vw;
     }
-    .eventsParticipated{
+
+    .eventsParticipated {
         /* height: 70vw; */
         margin: 15vw 0vw 20vw 0vw;
     }
+
     .copy {
         font-size: 3.9vw;
     }
+
     .title {
         font-size: 5vw;
     }
+
     .btn {
         font-size: 2.2vw;
     }

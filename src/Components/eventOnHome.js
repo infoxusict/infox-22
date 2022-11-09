@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { GiPaddleSteamer } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 function EventOnHome() {
   const [events, setEvents] = useState([]);
@@ -70,6 +71,18 @@ function EventOnHome() {
                       More info
                     </a>
                   </button>
+                  <button className="mt-12 mb-4  md:hidden justify-start flex">
+                  <Link
+                    href={"/event/" + event.eventId}
+                    className="register teams-btn text-xs "
+                  >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    More info
+                  </Link>
+                </button>
                 </div>
                 <div className="sch-event-info">
                   <h2 className="sch-event-name mt-6 text-2xl  atmosphere break-normal">
@@ -86,7 +99,7 @@ function EventOnHome() {
                   </h3>
                 </div>
                 <button className="mt-12 mb-4  md:hidden justify-start flex">
-                  <a
+                  <Link
                     href={"/event/" + event.eventId}
                     className="register teams-btn text-xs "
                   >
@@ -95,10 +108,13 @@ function EventOnHome() {
                     <span></span>
                     <span></span>
                     More info
-                  </a>
+                  </Link>
                 </button>
               </div>
             ))}
+        </div>
+        <div className="text-white cursor-pointer z-10 text-xl txt-shdw pt-12">
+          <Link to="/events">Click Here to view more Events...</Link>
         </div>
       </div>
     </>

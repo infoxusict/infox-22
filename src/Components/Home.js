@@ -129,7 +129,9 @@ const Home = (props) => {
             </div>
           </div>
           <EventOnHome />
+          <div className="md:pt-28 pt-12"></div>
           <SponserNew />
+
           <Glimpses />
         </div>
       </div>

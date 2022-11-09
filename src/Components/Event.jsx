@@ -60,7 +60,7 @@ function Event() {
                   <img src={event.eventPic} className="sch-event-img" alt="" />
                   <button className="mt-12 mb-4 hidden md:block">
                     <a
-                      href={"http://localhost:3000/event/" + event.eventId}
+                      href={"/event/" + event.eventId}
                       className="register teams-btn text-xs "
 
                     >

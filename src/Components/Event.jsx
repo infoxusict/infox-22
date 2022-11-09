@@ -15,7 +15,7 @@ function Event() {
   };
   const getAllEvents = async () => {
     const response = await fetch(
-      "https://infoxpression.herokuapp.com/event/get_all_event",
+      `${process.env.REACT_APP_BACKEND_URL}event/get_all_event`,
 
       {
         method: "POST",
@@ -28,8 +28,6 @@ function Event() {
 
     const json = await response.json();
     setEvents(json.sort((a, b) => parseDate(a) - parseDate(b)));
-
-    console.log(json);
   };
 
   useEffect(() => {
@@ -61,6 +59,7 @@ function Event() {
                   <button className="mt-12 mb-4 hidden md:block">
                     <a
                       href={"/event/" + event.eventId}
+                      className="register teams-btn text-xs q12" 
                     >
                       <span></span>
                       <span></span>
@@ -80,14 +79,14 @@ function Event() {
                     </h3>
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
-                  <h3 className="sch-event-desc line-clamp-1">
-                    {event.about.split("", 90)}...
+                  <h3 className="sch-event-desc">
+                    {event.about.split("", 100)}...
                   </h3>
                 </div>
                 <button className="mt-12 mb-4  md:hidden justify-start flex">
                   <a
-                    href={"http://localhost:3000/event/" + event.eventId}
-                    className="register teams-btn text-xs "
+                    href={"/event/" + event.eventId}
+                    className="register teams-btn text-xs"
                   >
                     <span></span>
                     <span></span>

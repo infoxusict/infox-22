@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { useEffect } from "react/cjs/react.production.min";
 import { useHistory } from "react-router-dom";
+import { FaDiscord } from "react-icons/fa";
 
 export default function ProfileCard(props) {
   const [isAuthKey, setisAuthKey] = useState(false);
@@ -39,7 +40,6 @@ console.log(props)
             <button id="logoutbtn" className="me-3" onClickCapture={logoutUser}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                
                 fill="currentColor"
                 class="bi bi-box-arrow-right"
                 viewBox="0 0 16 16"
@@ -69,6 +69,15 @@ console.log(props)
       <div className="profileData2">
         <h6 className="shadows">{props.college}</h6>
         <h5>{props.year}</h5>
+        <div className="discod-btn-da">
+          <a
+            rel="noreferrer"
+            href="https://discord.gg/Y6w42tmwWe"
+            target="_blank"
+          >
+            <FaDiscord size={33} />
+          </a>
+        </div>
         {/* <h4 className="college_title">College</h4> */}
       </div>
     </div>

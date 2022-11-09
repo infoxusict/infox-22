@@ -102,6 +102,16 @@
     width: 35px;
 }
 
+.discod-btn-da {
+    position: absolute;
+    /* left: 25vw; */
+    top: 44vw;
+    opacity: 0.5;
+    color: white;
+    height: 35px;
+    width: 35px;
+}
+
 #logoutbtn:hover {
     color: #2f2;
 }

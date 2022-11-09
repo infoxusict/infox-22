@@ -80,7 +80,7 @@ function Event() {
                     {/* <h3 className='sch-event-venue'>E-Block </h3> */}
                   </div>
                   <h3 className="sch-event-desc">
-                    {event.about.split("", 100)}...
+                    {event.about}
                   </h3>
                 </div>
                 <button className="mt-12 mb-4  md:hidden justify-start flex">

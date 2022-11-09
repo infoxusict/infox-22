@@ -51,7 +51,11 @@
 }
 
 .sch-event-desc {
-  float: right;
+  /* float: right; */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
 
 .sch-event-pic {
@@ -67,7 +71,7 @@
 }
 
 .sch-event-img:hover {
-  margin-top: -6vh;
+  transform: translateY(-2vh);
 }
 
 .teams-btn {

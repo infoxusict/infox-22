@@ -82,9 +82,9 @@
 
 #logoutbtn{
     color:white;
-    position: relative;
-    left: 25vw;
-    top:44vw;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
     opacity: 0.5;
     color: white;
 }
@@ -323,7 +323,11 @@
     .profileTitle {
         margin-top: 20vw;
     }
-
+    #logoutbtn{
+        rotate: 90deg;
+        right: 80%;
+        top: 90%;
+    }
 }
 @media (max-width: 500px) {
     .ProfileHeading {

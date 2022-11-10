@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
-// import img from "../../../../assets/images/icons/home-top-illustration.webp";
-// import bgImg from "../asset/Group 1304.svg";
 import "./Assets/Images/CSS/HomeEvents.css";
-import MagicSliderDots from "react-magic-slider-dots";
 import SliderDots from "react-slick";
-import "react-magic-slider-dots/dist/magic-dots.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import Footer from "./Footer";
 
 const EventCard = ({ event, idx }) => (
 	<div className={"homeEvent__card " + "id-" + (idx % 2)}>
@@ -38,15 +33,15 @@ const HomeEvents = () => {
 	const [events, setEvents] = useState([]);
 
 	const sliderSettings = {
-		dots: true,
+		dots: false,
 		arrows: true,
 		infinite: false,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		appendDots: (dots) => {
-			return <MagicSliderDots dots={dots} numDotsToShow={4} dotWidth={30} />;
-		},
+		// appendDots: (dots) => {
+		// 	return <MagicSliderDots dots={dots} numDotsToShow={4} dotWidth={30} />;
+		// },
 	};
 
 	const parseDate = (event) => {

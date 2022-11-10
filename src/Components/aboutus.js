@@ -151,9 +151,17 @@ export default function About() {
         </div>
         <div className="aboutm-content">
           <div className="aboutm-content-head">
-            <span className="glitch" data-text="ABOUT">
-              ABOUT
-            </span>
+            <div className="sn_glitch_forNHeading atmosphere hel">
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+              <div className="sn_line_forNHeading text-6xl ">ABOUT</div>
+            </div>
           </div>
           <div className="mcontent-wrap">
             <div className="mcontent-line-wrap">

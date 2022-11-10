@@ -207,7 +207,7 @@ const Footer = () => {
                   <a
                     rel="noreferrer"
                     className="listSocialA"
-                    href="https://discord.gg/KF5hfB84"
+                    href="https://discord.gg/Y6w42tmwWe"
                     target="_blank"
                   >
                     <FaDiscord size={30} />

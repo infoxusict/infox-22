@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 export default function ProfileCard(props) {
   const [isAuthKey, setisAuthKey] = useState(false);
-console.log(props)
+  console.log(props);
   const history = useHistory();
   const ifSignIn = async () => {
     var x = localStorage.getItem("authkey");
@@ -29,7 +29,11 @@ console.log(props)
     <div className="relative">
       <div className="profileCard">
         {!isAuthKey && (
-          <button id="logoutbtn" className="absolute" onClickCapture={logoutUser}>
+          <button
+            id="logoutbtn"
+            className="absolute"
+            onClickCapture={logoutUser}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"

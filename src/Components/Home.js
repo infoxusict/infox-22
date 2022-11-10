@@ -7,6 +7,7 @@ import Glimpses from "./Glimpses";
 import "aos/dist/aos.css";
 import Banner from "./Banner";
 import EventOnHome from "./eventOnHome";
+import HomeEvents from "./HomeEvents";
 
 const Home = (props) => {
   return (
@@ -128,7 +129,8 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-          <EventOnHome />
+          {/* <EventOnHome /> */}
+          <HomeEvents />
           <div className="md:pt-28 pt-12"></div>
           <SponserNew />
 

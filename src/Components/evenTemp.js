@@ -54,8 +54,6 @@ const EvenTemp = (props) => {
       toast.error("Please enter valid Team Name");
       return;
     }
-    console.log(props.data.eventId);
-    console.log(teamName);
     const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/gen_code`, {
       method: 'POST',
       headers: {
@@ -77,13 +75,11 @@ const EvenTemp = (props) => {
     setTeamID(json.team.teamId);
     setRegister(false);
     navigator.clipboard.writeText(json.team.teamId);
-    toast.success("Team ID copied to clipboard");
     // correct here
     document.getElementById("getBlur").style.opacity = 1;
     document.body.style.overflow = "scroll";
-    setTimeout(() => {
-      history.push("/profile");
-    }, 3000);
+    history.push("/profile");
+    toast.success("Team ID copied to clipboard");
   };
 
   const joinTeam = async (e) => {
@@ -115,8 +111,6 @@ const EvenTemp = (props) => {
     }
 
     setTeamID(json.teamId);
-    navigator.clipboard.writeText(json.teamId);
-    toast.success("Team ID copied to clipboard");
     setRegister(false);
     // correct here
     document.getElementById("getBlur").style.opacity = 1;

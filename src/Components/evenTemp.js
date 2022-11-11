@@ -258,7 +258,7 @@ const EvenTemp = (props) => {
 										fill="white"
 									></path>{" "}
 								</svg>
-								<p className="w-24"> {event?.date}</p>
+								<p className="w-100 justify-content-between"> {event?.date}</p>
 							</div>
 							<div className="flex gap-2 hel basis-1/3 md:basis-0">
 								<svg
@@ -280,11 +280,11 @@ const EvenTemp = (props) => {
 										fill="white"
 									></path>{" "}
 								</svg>
-								<p className="w-24">{event?.time}</p>
+								<p className="w-24 justify-content-between">{event?.time}</p>
 							</div>
 							<div className="flex gap-2 hel basis-1/3 md:basis-0">
 								<TiLocation size={33} className="" />
-								<p className="w-24">{event?.venue}</p>
+								<p className="w-100 justify-content-between">{event?.venue}</p>
 							</div>
 						</div>
 						<div className=" devfolio-button flex justify-center md:justify-start ">

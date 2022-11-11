@@ -24,6 +24,7 @@ const EvenTemp = React.lazy(() => import("./Components/evenTemp"));
 const Contact = React.lazy(() => import("./Components/Contact"));
 const Map = React.lazy(() => import("./Components/Map"));
 const Event = React.lazy(() => import("./Components/Event"));
+const NotFound = React.lazy(() => import("./Components/NotFound"));
 
 // import Navbar_3 from "./Components/Navbar_3";
 // import Sponser from './Components/Sponser'
@@ -70,6 +71,7 @@ const App = () => {
 					<Route exact path="/reach">
 						<Map />
 					</Route>
+					<Route path="*" component={NotFound} />
 				</Switch>
 				<Keeanu />
 				<Footer />

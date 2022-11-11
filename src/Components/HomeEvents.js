@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Assets/Images/CSS/HomeEvents.css";
 import SliderDots from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const EventCard = ({ event, idx }) => (
 	<div className={"homeEvent__card " + "id-" + (idx % 2)}>
@@ -17,7 +14,7 @@ const EventCard = ({ event, idx }) => (
 			</p>
 			<p>{event.tagline}</p>
 			<button className="mt-2 justify-start flex">
-				<a href={"/event/" + event.eventId} className="register teams-btn text-xs">
+				<a href={"/event/" + event.eventId} className="register teams-btn text-xs !my-2">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -66,7 +63,6 @@ const HomeEvents = () => {
 
 		const json = await response.json();
 		// setEvents(json.sort((a, b) => parseDate(a) - parseDate(b)));
-      console.log(json)
 		let selectedEve = [];
 		selectedEve.push(json[0]);
 		selectedEve.push(json[7]);

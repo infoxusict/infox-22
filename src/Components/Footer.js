@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Assets/Images/CSS/Footer.css";
 import { FaDiscord } from "react-icons/fa";
 
 // import MatrixRain from "./MatrixRain";

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./Assets/Images/CSS/teammodal.css"
 import MatrixRain from './MatrixRain'
 import { toast} from "react-hot-toast"
 

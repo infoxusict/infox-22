@@ -1,5 +1,4 @@
 import React from 'react'
-import "../Components/Assets/Images/CSS/sch-grid.css"
 import MatrixRain from "../Components/MatrixRain"
 
 function ScheduleGrid() {

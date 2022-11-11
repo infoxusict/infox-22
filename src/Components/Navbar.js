@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Assets/Images/CSS/Navbar.css";
+
 const Navbar = () => {
   let countt = 0;
   const handleNavIndex = () => {

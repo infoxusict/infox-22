@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import "./Assets/Images/CSS/team.css";
+
 // import Linkedin from "../assets/icons8-linkedin-2.json";
 export default function Team({
   ringColor,

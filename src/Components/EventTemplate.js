@@ -1,6 +1,5 @@
 import React from "react";
 // import { useHistory } from "react-router-dom";
-import "./Assets/Images/CSS/eventTemp.css";
 import Loader from "./Loader";
 // import MatrixRain from "../Components/MatrixRain.js";
 // import photo from "./aa.png";

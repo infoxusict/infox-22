@@ -13,6 +13,7 @@ import Loader from "./Components/Loader";
 import ScrollToTop from "./Components/scrollToTop";
 
 import ReactGA from "react-ga";
+import { Toaster } from "react-hot-toast";
 const trackingId = "G-9D3DN4PEW0";
 
 const Home = React.lazy(() => import("./Components/Home"));
@@ -36,6 +37,7 @@ ReactGA.initialize(trackingId);
 const App = () => {
 	return (
 		<Suspense fallback={<Loader />}>
+			<Toaster />
 			<Router>
 				{/* <Navbar_3/> */}
 				<ScrollToTop />

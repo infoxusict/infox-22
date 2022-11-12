@@ -32,7 +32,9 @@ const MatrixRain = () => {
       //Create and draw indiviual rain effect
       constructor(x, y, fontSize, canvasHeight) {
         this.characters =
-          "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // "infoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpressioninfoxpression";
+        "01010101010011010101010101010101010101011111011101101010101011111101111000001010101000000101010101001101010101010101010101010101111101110110101010101111110111100000101010100000010101010100110101010101010101010101010111110111011010101010111111011110000010101010000001010101010011010101010101010101010101011111011101101010101011111101111000001010101000000101010101001101010101010101010101010101111101110110101010101111110111100000101010100000"
+          // "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         this.x = x;
         this.y = y;
         this.fontSize = fontSize;
@@ -65,7 +67,7 @@ const MatrixRain = () => {
       constructor(canvasWidth, canvasHeight) {
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight;
-        this.fontSize = 20;
+        this.fontSize = 24;
         this.columns = this.canvasWidth / this.fontSize;
         this.symbols = [];
         this.#initialize();
@@ -120,7 +122,10 @@ const MatrixRain = () => {
   useEffect(() => {
     setTimeout(() => {
       Rain();
-    }, 3000);
+      Rain();
+      Rain();
+      Rain();
+    }, 300);
     if (
       ph ===
       Math.max(

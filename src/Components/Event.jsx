@@ -37,7 +37,7 @@ function Event() {
 
   return (
     <>
-      <MatrixRain />
+      {/* <MatrixRain /> */}
       <div className=" mt-20 md:mt-24">
         <div class="sn_glitch_forNHeading atmosphere uh-heading  hel">
           <div class="sn_line_forNHeading">Events</div>

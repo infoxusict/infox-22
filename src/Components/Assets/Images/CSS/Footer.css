@@ -5,12 +5,15 @@
   font-family: "aAtmospheric";
   src: url(../fonts/aAtmospheric.ttf);
 }
+
 .atmosphere {
   font-family: "aAtmospheric";
 }
+
 .da-color-green {
   color: #6cde01;
 }
+
 .footer-20192 {
   background-color: #000000;
   /* position: relative; */
@@ -21,7 +24,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  padding-top: 2rem !important ;
+  padding-top: 2rem !important;
   padding-bottom: 3rem !important;
   /* margin-top: 20vh; */
   /* margin-bottom: -50px; */
@@ -145,7 +148,7 @@
   color: #78f701;
 }
 
-.footer-20192 .social .social .listSocialA > .footerSocial {
+.footer-20192 .social .social .listSocialA>.footerSocial {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -169,7 +172,8 @@
   letter-spacing: 0.1rem;
   padding: 0;
 }
-.fooer-n{
+
+.fooer-n {
   margin-top: 2rem;
 
 }
@@ -198,10 +202,10 @@
   color: white;
 }
 
-.footer-grid{
+.footer-grid {
   align-items: center;
 }
 
-.footer-20192 .links{
- flex-direction: column;
+.footer-20192 .links {
+  flex-direction: column;
 }

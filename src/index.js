@@ -45,6 +45,7 @@ import "./Components/Assets/Images/CSS/glitch.css";
 import "./Components/Assets/Images/CSS/Contact.css";
 import "./Components/Assets/Images/CSS/uhack.css";
 import "./Components/Assets/Images/CSS/Schedule.css"
+import "./Components/Assets/Images/CSS/sch-event.css";
 
 import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { tempuserObject } from "./Profile";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 export default function Modal1({
   closeModal,
   data,
@@ -74,7 +74,6 @@ export default function Modal1({
 
   return (
     <>
-      <Toaster />
       <div className="modal">
         <button
           className="close-modal"

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import EditTeam from "./EditTeam";
 
@@ -61,7 +61,6 @@ const ProfileEventCard = ({ event }) => {
 				team={eventObj}
 				editTeamHandler={editTeamHandler}
 			/>
-			<Toaster toastOptions={{ className: "z-[10001]" }} />
 			<div className="content">
 				<h2 className="title">{eventObj.eventId.eventName}</h2>
 				{eventObj.teamName}

@@ -3,21 +3,16 @@ import MatrixRain from "./MatrixRain";
 import { TiLocation } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
 import { useHistory } from "react-router-dom";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { OptimizedImage } from "./OptimizedImage";
 
 const EvenTemp = (props) => {
-	// console.log(event?.eventPic);
 	const [event, setEvent] = useState({});
 	const [loading, setLoading] = useState(true);
 	const [register, setRegister] = useState(false);
 	const [teamCode, setTeamcode] = useState("");
 	const [teamName, setTeamName] = useState("");
-	const [teamID, setTeamID] = useState("");
 	const history = useHistory();
-	// const [Result, setResult] = React.useState("Registration Complete");
-	const [joinError, setJoinError] = useState("");
-	const [createError, setCreateError] = useState("");
 
 	useEffect(() => {
 		setLoading(true);
@@ -39,6 +34,7 @@ const EvenTemp = (props) => {
 				history.replace("/events");
 			})
 			.finally(() => setLoading(false));
+			//eslint-disable-next-line
 	}, [props.match.params.eventId]);
 
 	const onChangCeode = (event) => {
@@ -54,83 +50,52 @@ const EvenTemp = (props) => {
 			history.push("/profile");
 			return;
 		}
-
 		setRegister(true);
-		// // console.log("hi");
-		// change here
 		document.getElementById("getBlur").style.opacity = 0.05;
 		document.body.style.overflow = "hidden";
 	};
 
-	const createTeam = async (e) => {
-		e.preventDefault();
-
-		if (teamName.length < 4) {
-			toast.error("Please enter valid Team Name");
-			return;
-		}
-		const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/gen_code`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				authToken: localStorage.getItem("authkey"),
-			},
-			body: JSON.stringify({ eventId: event?.eventId, teamName: teamName }),
+	const createTeam = () =>
+		new Promise(async (resolve, reject) => {
+			if (teamName.length < 4) {
+				reject("Please enter valid Team Name");
+			}
+			const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/gen_code`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					authToken: localStorage.getItem("authkey"),
+				},
+				body: JSON.stringify({ eventId: event?.eventId, teamName: teamName }),
+			});
+			const json = await response.json();
+			if (json.success === false) {
+				reject(json.error);
+			}
+			navigator.clipboard.writeText(json.team.teamId);
+			resolve("Team Id copied to clipboard");
 		});
 
-		// eslint-disable-next-line
-		const json = await response.json();
-
-		if (json.success === false) {
-			toast.error(json.error);
-			setCreateError(json.error);
-			return;
-		}
-
-		setTeamID(json.team.teamId);
-		setRegister(false);
-		navigator.clipboard.writeText(json.team.teamId);
-		// correct here
-		document.getElementById("getBlur").style.opacity = 1;
-		document.body.style.overflow = "scroll";
-		history.push("/profile");
-		toast.success("Team ID copied to clipboard");
-	};
-
-	const joinTeam = async (e) => {
-		e.preventDefault();
-
-		if (teamCode.length < 5) {
-			toast.error("Please enter valid Team Code");
-			return;
-		}
-		console.log(event?.eventId);
-		console.log(teamCode);
-		const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/join`, {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				authToken: localStorage.getItem("authkey"),
-			},
-			body: JSON.stringify({ eventId: event?.eventId, teamId: teamCode }),
+	const joinTeam = () =>
+		new Promise(async (resolve, reject) => {
+			if (teamCode.length < 5) {
+				reject("Please enter valid Team Code");
+			}
+			const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/join`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					authToken: localStorage.getItem("authkey"),
+				},
+				body: JSON.stringify({ eventId: event?.eventId, teamId: teamCode }),
+			});
+			const json = await response.json();
+			if (json.success === false) {
+				reject(json.error);
+			}
+			resolve("Registered Successfully");
 		});
 
-		// eslint-disable-next-line
-		const json = await response.json();
-		// console.log(json);
-
-		if (json.success === false) {
-			toast.error(json.error);
-			setJoinError(json.error);
-			return;
-		}
-
-		setTeamID(json.teamId);
-		setRegister(false);
-		// correct here
-		document.getElementById("getBlur").style.opacity = 1;
-		history.push("/profile");
-	};
 	function leave() {
 		// var element = document.getElementById("team-modal");
 		// window.location.reload();
@@ -140,6 +105,53 @@ const EvenTemp = (props) => {
 		// element.style.display = "none";
 		// console.log("hehehehehe");
 	}
+
+	const createTeamHandle = async (e) => {
+		e.preventDefault();
+		setLoading(true);
+		toast.promise(createTeam(), {
+			loading: "Creating Team",
+			success: (data) => {
+				setLoading(false);
+				setRegister(false);
+				document.getElementById("getBlur").style.opacity = 1;
+				document.body.style.overflow = "scroll";
+				history.push("/profile");
+				return data;
+			},
+			error: (err) => {
+				setLoading(false);
+				setRegister(false);
+				document.getElementById("getBlur").style.opacity = 1;
+				document.body.style.overflow = "scroll";
+				return err;
+			},
+		});
+	};
+
+	const joinTeamHandle = async (e) => {
+		e.preventDefault();
+		setLoading(true);
+		toast.promise(joinTeam(), {
+			loading: "Registering",
+			success: (data) => {
+				setLoading(false);
+				setRegister(false);
+				document.getElementById("getBlur").style.opacity = 1;
+				document.body.style.overflow = "scroll";
+				history.push("/profile");
+				return data;
+			},
+			error: (err) => {
+				setLoading(false);
+				setRegister(false);
+				document.getElementById("getBlur").style.opacity = 1;
+				document.body.style.overflow = "scroll";
+				return err;
+			},
+		});
+	};
+
 	const registerClickHandle = () => {
 		if (event?.eventId === "chess1811") {
 			window.open("https://forms.gle/zogf1sEPsrBsi3fF7", "_blank");
@@ -163,7 +175,7 @@ const EvenTemp = (props) => {
 										<ImCross />
 									</button>
 									<h2 className="h2 atmosphere pt-5">Create Team</h2>
-									<form action="" id="create-form" onSubmit={createTeam}>
+									<form id="create-form" onSubmit={createTeamHandle}>
 										<input
 											type="text"
 											id="team-name"
@@ -171,7 +183,12 @@ const EvenTemp = (props) => {
 											value={teamName}
 											onChange={onChangeName}
 										/>
-										<button type="submit" className="register team-btn " id="create-btn">
+										<button
+											disabled={loading}
+											type="submit"
+											className="register team-btn "
+											id="create-btn"
+										>
 											{/* <Link href="https://google.com" className="register team-btn">
                   </Link> */}
 											<span></span>
@@ -181,9 +198,6 @@ const EvenTemp = (props) => {
 											Create
 										</button>
 									</form>
-									<div>
-										<Toaster />
-									</div>
 								</div>
 								{/* {stateName && "bfeif iuregi ehgio4hgo"} */}
 								{/* <hr /> */}
@@ -192,7 +206,7 @@ const EvenTemp = (props) => {
 								</h2>
 								<div id="join-modal">
 									<h2 className="h2 atmosphere">Join Team</h2>
-									<form id="join-form" onSubmit={joinTeam}>
+									<form id="join-form" onSubmit={joinTeamHandle}>
 										<input
 											type="text"
 											id="team-code"
@@ -200,7 +214,11 @@ const EvenTemp = (props) => {
 											value={teamCode}
 											onChange={onChangCeode}
 										/>
-										<button type="submit" className="register team-btn hel">
+										<button
+											disabled={loading}
+											type="submit"
+											className="register team-btn hel"
+										>
 											<span></span>
 											<span></span>
 											<span></span>
@@ -289,6 +307,7 @@ const EvenTemp = (props) => {
 						</div>
 						<div className=" devfolio-button flex justify-center md:justify-start ">
 							<button
+								disabled={loading}
 								to="/"
 								className="register !mt-24 md:!mt-32"
 								onClick={registerClickHandle}

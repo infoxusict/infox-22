@@ -51,7 +51,7 @@ function Event() {
           <div class="sn_line_forNHeading">Events</div>
         </div>
 
-        <div className="text-white hel flex flex-row uh-bg mx-auto container max-w-[90%] md:max-w-[50%] da-toggle text-xs md:text-xl  mt-12 md:mb-8">
+        <div className="text-white hel flex flex-row uh-bg mx-auto container max-w-[90%] md:max-w-[50%] da-toggle text-xs md:text-xl  mt-12 md:mb-8 !justify-around ">
           <button onClick={() => settabType("all")}>All</button>
           <button onClick={() => settabType("Coding")}>Coding</button>
           <button onClick={() => settabType("Electronics")}>Electronics</button>
@@ -65,8 +65,13 @@ function Event() {
                 (event.category === tabType || tabType === "all") && (
                   <div className="sch-event-card">
                     <div className="sch-event-pic aspect-square">
-                      <OptimizedImage hashKey={event.eventId} src={event.eventPic} className="sch-event-img" alt={event.eventName} />
-									{/* <img
+                      <OptimizedImage
+                        hashKey={event.eventId}
+                        src={event.eventPic}
+                        className="sch-event-img"
+                        alt={event.eventName}
+                      />
+                      {/* <img
                         src={event.eventPic}
                         className="sch-event-img"
                         alt=""

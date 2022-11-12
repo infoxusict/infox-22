@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 // import { GiPaddleSteamer } from "react-icons/gi";
 
-import "./Assets/Images/CSS/sch-event.css";
 import MatrixRain from "./MatrixRain";
+import { OptimizedImage } from "./OptimizedImage";
 
 function Event() {
   const [events, setEvents] = useState([]);
@@ -64,12 +64,13 @@ function Event() {
               (event) =>
                 (event.category === tabType || tabType === "all") && (
                   <div className="sch-event-card">
-                    <div className="sch-event-pic">
-                      <img
+                    <div className="sch-event-pic aspect-square">
+                      <OptimizedImage hashKey={event.eventId} src={event.eventPic} className="sch-event-img" alt={event.eventName} />
+									{/* <img
                         src={event.eventPic}
                         className="sch-event-img"
                         alt=""
-                      />
+                      /> */}
                       <button className="mt-12 mb-4 hidden md:block">
                         <a
                           href={"/event/" + event.eventId}

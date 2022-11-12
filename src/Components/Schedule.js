@@ -1,6 +1,3 @@
-
-import "./Schedule.css"
-
 import React from 'react'
 import MatrixRain from './MatrixRain'
 

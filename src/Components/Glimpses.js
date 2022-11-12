@@ -1,7 +1,6 @@
-import "./Assets/Images/CSS/glimpses.css";
 import React from "react";
 import { InView } from "react-intersection-observer";
-import "./Assets/Images/CSS/glitch.css";
+
 const Glimpses = () => {
   // const ref = React.useRef();
   let count = 0;

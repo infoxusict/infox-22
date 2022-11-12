@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal1 from "./Modal1";
 import { tempuserObject } from "./Profile";
-import "./Assets/Images/CSS/modal.css";
 
 // How to use:
 // Sample <Modal data={data} buttonName={"Register Now!"} />

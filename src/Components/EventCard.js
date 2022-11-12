@@ -1,5 +1,4 @@
 import React from "react";
-import "./Assets/Images/CSS/EventCard.css";
 
 const EventCard = () => {
   return (

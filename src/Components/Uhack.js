@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 // import Aos from "aos";
 // import "aos/dist/aos.css";
-
-import "./Assets/Images/CSS/uhack.css";
 import MatrixRain from "./MatrixRain";
 import FAQ from "./uhack-faq";
 import { FaRobot } from "react-icons/fa";
@@ -15,6 +13,7 @@ import { SiMusicbrainz } from "react-icons/si";
 
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { VscTools } from "react-icons/vsc";
+import { OptimizedImage } from "./OptimizedImage";
 
 const Uhack = () => {
   React.useEffect(() => {
@@ -349,12 +348,14 @@ const Uhack = () => {
                   <div class="sn_line_forNHeading">Uhack</div>
                 </div>
               </div>
-              <div className="flex justify-center md:justify-end ">
-                <img
+              <div className="flex justify-center md:justify-end w-full">
+                <OptimizedImage hashKey={"uhack"} src={require("./Assets/Images/images/uhack/uhack-poster.png")} alt="uhack" className="uh-img p-4 uh-bg w-4/5 h-min aspect-[179/297] max-h-min" />
+                {/* <img
+                loading="lazy"
                   src={require("./Assets/Images/images/uhack/uhack-poster.png")}
                   alt="infox"
                   className="uh-img  p-4 uh-bg w-4/5 "
-                />
+                /> */}
               </div>
             </div>
           </section>

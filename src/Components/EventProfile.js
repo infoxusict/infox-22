@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Assets/Images/CSS/EventProfile.css";
 import ProfileEventCard from "./ProfileEventCard";
 
 const EventCardProfile = (props) => {

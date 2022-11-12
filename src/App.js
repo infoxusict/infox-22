@@ -1,138 +1,83 @@
-import React, { useEffect, useState } from "react";
-import Footer from "./Components/Footer";
-import Home from "./Components/Home";
-import Navbar from "./Components/Navbar";
-import TeamPage from "./Components/teampage";
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Keeanu from "./Components/Keeanu";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import Loader from "./Components/Loader";
 // import EventCard from "./Components/EventCard";
 // import EventTemplate from "./Components/EventTemplate";
-import Schedule from "./Components/Schedule";
-import Legacy from "./Components/legacy";
-import Profile from "./Components/Profile";
-import Loader from "./Components/Loader";
+// import Schedule from "./Components/Schedule";
 // import Modal from "./Components/Modal";
 // import Modal1 from "./Components/Modal1";
-import TeamModal from "./Components/TeamModal";
-import Uhack from "./Components/Uhack";
+// import TeamModal from "./Components/TeamModal";
 import ScrollToTop from "./Components/scrollToTop";
 
-import Contact from "./Components/Contact";
-import Map from "./Components/Map";
-import EvenTemp from "./Components/evenTemp";
-
-// import Navbar_3 from "./Components/Navbar_3";
-// import Sponser from './Components/Sponser'
-import Event from "./Components/Event";
-import ScheduleGrid from "./Components/ScheduleGrid";
-
-// google analytics
 import ReactGA from "react-ga";
 const trackingId = "G-9D3DN4PEW0";
 
+const Home = React.lazy(() => import("./Components/Home"));
+const Uhack = React.lazy(() => import("./Components/Uhack"));
+const TeamPage = React.lazy(() => import("./Components/teampage"));
+const Legacy = React.lazy(() => import("./Components/legacy"));
+const Profile = React.lazy(() => import("./Components/Profile"));
+const EvenTemp = React.lazy(() => import("./Components/evenTemp"));
+const Contact = React.lazy(() => import("./Components/Contact"));
+const Map = React.lazy(() => import("./Components/Map"));
+const Event = React.lazy(() => import("./Components/Event"));
+const NotFound = React.lazy(() => import("./Components/NotFound"));
+
+// import Navbar_3 from "./Components/Navbar_3";
+// import Sponser from './Components/Sponser'
+// import ScheduleGrid from "./Components/ScheduleGrid";
+
+// google analytics
 ReactGA.initialize(trackingId);
 
 const App = () => {
-  // let events = [];
-  const [events, setEvents] = useState([]);
-
-  const getAllEvents = async () => {
-    const response = await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}event/get_all_event`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ key: "<h1>Newprogrammakinginprogress</h1>" }),
-      }
-    );
-
-    const json = await response.json();
-    setEvents(json);
-
-    // console.log(json);
-  };
-
-  useEffect(() => {
-    getAllEvents();
-  }, []);
-
-  return (
-    <>
-      <Router>
-        {/* <Navbar_3/> */}
-        <ScrollToTop />
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <div className="Home">
-              <Home page="home" />
-            </div>
-          </Route>
-          {/* <Route exact path="/event">
-            <Schedule />
-          </Route>
-          {/* <Route exact path="/event/name">
-            <EventTemplate />
-          </Route>
-
-          {/* Mapping Events */}
-
-          {events.map((event) => {
-            // // console.log(`/event/${event.eventId}`);
-            return (
-              <Route key={event.eventId} exact path={`/event/${event.eventId}`}>
-                <EvenTemp data={event} />
-              </Route>
-            );
-          })}
-
-          <Route exact path="/team">
-            <TeamPage />
-          </Route>
-          <Route exact path="/legacy">
-            <Legacy />
-          </Route>
-
-          <Route exact path="/Profile">
-            <Profile />
-          </Route>
-
-          <Route exact path="/events">
-            <Event />
-          </Route>
-
-          {/* <Route exact path="/schedule">
+	return (
+		<Suspense fallback={<Loader />}>
+			<Router>
+				{/* <Navbar_3/> */}
+				<ScrollToTop />
+				<Navbar />
+				<Switch>
+					<Route exact path="/">
+						<div className="Home">
+							<Home page="home" />
+						</div>
+					</Route>
+					<Route path="/event/:eventId" component={EvenTemp} />
+					<Route exact path="/team">
+						<TeamPage />
+					</Route>
+					<Route exact path="/legacy">
+						<Legacy />
+					</Route>
+					<Route exact path="/Profile">
+						<Profile />
+					</Route>
+					<Route exact path="/events">
+						<Event />
+					</Route>
+					{/* <Route exact path="/schedule">
             <ScheduleGrid />
           </Route> */}
-
-          <Route path="/modal">
-            <TeamModal />
-          </Route>
-
-          <Route exact path="/loader">
-            <Loader />
-          </Route>
-
-          <Route exact path="/uhack">
-            <Uhack />
-          </Route>
-          <Route exact path="/contact">
-            <Contact />
-          </Route>
-          <Route exact path="/reach">
-            <Map />
-          </Route>
-          <Route exact path="/event/name">
-            <EvenTemp />
-          </Route>
-        </Switch>
-        <Keeanu />
-        <Footer />
-      </Router>
-    </>
-  );
+					<Route exact path="/uhack">
+						<Uhack />
+					</Route>
+					<Route exact path="/contact">
+						<Contact />
+					</Route>
+					<Route exact path="/reach">
+						<Map />
+					</Route>
+					<Route path="*" component={NotFound} />
+				</Switch>
+				<Keeanu />
+				<Footer />
+			</Router>
+		</Suspense>
+	);
 };
 
 export default App;

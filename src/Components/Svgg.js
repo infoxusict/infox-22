@@ -1,6 +1,4 @@
 import * as React from "react"
-import "./Assets/Images/CSS/Home.css"
-import "./Assets/Images/CSS/glitch.css"
 
 function SvgComponent(props) {
   return (

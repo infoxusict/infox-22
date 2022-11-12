@@ -1,8 +1,6 @@
 import React from "react";
 import Slider from "./Carousel";
 import About from "./aboutus";
-import "./Assets/Images/CSS/legacy.css";
-import "./Assets/Images/CSS/glitch.css";
 import Sponser from "./Sponser";
 import MatrixRain from "./MatrixRain";
 // import Sponser from "./Sponser";

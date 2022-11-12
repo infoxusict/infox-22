@@ -1,5 +1,4 @@
 import React from "react";
-import "./Assets/Images/CSS/teammodal.css";
 import MatrixRain from "./MatrixRain";
 
 function TeamModal() {

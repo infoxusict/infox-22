@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Assets/Images/CSS/Navbar.css"
 
 export default function Navbar_3() {
   return (

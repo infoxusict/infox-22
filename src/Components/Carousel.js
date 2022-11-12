@@ -1,7 +1,5 @@
 import { useRef, useState, useEffect } from "react";
 
-import "./Assets/Images/CSS/Carousel.css";
-
 // const width1=0;
 // const height1=0
 

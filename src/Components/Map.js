@@ -1,5 +1,4 @@
 import React from "react";
-import "./Assets/Images/CSS/Map.css";
 import MatrixRain from "./MatrixRain";
 // import { FaDiscord } from "react-icons/fa";
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import MatrixRain from './MatrixRain'
-import "./Assets/Images/CSS/Contact.css"
 const Contact = () => {
   return (
     <>

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./Assets/Images/CSS/MAtrixRain.css";
 
 var fps;
 var ph;

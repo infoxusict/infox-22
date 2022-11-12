@@ -1,6 +1,5 @@
 import React from "react";
 // import { useHistory } from "react-router-dom";
-import "./Assets/Images/CSS/eventTemp.css";
 import Loader from "./Loader";
 // import MatrixRain from "../Components/MatrixRain.js";
 // import photo from "./aa.png";
@@ -16,7 +15,7 @@ const EventTemp = () => {
       >
         <div className="  mt-12 md:mt-32">
           {/* <img src={photo} className = "pheight" alt="" /> */}
-          <h2 className="text-4xl  md:text-7xl subpixel-antialiased font-bold title justify-start">
+          <h2 className="text-4xl  md:text-7xl subpixel-antialiased font-bold title justify-content-between w-100">
             {`${eventobj.eventName}`}{" "}
           </h2>
           <p className="text-xs md:text-xl subpixel-antialiased md:pt-5 md:pb-10">

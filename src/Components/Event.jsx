@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { startLoading, stopLoading } from "../redux/slices/loadingSlice";
 // import { GiPaddleSteamer } from "react-icons/gi";
-
-import MatrixRain from "./MatrixRain";
 import { OptimizedImage } from "./OptimizedImage";
 
 function Event() {
   const [events, setEvents] = useState([]);
+  const dispatch = useDispatch();
   const parseDate = (event) => {
     const dd = event.date.slice(0, 2),
       mm = event.date.slice(3, 5),
       yyyy = event.date.slice(6, 10);
     return Date.parse(mm + "/" + dd + "/" + yyyy + " " + event.time);
   };
+  
   const getAllEvents = async () => {
+    dispatch(startLoading());
+    try{
     const response = await fetch(
       `${process.env.REACT_APP_BACKEND_URL}event/get_all_event`,
 
@@ -27,6 +31,10 @@ function Event() {
 
     const json = await response.json();
     setEvents(json.sort((a, b) => parseDate(a) - parseDate(b)));
+    dispatch(stopLoading());
+    } catch (_) {
+      dispatch(stopLoading());
+    }
   };
 
   useEffect(() => {

@@ -126,7 +126,6 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-          {/* <EventOnHome /> */}
           <HomeEvents />
           <div className="md:pt-28 pt-12"></div>
           <SponserNew />

@@ -5,6 +5,8 @@ import EventCardProfile from "./EventProfile";
 import ProfileCard from "./ProfileCard";
 import jwt_decode from "jwt-decode";
 import Modal from "./Modal";
+import { useDispatch } from "react-redux";
+import { startLoading, stopLoading } from "../redux/slices/loadingSlice";
 
 var userDetails = {};
 export var tempuserObject = {
@@ -28,6 +30,7 @@ const Profile = () => {
   const [profileDATA, setprofileDATA] = React.useState({});
   const [isModalShown, setIsModalShown] = useState(false);
   const [isAuthKey, setAuthKey] = useState(false);
+  const dispatch = useDispatch();
 
   //function to check whether user is signed up already
   const ifSignIn = async () => {
@@ -111,12 +114,12 @@ const Profile = () => {
   React.useEffect(() => {
     /* global google */
     const func = async () => {
+      dispatch(startLoading());
       await google.accounts.id.initialize({
         client_id:
           "272494210674-pij8m84sh3852areuj5cn6jpukais005.apps.googleusercontent.com",
         callback: handleCallbackResponse,
       });
-
       await google.accounts.id.renderButton(
         document.getElementById("googlebtn"),
         {
@@ -124,12 +127,10 @@ const Profile = () => {
           size: "large",
         }
       );
-
       await ifSignIn();
+      dispatch(stopLoading());
     };
-
     func();
-    // console.log(profileDATA);
     // eslint-disable-next-line
   }, []);
   return (

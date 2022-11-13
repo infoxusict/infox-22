@@ -5,17 +5,20 @@ import { ImCross } from "react-icons/im";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { OptimizedImage } from "./OptimizedImage";
+import { useDispatch } from "react-redux";
+import { startLoading, stopLoading } from "../redux/slices/loadingSlice";
 
 const EvenTemp = (props) => {
 	const [event, setEvent] = useState({});
-	const [loading, setLoading] = useState(true);
+	const [localLoading, setLocalLoading] = useState(true);
 	const [register, setRegister] = useState(false);
 	const [teamCode, setTeamcode] = useState("");
 	const [teamName, setTeamName] = useState("");
 	const history = useHistory();
+	const dispatch = useDispatch();
 
 	useEffect(() => {
-		setLoading(true);
+		dispatch(startLoading());
 		fetch(`${process.env.REACT_APP_BACKEND_URL}event/get_event`, {
 			method: "POST",
 			headers: {
@@ -33,7 +36,7 @@ const EvenTemp = (props) => {
 			.catch(() => {
 				history.replace("/events");
 			})
-			.finally(() => setLoading(false));
+			.finally(() => dispatch(stopLoading()));
 			//eslint-disable-next-line
 	}, [props.match.params.eventId]);
 
@@ -108,11 +111,11 @@ const EvenTemp = (props) => {
 
 	const createTeamHandle = async (e) => {
 		e.preventDefault();
-		setLoading(true);
+		setLocalLoading(true);
 		toast.promise(createTeam(), {
 			loading: "Creating Team",
 			success: (data) => {
-				setLoading(false);
+				setLocalLoading(false);
 				setRegister(false);
 				document.getElementById("getBlur").style.opacity = 1;
 				document.body.style.overflow = "scroll";
@@ -120,7 +123,7 @@ const EvenTemp = (props) => {
 				return data;
 			},
 			error: (err) => {
-				setLoading(false);
+				setLocalLoading(false);
 				setRegister(false);
 				document.getElementById("getBlur").style.opacity = 1;
 				document.body.style.overflow = "scroll";
@@ -131,11 +134,11 @@ const EvenTemp = (props) => {
 
 	const joinTeamHandle = async (e) => {
 		e.preventDefault();
-		setLoading(true);
+		setLocalLoading(true);
 		toast.promise(joinTeam(), {
 			loading: "Registering",
 			success: (data) => {
-				setLoading(false);
+				setLocalLoading(false);
 				setRegister(false);
 				document.getElementById("getBlur").style.opacity = 1;
 				document.body.style.overflow = "scroll";
@@ -143,7 +146,7 @@ const EvenTemp = (props) => {
 				return data;
 			},
 			error: (err) => {
-				setLoading(false);
+				setLocalLoading(false);
 				setRegister(false);
 				document.getElementById("getBlur").style.opacity = 1;
 				document.body.style.overflow = "scroll";
@@ -184,7 +187,7 @@ const EvenTemp = (props) => {
 											onChange={onChangeName}
 										/>
 										<button
-											disabled={loading}
+											disabled={localLoading}
 											type="submit"
 											className="register team-btn "
 											id="create-btn"
@@ -215,7 +218,7 @@ const EvenTemp = (props) => {
 											onChange={onChangCeode}
 										/>
 										<button
-											disabled={loading}
+											disabled={localLoading}
 											type="submit"
 											className="register team-btn hel"
 										>
@@ -307,7 +310,7 @@ const EvenTemp = (props) => {
 						</div>
 						<div className=" devfolio-button flex justify-center md:justify-start ">
 							<button
-								disabled={loading}
+								disabled={localLoading}
 								to="/"
 								className="register !mt-24 md:!mt-32"
 								onClick={registerClickHandle}

@@ -38,6 +38,7 @@ const App = () => {
 	return (
 		<Suspense fallback={<Loader />}>
 			<Toaster />
+			<Loader />
 			<Router>
 				{/* <Navbar_3/> */}
 				<ScrollToTop />

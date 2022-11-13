@@ -72,11 +72,11 @@ function Event() {
               (event) =>
                 (event.category === tabType || tabType === "all") && (
                   <div className="sch-event-card">
-                    <div className="sch-event-pic aspect-square">
+                    <div className="sch-event-pic">
                       <OptimizedImage
                         hashKey={event.eventId}
                         src={event.eventPic}
-                        className="sch-event-img"
+                        className="sch-event-img aspect-square"
                         alt={event.eventName}
                       />
                       {/* <img
@@ -84,7 +84,7 @@ function Event() {
                         className="sch-event-img"
                         alt=""
                       /> */}
-                      <button className="mt-12 mb-4 hidden md:block">
+                      <button className="mb-4 hidden md:block">
                         <a
                           href={"/event/" + event.eventId}
                           className="register teams-btn text-xs q12"

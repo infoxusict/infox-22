@@ -47,16 +47,16 @@ function Event() {
     <>
       {/* <MatrixRain /> */}
       <div className=" mt-20 md:mt-24">
-        <div class="sn_glitch_forNHeading atmosphere uh-heading  hel">
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
+        <div className="sn_glitch_forNHeading atmosphere uh-heading  hel">
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
         </div>
 
         <div className="text-white hel flex flex-row uh-bg mx-auto container max-w-[90%] md:max-w-[50%] da-toggle text-xs md:text-xl  mt-12 md:mb-8 !justify-around ">

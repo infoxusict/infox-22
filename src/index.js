@@ -4,6 +4,7 @@ import App from './App';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import swConfig from './swConfig';
 
 // css imports
 import './index.css';
@@ -63,4 +64,4 @@ root.render(
 );
 
 
-serviceWorkerRegistration.register();
+serviceWorkerRegistration.register(swConfig);

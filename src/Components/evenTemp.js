@@ -37,7 +37,7 @@ const EvenTemp = (props) => {
 				history.replace("/events");
 			})
 			.finally(() => dispatch(stopLoading()));
-			//eslint-disable-next-line
+		//eslint-disable-next-line
 	}, [props.match.params.eventId]);
 
 	const onChangCeode = (event) => {
@@ -53,10 +53,45 @@ const EvenTemp = (props) => {
 			history.push("/profile");
 			return;
 		}
-		setRegister(true);
-		document.getElementById("getBlur").style.opacity = 0.05;
-		document.body.style.overflow = "hidden";
+		if (event.teamSize === 1) {
+			setLocalLoading(true);
+			toast.promise(registerSingle(), {
+				loading: "Registering",
+				success: (data) => {
+					setLocalLoading(false);
+					history.push("/profile");
+					return data;
+				},
+				error: (err) => {
+					setLocalLoading(false);
+					return err;
+				},
+			});
+		} else {
+			setRegister(true);
+			document.getElementById("getBlur").style.opacity = 0.05;
+			document.body.style.overflow = "hidden";
+		}
 	};
+
+	const registerSingle = () =>
+		new Promise(async (resolve, reject) => {
+			const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}team/register_single`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					authToken: localStorage.getItem("authkey"),
+				},
+				body: JSON.stringify({
+					eventId: event.eventId,
+				}),
+			});
+			const json = await response.json();
+			if (json.error) {
+				reject(json.error);
+			}
+			resolve("Registered Successfully");
+		});
 
 	const createTeam = () =>
 		new Promise(async (resolve, reject) => {

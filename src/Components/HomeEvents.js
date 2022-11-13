@@ -41,13 +41,6 @@ const HomeEvents = () => {
 		// },
 	};
 
-	const parseDate = (event) => {
-		const dd = event.date.slice(0, 2),
-			mm = event.date.slice(3, 5),
-			yyyy = event.date.slice(6, 10);
-		// console.log(mm + "/" + dd + "/" + yyyy + " " + event.time);
-		return Date.parse(mm + "/" + dd + "/" + yyyy + " " + event.time);
-	};
 	const getAllEvents = async () => {
 		const response = await fetch(
 			"https://infoxpression.herokuapp.com/event/get_all_event",
@@ -79,16 +72,16 @@ const HomeEvents = () => {
 
 	return (
 		<div className=" flex flex-wrap justify-evenly mt-20 md:mt-24">
-			<div class="sn_glitch_forNHeading atmosphere uh-heading  ">
-				<div class="sn_line_forNHeading">Events</div>
-				<div class="sn_line_forNHeading">Events</div>
-				<div class="sn_line_forNHeading">Events</div>
-				<div class="sn_line_forNHeading">Events</div>
-				<div class="sn_line_forNHeading">Events</div>
-				<div class="sn_line_forNHeading">Events</div>
-				<div class="sn_line_forNHeading">Events</div>
-				<div class="sn_line_forNHeading">Events</div>
-				<div class="sn_line_forNHeading">Events</div>
+			<div className="sn_glitch_forNHeading atmosphere uh-heading  ">
+				<div className="sn_line_forNHeading">Events</div>
+				<div className="sn_line_forNHeading">Events</div>
+				<div className="sn_line_forNHeading">Events</div>
+				<div className="sn_line_forNHeading">Events</div>
+				<div className="sn_line_forNHeading">Events</div>
+				<div className="sn_line_forNHeading">Events</div>
+				<div className="sn_line_forNHeading">Events</div>
+				<div className="sn_line_forNHeading">Events</div>
+				<div className="sn_line_forNHeading">Events</div>
 			</div>
 			<div className="homeEvents">
 				<div className="homeEvents__bg">
@@ -113,8 +106,8 @@ const HomeEvents = () => {
 				<div className="homeEvents__sm">
 					<SliderDots {...sliderSettings}>
 						{events.map((event, idx) => (
-							<div className="homeEvents__half__sm">
-								<EventCard key={event._id} idx={idx} event={event} />
+							<div key={event._id} className="homeEvents__half__sm">
+								<EventCard idx={idx} event={event} />
 							</div>
 						))}
 					</SliderDots>

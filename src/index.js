@@ -4,7 +4,7 @@ import App from './App';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import swConfig from './swConfig';
+
 // css imports
 import './index.css';
 import "./Components/Assets/Images/CSS/aboutus.css";

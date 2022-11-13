@@ -10,7 +10,7 @@ import { startLoading, stopLoading } from "../redux/slices/loadingSlice";
 
 const EvenTemp = (props) => {
 	const [event, setEvent] = useState({});
-	const [localLoading, setLocalLoading] = useState(true);
+	const [localLoading, setLocalLoading] = useState(false);
 	const [register, setRegister] = useState(false);
 	const [teamCode, setTeamcode] = useState("");
 	const [teamName, setTeamName] = useState("");

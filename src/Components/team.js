@@ -92,7 +92,7 @@ export default function Team({
             role="img"
             aria-labelledby="svgcid-534po1gxdk6w"
           >
-            <g fill-rule="evenodd">
+            <g fillRule="evenodd">
               <path
                 stroke-width="2"
                 stroke={`${circleColor}`}

@@ -146,49 +146,49 @@ const Uhack = () => {
 
           <div className="about__left">
             <div id="about-stats">
-              <div class="about-students">
-                <div id="about-students" class="circle-ripple">
-                  <span class="about-stat-num">5800+</span>
-                  <span class="about-stat-title">Registrations</span>
+              <div className="about-students">
+                <div id="about-students" className="circle-ripple">
+                  <span className="about-stat-num">5800+</span>
+                  <span className="about-stat-title">Registrations</span>
                 </div>
-                <div id="about-students-ripple-1" class="circle-ripple"></div>
-                <div id="about-students-ripple-2" class="circle-ripple"></div>
-                <div id="about-students-ripple-3" class="circle-ripple"></div>
-                <div id="about-students-ripple-4" class="circle-ripple"></div>
-                <div id="about-students-ripple-5" class="circle-ripple"></div>
+                <div id="about-students-ripple-1" className="circle-ripple"></div>
+                <div id="about-students-ripple-2" className="circle-ripple"></div>
+                <div id="about-students-ripple-3" className="circle-ripple"></div>
+                <div id="about-students-ripple-4" className="circle-ripple"></div>
+                <div id="about-students-ripple-5" className="circle-ripple"></div>
               </div>
 
-              <div class="about-colleges">
-                <div id="about-colleges" class="circle-ripple">
-                  <span class="about-stat-num">25+</span>
-                  <span class="about-stat-title">Teams</span>
+              <div className="about-colleges">
+                <div id="about-colleges" className="circle-ripple">
+                  <span className="about-stat-num">25+</span>
+                  <span className="about-stat-title">Teams</span>
                 </div>
-                <div id="about-colleges-ripple-1" class="circle-ripple"></div>
-                <div id="about-colleges-ripple-2" class="circle-ripple"></div>
-                <div id="about-colleges-ripple-3" class="circle-ripple"></div>
-                <div id="about-colleges-ripple-4" class="circle-ripple"></div>
-                <div id="about-colleges-ripple-5" class="circle-ripple"></div>
+                <div id="about-colleges-ripple-1" className="circle-ripple"></div>
+                <div id="about-colleges-ripple-2" className="circle-ripple"></div>
+                <div id="about-colleges-ripple-3" className="circle-ripple"></div>
+                <div id="about-colleges-ripple-4" className="circle-ripple"></div>
+                <div id="about-colleges-ripple-5" className="circle-ripple"></div>
               </div>
               <div className="about-events">
-                <div id="about-events" class="circle-ripple">
-                  <span class="about-stat-num">24</span>
-                  <span class="about-stat-title">Hour</span>
+                <div id="about-events" className="circle-ripple">
+                  <span className="about-stat-num">24</span>
+                  <span className="about-stat-title">Hour</span>
                 </div>
-                <div id="about-events-ripple-1" class="circle-ripple"></div>
-                <div id="about-events-ripple-2" class="circle-ripple"></div>
-                <div id="about-events-ripple-3" class="circle-ripple"></div>
-                <div id="about-events-ripple-4" class="circle-ripple"></div>
-                <div id="about-events-ripple-5" class="circle-ripple"></div>
+                <div id="about-events-ripple-1" className="circle-ripple"></div>
+                <div id="about-events-ripple-2" className="circle-ripple"></div>
+                <div id="about-events-ripple-3" className="circle-ripple"></div>
+                <div id="about-events-ripple-4" className="circle-ripple"></div>
+                <div id="about-events-ripple-5" className="circle-ripple"></div>
               </div>
             </div>
           </div>
           <div className="about__right">
             <div id="about-content">
-              <div class="content-wrap mt-32">
-                <div class="content-line-wrap">
-                  <div class="before-content-line"></div>
+              <div className="content-wrap mt-32">
+                <div className="content-line-wrap">
+                  <div className="before-content-line"></div>
                 </div>
-                <div class="content-text text-justify">
+                <div className="content-text text-justify">
                   UHack, a hackathon where programmers and other interested
                   individuals collaborate to enhance or create new software. It
                   provide an opportunity for contributors to strengthen soft
@@ -213,27 +213,27 @@ const Uhack = () => {
       <div className="aboutm">
         <div className="aboutm-stats">
           <div className="aboutm-students">
-            <span class="aboutm-number">5800+</span>
-            <span class="aboutm-number-head">students</span>
+            <span className="aboutm-number">5800+</span>
+            <span className="aboutm-number-head">students</span>
           </div>
           <div className="aboutm-colleges">
-            <span class="aboutm-number">25+</span>
-            <span class="aboutm-number-head">Teams</span>
+            <span className="aboutm-number">25+</span>
+            <span className="aboutm-number-head">Teams</span>
           </div>
           <div className="aboutm-events">
-            <span class="aboutm-number">24</span>
-            <span class="aboutm-number-head">Hour</span>
+            <span className="aboutm-number">24</span>
+            <span className="aboutm-number-head">Hour</span>
           </div>
         </div>
         <div className="aboutm-content">
           <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
             ABOUT
           </div>
-          <div class="mcontent-wrap ">
-            <div class="mcontent-line-wrap">
-              <div class="mbefore-content-line"></div>
+          <div className="mcontent-wrap ">
+            <div className="mcontent-line-wrap">
+              <div className="mbefore-content-line"></div>
             </div>
-            <div class="mcontent-text text-justify">
+            <div className="mcontent-text text-justify">
               UHack, a hackathon where programmers and other interested
               individuals collaborate to enhance or create new software. It
               provide an opportunity for contributors to strengthen soft skills
@@ -259,16 +259,16 @@ const Uhack = () => {
           <section className=" flex flex-col-reverse  md:flex-row md:gap-32 pb-16 uh-bg md:pl-8">
             <div className="basis-1/2 mt-8 md:mt-16 md:pl-8">
               {/* <div className="atmosphere text-7xl">Uhack</div> */}
-              <div class="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
-                <div class="sn_line_forNHeading">Uhack</div>
-                <div class="sn_line_forNHeading">Uhack</div>
-                <div class="sn_line_forNHeading">Uhack</div>
-                <div class="sn_line_forNHeading">Uhack</div>
-                <div class="sn_line_forNHeading">Uhack</div>
-                <div class="sn_line_forNHeading">Uhack</div>
-                <div class="sn_line_forNHeading">Uhack</div>
-                <div class="sn_line_forNHeading">Uhack</div>
-                <div class="sn_line_forNHeading">Uhack</div>
+              <div className="sn_glitch_forNHeading atmosphere uh-heading hidden md:block">
+                <div className="sn_line_forNHeading">Uhack</div>
+                <div className="sn_line_forNHeading">Uhack</div>
+                <div className="sn_line_forNHeading">Uhack</div>
+                <div className="sn_line_forNHeading">Uhack</div>
+                <div className="sn_line_forNHeading">Uhack</div>
+                <div className="sn_line_forNHeading">Uhack</div>
+                <div className="sn_line_forNHeading">Uhack</div>
+                <div className="sn_line_forNHeading">Uhack</div>
+                <div className="sn_line_forNHeading">Uhack</div>
               </div>
               <div className="md:mt-4  text-l mx-8 md:mx-0  text-justify">
                 UHack is here again folks!! One of the best hackathons of
@@ -288,7 +288,7 @@ const Uhack = () => {
                     width="24"
                     height="24"
                     fill="currentColor"
-                    class="bi bi-calendar-date"
+                    className="bi bi-calendar-date"
                     viewBox="0 0 16 16"
                   >
                     {" "}
@@ -310,7 +310,7 @@ const Uhack = () => {
                     width="24"
                     height="24"
                     fill="currentColor"
-                    class="bi bi-clock"
+                    className="bi bi-clock"
                     viewBox="0 0 16 16"
                   >
                     {" "}
@@ -328,7 +328,7 @@ const Uhack = () => {
               </div>
               <div className=" mt-12 md:mt-48 flex justify-center md:justify-start">
                 <div
-                  class="apply-button"
+                  className="apply-button"
                   data-hackathon-slug="uhack5"
                   data-button-theme="dark-inverted"
                 ></div>
@@ -336,16 +336,16 @@ const Uhack = () => {
             </div>
             <div className="basis-1/2 flex justify-center mt-16 md:mt-0 flex-col hel">
               <div>
-                <div class="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
-                  <div class="sn_line_forNHeading">Uhack</div>
-                  <div class="sn_line_forNHeading">Uhack</div>
-                  <div class="sn_line_forNHeading">Uhack</div>
-                  <div class="sn_line_forNHeading">Uhack</div>
-                  <div class="sn_line_forNHeading">Uhack</div>
-                  <div class="sn_line_forNHeading">Uhack</div>
-                  <div class="sn_line_forNHeading">Uhack</div>
-                  <div class="sn_line_forNHeading">Uhack</div>
-                  <div class="sn_line_forNHeading">Uhack</div>
+                <div className="sn_glitch_forNHeading atmosphere uh-heading md:hidden block">
+                  <div className="sn_line_forNHeading">Uhack</div>
+                  <div className="sn_line_forNHeading">Uhack</div>
+                  <div className="sn_line_forNHeading">Uhack</div>
+                  <div className="sn_line_forNHeading">Uhack</div>
+                  <div className="sn_line_forNHeading">Uhack</div>
+                  <div className="sn_line_forNHeading">Uhack</div>
+                  <div className="sn_line_forNHeading">Uhack</div>
+                  <div className="sn_line_forNHeading">Uhack</div>
+                  <div className="sn_line_forNHeading">Uhack</div>
                 </div>
               </div>
               <div className="flex justify-center md:justify-end w-full">

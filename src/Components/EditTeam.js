@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
-const mem = ["jainabhishek7204@gmail.com", "abh7204@gmail.com"];
-
 const EditTeam = ({ showModal, closeModal, team, editTeamHandler }) => {
 	const [teamName, setTeamName] = useState(team?.teamName || "");
 	const [teamMembers, setTeamMembers] = useState(team?.members || []);

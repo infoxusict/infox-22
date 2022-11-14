@@ -101,7 +101,7 @@ const Home = (props) => {
               >
                 OCTOBER 2022
               </h3> */}
-                <p
+                <div
                   style={{
                     textAlign: "center",
                     fontWeight: "600",
@@ -122,11 +122,10 @@ const Home = (props) => {
                   <p style={{ fontSize: "small" }}>
                     CELEBRATING THE SENSE OF BELONGING
                   </p>
-                </p>
+                </div>
               </div>
             </div>
           </div>
-          {/* <EventOnHome /> */}
           <HomeEvents />
           <div className="md:pt-28 pt-12"></div>
           <SponserNew />

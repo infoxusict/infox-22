@@ -50,11 +50,6 @@
   font-weight: 300;
   font-size: 18px;
 }
-.section__text {    
-  max-width: 75%;
-  margin: -70px auto 0 auto;
-  font-size: 18px;
-}
 
 @media screen and (max-width: 910px) {
   .homeEvents__bg,
@@ -69,22 +64,6 @@
     place-content: center;
     grid-template-columns: repeat(2, minmax(auto, 250px));
     column-gap: 2rem;
-  }
-  .head__left .head__content > h1 {
-    font-size: 1.8rem;
-  }
-
-  .head__left .head__content > p {
-    font-size: 0.8rem;
-  }
-
-  .head__left .head__content > button {
-    font-size: medium;
-  }
-
-  .landing__head {
-    grid-template-columns: 55% 45%;
-    padding-right: 5px;
   }
 }
 
@@ -106,46 +85,5 @@
   }
   .bg_screen {
     display: none !important;
-  }
-
-  .landing__head {
-    grid-template-columns: minmax(0, 1fr);
-    padding: 1rem;
-  }
-
-  .container-logo {
-    margin: auto;
-  }
-
-  .logo {
-    max-width: 80px;
-    margin-top: -1.5rem;
-    height: 77px;
-  }
-
-  .head__left .head__content {
-    text-align: center;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .head__left .head__content > h1 {
-    font-size: 1.4rem;
-  }
-
-  .head__left .head__content > button {
-    font-size: small;
-  }
-  .head__left .head__content > button::after {
-    display: none;
-  }
-  .shape_image {
-    top: 20%;
-    left: 0%;
-    width: 100%;
-  }
-  .footer__heroSection {
-    padding-right: 100px !important;
   }
 }

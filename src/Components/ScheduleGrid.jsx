@@ -7,7 +7,7 @@ function ScheduleGrid() {
      <div className='day2' style={{fontSize:"4vh"}}>DAY-1</div>
     <div className='sch-par-div'>
       <MatrixRain/>
-      <div class="angry-grid">
+      <div className="angry-grid">
         {/* <div className='sch-grid-event' id="item-0">&nbsp;0</div> */}
         <div className='sch-grid-event' id="item-1">&nbsp;E-block Audi</div>
         <div className='sch-grid-event' id="item-2">&nbsp;D 317-318</div>
@@ -55,7 +55,7 @@ function ScheduleGrid() {
  <div className='day2' style={{fontSize:"4vh"}}>DAY-2</div></h1>
     <div className='sch-par-div'>
       <MatrixRain/>
-      <div class="angry-grid-1">
+      <div className="angry-grid-1">
         {/* <div className='sch-grid-event' id="item-0">&nbsp;0</div> */}
         <div className='sch-grid-event' id="item-1">E-block Audi</div>
         <div className='sch-grid-event' id="item-2-1">E-218-319</div>
@@ -105,7 +105,7 @@ function ScheduleGrid() {
    <h1> <div className='day3' style={{fontSize: "4vh"}}>DAY-3</div></h1>
    <div className='sch-par-div'>
       <MatrixRain/>
-      <div class="angry-grid-2">
+      <div className="angry-grid-2">
         {/* <div className='sch-grid-event' id="item-0">&nbsp;0</div> */}
         <div className='sch-grid-event' id="item-1">&nbsp;E-block Audi</div>
         <div className='sch-grid-event' id="item-2">&nbsp;E-218-219</div>

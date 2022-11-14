@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { startLoading, stopLoading } from "../redux/slices/loadingSlice";
 // import { GiPaddleSteamer } from "react-icons/gi";
-
-import MatrixRain from "./MatrixRain";
 import { OptimizedImage } from "./OptimizedImage";
 
 function Event() {
   const [events, setEvents] = useState([]);
+  const dispatch = useDispatch();
   const parseDate = (event) => {
     const dd = event.date.slice(0, 2),
       mm = event.date.slice(3, 5),
       yyyy = event.date.slice(6, 10);
     return Date.parse(mm + "/" + dd + "/" + yyyy + " " + event.time);
   };
+  
   const getAllEvents = async () => {
+    dispatch(startLoading());
+    try{
     const response = await fetch(
       `${process.env.REACT_APP_BACKEND_URL}event/get_all_event`,
 
@@ -27,6 +31,10 @@ function Event() {
 
     const json = await response.json();
     setEvents(json.sort((a, b) => parseDate(a) - parseDate(b)));
+    dispatch(stopLoading());
+    } catch (_) {
+      dispatch(stopLoading());
+    }
   };
 
   useEffect(() => {
@@ -39,16 +47,16 @@ function Event() {
     <>
       {/* <MatrixRain /> */}
       <div className=" mt-20 md:mt-24">
-        <div class="sn_glitch_forNHeading atmosphere uh-heading  hel">
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
-          <div class="sn_line_forNHeading">Events</div>
+        <div className="sn_glitch_forNHeading atmosphere uh-heading  hel">
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
+          <div className="sn_line_forNHeading">Events</div>
         </div>
 
         <div className="text-white hel flex flex-row uh-bg mx-auto container max-w-[90%] md:max-w-[50%] da-toggle text-xs md:text-xl  mt-12 md:mb-8 !justify-around ">
@@ -64,11 +72,11 @@ function Event() {
               (event) =>
                 (event.category === tabType || tabType === "all") && (
                   <div className="sch-event-card">
-                    <div className="sch-event-pic aspect-square">
+                    <div className="sch-event-pic">
                       <OptimizedImage
                         hashKey={event.eventId}
                         src={event.eventPic}
-                        className="sch-event-img"
+                        className="sch-event-img aspect-square"
                         alt={event.eventName}
                       />
                       {/* <img
@@ -76,7 +84,7 @@ function Event() {
                         className="sch-event-img"
                         alt=""
                       /> */}
-                      <button className="mt-12 mb-4 hidden md:block">
+                      <button className="mb-4 hidden md:block">
                         <a
                           href={"/event/" + event.eventId}
                           className="register teams-btn text-xs q12"

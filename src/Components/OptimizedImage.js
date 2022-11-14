@@ -26,8 +26,7 @@ function OptimizedImage({ hashKey, src, alt, className, ...props }) {
 							top: 0,
 							left: 0,
 							zIndex: 20,
-							width: "100%",
-							height: "100%",
+							width: "100%"
 						}}
 						hash={blurHashes[hashKey] || "UC3w{OpFMMWUr2gKYGg0n,k-c8brYscknAk-"}
 						punch={1}

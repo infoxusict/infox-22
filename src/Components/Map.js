@@ -28,8 +28,8 @@ const Map = () => {
                 />
               </a>
             </div>
-            <div class="reach_us_card">
-              <div class="align_card">
+            <div className="reach_us_card">
+              <div className="align_card">
                 <h1 className="card_reach_title">Contact info</h1>
                 <hr id="contact_upper_rule" />
                 <ul className="ulreach">
@@ -98,8 +98,8 @@ const Map = () => {
           </div>
           {/* <div id="special_banner"></div>
       <div id="special_banner2"></div> */}
-          <div class="reach_us_card_2">
-            <div class="align_card">
+          <div className="reach_us_card_2">
+            <div className="align_card">
               <h1 className="card_reach_title">Contact info</h1>
               <hr id="contact_upper_rule" />
               <ul className="ulreach">

@@ -4,6 +4,7 @@ import Keeanu from "./Components/Keeanu";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Loader from "./Components/Loader";
+import ScheduleGrid from "./Components/ScheduleGrid";
 // import EventCard from "./Components/EventCard";
 // import EventTemplate from "./Components/EventTemplate";
 // import Schedule from "./Components/Schedule";
@@ -62,9 +63,9 @@ const App = () => {
 					<Route exact path="/events">
 						<Event />
 					</Route>
-					{/* <Route exact path="/schedule">
+					<Route exact path="/schedule">
             <ScheduleGrid />
-          </Route> */}
+          </Route>
 					<Route exact path="/uhack">
 						<Uhack />
 					</Route>

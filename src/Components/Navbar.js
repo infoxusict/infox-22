@@ -108,11 +108,11 @@ const Navbar = () => {
               <span>Events</span>
             </Link>
           </li>
-          <li className="navigation__item" onClick={handleNavToggle}>
+          {/* <li className="navigation__item" onClick={handleNavToggle}>
             <Link to="/schedule" className="navigation__link">
               <span>Schedule</span>
             </Link>
-          </li>
+          </li> */}
           {/* <li className="navigation__item" onClick={handleNavToggle}>
             <Link to="/event" className="navigation__link">
               <span>Schedule</span>

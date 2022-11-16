@@ -11,9 +11,9 @@ const Schedule = () => {
           href="https://www.vardiano.com/"
           target="_blank"
           rel="noreferrer"
-          className="basis-2/5 md:basis-1/5 spon-logo-width col-start-1 col-end-3 md:col-end-5"
+          className="basis-2/5 md:basis-1/5  col-start-1 col-end-3 md:col-end-5"
         >
-          <img src={require("./Assets/Images/sponsor-2/vardiano.png")} alt="" />
+          <img src={require("./Assets/Images/sponsor-2/vardiano.webp")} alt="" />
         </a>
         <a
           href="https://polygon.technology/"
@@ -132,7 +132,7 @@ const Schedule = () => {
           className="basis-2/5 md:basis-1/5 spon-logo-width"
         >
           <img
-            src={require("./Assets/Images/sponsor-2/pearl academy.png")}
+            src={require("./Assets/Images/sponsor-2/EDGE_Meta_Logo_1-removebg-preview.png")}
             alt="Devfolio-logo"
           />
         </a>

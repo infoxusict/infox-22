@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Team from "./team";
 // import Aos from "aos";
 // import "aos/dist/aos.css";
 import MatrixRain from "./MatrixRain";
@@ -349,7 +350,12 @@ const Uhack = () => {
                 </div>
               </div>
               <div className="flex justify-center md:justify-end w-full">
-                <OptimizedImage hashKey={"uhack"} src={require("./Assets/Images/images/uhack/uhack-poster.png")} alt="uhack" className="uh-img p-4 uh-bg w-4/5 h-min aspect-[179/297] max-h-min" />
+                <OptimizedImage
+                  hashKey={"uhack"}
+                  src={require("./Assets/Images/images/uhack/uhack-poster.png")}
+                  alt="uhack"
+                  className="uh-img p-4 uh-bg w-4/5 h-min aspect-[179/297] max-h-min"
+                />
                 {/* <img
                 loading="lazy"
                   src={require("./Assets/Images/images/uhack/uhack-poster.png")}
@@ -368,8 +374,7 @@ const Uhack = () => {
             <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw">
               Sponsors
             </div>
-            
-            
+
             <div className="grid grid-cols-2 md:grid-cols-3 justify-items-center items-center mx-3 gap-x-6 gap-y-12 md:gap-y-20 md:gap-x-12 mt-6 md:mt-14 uh-bg py-16 md:px-16">
               <a
                 href="https://polygon.technology/"
@@ -449,7 +454,6 @@ const Uhack = () => {
                   src={require("./Assets/Images/images/uhack/Solana-logo.png")}
                   alt="Solana-logo"
                 />
-                
               </a>
 
               <a
@@ -485,6 +489,110 @@ const Uhack = () => {
                   alt="taskade-logo"
                 />
               </a>
+              <a
+                href="https://mathcody.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="basis-2/5 md:basis-1/5 spon-logo-width"
+              >
+                <img
+                  src={require("./Assets/Images/sponsor-2/math and cody.png")}
+                  alt="Devfolio-logo"
+                />
+              </a>
+              <a
+                href="https://www.duolearn.tech/"
+                target="_blank"
+                rel="noreferrer"
+                className="basis-2/5 md:basis-1/5 spon-logo-width"
+              >
+                <img
+                  src={require("./Assets/Images/sponsor-2/duolearnlogo.png")}
+                  alt="Devfolio-logo"
+                />
+              </a>
+            </div>
+          </section>
+          <section className="uhf">
+            <div className="flex hel text-4xl md:text-6xl atmosphere title-txt-shdw mt-24 md:mt-32">
+              Mentors
+            </div>
+            <div className=" mt-12 ">
+              <div className="teampage__container">
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Anurag Aggarwal"
+                  team=" Flipkart"
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/kanurag94/"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  // gmail="rudranshratan@gmail.com"
+                  photo="./Assets/Images/mentors/anurag.jpeg"
+                />
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Divyansh Tripathi"
+                  team=" GoJek"
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/silentlad/"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  // gmail="rudranshratan@gmail.com"
+                  photo="./Assets/Images/mentors/divyansh.jpeg"
+                />
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Gaurav Jain"
+                  team="Tata 1mg "
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/gauravj22/"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  // gmail="rudranshratan@gmail.com"
+                  photo="./Assets/Images/mentors/gaurav.jpeg"
+                />
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Shlok Garg"
+                  team="Tata 1mg"
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/shlokgarg01/"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  // gmail="rudranshratan@gmail.com"
+                  photo="./Assets/Images/mentors/shlok.jpeg"
+                  youtube="https://sgcodes.co.in/youtube"
+                />
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Vivek Sharma"
+                  team="Amazon"
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/vivek-sharma-33592a98/"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  // gmail="rudranshratan@gmail.com"
+                  photo="./Assets/Images/mentors/vivek2.png"
+                />
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Aniket Singh"
+                  team="Math & Cody"
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/aniket-singh-11275a213/"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  // gmail="rudranshratan@gmail.com"
+                  photo="./Assets/Images/mentors/ankit.jpeg"
+                />
+              </div>
             </div>
           </section>
           <section className="container mx-auto ">

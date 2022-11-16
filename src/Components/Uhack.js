@@ -580,6 +580,18 @@ const Uhack = () => {
                   // gmail="rudranshratan@gmail.com"
                   photo="./Assets/Images/mentors/vivek2.png"
                 />
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Aniket Singh"
+                  team="Math & Cody"
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/aniket-singh-11275a213/"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  // gmail="rudranshratan@gmail.com"
+                  photo="./Assets/Images/mentors/ankit.jpeg"
+                />
               </div>
             </div>
           </section>

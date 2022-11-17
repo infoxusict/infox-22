@@ -592,6 +592,30 @@ const Uhack = () => {
                   // gmail="rudranshratan@gmail.com"
                   photo="./Assets/Images/mentors/ankit.jpeg"
                 />
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Pavan Kumar"
+                  team="Duolearn"
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/pavan-kumar-2000"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  gmail="pavankumarkpkp@gmail.com"
+                  photo="./Assets/Images/mentors/pawan.jpeg"
+                />
+                <Team
+                  ringColor="#161616"
+                  circleColor="#c2bfb9"
+                  name="Devakumar N M"
+                  team="Duolearn"
+                  position="Mentor"
+                  Quote="Impossible is a word only in the dictionary of fools."
+                  linkedin="https://www.linkedin.com/in/devnm21"
+                  // github="https://github.com/RUDRANSHRATAN"
+                  gmail="devu.nm21@gmail.com"
+                  photo="./Assets/Images/mentors/devakumar.jpeg"
+                />
               </div>
             </div>
           </section>

@@ -36,52 +36,52 @@ const NotFound = React.lazy(() => import("./Components/NotFound"));
 ReactGA.initialize(trackingId);
 
 const App = () => {
-	return (
-		<Suspense fallback={<Loader />}>
-			<Toaster />
-			<Loader />
-			<Router>
-				{/* <Navbar_3/> */}
-				<ScrollToTop />
-				<Navbar />
-				<Switch>
-					<Route exact path="/">
-						<div className="Home">
-							<Home page="home" />
-						</div>
-					</Route>
-					<Route path="/event/:eventId" component={EvenTemp} />
-					<Route exact path="/team">
-						<TeamPage />
-					</Route>
-					<Route exact path="/legacy">
-						<Legacy />
-					</Route>
-					<Route exact path="/Profile">
-						<Profile />
-					</Route>
-					<Route exact path="/events">
-						<Event />
-					</Route>
-					<Route exact path="/schedule">
+  return (
+    <Suspense fallback={<Loader />}>
+      <Toaster />
+      <Loader />
+      <Router>
+        {/* <Navbar_3/> */}
+        <ScrollToTop />
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <div className="Home">
+              <Home page="home" />
+            </div>
+          </Route>
+          <Route path="/event/:eventId" component={EvenTemp} />
+          <Route exact path="/team">
+            <TeamPage />
+          </Route>
+          <Route exact path="/legacy">
+            <Legacy />
+          </Route>
+          <Route exact path="/Profile">
+            <Profile />
+          </Route>
+          <Route exact path="/events">
+            <Event />
+          </Route>
+          <Route exact path="/schedule">
             <ScheduleGrid />
           </Route>
-					<Route exact path="/uhack">
-						<Uhack />
-					</Route>
-					<Route exact path="/contact">
-						<Contact />
-					</Route>
-					<Route exact path="/reach">
-						<Map />
-					</Route>
-					<Route path="*" component={NotFound} />
-				</Switch>
-				<Keeanu />
-				<Footer />
-			</Router>
-		</Suspense>
-	);
+          <Route exact path="/uhack">
+            <Uhack />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/reach">
+            <Map />
+          </Route>
+          <Route path="*" component={NotFound} />
+        </Switch>
+        <Keeanu />
+        <Footer />
+      </Router>
+    </Suspense>
+  );
 };
 
 export default App;

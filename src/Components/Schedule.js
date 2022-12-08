@@ -13,7 +13,10 @@ const Schedule = () => {
           rel="noreferrer"
           className="basis-2/5 md:basis-1/5  col-start-1 col-end-3 md:col-end-5"
         >
-          <img src={require("./Assets/Images/sponsor-2/vardiano.webp")} alt="" />
+          <img
+            src={require("./Assets/Images/sponsor-2/vardiano.webp")}
+            alt=""
+          />
         </a>
         <a
           href="https://polygon.technology/"
@@ -82,14 +85,14 @@ const Schedule = () => {
           />
         </a>
         <a
-          href="https://www.fossanalytics.com/en-in"
+          href="https://fossunited.org"
           target="_blank"
           rel="noreferrer"
           className="basis-2/5 md:basis-1/5 spon-logo-width"
         >
           <img
             src={require("./Assets/Images/sponsor-2/foss.png")}
-            alt="Devfolio-logo"
+            alt="Foss-logo"
           />
         </a>
         <a

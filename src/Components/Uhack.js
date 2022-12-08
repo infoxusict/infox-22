@@ -434,6 +434,17 @@ const Uhack = () => {
                 />
               </a>
               <a
+                href="https://fossunited.org"
+                target="_blank"
+                rel="noreferrer"
+                className="basis-2/5 md:basis-1/5 spon-logo-width"
+              >
+                <img
+                  src={require("./Assets/Images/sponsor-2/foss.png")}
+                  alt="Foss-logo"
+                />
+              </a>
+              <a
                 href="https://gen.xyz/"
                 target="_blank"
                 rel="noreferrer"

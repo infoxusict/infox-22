@@ -193,6 +193,8 @@ const EvenTemp = (props) => {
 	const registerClickHandle = () => {
 		if (event?.eventId === "chess1811") {
 			window.open("https://forms.gle/zogf1sEPsrBsi3fF7", "_blank");
+		} else if (event?.eventId === "djnight") {
+			window.open("https://forms.gle/Mbw7woWorTvcn4dU6", "_blank");
 		} else {
 			registerModal();
 		}
